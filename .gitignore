@@ -1,0 +1,10 @@
+/node_modules/
+/dist/
+/app/css/
+/app/js/vendor/
+/temp/
+.DS_Store
+Thumbs.db
+*.sublime*
+*.log
+*.psd

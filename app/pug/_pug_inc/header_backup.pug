@@ -1,0 +1,30 @@
+header.page-header
+	//.page-header__inner
+	.page-header__logo-nav-outer-wrapper
+		.page-header__logo-nav-wrapper.main-nav--nojs
+			.page-header__logo-wrapper
+				a.page-header__logo(href="", alt="Pink")
+					//img(src="img/pink-mobile.svg", alt="Logo")
+					picture
+						source(media="(min-width:1200px)", srcset="img/logotype-white-desktop.svg")
+						source(media="(min-width:700px)", srcset="img/logotype-white-tablet.svg")
+						img(src="img/logotype-white-mobile.svg", alt="Logo")
+				a.toggle-menu(href="#") Toggle Menu
+			nav.main-nav
+				ul.main-nav__list
+					li.main-nav__item.main-nav__item--active: a() Главная
+					li.main-nav__item: a(href="") Фотографии
+					li.main-nav__item: a(href="") Конкурс
+					li.main-nav__item: a(href="") HTMLACADEMY
+	.download__wrapper
+		.download__content
+			h1 Взгляните на жизнь иначе!
+			a.btn(href="", title="Download our App") Скачать приложение
+			.download-text__appst-links-wrapper
+				a.appstore(href="", title="Download our App") Download from Appstore
+				a.playmarket(href="", title="Download our App") Download from Play Market
+				a.marketplace(href="", title="Download our App") Download from Marketplace
+			.download__text.
+				Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 9
+		.download__img
+			img(src="img/img-download-tablet.png", alt="Download App")
