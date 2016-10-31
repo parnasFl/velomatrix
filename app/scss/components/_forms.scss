@@ -1,0 +1,32 @@
+
+label {
+	display: block;
+	font-family: @ff-bold;
+	font-size: @font-size-base + 1;
+	margin-bottom: 10px;
+}
+
+select {
+	display: block;
+	width: 100%;
+	border: none;
+	border: 0;
+	
+}
+
+
+textarea {
+	width: 100%;
+	border: none;
+	border: 0;
+	resize: vertical;
+	
+	&:focus {
+		//background-color: #fff;
+	}
+}
+label i {
+	color: @pink-base;
+	font-style: normal;
+}
+

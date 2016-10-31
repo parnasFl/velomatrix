@@ -1,0 +1,30 @@
+/*Buttons*/
+.btn {
+	//width: auto;
+	display: inline-block;
+	//height: 55px;
+	//line-height: 55px;
+	color: #fff;
+	font-family: $ff-bold;
+	font-size: 18px;
+	padding-top: 16px;
+	padding-bottom: 13px;
+	padding-left: 28px;
+	padding-right: 28px;
+	background-color: transparent;
+	border: 3px solid #fff;
+	border-radius: 50px;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	text-align: center;
+	&:hover {
+		//border-color: #fff;
+		background-color: #fff;
+		color: #1d2631;
+	}
+
+	
+}

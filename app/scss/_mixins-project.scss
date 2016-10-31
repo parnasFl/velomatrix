@@ -1,0 +1,107 @@
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+@import "_vars-project";
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//Container mixin
+@mixin container {
+	width: $xs-container-width;
+	margin: 0 auto;
+
+	@media #{$tablet-widths} {
+		width: $sm-container-width;
+	}
+
+	@media #{$desktop-widths} {
+		width: $md-container-width;
+	}
+}
+
+@mixin container-fluid {
+	//width: auto;
+	width: 93.75%;
+	margin: 0 auto;
+	box-shadow: inset 0 0 3px yellow;
+
+	@media #{$tablet-widths} {
+		width: 91.4%;
+		min-width: 320px;
+		max-width: 959px;
+		margin: 0 auto;
+	}
+}
+
+
+//Justified menu
+@mixin justified-menu {
+	width: 100%;
+	text-align: justify;
+	line-height: 0;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 0px;
+	}
+}
+
+//Justified menu items mixin
+
+@mixin justified-menu_item {
+	display: inline-block;
+	position: relative;
+
+	* {
+		line-height: 1.42;
+	}
+}
+
+//Link text hide
+
+@mixin link-text-indent {
+  border:0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+
+// Mixins in DEV
+
+// @mixin container-fluid2 ($container, $viewport) {
+// 	width: auto;
+// 	$tablet-container: 640px;
+// 	$tablet-viewport: 768px;
+// 	$desktop-container: 960px;
+// 	$desktop-viewport: 1200px;
+
+// 	@media #{$tablet-widths} {
+// 		$container : $tablet-container;
+// 		$viewport : $tablet-viewport;
+
+// 		width: $container / $viewport + '%';
+// 		max-width: $desktop-container;
+// 		margin: 0 auto;
+// 	}
+// }

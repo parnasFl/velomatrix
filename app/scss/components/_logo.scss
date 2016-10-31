@@ -1,0 +1,29 @@
+/*=============Logo Styles=========*/
+@logo-text-color: #fca211;
+
+.site-logo {
+	
+	&__link {
+		display: block;
+		
+		font-family: @ff-custom;
+		color: @logo-text-color;
+		font-size: 30px;
+		
+		&:hover {
+			color: @logo-text-color;
+		}
+		i {
+			display: inline-block;
+			vertical-align: middle;
+			width: 80px;
+			height: 66px;
+			background: url("../img/logo.png") 0 0 no-repeat;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
