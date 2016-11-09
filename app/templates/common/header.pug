@@ -1,1 +1,53 @@
 header.page-header
+	.top-bar
+		a.top-bar__toggle(href="#") Toggle Top Menu
+		ul.top-bar__nav
+			li.top-bar__address-item
+				span.top-bar__address-icon
+				span.top-bar__address-text.
+					м. Сокольники, Сокольническая
+					площадь, д.9, к.2
+			li.top-bar__menu
+				ul.top-bar__menu-list
+					li.top-bar__menu-item.iconed
+						span.top-bar__menu-icon
+						a.top-bar__menu-link(href="#") Зимные товары
+					li.top-bar__menu-item
+						a.top-bar__menu-link(href="#") Доставка и оплата
+					li.top-bar__menu-item
+						a.top-bar__menu-link(href="#") Для партнеров
+					li.top-bar__menu-item
+						a.top-bar__menu-link(href="#") Контакты
+			li.top-bar__user
+				a.top-bar__user-link(href="#")
+					span.top-bar__user-icon
+					span.top-bar__user-text Вход или Регистрация
+		.cart
+			a.cart__btn(href="#")
+				span.cart__btn-pre-icon
+				.cart__btn-text.
+					В корзине <i>1</i> товар
+				span.cart__btn-post-icon
+	.bottom-bar
+		.page-logo
+			a.page-logo__link(href="#")
+				span.page-logo__img
+					picture
+						source(media="(min-width:768px)", srcset="img/logo-desktop@3x.png")
+						img(src="img/logo_mobile.png", alt="Logo")
+				span.page-logo__slogan велосипеды и запчасти
+		.page-search
+			.page-search__wrapper
+				form.search
+					input(type=search, placeholder="Введите название товара ...")
+					button(type=submit)
+						span.submit-icon
+						span.submit-text
+		.page-support
+			ul.page-support__list
+				li.page-support__phone +7 495 961-94-21
+				li.page-support__working-hours Ежедневно с 10:00 до 20:00
+				li.page-support__callback
+					a.page-support__callback-btn(href="#") обратный звонок
+
+

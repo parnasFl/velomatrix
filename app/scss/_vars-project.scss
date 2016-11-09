@@ -2,16 +2,19 @@
 
 //Colors
 $dark-base: #000;
-$light-base: #fff;
+$light-base: #ccc;
+$grey-base: #afafaf;
+$grey-base: #afafaf;
 $blue-base: #283645;
 $pink-base: #d22856;
 $lightgrey-bg: #ccc;
 //Responsive grids variaes
 $xs-container-width: 320px;
 $sm-container-width: 640px;
-$md-container-width: 940px;
-$tablet-widths: "(min-width: 700px)";
-$desktop-widths: "(min-width: 940px)";
+//$md-container-width: 940px;
+//$lg-container-width: 940px;
+$tablet-widths: "(min-width: 600px)";
+$desktop-widths: "(min-width: 1024px)";
 //$tablet-widths: 768px;
 //$desktop-widths: 1200px;
 
@@ -45,11 +48,10 @@ $link-hover-decoration: none;
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 // $font-family-base:        $font-family-sans-serif;
 
-$ff-regular: OpenSansRegular, Helvetica, sans-serif;
-$ff-bold: OpenSansBold, Helvetica, sans-serif;
-$ff-light: OpenSansLight, Helvetica, sans-serif;
+$ff-regular: proxima_nova, Helvetica, sans-serif;
+$ff-custom: bad_scriptregular;
 
-$font-size-base:          18px;
+$font-size-base:          16px;
 
 $font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
@@ -64,7 +66,7 @@ $line-height-base:        1.428571429; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    $ff-bold;
-$headings-font-weight:    500;
+//$headings-font-family:    $ff-bold;
+//$headings-font-weight:    500;
 $headings-line-height:    1.1;
 $headings-color:          inherit;

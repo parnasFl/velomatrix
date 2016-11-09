@@ -9,7 +9,7 @@ $body-bg: #fff;
 
 
 // Reset the box-sizing
-//
+// 
 // Heads up! This reset may cause conflicts with some third-party widgets.
 // For recommendations on resolving such conflicts, see
 // http://getbootstrap.com/getting-started/#third-box-sizing
@@ -42,8 +42,7 @@ body {
 	min-height: 100%;
 	position: relative;
 	overflow: hidden;
-	//min-width: $container-width + 20px;
-	min-width: 320px;
+	//min-width: 320px;
 }
 
 .wrapper:after {
@@ -59,11 +58,17 @@ body {
 	}
 }
 
-// .container {
-//   width: $container-width;
-//   margin: 0 auto;
-//   //@include clearfix();
-// }
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 
 
 footer {
@@ -90,17 +95,12 @@ img {
 	height: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin-top: 0;
-	font-weight: normal;
-}
-
 
 // Links
 
 a {
 	font-family: $ff-regular;
-	color: $link-color;
+	// color: $link-color;
 	text-decoration: none;
 	transition: all .3s;
 
@@ -136,12 +136,6 @@ figure {
 	cursor: pointer;
 }
 
-//This project only - Pink
-h1, h2 {
-	//font-family: $ff-light;
-}
-
-h3,h4 {
-	//font-family: $ff-bold;
-	//font-size: 18px;
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
 }

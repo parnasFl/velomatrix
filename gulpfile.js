@@ -55,18 +55,18 @@ gulp.task('scss',['headerscss'], function () {
 	.pipe(reload({stream: true}));
 });
 
-//SCSS Task
-gulp.task('headerscss', function () {
-	gulp.src('app/header.scss')
-	.pipe(sass({
-		includePaths: bourbon.includePaths
-	}).on('error', sass.logError))
-	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleanCSS())
-	.pipe(gulp.dest('app'))
-	.pipe(reload({stream: true}));
-});
+// //SCSS Task
+// gulp.task('headerscss', function () {
+// 	gulp.src('app/header.scss')
+// 	.pipe(sass({
+// 		includePaths: bourbon.includePaths
+// 	}).on('error', sass.logError))
+// 	.pipe(rename({suffix: '.min', prefix : ''}))
+// 	.pipe(autoprefixer(['last 15 versions']))
+// 	.pipe(cleanCSS())
+// 	.pipe(gulp.dest('app'))
+// 	.pipe(reload({stream: true}));
+// });
 
 //Local browserSync Server
 gulp.task('server', ['pug'],function(){

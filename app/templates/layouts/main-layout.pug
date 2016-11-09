@@ -3,11 +3,12 @@ html(lang="ru-RU")
 	include ../common/head.pug
 	body
 		<!--[if lt IE 10 ]>
-		<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Обновите ваш браузер</a> чтобы воспользоваться всеми возможностями сайта.</p>
+		<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
 		<![endif]-->
 		.wrapper
 			//- Header
 			include ../common/header
+			include ../common/nav
 			//- all other repeating content
 			//- Variable content
 			block content
@@ -15,18 +16,4 @@ html(lang="ru-RU")
 			include ../common/footer
 
 		block scripts
-
-		<!-- build:js js/vendor.min.js -->
-
-		<!-- bower:js -->
-		<!-- endbower -->
-		
-		<!-- endbuild -->
-
-			//- Optimized loading JS Start
-		script.
-			var scr = {"scripts":[
-			//{"src" : "js/libs.min.js", "async" : false},
-			{"src" : "js/common.js", "async" : false}
-			]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
-		//- Optimized loading JS End
+			include ../common/scripts

@@ -1,23 +1,23 @@
 // Core variables and mixins
-@import "vars-project";
-@import "mixins-project";
+@import "_vars-project";
+@import "_mixins-project";
 @import "bourbon";
 
 
 // Reset and dependencies
-@import "base/inormalize";
+@import "base/_inormalize";
 
 // Core CSS
-@import "base/scaffolding-project";
+@import "base/_scaffolding-project";
 
 //Components
 //@import "components/font-awesome";
-@import "components/buttons";
+@import "components/_buttons";
 
 
 
 //Project blocks
-
+@import "blocks/_top-bar";
 
 //Customized vendor less/css style
 //@import "vendor/bxslider";
