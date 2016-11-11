@@ -1,0 +1,150 @@
+/* Search Block Styles*/
+.page-search__wrapper {
+	position: relative;
+}
+
+.search {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+
+.search__input {
+	width: 100%;
+	display: block;
+	outline: none;
+	border-radius: 3px;
+	border: 2px solid $red-base;
+	padding-top: 13px;
+	padding-bottom: 11px;
+	padding-left: 10px;
+	padding-right: 40px;
+
+	&::-webkit-input-placeholder {
+		color: #999;
+		font-family: $ff-regular;
+		font-weight: 400;
+	}
+
+	&::-moz-placeholder {
+		color: #999;
+		font-family: $ff-regular;
+		font-weight: 400;
+	}
+
+	&:-ms-input-placeholder {
+		color: #999;
+		font-family: $ff-regular;
+		font-weight: 400;
+	}
+}
+
+.search__btn {
+	position: absolute;
+	border: 0;
+	background-color: transparent;
+	right: 0;
+	top: 50%;
+	right: 10px;
+	margin-top: -8px;
+	line-height: 1;
+	&:active, &:focus {
+		outline: 0;
+		outline: none;
+	}
+}
+
+.submit-icon {
+	display: block;
+}
+
+.submit-text {
+	@include link-text-indent;
+}
+
+
+@media (max-width: 767px) {
+
+	.page-search {
+		border-bottom: 1px solid $bd-grey;
+		margin-top: 10px;
+		display: none;
+	}
+
+	.page-search__wrapper {
+		margin-bottom: 10px;
+	}
+	
+	.search {
+		width: 84%;
+		margin-left: 3.125%;
+	}
+
+	.search__delete {
+		display: inline-block;
+		vertical-align: middle;
+		width: 13px;
+		height: 13px;
+		position: relative;
+		margin-left: 14px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 2px;
+			height: 13px;
+			background-color: #000;
+			transform: rotate(45deg);
+			left: 0px;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 2px;
+			height: 13px;
+			background-color: #000;
+			transform: rotate(-45deg);
+			left: 0;
+		}
+	}
+
+	.search__delete-text {
+		@include link-text-indent;
+	}
+}
+
+
+@media (max-width: 1023px) {
+	.search {
+		width: 310px;
+	}
+}//@media (max-width: 1023px) 
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	
+	.search__delete{
+		display: none;
+	}
+
+	
+}//(min-width: 768px)
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+	.page-search {
+		width: 39.539899352983%;
+	}
+
+	.page-search__wrapper {
+		width: 100%;
+	}
+
+	.search {
+		width: 100%;
+	}
+}//(min-width: 1024px
+/* Search Block Styles End*/

@@ -17,8 +17,7 @@
   "dependencies": {
     "jquery": "^3.1.1",
     "magnific-popup": "Magnific-Popup#^1.1.0",
-    "qtip2": "^2.2.1",
-    "picturefill": "^3.0.2"
+    "qtip2": "^2.2.1"
   },
   "overrides": {
     "qtip2": {

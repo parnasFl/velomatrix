@@ -38,7 +38,7 @@
 
 @mixin container-fluid {
 	//width: auto;
-	width: 93.75%;
+	width: 100%;
 	margin: 0 auto;
 	//box-shadow: inset 0 0 3px yellow;
 
@@ -89,19 +89,87 @@
 
 //Placeholder
 
-@mixin placeholder($color: #000) {
-	&::-webkit-input-placeholder {
-		color: $color;
-	}
+// @mixin placeholder($color, $font, $weight) {
+// 	&::-webkit-input-placeholder {
+// 		color: $color;
+// 		font-family: $font;
+// 		font-weight: $weight;
+// 	}
 
-	&::-moz-placeholder {
-		color: $color;
-	}
+// 	&::-moz-placeholder {
+// 		color: $color;
+// 		font-family: $font;
+// 		font-weight: $weight;
+// 	}
 
-	&:-ms-input-placeholder {
-		color: $color;
-	}
-}
+// 	&:-ms-input-placeholder {
+// 		color: $color;
+// 		font-family: $font;
+// 		font-weight: $weight;
+// 	}
+// }
+
+/*Buttons*/
+// @mixin btn-simple {
+// 	//width: auto;
+// 	display: inline-block;
+// 	//height: 55px;
+// 	//line-height: 55px;
+// 	color: #fff;
+// 	font-family: $ff-regular;
+// 	font-weight: 900;
+// 	font-size: 12px;
+// 	padding-top: 16px;
+// 	padding-bottom: 16px;
+// 	padding-left: 15px;
+// 	padding-right: 15px;
+// 	background-color: #ed0000;
+// 	//border: 3px solid #fff;
+// 	border-radius: 3px;
+// 	//border-radius: 50px;
+// 	-webkit-transition: all .3s;
+// 	-moz-transition: all .3s;
+// 	-ms-transition: all .3s;
+// 	-o-transition: all .3s;
+// 	transition: all .3s;
+// 	text-align: center;
+// 	&:hover {
+// 		//border-color: #fff;
+// 		background-color: #ff552d;
+// 	}
+
+	
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Mixins in DEV
 

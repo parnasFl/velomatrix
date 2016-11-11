@@ -17,7 +17,18 @@
 
 
 //Project blocks
-@import "blocks/_top-bar";
+//@import "blocks/_main";
+@import "blocks/_header-bar";
+@import "blocks/_general-styles";
+@import "blocks/_cart";
+@import "blocks/_logo";
+@import "blocks/_search";
+@import "blocks/_phone";
+@import "blocks/_config";
+@import "blocks/_nav-bar";
+//@import "blocks/_main-slider";
+//@import "blocks/_cats";
 
 //Customized vendor less/css style
-//@import "vendor/bxslider";
+//@import "vendor/_slick-theme";
+//@import "vendor/_slick";

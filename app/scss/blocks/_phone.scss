@@ -1,0 +1,78 @@
+/* Phone Block Styles*/
+.page-support {
+	text-align: right;
+}
+
+.page-support__phone {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.page-support__working-hours {
+	font-size: 12px;
+	font-weight: 400;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+.page-support__callback-btn {
+	display: inline-block;
+	font-size: 12px;
+	background-color: #e5e5e5;
+	border-radius: 50px;
+	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+	.page-support {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		border-bottom: 1px solid $bd-grey;
+		display: none;
+	}
+	
+	.page-support__working-hours {
+		margin-bottom: 10px;
+	}
+
+	.page-support__callback-btn {
+		margin-bottom: 10px;
+	}
+}
+
+
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	
+}//(min-width: 768px)
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+	.page-support__phone {
+		font-size: 20px;
+	}
+
+	.page-support__working-hours {
+		font-size: 13px;
+		font-weight: 400;
+		color: #666;
+
+	}
+}//(min-width: 1024px
+
+
+
+/* Phone Block Styles End*/

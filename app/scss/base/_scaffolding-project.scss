@@ -25,27 +25,44 @@ $body-bg: #fff;
 
 // Body reset
 html {
-	font-size: 16px;
+	font-size: 10px;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
 	font-family: $ff-regular;
 	font-size: $font-size-base;
+	//font-size: 62.5%;
 	line-height: $line-height-base;
 	-webkit-font-smoothing: antialiased;
 	color: $text-color;
 	background-color: $body-bg;
+	min-width: 320px;
 }
 
 .wrapper {
+	display: flex;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.main-content {
+	width: auto;
 	min-height: 100%;
 	position: relative;
 	overflow: hidden;
 	//min-width: 320px;
+	@media (min-width:768px) {
+		width: auto;
+		min-width: 718px;
+	}
+
+	@media (min-width:1024px) {
+		width: 1341px;
+	}
 }
 
-.wrapper:after {
+.main-content:after {
 	content: "";
 	display: none;
 	//height: $footer-height;
@@ -57,6 +74,27 @@ body {
 		min-height: $footer-height;
 	}
 }
+
+
+// .wrapper {
+// 	min-height: 100%;
+// 	position: relative;
+// 	overflow: hidden;
+// 	//min-width: 320px;
+// }
+
+// .wrapper:after {
+// 	content: "";
+// 	display: none;
+// 	//height: $footer-height;
+// 	min-height: $footer-height;
+// 	overflow: hidden;
+
+// 	@media #{$tablet-widths} {
+// 		display: block;
+// 		min-height: $footer-height;
+// 	}
+// }
 
 .visually-hidden {
 	position: absolute;
@@ -125,7 +163,6 @@ figure {
 }
 
 
-
 // iOS "clickable elements" fix for role="button"
 //
 // Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
@@ -139,3 +176,4 @@ figure {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
+

@@ -4,7 +4,7 @@ var gulp           = require('gulp'),
 		cleanCSS       = require('gulp-clean-css'),
 		pug            = require('gulp-pug'),
 		browserSync    = require('browser-sync'),
-		//concat         = require('gulp-concat'),
+		concat         = require('gulp-concat'),
 		del            = require('del'),
 		rename         = require('gulp-rename'),
 		imagemin       = require('gulp-imagemin'),
@@ -33,8 +33,7 @@ gulp.task('pug', function () {
 		}))
 		.pipe(wiredep({
 				//directory: './app/js/vendor',
-				ignorePath: /^(\.\.\/)*\.\./,
-				exclude: './app/js/vendor/picturefill/dist/picturefill.min.js'
+				ignorePath: /^(\.\.\/)*\.\./
 		}))
 		.on('error', log)
 		.pipe(prettify({indent_size: 2}))
@@ -43,7 +42,7 @@ gulp.task('pug', function () {
 });
 
 //SCSS Task
-gulp.task('scss',['headerscss'], function () {
+gulp.task('scss', function () {
 	gulp.src('app/scss/**/*.scss')
 	.pipe(sass({
 		includePaths: bourbon.includePaths
@@ -55,18 +54,17 @@ gulp.task('scss',['headerscss'], function () {
 	.pipe(reload({stream: true}));
 });
 
-// //SCSS Task
-// gulp.task('headerscss', function () {
-// 	gulp.src('app/header.scss')
-// 	.pipe(sass({
-// 		includePaths: bourbon.includePaths
-// 	}).on('error', sass.logError))
-// 	.pipe(rename({suffix: '.min', prefix : ''}))
-// 	.pipe(autoprefixer(['last 15 versions']))
-// 	.pipe(cleanCSS())
-// 	.pipe(gulp.dest('app'))
-// 	.pipe(reload({stream: true}));
-// });
+//Script Task for concat and minifying base jquery plgs
+gulp.task('libs', function() {
+	return gulp.src([
+		'app/js/libs/slick.min.js'
+		])
+		.pipe(concat('libs.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('app/js'))
+		//.pipe(notify('Done!'))
+		.pipe(browserSync.reload({stream: true}));
+});
 
 //Local browserSync Server
 gulp.task('server', ['pug'],function(){
@@ -144,6 +142,7 @@ gulp.task('css', function(){
 gulp.task('js', function(){
 	return gulp.src([
 			'app/js/common.js',
+			'app/js/lib.min.js',
 			'app/js/vendor/picturefill/dist/picturefill.min.js'
 			]).pipe(gulp.dest('dist/js'));
 });
@@ -165,7 +164,7 @@ gulp.task('build', ['clean', 'pug'], function() {
 //========================Watch and Default================
 
 //Watch Tasks
-gulp.task('watch',['pug', 'scss'], function () {
+gulp.task('watch',['pug', 'scss', 'libs'], function () {
 	gulp.watch('app/templates/**/*.pug', ['pug']);
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);

@@ -6,12 +6,14 @@ html(lang="ru-RU")
 		<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
 		<![endif]-->
 		.wrapper
-			//- Header
-			include ../common/header
-			include ../common/nav
-			//- all other repeating content
-			//- Variable content
-			block content
+			.config
+				include ../common/config
+			.main-content
+				include ../common/header
+				include ../common/nav
+				//- all other repeating content
+				//- Variable content
+				block content
 		block footer
 			include ../common/footer
 

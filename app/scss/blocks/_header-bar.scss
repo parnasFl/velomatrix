@@ -1,0 +1,384 @@
+.top-bar__toggle {
+	display: none;
+}
+
+.top-bar {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+}
+
+
+.top-bar__search-toggle {
+	display: none;
+}
+
+.top-bar__phone-toggle {
+	display: none;
+}
+
+.bottom-bar {
+	display: flex;
+}
+
+@media (max-width: 767px) {
+	.top-bar {
+		//margin-bottom: 10px;
+	}
+	
+	.top-bar__address {
+		display: none;
+	}
+
+	.bottom-bar {
+		flex-direction: column;
+	}
+
+	// .page-logo {
+	// 	position: absolute;
+	// 	left: 82px;
+	// 	right: 82px;
+	// 	top: 0;
+	// 	align-content: center;
+	// 	justify-content: center;
+	// }
+	// .page-logo__link {
+	// 	width: 100%;
+	// 	display: block;
+	// 	height: 41px;
+	// 	margin: auto;
+	// }
+
+	// .page-logo__img {
+	// 	position: absolute;
+	// 	width: 83px;
+	// 	height: 15px;
+	// 	left: 0;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	margin: auto;
+
+	// 	img, picture {
+	// 		display: block;
+	// 		max-width: 100%;
+	// 		height: auto;
+	// 	}
+	// }
+	// .page-logo__slogan {
+	// 	@include link-text-indent;
+	// }
+	
+	.top-bar__search-toggle {
+		display: flex;
+		position: absolute;
+		left: 41px;
+		width: 41px;
+		height: 41px;
+		border-right: 1px solid $bd-grey;
+	}
+
+	.top-bar__search-toggle-text {
+			@include link-text-indent;
+		}
+
+	.top-bar__search-toggle-icon {
+		width: 16px;
+		height: 16px;
+		margin: auto;
+	}
+
+	.top-bar__phone-toggle {
+		display: flex;
+		position: absolute;
+		right: 41px;
+		width: 41px;
+		height: 41px;
+		border-left: 1px solid $bd-grey;
+	}
+
+	.top-bar__phone-toggle-text {
+		@include link-text-indent;
+	}
+
+	.top-bar__phone-toggle-icon {
+		width: 16px;
+		height: 17px;
+		margin: auto;
+	}
+}
+
+
+@media (max-width: 1023px) {
+	.top-bar {
+		width: auto;
+		border-bottom: 1px solid $bd-grey;
+	}
+
+	.top-bar__address {
+		align-self: center;
+		color: #666;
+		font-size: 13px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 2px;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: #dfdfdf;
+		}
+	}
+	
+	.top-bar__toggle {
+		display: block;
+		width: 41px;
+		height: 41px;
+		background: url("../img/icon-hamburger.svg") center center no-repeat;
+		background-size: 19px 13px;
+		border-right: 1px solid $bd-grey;
+		//border-bottom: 1px solid $bd-grey;
+	}
+
+	.top-bar__toggle-text {
+		@include link-text-indent;
+	}
+
+	.top-bar__nav {
+		display: none;
+	}
+	
+	.page-search {
+		//order: 0;
+	}
+
+	.page-support {
+		//order:2;
+	}
+}//@media (max-width: 1023px) 
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	
+
+	.top-bar {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+	}
+
+	.bottom-bar {
+		//flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid $bd-grey;
+	}
+
+}
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+	.top-bar__toggle {
+		display: none;
+	}
+	.top-bar__search-toggle {
+		display: none;
+	}
+
+	.top-bar__phone-toggle {
+		display: none;
+	}
+
+	.top-bar {
+		padding-left: 2.237136465324%;
+		padding-right: 2.237136465324%;
+		padding-top: 25px;
+		padding-bottom: 20px;	
+		//align-content: center;
+		//outline: 1px solid aqua;
+		border-bottom: 1px solid $bd-grey;
+	}
+
+	.top-bar__address {
+		//width: 16.534867002157570%;
+		width: 17.434867%;
+		flex-grow: .3;
+		//flex-grow: 1;
+		font-size: 1.3rem;
+		color: #666;
+		padding-left: 25px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			background: url("../img/icon-gps.svg") 0 0 no-repeat;
+			left: 0;
+			top: 0;
+			width: 16px;
+			height: 20px;
+		}
+		//outline: 1px solid grey;
+		//display: flex;
+		//justify-content: space-between;
+		//align-content: center;
+	}
+	
+	.top-bar__address-icon {
+		//width: 16px;
+		//height: 20px;
+		//width: 6.9565217391%;
+		//display: inline-block;
+		//vertical-align: middle;
+	}
+
+	.top-bar__address-text {
+		border-bottom: 1px solid #dfdfdf;
+		//width: 86.95652173913%;
+		//margin-left: 6.086956521739%;
+		//display: inline-block;
+		vertical-align: middle;
+		word-wrap: break-word;
+	}
+
+	.top-bar__nav {
+		width: 48.885693745507%;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		flex-shrink: 1;
+		//outline: 1px solid green;
+		//flex-grow: 1;
+		//margin-left: 10%;
+
+	}
+
+	.top-bar__menu {
+		width: 83.823529411765%;
+		display: flex;
+		align-content: center;
+		//outline: 1px solid purple;
+
+		//display: inline-block;
+		//vertical-align: middle;
+	}
+	.top-bar__user {
+		//display: inline-block;
+		//vertical-align: middle;
+		//display: flex;
+		//align-content: center;
+		//outline: 1px solid blue;
+	}
+	.top-bar__menu-list {
+		display: flex;
+		//justify-content: space-betweet;
+		flex-wrap: wrap;
+		flex-grow: 1;
+		align-content: center;
+		font-weight: 400;
+	}
+	.top-bar__menu-item {
+		//align-self: center;
+		margin-right: 7.352941176471%;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.top-bar__menu-link {
+		color: #000;
+		font-size: 1.4rem;
+	}
+	.top-bar__menu-item--iconed {
+		position: relative;
+		&.top-bar__menu-item {
+			
+			padding-left: 4.411764705882%;
+			
+		}
+		.top-bar__menu-link {
+			color: #008dc1;
+			font-weight: 700;
+		}
+
+		.top-bar__menu-icon {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -7px;
+			// display: inline-block;
+			// padding-top: 15px;
+		}
+	}
+
+	.top-bar__user-link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		opacity: 0.23;
+		border: 2px solid #333;
+		border-radius: 20px;
+		background: url("../img/icon-user.svg") center center no-repeat;
+		background-size: 12px 12px;
+	}
+
+	.top-bar__user-icon {
+	
+	}
+
+	.top-bar__user-text {
+		@include link-text-indent;
+	}
+
+	.bottom-bar {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		justify-content: space-around;
+		align-content: center;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+
+}
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+
+}

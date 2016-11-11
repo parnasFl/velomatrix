@@ -1,0 +1,69 @@
+/* Config Panel Styles */
+
+
+@media (max-width: 767px) {
+	.config {
+		display: none;
+	}
+}
+
+
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	.config {
+
+		width: 50px;
+		outline: 1px solid red;
+		height: 100vh;
+	}
+}
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+	.config {
+		width: 3.594536304817%;
+	}
+}
+
+/* Config Panel Styles End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+
+}
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+
+}
