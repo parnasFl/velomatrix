@@ -5,6 +5,10 @@
 
 .main-slider {
 	margin-bottom: 10px;
+	background-color: #2a2e2f;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .main-slider__item {
@@ -16,6 +20,7 @@
 
 .category-item {
 	@include v-default-block;
+	position: relative;
 }
 
 .category-item__desc {
@@ -53,6 +58,10 @@
 .category-item__price {
 	font-weight: 700;
 }
+
+.category-item__label {
+		display: none;
+	}
 
 
 .category-item__footer {
@@ -101,9 +110,7 @@
 		}
 	}
 
-	.category-item__label {
-		display: none;
-	}
+	
 
 }
 
@@ -151,10 +158,117 @@
 
 	.category-item {
 		flex-basis: 329px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 18px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+
+	.category-item__desc {
+		flex-direction: column;
+		align-content: center;
+	}
+	
+	.category-item__desc-wrapper {
+		//position: absolute;
+		//top: 18px;
+		//left: 15px;
+		z-index: 1;
+	}
+
+	.category-item__title {
+		//position: static;
+	}
+
+	.category-item__count {
+		display: block;
+		font-size: 14px;
+		color: #999;
+		font-weight: bold;
+	}
+	
+	.category-item__price {
+		font-size: 14px;
+	}
+	
+	
+	.category-item__pic {
+		width: 90%;
+		margin: auto;
+		margin-bottom: 10px;
+		img {
+			display: table;
+			margin: auto;
+		}
 	}
 
 	.category-item__footer {
 		display: block;
+		margin-top: auto;
+	}
+	.category-item__brands {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.category-item__brands-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: center;
+	}
+
+	.category-item__brands-item {
+		flex-basis: 80px;
+	}
+	
+	.category-item__filter {
+		width: 100%;
+		margin: 0 auto;
+		margin-top: auto;
+	}
+
+	.category-item__filter-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.category-item__filter-item {
+		margin-right: 40px;
+		position: relative;
+		&:last-child {
+			margin-right: 0;
+			&:after {
+				display: none;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			border: 1px solid #cacaca;
+			background-color: #fff;
+			right: -22px;
+			top: 50%;
+			margin-top: -2px;
+			border-radius: 50%;
+		}
+	}
+
+	.category-item__filter-link {
+		font-size: 12px;
+		color: #666;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -163,7 +277,106 @@
 /*Desktop Media queries*/
 
 @media (min-width: 1024px) {
+	
+	.slide-categories {
+		padding-top: 20px;
+		//padding-left: 2.237136465324%;
+		padding-left: 2.322340919647%;
+		padding-right: 2.322340919647%;
+	}
+	.main-slider {
+		//flex-basis: 56.524981357196%;
+		flex-basis: 58.677813903081%;
+		margin-bottom: 20px;
+	}
 
+	.category-item {
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		&.category-item--slider {
+			flex-basis: 38.470469850608%;
+		}
+		flex-basis: 38.396036538164%;
+
+		&.category-item--narrow {
+			flex-basis: 18.269081901223%;
+			overflow: hidden;
+			.category-item__pic {
+				width: 225%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		&.category-item--wide {
+			flex-basis: 48.459513856634%;
+		}
+	}
+	
+	.category-item__label {
+		display: block;
+		position: absolute; right: 20px; top: 30px;
+		z-index: 2;
+		font-size: 10px;
+		color: #fff;
+		font-weight: 700;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-transform: uppercase;
+		&:after {
+			top: 15px;
+			right:5px;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(83, 146, 0, 0);
+			border-width: 11px;
+			margin-left: -11px;
+			transform: rotate(135deg);
+		}
+	}
+
+	&.category-item__label--green {
+		background-color: #6cbf00;
+		&:after {
+			border-top-color: #539200;
+		}
+	}
+
+	&.category-item__label--red {
+		background-color: #ed0000;
+		&:after {
+			border-top-color: #af0000;
+		}
+	}
+
+	&.category-item__label--blue {
+		background-color: #12449a;
+		&:after {
+			border-top-color: #072455;
+		}
+	}
+
+	&.category-item__label--purple {
+		background-color: #7200ff;
+		&:after {
+			border-top-color: #47009e;
+		}
+	}
+
+
+	.category-item__footer {
+		display: block;
+		margin-top: 0;
+	}
 }
 
 /* Slider and Categories  End*/

@@ -42,7 +42,7 @@ body {
 
 .wrapper {
 	display: flex;
-	max-width: 1400px;
+	max-width: 1341px;
 	margin: 0 auto;
 }
 
@@ -109,7 +109,7 @@ body {
 }
 
 
-footer {
+footer.page-footer {
 	min-height: $footer-height;
 	width: 100%;
 	margin-top: -$footer-height!important;
