@@ -54,7 +54,7 @@ body {
 	//min-width: 320px;
 	@media (min-width:768px) {
 		width: auto;
-		min-width: 718px;
+		width: 718px;
 	}
 
 	@media (min-width:1024px) {
@@ -131,6 +131,7 @@ textarea {
 img {
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 
 
@@ -138,7 +139,7 @@ img {
 
 a {
 	font-family: $ff-regular;
-	// color: $link-color;
+	color: $link-color;
 	text-decoration: none;
 	transition: all .3s;
 

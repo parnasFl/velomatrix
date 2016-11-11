@@ -22,8 +22,10 @@
 		bottom: 0;
 		text-align: center;
 		transform: translateY(-50%);
-		//margin: auto;
 	}
+
+	
+
 	.config-toggle {
 		width: 41px;
 		height: 40px;
@@ -46,19 +48,25 @@
 
 /* Only Tablet styles */
 @media (max-width: 1023px) {
-	.main-nav {
-		//border-bottom: 1px solid $bd-grey;
-
-	}
-
 	.catalog-button {
 		display: block;
 		font-weight: 700;
 		font-size: 14px;
 		text-transform: uppercase;
 		color: #000;
-		
-		//margin: auto;
+	}
+
+	.catalog-button__icon {
+		display: inline-block;
+		vertical-align: middle;
+		img {
+			display: inline-block;
+		}
+	}
+
+	.catalog-button__text {
+		display: inline-block;
+		vertical-align: middle;
 	}
 	
 	.main-nav__list {
@@ -101,8 +109,6 @@
 	}
 
 	.main-nav__list {
-		//display: flex;
-		//justify-content: space-between;
 		display: block;
 		@include justified-menu;
 	}
@@ -124,7 +130,6 @@
 		display: none;
 		
 		border-top: 3px solid $red-base;
-		//display: flex;
 	}
 
 	.main-nav__dropdown-list {

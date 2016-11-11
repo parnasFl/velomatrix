@@ -17,7 +17,7 @@
 
 
 //Project blocks
-//@import "blocks/_main";
+@import "blocks/_main";
 @import "blocks/_header-bar";
 @import "blocks/_general-styles";
 @import "blocks/_cart";
@@ -26,8 +26,7 @@
 @import "blocks/_phone";
 @import "blocks/_config";
 @import "blocks/_nav-bar";
-//@import "blocks/_main-slider";
-//@import "blocks/_cats";
+@import "blocks/_categories-slider";
 
 //Customized vendor less/css style
 //@import "vendor/_slick-theme";

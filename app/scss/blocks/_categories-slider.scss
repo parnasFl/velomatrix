@@ -1,0 +1,172 @@
+/* Slider and Categories Styles */
+.slide-categories {
+
+}
+
+.main-slider {
+	margin-bottom: 10px;
+}
+
+.main-slider__item {
+	
+	&:nth-child(n+2) {
+		display: none;
+	}
+}//.main-slider__item
+
+.category-item {
+	@include v-default-block;
+}
+
+.category-item__desc {
+	display: flex;
+
+	&:hover {
+		.category-item__title-icon {
+			background: url("../img/icon-cat-arrow-hover.png") 0 0 no-repeat;
+			background-size: 19px 19px;
+		}
+	}
+}
+
+.category-item__title {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 900;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.category-item__title-icon {
+	display: inline-block;
+	vertical-align: middle;
+	background: url("../img/icon-cat-arrow.png") 0 0 no-repeat;
+	background-size: 19px 19px;
+	width: 19px;
+	height: 19px;
+}
+
+.category-item__count {
+	display: none;
+}
+
+.category-item__price {
+	font-weight: 700;
+}
+
+
+.category-item__footer {
+	display: none;
+}
+/* Only Mobile Styles */
+@media (max-width: 767px) {
+	.slide-categories {
+		margin-bottom: 25px;
+	}
+
+	.category-item {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.category-item__desc {
+		align-content: center;
+		padding: 10px;
+	}
+	
+	.category-item__desc-wrapper {
+		flex-grow: 1;
+	}
+
+	.category-item__price {
+		font-size: 14px;
+	}
+
+	.category-item__pic {
+		width: 80px;
+		height: 80px;
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+
+	.category-item__label {
+		display: none;
+	}
+
+}
+
+/* Only Mobile&Tablet styles */
+@media (max-width: 1023px) {
+	
+
+	// .main-slider {
+	// 	width: 100%;	
+	// 	margin-bottom: 10px;
+	// }
+
+	// .main-slider__item {
+	// 	width: auto;
+	// 	img {
+	// 		//min-width: 100%;
+	// 	}
+	// }
+
+}//@media (max-width: 1023px) 
+
+// Only Tablet Styles
+@media (min-width: 768px) and (max-width: 1023px) {
+	.slide-categories {
+		width: 718px;
+		margin: 0 auto;
+	}
+}
+
+/*Tablet Media queries*/
+
+@media (min-width: 768px) {
+	.main-slider {
+		margin-bottom: 50px;
+	}
+
+	.slide-categories {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		justify-content: space-between;
+	}
+
+	.category-item {
+		flex-basis: 329px;
+	}
+
+	.category-item__footer {
+		display: block;
+	}
+}
+
+
+
+/*Desktop Media queries*/
+
+@media (min-width: 1024px) {
+
+}
+
+/* Slider and Categories  End*/
+
+
+
