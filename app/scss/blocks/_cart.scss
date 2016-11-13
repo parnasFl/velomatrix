@@ -84,11 +84,13 @@
 	}
 
 	.cart__btn {
-		//@include btn-simple;
+		@include btn--red;
+		@include btn--round;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		padding-left: 20px;
 		padding-right: 20px;
+		text-transform: normal;
 	}
 
 	.cart__btn-pre-icon {

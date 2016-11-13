@@ -17,10 +17,9 @@
 /*Tablet Media queries*/
 @media (min-width: 768px) {
 	.config {
-
-		width: 50px;
+		flex-basis: 50px;
 		outline: 1px solid red;
-		height: 100vh;
+		min-height: 100%;
 	}
 }
 
@@ -29,7 +28,7 @@
 /*Desktop Media queries*/
 @media (min-width: 1024px) {
 	.config {
-		width: 3.594536304817%;
+		flex-basis: 3.594536304817%;
 	}
 }
 

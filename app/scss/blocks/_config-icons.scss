@@ -1,0 +1,91 @@
+/* config links Styles */
+.config-links__list {
+
+}
+
+.config-links__item {
+	display: inline-block;
+	vertical-align: top;
+	width: 60px;
+	text-align: center;
+}
+
+.config-links__link {
+	display: block;
+	&:hover {
+		.config-links__icon {
+			border-color: #ed0000;
+			border-width: 2px;
+		}
+	}
+}
+
+.config-links__icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	margin: auto;
+	margin-bottom: 10px;
+	img {
+		position: absolute;
+		top: 0;bottom: 0;right: 0;left: 0;
+		margin: auto;
+	}
+}
+
+/* Only Mobile Styles */
+@media (max-width: 767px) {
+	.config-links__list {
+		margin-right: -10px;
+	}
+
+	.config-links__item {
+		margin-right: 10px;
+	}
+
+	.config-links__link {
+
+	}
+
+	.config-links__text {
+		display: none;
+	}
+}
+
+/* Only Mobile&Tablet styles */
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* Only Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+	
+}
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	.config-links__text {
+		display: block;
+		font-family: Arial, sans-serif;
+		font-size: 10px;
+		color:#666;
+		font-weight: normal;
+		line-height: .8;
+	}
+	
+}
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+	
+}
+
+/* config icons  End*/
+
+
+

@@ -1,0 +1,184 @@
+/* bicycle Styles */
+.bic {
+
+}
+
+.bic-item {
+
+}
+.bic-item__descr-title-link {
+	margin-bottom: 15px;
+}
+
+.bic-item__descr-title {
+	font-weight: 900;
+	text-transform: uppercase;
+	filter: drop-shadow(4px 4px 0 #efefef);
+}
+
+.bic-item__descr-text {
+	p {
+		word-wrap: break-word;
+	}
+}
+
+
+/* Only Mobile Styles */
+@media (max-width: 767px) {
+	
+	.bic {
+		//width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.bic-item__descr-title {
+		font-size: 20px;
+	}
+	
+}
+
+/* Only Mobile&Tablet styles */
+@media (max-width: 1023px) {
+	.bic-item__descr-title-link {
+		&:hover {
+			.bic-item__descr-title-icon {
+			background: url("../img/icon-cat-arrow-hover.png") 0 0 no-repeat;
+			background-size: 19px 19px;
+			}
+		}
+	}
+
+	.bic-item__descr-title {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.bic-item__descr-title-icon {
+		display: inline-block;
+		vertical-align: middle;
+		background: url("../img/icon-cat-arrow.png") 0 0 no-repeat;
+		background-size: 19px 19px;
+		width: 19px;
+		height: 19px;
+		margin-left: 5px;
+	}
+
+	.bic-item__descr-image {
+		display: none;
+	}
+
+	.bic-item__descr-text {
+		margin-bottom: 25px;
+	}
+	
+	.bic-item__config-links {
+		margin-bottom: 20px;
+	}
+	
+	.bic-item__cat-link {
+		display: none;
+	}
+}//@media (max-width: 1023px) 
+
+
+/* Only Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.bic {
+		width: 718px;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	.bic-item__descr-title {
+		font-size: 40px;
+		filter: drop-shadow(8px 8px 0 #efefef);
+	}
+	
+}
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+	.bic {
+		@include clearfix;
+		margin-bottom: 70px;
+	}
+
+	.bic-item {
+		padding-left: 2.322340919647%;
+		padding-right: 2.322340919647%;
+		font-size: 0;
+		position: relative;
+		
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			left: 0; right: 0;
+			height: 1px;
+			opacity: 0.1;
+			background-color: black;
+		}
+
+		&:before {
+			//top: 35px;
+		}
+		
+		&:after {
+			//bottom: 35px;
+		}
+	}
+
+	.bic-item__descr-wrapper {
+		width: 76.457217080695%;
+		display: inline-block;
+		vertical-align: middle;
+		@include clearfix;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		
+	}
+
+	.bic-item__descr-top {
+		width: 44.595455510724%;
+		float: left;
+		position: relative;
+	}
+
+	.bic-item__descr-title-link {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.bic-item__descr-image {
+		position: absolute;
+		left: 0;
+		top: 40px;
+	}
+
+	.bic-item__descr-body {
+		width: 55.404544489276%;
+		float: right;
+		padding-left: 6.370779358675%;
+		padding-right: 3.185389679337%;
+		//padding-top: 30px;
+		//padding-bottom: 30px;
+	}
+
+	.bic-item__descr-text {
+		font-size: 16px;
+		margin-bottom: 30px;
+	}
+
+	.bic-item__descr-title {
+		font-size: 50px;
+	}
+}
+
+/* bicycles  End*/
+

@@ -1,31 +1,51 @@
 /*Buttons*/
-@media (min-width: 1024px) {
-	.btn {
+.btn {
 		display: inline-block;
-		color: #fff;
 		font-family: $ff-regular;
 		font-weight: 900;
 		font-size: 12px;
-		padding-top: 16px;
-		padding-bottom: 16px;
+		padding-top: 14px;
+		padding-bottom: 15px;
 		padding-left: 15px;
 		padding-right: 15px;
-		background-color: #ed0000;
-		//border: 3px solid #fff;
 		border-radius: 3px;
-		//border-radius: 50px;
-		-webkit-transition: all .3s;
-		-moz-transition: all .3s;
-		-ms-transition: all .3s;
-		-o-transition: all .3s;
 		transition: all .3s;
 		text-align: center;
-		&:hover {
-			background-color: #ff552d;
+		text-transform: uppercase;
+		
+
+		.btn--red {
+			color: #fff;
+			background-color: #ed0000;
+			&:hover {
+				background-color: #ff552d;
+			}
 		}
 
 		&.btn--round {
 			border-radius: 50px;
 		}
+
+		.btn--red-round {
+			color: #fff;
+			background-color: #ed0000;
+			border-radius: 50px;
+		}
+
+		&.btn--transparent {
+			border: 2px solid #e5e5e5;
+			color: #7b7b7b;
+		}
+
+		&.btn--transparent-round {
+			border: 2px solid #e5e5e5;
+			color: #7b7b7b;
+			border-radius: 50px;
+
+			&:hover {
+				border-color: #ed0000;
+				color: #ed0000;
+			}
+		}
+
 	}
-}

@@ -116,38 +116,35 @@
 // }
 
 /*Buttons*/
-// @mixin btn-simple {
-// 	//width: auto;
-// 	display: inline-block;
-// 	//height: 55px;
-// 	//line-height: 55px;
-// 	color: #fff;
-// 	font-family: $ff-regular;
-// 	font-weight: 900;
-// 	font-size: 12px;
-// 	padding-top: 16px;
-// 	padding-bottom: 16px;
-// 	padding-left: 15px;
-// 	padding-right: 15px;
-// 	background-color: #ed0000;
-// 	//border: 3px solid #fff;
-// 	border-radius: 3px;
-// 	//border-radius: 50px;
-// 	-webkit-transition: all .3s;
-// 	-moz-transition: all .3s;
-// 	-ms-transition: all .3s;
-// 	-o-transition: all .3s;
-// 	transition: all .3s;
-// 	text-align: center;
-// 	&:hover {
-// 		//border-color: #fff;
-// 		background-color: #ff552d;
-// 	}
+@mixin btn--red {
+	display: inline-block;
+	color: #fff;
+	font-family: $ff-regular;
+	font-weight: 900;
+	font-size: 12px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #ed0000;
+	border-radius: 3px;
+	transition: all .3s;
+	text-align: center;
+	text-transform: uppercase;
+	&:hover {
+		background-color: #ff552d;
+	}
+}
 
-	
-// }
+@mixin btn--round {
+	border-radius: 50px;
+}
 
-
+@mixin btn--transparent {
+	border: 2px solid #e5e5e5;
+	color: #7b7b7b;
+	text-transform: uppercase;
+}
 
 
 
