@@ -19,6 +19,7 @@
 	.config {
 		flex-basis: 50px;
 		outline: 1px solid red;
+		outline: 1px solid $bd-grey;
 		min-height: 100%;
 	}
 }

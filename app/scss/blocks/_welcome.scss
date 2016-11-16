@@ -1,0 +1,75 @@
+/* workshop Styles */
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+
+
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+.welcome {
+	display: none;
+}
+
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============O nly Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+
+
+	
+	
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.welcome {
+		padding-left: 2.322340919647%;
+		padding-right: 2.322340919647%;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border-top: 1px solid $bd-grey;
+
+
+	}
+	.welcome__title {
+		font-size: 12px;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+	
+	.welcome__text {
+		font-size: 12px;
+
+		a {
+			display: inline;
+			color: #6699cc;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+/* workshop  End*/
+

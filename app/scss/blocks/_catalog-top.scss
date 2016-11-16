@@ -1,0 +1,128 @@
+/* catalog-top Styles */
+
+
+
+.catalog-top__image {
+
+}
+
+.breadcrumb {
+	margin-bottom: 20px;
+}
+
+.breadcrumb__item {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 26px;
+	a {
+		display: block;
+	}
+	&:not(:last-child) {
+		&::after {
+			@include pseudo;
+			top: 50%;
+			margin-top: -4px;
+			right: -17px;
+			width: 5px;
+			height: 8px;
+			background-image: url('../img/icon-breadcrumb.svg');
+			background-size: 5px 8px;
+		}
+	}
+}
+
+.breadcrumb__item a {
+	color: #999;
+	font-size: 12px;
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	
+	.breadcrumb {
+		width: 100%;
+		border-top: 1px solid $bd-grey;
+		border-bottom: 1px solid $bd-grey;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 4px;
+		padding-bottom: 7px;
+	}
+
+	.catalog-top {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.catalog-top__image {
+		
+	}
+
+
+
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.catalog-top {
+		width: 718px;
+		margin: 0 auto;
+	}
+	.breadcrumb {
+		margin-bottom: 20px;
+		width: 718px;
+		margin: 0 auto;
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+.catalog-top {
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.breadcrumb {
+	
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.catalog-top {
+		padding-left: 2.237136465324%;
+		padding-right: 2.237136465324%;
+	}
+
+	.breadcrumb {
+		padding-left: 2.237136465324%;
+		padding-right: 2.237136465324%;
+	}
+}
+
+
+/* catalog-top  End*/
+

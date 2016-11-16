@@ -26,11 +26,29 @@
 @import "blocks/_phone";
 @import "blocks/_config";
 @import "blocks/_nav-bar";
+
+/* Index Page Styles */
+
 @import "blocks/_categories-slider";
 @import "blocks/_popular";
 @import "blocks/_bicycles";
 @import "blocks/_config-icons";
 @import "blocks/_sales-leader";
+@import "blocks/_home-articles";
+@import "blocks/_workshop";
+@import "blocks/_welcome";
+@import "blocks/_advantages";
+
+/* Catalog Page Styles */
+
+@import "blocks/_catalog-top";
+@import "blocks/_catalog-menu";
+@import "blocks/_catalog-descr";
+@import "blocks/_catalog-list";
+@import "blocks/_catalog-bottom";
+
+
+
 
 //Customized vendor less/css style
 //@import "vendor/_slick-theme";

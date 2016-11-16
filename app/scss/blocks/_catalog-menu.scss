@@ -1,0 +1,214 @@
+/* catalog-menu Styles */
+.catalog-menu {
+	margin-bottom: 20px;
+}
+
+.catalog-menu__title {
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.catalog-menu__name {
+	text-transform: uppercase;
+
+	&:hover {
+		color: #6699cc;
+	}
+}
+
+.catalog-menu__text {
+	font-size: 13px;
+	color: #666;
+}
+
+.catalog-menu__image {
+	position: relative;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+	
+	img {
+		max-width: 100%;
+		@include img-center;
+	}
+}
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.catalog-menu {
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 100%;
+	}
+
+	.catalog-menu__header {
+		margin-bottom: 10px;
+	}
+
+	.catalog-menu__title {
+		font-size: 20px;
+	}
+
+	.catalog-menu__item {
+		width: auto;
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		padding: 10px;
+		min-height: 70px;
+		position: relative;
+		margin-bottom: 10px;
+		@include clearfix;
+	}
+
+
+
+	.catalog-menu__content {
+		float: left;
+	}
+
+	.catalog-menu__name {
+		font-size: 16px;
+		padding-top: 5px;
+	}
+
+	.catalog-menu__image {
+		float: right;
+		width: 50px;
+		height: 50px;
+	}
+
+
+}
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.catalog-menu {
+		width: 718px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.catalog-menu__header {
+		margin-bottom: 30px;
+	}
+
+	.catalog-menu__title {
+		font-size: 30px;
+		filter: drop-shadow(8px 8px 0 #efefef);
+	}
+
+	.catalog-menu__list {
+		font-size: 0;
+		margin-right: -30px;
+	}
+
+	.catalog-menu__li {
+
+	}
+
+	.catalog-menu__item {
+		display: inline-block;
+		width: 147px;
+		text-align: center;
+		margin-right: 30px;
+		margin-bottom: 20px;
+	}
+
+	.catalog-menu__image {
+		width: 110px;
+		height: 60px;
+	}
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	
+	.catalog-menu__item {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.catalog-menu__name {
+		font-weight: 300;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	.catalog-menu__text {
+		span {
+			font-weight: 700;
+			margin-bottom: 5px;
+		}
+		span, i {
+			display: block;
+		}
+	}
+
+	.catalog-menu__image {
+		margin: 0 auto;
+		&:hover {
+			transform: scale(1.1);
+		}
+		margin-bottom: 20px;
+	}
+
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.catalog-menu {
+		//padding-left: 2.322340919647%;
+		//padding-right: 2.322340919647%;
+	}
+
+	.catalog-menu__header {
+		margin-bottom: 50px;
+	}
+
+	.catalog-menu__title {
+		font-size: 50px;
+		margin-left: 2.237136465324%;
+	}
+
+	.catalog-menu__list {
+		@include clearfix;
+	}
+
+	.catalog-menu__li {
+
+	}
+
+	.catalog-menu__item {
+		float: left;
+		width: 20%;
+		padding-left: 2.237136465324%;
+		padding-right: 2.237136465324em;
+	}
+
+	.catalog-menu__name {
+		font-size: 20px;
+	}
+
+	.catalog-menu__image {
+		width: 100%;
+		height: 127px;
+	}
+
+}
+
+
+/* catalog-menu  End*/
+

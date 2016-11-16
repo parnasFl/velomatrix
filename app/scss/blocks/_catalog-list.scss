@@ -1,0 +1,121 @@
+/* catalog-list Styles */
+.catalog-list__filter {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 14px;
+	border-bottom: 1px solid $bd-grey;
+	@media (min-width: 1024px) {
+		font-size: 15px;
+	}
+}
+
+.catalog-list__filter-result {
+	font-weight: 700;
+}
+
+.catalog-list__filter-settings {
+	position: relative;
+	padding-left: 22px;
+	padding-right: 20px;
+	&:before,
+	&:after {
+		@include pseudo;
+	}
+
+	&:before {
+		background-image: url("../img/icon-sort.svg");
+		background-size: 10px 13px;
+		width: 10px;
+		height: 13px;
+		top: 50%;
+		margin-top: -7px;
+		left: 0;
+	}
+
+	&:after {
+		background-image: url("../img/icon-down.svg");
+		background-size: 8px 5px;
+		width: 8px;
+		height: 5px;
+		top: 50%;
+		margin-top: -2px;
+		right: 0;
+	}
+
+	option {
+		font-weight: 700;
+		color: $blue-link;
+	}
+}
+
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.catalog-list__filter-result {
+		margin: 0 auto;
+		margin-bottom: 15px;
+		display: table;
+	}
+
+	.catalog-list__filter-settings {
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.catalog-list__filter {
+		display: flex;
+		justify-content: center;
+		//margin-left: auto;
+		//margin-right: auto;
+	}
+
+	.catalog-list__inner {
+		width: 718px;
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.catalog-list__inner {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.catalog-list__filter-settings {
+		order: -1;
+	}
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.catalog-list__filter {
+
+	}
+}
+
+
+/* catalog-list  End*/
+

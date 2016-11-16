@@ -1,0 +1,294 @@
+/* Advantages Styles */
+.advantages {
+
+}
+
+.advantages__item {
+
+}
+
+.advantages__item-icon {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	img {
+		position: absolute;
+		left: 0;right: 0;top: 0;bottom: 0;
+		margin: auto;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: -13%;
+		top: -17%;
+		width: 30px;
+		height: 30px;
+		background-color: $bd-grey;
+		border-radius: 50%;
+	}
+	&.shipping {
+		&::before {
+			left: -13%;
+			top: -17%;
+			background-color: #ffa4e2;
+		}
+	}
+	&.econom {
+		&::before {
+			left: -13%;
+			top: -17%;
+			background-color: #73dedd;
+		}
+	}
+	&.guarantee {
+		&::before {
+			left: -13%;
+			top: -17%;
+			background-color: #ffa4a4;
+		}
+	}
+	&.service {
+		&::before {
+			left: -13%;
+			top: -17%;
+			background-color: #e5ff54;
+		}
+	}
+
+}
+
+.advantages__item-content {
+	text-align: left;
+}
+
+.advantages__item-title {
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.advantages__item-text {
+	font-size: 12px;
+	color: #333333;
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+
+	.advantages {
+
+	}
+
+	.advantages__item {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-bottom: 1px solid $bd-grey;
+		@include clearfix;
+
+		&:first-child {
+			border-top: 1px solid $bd-grey;
+		}
+
+	}
+
+	.advantages__item-icon {
+		float: left;
+	}
+
+	.advantages__item-content {
+		width: 200px;
+		float: left;
+		margin-left: 20px;
+	}
+
+	.advantages__item-title {
+
+	}
+
+	.advantages__item-text {
+
+	}
+
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+	.advantages {
+		
+	}
+
+	.advantages__item {
+
+	}
+
+	.advantages__item-icon {
+
+	}
+
+	.advantages__item-content {
+
+	}
+
+	.advantages__item-title {
+		font-size: 14px;
+	}
+
+	.advantages__item-text {
+
+	}
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.advantages {
+		width: 718px;
+		margin: 0 auto;
+		
+		border-left: 1px solid $bd-grey;
+		border-right: 1px solid $bd-grey;
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		
+	}
+
+	.advantages__list {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.advantages__item {
+		width: 169px;
+		padding-top: 20px;
+		padding-bottom: 13px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:not(:first-child) {
+			padding-left: 15px;
+		}
+
+		&:not(:last-child) {
+			border-right: 1px solid $bd-grey;
+			padding-right: 15px;
+		}
+	}
+
+	.advantages__item-icon {
+		margin-bottom: 20px;
+	}
+
+	.advantages__item-content {
+		text-align: center;
+	}
+
+	.advantages__item-title {
+
+	}
+
+	.advantages__item-text {
+
+	}
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+
+	.advantages {
+		border-top: 1px solid $bd-grey;
+		border-bottom: 1px solid $bd-grey;
+	}
+
+	.advantages__item {
+
+	}
+
+	.advantages__item-icon {
+
+	}
+
+	.advantages__item-content {
+
+	}
+
+	.advantages__item-title {
+
+	}
+
+	.advantages__item-text {
+
+	}
+	
+	
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.advantages {
+		//padding-left: 2.322340919647%;!
+		//padding-right: 2.322340919647%;!
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.advantages__list {
+		display: flex;
+	}
+
+	.advantages__item {
+		flex-basis: 25%;
+		@include clearfix;
+		padding-left: 1.548227279765%;
+		padding-right: 1.548227279765%;
+
+		&:not(:last-child) {
+			border-right: 1px solid $bd-grey;
+			//padding-right: 1.623640201331%;
+		}
+
+		&:not(:first-child) {
+			//padding-left: 1.623640201331%;
+		}
+	}
+
+	.advantages__item-icon {
+		//width: 29.855480813189%;
+		width: 24.771636476235%;
+		float: left;
+		//margin-right: 1.548227279765%;
+	}
+
+	.advantages__item-content {
+		//width: 70.144519186811%;
+		padding-left: 6.192909119059%;
+		width: 75.228363523765%;
+		float: right;
+	}
+
+	.advantages__item-title {
+		font-size: 16px;
+	}
+
+	.advantages__item-text {
+
+	}
+}
+
+
+/* Advantages  End*/
+

@@ -258,7 +258,7 @@
 			background-color: #fff;
 			right: -22px;
 			top: 50%;
-			margin-top: -2px;
+			margin-top: -5px;
 			border-radius: 50%;
 		}
 	}
@@ -313,6 +313,13 @@
 
 		&.category-item--wide {
 			flex-basis: 48.459513856634%;
+		}
+
+		&.red-ribbon {
+			background-image: url("../img/red-ribbon.svg");
+			background-repeat: no-repeat;
+			background-position: -104px -91px;
+			background-size: 399px 351px;
 		}
 	}
 	

@@ -26,10 +26,13 @@
 			border-radius: 50px;
 		}
 
-		.btn--red-round {
+		&.btn--red-round {
 			color: #fff;
 			background-color: #ed0000;
 			border-radius: 50px;
+			&:hover {
+				background-color: #ff552d;
+			}
 		}
 
 		&.btn--transparent {

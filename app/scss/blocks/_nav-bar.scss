@@ -13,7 +13,10 @@
 
 /* Only mobile styles */
 @media (max-width: 767px) {
-	
+	.main-nav {
+		margin-bottom: 10px;
+	}
+
 	.catalog-button {
 		position: absolute;
 		left: 41px;
@@ -87,7 +90,9 @@
 
 // /*Tablet Media queries*/
  @media (min-width: 768px) {
-	
+	.main-nav {
+		margin-bottom: 20px;
+	}
 }//(min-width: 768px)
 
 

@@ -1,0 +1,236 @@
+/* workshop Styles */
+
+.workshop {
+	width: 100%;
+	padding: 10px;
+}
+
+
+.workshop__title {
+	font-weight: 800;
+	span {
+		color: $red-base;
+	}
+}
+
+
+.workshop__worktime {
+	color: #999;
+	font-size: 12px;
+}
+
+.workshop__text {
+	font-size: 14px;
+}
+
+	.workshop-link {
+		padding-top: 8px;
+		padding-bottom: 7px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+
+	.workshop {
+		margin-bottom: 20px;
+	}
+
+	.workshop__icon {
+		margin-bottom: 15px;
+	}
+
+	.workshop__title {
+		font-size: 27px;
+	}
+
+	.workshop__address {
+		font-size: 14px;
+	}
+
+	.workshop__worktime {
+		font-size: 12px;
+	}
+
+
+
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+	.workshop {
+		position: relative;
+	}
+
+	.workshop__icon {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.workshop__title-txt-wrap {
+		.workshop__text {
+			display: none;
+		}
+	}
+
+	.workshop__title {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.workshop__image {
+		display: none;
+	}
+
+	.workshop__schedule {
+		text-align: center;
+		margin-bottom: 20px;
+		//position: absolute;
+		//top: 160px;
+
+		//left: 50%;
+		//transform: translateX(-50%);
+	}
+
+	.workshop__address {
+		font-weight: 700;
+	}
+
+	.workshop__text {
+		text-align: center;
+		margin-bottom: 20px;
+		
+	}
+
+	.workshop-link {
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============O nly Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+	.workshop {
+		width: 718px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	.workshop__title {
+		margin-bottom: 20px;
+		font-size: 50px;
+	}
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+
+	.workshop {
+		margin-bottom: 40px;
+		padding-left: 2.322340919647%;
+		padding-right: 2.322340919647%;
+	} 
+
+	.workshop__inner-wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+	
+	.workshop__title-txt-wrap {
+		order: -1;
+		flex-basis: 51.95522109382%;
+		flex-grow: 0;
+		padding-right: 1.623600659182%;
+
+		.workshop__title {
+			white-space: nowrap;
+			margin-bottom: 5px;
+		}
+
+		.workshop__text {
+			font-weight: 300;
+			font-size: 1.2vw;
+		}
+	}
+
+	.workshop__icon {
+		order: 0;
+		flex-basis: 6.819122768564%;
+		flex-grow: 0;
+		padding-right: 1.623600659182%;
+	}
+	
+
+	.workshop__title {
+		//font-size: 58px;
+		font-size: 4vw;
+		line-height: 1;
+	}
+
+	.workshop__image {
+		order: 2;
+		flex-basis: 27.682391239051%;
+		flex-grow: 0;
+		padding-right: 1.623600659182%;
+	}
+
+	.workshop__schedule {
+		order: 3;
+		flex-basis: 13.543264898565%;
+		flex-grow: 0;
+		text-align: center;
+	}
+
+	.workshop__address {
+		line-height: 1;
+		margin-bottom: 20px;
+		span {
+			font-size: 21px;
+			font-weight: 300;
+		}
+		i {
+			font-size: 13px;
+			white-space: nowrap;
+		}
+	}
+
+	.workshop__text {
+		font-size: 21px;
+	}
+
+	.workshop__text.root {
+		display: none;
+	}
+
+	.workshop-link {
+		
+	}
+
+}
+
+
+/* workshop  End*/
+
