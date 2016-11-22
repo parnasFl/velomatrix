@@ -1,0 +1,289 @@
+/* .feedback Styles */
+.item {
+	display: flex;
+}
+
+.item__image {
+	position: relative;
+	flex-shrink: 0;
+	img {
+		@include img-center;
+	}
+}
+
+.item__descr {
+
+}
+
+.item__descr-title,
+.item__descr-price,
+.item__descr-marking,
+.item__descr-stock {
+	margin-bottom: 5px;
+}
+
+.item__descr-title {
+	font-size: 14px;
+	font-weight: 600;
+
+	&:hover {
+		color: $blue-link;
+	}
+}
+
+.item__descr-price {
+	font-size: 12px;
+	font-weight: 700;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.item__descr-price .price {
+	
+	&.old-price {
+		margin-left: 20px;
+		
+		span {
+			position: relative;
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 129%;
+				height: 2px;
+				background-color:$red-base;
+				top: 8px;
+				right: -8px;
+				transform: rotate(-13deg);
+			}
+		}
+
+	}
+
+	&.new-price {
+		color: $red-base;
+	}
+}
+
+.price__inner {
+	flex-basis: 100%;
+	display: flex;
+}
+
+.item__descr-price .price span {
+	font-weight: 800;
+	font-size: 17px;
+}
+
+.item__descr-price .econom-lable {
+	display: inline-block;
+	background-color: #6cbf00;
+	padding: 5px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	position: relative;
+	padding-right: 39px;
+	padding-left: 5px;
+	height: 17px;
+	line-height: 0;
+	margin-top: -3px;
+	flex-grow: 0;
+	span {
+		font-size: 10px;
+		line-height: .8;
+	}
+
+	i {
+		position: absolute;
+		font-size: 16px;
+		font-weight: 700;
+		right: 5px;
+		top: 8px;
+	}
+}
+
+
+.item__descr-marking {
+	font-size: 12px;
+	color: #999;
+}
+
+.item__descr-stock {
+	
+}
+
+.item-stock {
+	font-size: 12px;
+	font-weight: 700;
+	position: relative;
+	padding-left: 12px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -4px;
+	}
+
+	&.in-stock {
+		color: #8bbe4f;
+		
+		&:before {
+			width: 8px;
+			height: 8px;
+			background: url("../img/icon-stock.svg") 0 0 no-repeat;
+			background-size: 8px 8px;
+		}
+	}
+	
+	&.less-stock {
+		color: #ff9900;
+		&:before {
+			width: 8px;
+			height: 8px;
+			background: url("../img/icon-stock-less.svg") 0 0 no-repeat;
+			background-size: 8px 8px;
+		}
+	}
+
+	&.not-in-stock {
+		color: #ed0000;
+		&:before {
+			width: 8px;
+			height: 8px;
+			background: url("../img/icon-stock-not.svg") 0 0 no-repeat;
+			background-size: 8px 8px;
+		}
+	}
+}
+
+.item__descr-btn {
+	@include btn--red;
+	padding-top: 5px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+	
+	i, span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	i {
+		margin-right: 10px;
+	}
+}
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+
+	.item {
+		padding: 10px;
+
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+	}
+
+	.item__image {
+		margin-right: 10px;
+
+		flex-basis: 80px;
+		height: 80px;
+	}
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.item {
+		padding: 20px;
+		
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+	}
+
+	.item__image {
+		margin-right: 20px;
+
+		flex-basis: 120px;
+		height: 120px;
+	}
+
+	.item__descr-title,
+	.item__descr-marking,
+	.item__descr-price,
+	.item__descr-stock {
+		margin-bottom: 10px;
+	}
+
+	.item__descr-title {
+		font-size: 16px;
+		font-weight: 700;
+
+	}
+
+
+	.item__descr-price {
+		font-size: 15px;
+	}
+
+	.item__descr-price .price {
+
+	}
+
+	.item__descr-price .price span {
+		font-weight: 800;
+		font-size: 25px;
+	}
+
+	.item__descr-price .price {
+		
+		&.old-price {
+			span {
+				&:after {
+					top: 13px;
+					right: -11px;
+					transform: rotate(-11deg);
+				}
+			}
+		}
+	}
+
+	.item__descr-btn {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+   
+}
+
+
+/* feedback  End*/
+

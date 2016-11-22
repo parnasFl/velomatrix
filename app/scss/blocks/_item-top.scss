@@ -1,0 +1,111 @@
+/* item-top Styles */
+.item__rating {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.item__rating-item {
+	display: inline-block;
+	margin-left: .5px;
+	margin-right: .5px;
+	width: 15px;
+	height: 16px;
+	background-image: url("../img/icon-star-empty.svg");
+	background-size: 15px 16px;
+}
+
+.item__rating-item--full {
+	background-image: url("../img/star2.svg");
+}
+
+.feedback-count {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.feedback-count a {
+	color: #999;
+	font-size: 14px;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.item-page__title {
+		font-weight: 700;
+		font-size: 16px;
+		margin-bottom: 10px;
+		padding: 10px;
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	.item__rating {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.item-page__title {
+		font-weight: 400;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.rating-info {
+		margin-bottom: 20px;
+	}
+	
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.item-page__main {
+		@include clearfix;
+		margin-bottom: 40px;
+	}
+	
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.item-page__title {
+		font-weight: 300;
+		font-size: 40px;
+		margin-bottom: 23px;
+	}
+
+	.item-page__descr {
+		@include clearfix;
+	}
+
+	.rating-info {
+		margin-bottom: 20px;
+	}
+}
+
+
+/* item-top  End*/
+

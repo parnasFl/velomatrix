@@ -5,7 +5,7 @@
 		font-weight: 900;
 		font-size: 12px;
 		padding-top: 14px;
-		padding-bottom: 15px;
+		padding-bottom: 14px;
 		padding-left: 15px;
 		padding-right: 15px;
 		border-radius: 3px;
@@ -38,6 +38,10 @@
 		&.btn--transparent {
 			border: 2px solid #e5e5e5;
 			color: #7b7b7b;
+			&:hover {
+				border-color: $red-base;
+				color: $red-base;
+			}
 		}
 
 		&.btn--transparent-round {

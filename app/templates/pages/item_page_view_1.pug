@@ -1,0 +1,17 @@
+extends ../layouts/main-layout
+
+block title
+	title Страница товара
+
+block content
+	.item-page__wrapper
+		include ../common/item-breadcrumb
+		include ../common/item-top
+		.item-page__main
+			include ../common/item-main-left
+			include ../common/item-main-right
+			include ../common/item-main-bottom
+		.item-page__descr
+			include ../common/item-descr
+			include ../common/item-tech-info
+			include ../common/item-feedback

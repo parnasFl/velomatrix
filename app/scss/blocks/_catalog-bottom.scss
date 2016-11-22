@@ -1,4 +1,80 @@
 /* catalog-bottom Styles */
+.cat-bottom {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.cat-bottom__loading {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		&:last-child {
+			margin-left: 10px;
+		}
+	}
+}
+
+.cat-bottom__loader-btn {
+	margin-bottom: 30px;
+}
+
+.pagination {
+	display: table;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.pagination__list {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pagination__item {
+	display: inline-block;
+	vertical-align: middle;
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+
+	a {
+		display: block;
+		width: 40px;
+		height: 40px;
+		line-height: 38px;
+		background-color: white;
+		//border: 3px solid transparent;
+		box-shadow: 0 0 0 1px #ededed;
+		border-radius: 3px;
+		position: relative;
+		color: #999;
+		
+		// span {
+		// 	vertical-align: middle;
+		// 	//@include img-center;
+		// }
+
+		&:hover {
+			//border-color: $red-base;
+			box-shadow: 0 0 0 3px #ed0000;
+			//text-decoration: underline;
+			color: #000;
+		}
+	}
+}
+
+.pagination__next-page {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+	color: #999;
+	&:hover {
+		text-decoration: underline;
+	}
+}
 
 
 /* ==============Only Mobile Styles * 767 * ==============
@@ -12,8 +88,18 @@
 /* ============== Only Mobile&Tablet styles * 1023 * ======
 *******************************************************/
 @media (max-width: 1023px) {
-
-
+	.cat-bottom__loader-btn {
+		@include btn--transparent-round;
+		padding-left: 40px;
+		padding-right: 40px;
+		text-transform: none;
+		font-size: 12px;
+		font-weight: 400;
+	}
+	
+	.cat-bottom__text {
+		display: none;
+	}
 
 }//@media (max-width: 1023px) 
 
@@ -36,7 +122,33 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
+	.cat-bottom__loading {
+		margin-bottom: 50px;
+	}
+	.cat-bottom__loader-btn {
+		margin-bottom: 50px;
+	}
+	.pagination {
+		margin-bottom: 50px;
+	}
 
+	.cat-bottom__text {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 50px;
+		p {
+			text-align: left;
+			margin-bottom: 20px;
+		}
+
+		a {
+			display: inline;
+			color: $blue-link;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 

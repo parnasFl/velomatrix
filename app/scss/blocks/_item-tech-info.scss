@@ -1,0 +1,150 @@
+/* .item-tech Styles */
+.item-tech {
+	margin-bottom: 20px;
+}
+
+
+
+.item-tech__list {
+	width: 100%;
+	td {
+		width: 50%;
+	}
+	th {
+		width: 100%;
+		text-align: left;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-top: 16px;
+		padding-bottom: 12px;
+		padding-left: 5px;
+	}
+
+	td {
+		width: 50%;
+		text-align: left;
+		padding-top: 16px;
+		padding-bottom: 12px;
+		padding-left: 5px;
+		padding-right: 5px;
+
+		&:last-child {
+			font-weight: 700;
+		}
+	}
+
+	tr:nth-child(odd) {
+		background-color: #fff;
+	}
+
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	tr.title {
+		background-color: #fff;
+	}
+
+
+	&.item-tech__list--no-th {
+		tr:nth-child(even) {
+			background-color: #fff;
+		}
+
+		tr:nth-child(odd) {
+			background-color: #f2f2f2;
+		}
+	}
+}
+
+.tech-item-color-list {
+
+}
+
+.tech-color-list-item {
+
+}
+
+.tech-color-list-item i {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.tech-color-list-item span {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+ .item-tech {
+ 	padding-left: 10px;
+ 	padding-right: 10px;
+ }
+	
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.item-tech {
+		width: 100%;
+	}
+
+	.item-tech__list {
+		width: 100%;
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+
+	
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.item-tech {
+		width: 38%;
+		float: right;
+	}
+
+	.item-tech__list {
+		width: 100%;
+
+		td, th {
+			vertical-align: middle;
+
+			&:first-child {
+				padding-left: 20px;
+			}
+
+			&:last-child {
+				padding-right: 10px;
+			}
+		}
+	}
+
+
+}
+
+
+/* item-top  End*/
+

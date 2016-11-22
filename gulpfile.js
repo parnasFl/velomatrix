@@ -70,7 +70,6 @@ gulp.task('libs', function() {
 gulp.task('server', ['pug'],function(){
 	browserSync({
 		notify: false,
-		port: 9000,
 		server: {
 			baseDir: 'app'
 		}

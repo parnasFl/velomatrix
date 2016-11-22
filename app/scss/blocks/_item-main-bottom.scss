@@ -1,0 +1,377 @@
+/* .item-page__extra-infos Styles */
+@mixin mobile-blocks-base {
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+}
+
+// @mixin tablet-blocks-base { 
+// 	background-color: white;
+// 	border: 2px solid #e5e5e5;
+// 	border-radius: 3px;
+// }
+
+
+.shipping-title,
+.self-pickup,
+.item-page__extra-right  {
+	font-size: 14px;
+}
+
+.shipping-title {
+	position: relative;
+	padding-left: 70px;
+	font-size: 12px;
+	b, strong {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 15px;
+	}
+
+	b {
+		color: #000;
+	}
+
+	strong {
+		color: $red-base;
+	}
+	
+	&:before {
+		@include pseudo;
+		background-image: url("../img/icon-truck.svg");
+		width: 39px;
+		height: 25px;
+		background-size: 39px 25px;
+		left: 10px;
+		top: 50%;
+		margin-top: -13px;
+	}
+}
+
+.self-pickup {
+	span {
+		display: block;
+	}
+
+	a {
+		display: inline-block;
+		font-size: 13px;
+		color: #666;
+		line-height: 18px;
+		i {
+			border-bottom: 1px solid #d9d9d9;
+		}
+
+		&:hover {
+			i {
+				border-color: transparent;
+			}
+			
+		}
+	}
+}
+
+.item-page__extra-right {
+	text-align: center;
+}
+
+.payment-title {
+	margin-bottom: 10px;
+}
+
+.payment__list {
+	text-align: center;
+	font-size: 0;
+}
+
+.payment-item {
+	width: 40px;	
+	display: inline-block;
+	font-size: 14px;
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+
+
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.item-page__extra-infos {
+		margin-bottom: 30px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.shipping-title,
+	.self-pickup,
+	.item-page__extra-right {
+		@include mobile-blocks-base;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+	.item-page__extra-right {
+		margin-bottom: 0;
+	}
+
+	.shipping-title {
+		padding-left: 70px;
+	}
+
+	.item-page__extra-bottom {
+		display: none;
+	}
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+	
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.item-page__extra-infos {
+		clear: both;
+	}
+
+	.item-page__extra-top {
+	}
+
+	.shipping-title {
+		width: 313px;
+		float: left;
+		position: relative;
+
+		// &:after {
+		// 	@include pseudo;
+		// 	//background-image: url("../img/arrow-item-page2.png");
+		// 	width: 11px;
+		// 	height: 48px;
+		// 	//background-size: 11px 48px;
+		// 	left: 51px;
+		// 	top: 50%;
+		// 	margin-top: -24px;
+		// 	//border: 1px solid #000;
+		// }
+	}
+
+	.item-page__extra-left {
+		width: 100%;
+		@include clearfix;
+		//padding-top: 10px;
+		//padding-bottom: 10px;
+		position: relative;
+		margin-bottom: 20px;
+
+		// &::before, &::after {
+		// 	@include pseudo;
+		// 	height: 30px;
+		// 	width: 1px;
+		// 	background-color: #666;
+		// 	top: 0;
+		// 	left: 20px;
+		// 	transform: rotate(-8deg);
+		// }
+
+		&::before {
+
+		}
+
+		&::after {
+
+		}
+	}
+
+	.shipping-title {
+		padding-top: 12px;
+		padding-bottom: 8px;
+		border-right: 1px solid $bd-grey;
+	}
+
+	.self-pickup {
+		width: 363px;
+		float: left;
+		padding: 10px;
+		font-size: 13px;
+	}
+
+	.item-page__extra-right {
+		width: 100%;
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		text-align: center;
+		padding-top: 12px;
+		padding-bottom: 8px;
+	}
+
+	.payment-title {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 0;
+		margin-right: 10px;
+	}
+
+	.payment__list {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.item-page__extra-bottom {
+		display: none;
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.item-page__extra-left {
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		//padding-top: 12px;
+		//padding-bottom: 8px;
+	}
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+
+	.item-page__extra-infos {
+		clear: left;
+		width: 60.8%;
+		margin-left: 7.9%;
+	}
+
+	.item-page__extra-top {
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		padding-top: 12px;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+	}
+
+	.item-page__extra-left {
+		border: none;
+		border-right: 1px solid $bd-grey;
+		padding-right: 2.1%;
+		padding-left: 10.5%;
+		position: relative;
+
+		&::before {
+			@include pseudo;
+			width: 40px;height: 25px;
+			top: 50%;
+			left: 4%;
+			margin-top: -12px;
+			background-image: url("../img/icon-truck.svg");
+			background-size: 40px 25px;
+		}
+	}
+
+	.item-page__extra-right {
+		padding-left: 3%;
+	}
+
+	.shipping-title br {
+		display: none;
+	}
+	
+	.shipping-title {
+		font-size: 1.07vw;
+		padding: 0;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.shipping-title b, .shipping-title strong {
+		font-weight: 900;
+	}
+
+	.self-pickup, .payment-title {
+		display: inline-block;
+		font-size: .92vw;
+	}
+
+	.self-pickup {
+		//display: inline-block;
+	}
+	.self-pickup a {
+		//display: inline-block;
+	}
+	.self-pickup span {
+		display: inline;
+	}
+
+	.self-pickup span, .self-pickup i {
+		font-size: .92vw;
+		display: inline-block;
+	}
+
+	.payment-title {
+
+	}
+
+	.payment-item {
+		width: 16.7%;
+		&:not(:last-child) {
+			margin-right: 4%;
+		}
+	}
+
+	.item-page__extra-bottom {
+		display: table;
+		margin: auto;
+	}
+	
+	.item-page__extra-bottom a {
+		font-size: 12px;
+		font-weight: 700;
+		text-decoration: underline;
+		text-transform: uppercase;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+
+			strong {
+				text-decoration: none;
+			}
+		}
+
+		&::after {
+			@include pseudo;
+			width: 19px;
+			height: 14px;
+			top: 52%;
+			margin-top: -7px;
+			background-image: url("../img/icon-news-arrow.svg");
+			right: -23px;
+		}
+	}
+
+	.item-page__extra-bottom a strong {
+		color: $red-base;
+		text-decoration: underline;
+	}
+}
+
+
+/* .item-page__extra-infos  End*/
+

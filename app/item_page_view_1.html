@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <title>Страница товара</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Bicycles online Store">
+    <meta name="keywords" content="bicycles">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Temporary Settings-->
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+    <script>
+      ! function(e)
+      {
+        "use strict";
+
+        function t(e, t, n)
+        {
+          e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+        };
+
+        function n(t, n)
+        {
+          return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+        };
+
+        function a(t, a)
+        {
+          if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+          else
+          {
+            var s = r.createElement("link");
+            s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+          }
+        }
+
+        function l(e, t)
+        {
+          var n = new XMLHttpRequest;
+          n.open("GET", t, !0), n.onreadystatechange = function()
+          {
+            4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+          }, n.send()
+        }
+
+        function o(e)
+        {
+          var t = r.createElement("style");
+          t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+        }
+        var r = e.document;
+        e.loadCSS = function(e, t, n)
+        {
+          var a, l = r.createElement("link");
+          if (t) a = t;
+          else
+          {
+            var o;
+            o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+          }
+          var s = r.styleSheets;
+          l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+          var c = function(e)
+          {
+            for (var t = l.href, n = s.length; n--;)
+              if (s[n].href === t) return e();
+            setTimeout(function()
+            {
+              c(e)
+            })
+          };
+          return l.onloadcssdefined = c, c(function()
+          {
+            l.media = n || "all"
+          }), l
+        }, e.loadLocalStorageCSS = function(l, o)
+        {
+          n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function()
+          {
+            a(l, o)
+          })
+        }
+      }(this);
+    </script>
+    <!-- Load Fonts CSS Start-->
+    <script>
+      loadCSS("css/fonts.min.css?ver=1.0.0", false, "all"); // Loading fonts, if the site is located in a subfolder
+      //loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+    </script>
+    <!-- Load Fonts CSS End-->
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/js/vendor/magnific-popup/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="/js/vendor/qtip2/jquery.qtip.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- Load Custom CSS Start-->
+    <script>
+      loadCSS("css/style.min.css?ver=1.0.0", false, "all");
+    </script>
+    <!-- Load Custom CSS End-->
+    <!-- Temporary Settings End-->
+    <!--Then uncomment below-->
+    <!-- Custom Browsers Color Start -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <!-- Custom Browsers Color End -->
+  </head>
+  <body>
+    <!--[if lt IE 10 ]>
+<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
+<![endif]-->
+    <div class="wrapper">
+      <div class="config">
+        <div class="config"></div>
+      </div>
+      <div class="main-content">
+        <header class="page-header">
+          <div class="top-bar">
+            <a class="top-bar__toggle" href="#">
+              <span class="top-bar__toggle-text">Top Menu Toggle</span>
+            </a>
+            <a class="top-bar__search-toggle" href="#">
+              <span class="top-bar__search-toggle-icon">
+                <img src="img/icon-search.svg" height="16" width="16">
+              </span>
+              <span class="top-bar__search-toggle-text">Поиск</span>
+            </a>
+            <div class="top-bar__address">
+              <span class="top-bar__address-icon">
+                <img src="img/icon-gps.svg" width="16" height="20" alt="gps icon">
+              </span>
+              <a class="top-bar__address-text" href="#">м. Сокольники, Сокольническая площадь, д.9, к.2</a>
+            </div>
+            <ul class="top-bar__nav">
+              <li class="top-bar__menu">
+                <ul class="top-bar__menu-list">
+                  <li class="top-bar__menu-item top-bar__menu-item--iconed">
+                    <span class="top-bar__menu-icon">
+                      <img src="../img/icon-ski.svg" width="18" height="15">
+                    </span>
+                    <a class="top-bar__menu-link" href="#">Зимные товары</a>
+                  </li>
+                  <li class="top-bar__menu-item">
+                    <a class="top-bar__menu-link" href="#">Доставка и оплата</a>
+                  </li>
+                  <li class="top-bar__menu-item">
+                    <a class="top-bar__menu-link" href="#">Для партнеров</a>
+                  </li>
+                  <li class="top-bar__menu-item">
+                    <a class="top-bar__menu-link" href="#">Контакты</a>
+                  </li>
+                  <li class="top-bar__menu-item">
+                    <a class="top-bar__menu-link" href="#">Контакты</a>
+                  </li>
+                  <li class="top-bar__menu-item">
+                    <a class="top-bar__menu-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="top-bar__user">
+                <a class="top-bar__user-link" href="#">
+                  <span class="top-bar__user-text">Вход или Регистрация</span>
+                </a>
+              </li>
+            </ul>
+            <a class="top-bar__phone-toggle" href="#">
+              <span class="top-bar__search-toggle-icon">
+                <img src="img/icon-phone.svg" height="16" width="16">
+              </span>
+              <span class="top-bar__phone-toggle-text">Телефон</span>
+            </a>
+            <div class="cart">
+              <a class="cart__btn" href="#">
+                <span class="cart__btn-pre-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 475 442">
+                    <style>
+                      .st0 {
+                        fill: #010101;
+                      }
+                    </style>
+                    <path class="st0" d="M197.8 262.3c4 9.5 7.5 18.6 14.5 25.8 4.7 4.9 10.6 6.6 17.2 6.6 59.2 0 118.3 0 177.5-.1 6.5 0 11.8 2.1 15.4 7.6 6.5 9.9-.3 23.5-12.3 24.6-1.5.1-3 .1-4.5.1-57.3 0-114.7-.3-172 .1-26.1.2-44.5-10.9-56.7-33.5-9.9-18.3-16.1-37.9-23-57.4-15.9-45.4-31.8-90.8-47.6-136.3-4.4-12.6-9-25-17.6-35.6-6.8-8.3-15.5-12.3-26.2-12.2-8.2.1-16.3.1-24.5 0-9.8-.1-16.8-6.8-16.9-15.9-.1-9.3 7.1-16.3 17.1-16.2 12.6.1 25.4-1.1 37.9 1.2 19.4 3.6 33.3 15 43.8 31.2 5.6 8.7 10.2 17.9 13.5 27.7 1.2 3.6 3 4.6 6.8 4.6 79.3-.1 158.6-.1 238-.1 13.5 0 27-.1 40.5.1 9.9.1 19.1 2.6 26.5 9.6 9.8 9.3 12.1 21.2 9.6 33.5-6.1 30.5-14.3 60.5-29.1 88.2-5.1 9.6-11.2 18.5-18.9 26.3-13.2 13.3-29 20.1-47.9 20-51.7-.1-103.3 0-155 0-1.9.1-3.7.1-6.1.1zm178.4-113.5c.1 9.4 7 16.5 16.4 16.6 8.6.1 16.1-7.3 16-15.9 0-9.5-7.4-16.6-17-16.4-8.2.1-15.5 7.6-15.4 15.7zm-161.3 0c.1-8.2-7.4-15.6-16-15.8-8.9-.1-16.3 7.2-16.4 16-.1 8.5 7 16.1 15 16.3 9.9.3 17.2-6.7 17.4-16.5zm96.8 49.1c.1-8.6-7.1-16-15.6-16.2-9.3-.2-16.6 6.8-16.8 16-.2 8.6 7.3 16.2 16.1 16.2 8.9.1 16.3-7.2 16.3-16zm.1-48.7c.1 9.1 7.1 16.2 16.1 16.1 9 0 16.1-7.2 16.1-16.2 0-9.1-7.5-16.3-16.6-16.2-8.6.3-15.7 7.7-15.6 16.3zm-32.5-.2c-.1-8.9-7.5-16.2-16.3-16-9.2.2-16.2 7.7-16 16.9.2 8.5 7.6 15.5 16.3 15.4 9 0 16.1-7.3 16-16.3zm96.9 48.9c.1-9-6.9-16.1-16-16.3-8.6-.1-16 6.9-16.2 15.5-.2 9.2 6.9 16.7 16 16.8 8.9.1 16.1-7 16.2-16zm-161.3-.1c0 8.9 7.4 16.2 16.1 16.1 9.2-.1 16.2-7.5 16.1-16.7-.1-8.5-7.4-15.6-16.1-15.6-9.1.1-16.2 7.2-16.1 16.2zM384.2 424c-22.2 0-40.2-18.1-40.3-40.3 0-22.3 18-40.5 40.2-40.5 22.4-.1 40.8 18.3 40.6 40.7 0 22-18.3 40.1-40.5 40.1zM263.1 383.6c0 22.3-18 40.3-40.1 40.4-22.4 0-40.6-18.2-40.5-40.7.1-22.2 18.3-40.3 40.5-40.2 22.2.1 40.2 18.3 40.1 40.5z"
+                    />
+                  </svg>
+                </span>
+                <div class="cart__btn-text">В корзине
+                  <i>10</i> товаров</div>
+                <span class="cart__btn-post-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 493 351">
+                    <style>
+                      .st0 {
+                        fill: #020202;
+                      }
+                    </style>
+                    <path class="st0" d="M362.5 208.9H55.1c-19 0-33.5-13.5-34-31.4-.4-17.7 13.5-32.5 31.1-33.3 2-.1 4 0 6 0h298.5c1.9 0 3.9.5 6.8-.8-1.7-1.4-3.1-2.5-4.3-3.7-23.4-23.3-46.8-46.5-70.1-69.9-9.7-9.7-11.9-22.7-6.5-35 5.5-12.5 17.5-20.1 31-19.5 7.8.3 14.6 3.3 20.1 8.8 43.8 43.7 87.6 87.3 131.2 131.1 11.9 12 11.9 29.8.6 42.4-1.9 2.1-3.9 4.1-5.9 6.1-41.5 41.4-83.1 82.9-124.5 124.3-9.2 9.2-20 12.5-32.4 8.6-12.3-3.9-19.7-12.7-22.3-25.3-2.2-11.2 1.5-20.6 9.5-28.6 23-22.9 46-45.9 69-68.8 1.3-1.3 2.8-2.3 4.2-3.5-.1-.6-.4-1.1-.6-1.5z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="bottom-bar">
+            <div class="page-logo">
+              <a class="page-logo__link" href="#">
+                <span class="page-logo__img">
+                  <picture>
+                    <source media="(min-width:768px)" srcset="img/logo-desktop@3x.png">
+                    <img src="img/logo_mobile.png" alt="Logo" width="83" height="15"> </picture>
+                </span>
+                <span class="page-logo__slogan">велосипеды и запчасти</span>
+              </a>
+            </div>
+            <div class="page-search">
+              <div class="page-search__wrapper">
+                <form class="search">
+                  <input class="search__input" type="search" placeholder="Введите название товара ...">
+                  <button class="search__btn">
+                    <span class="submit-icon">
+                      <img src="img/icon-search.svg" width="16" height="16">
+                    </span>
+                    <span class="submit-text">Поиск</span>
+                  </button>
+                </form>
+                <a class="search__delete" href="#">
+                  <div class="search__delete-icon"></div>
+                  <div class="search__delete-text">Удалить Форму Поиска</div>
+                </a>
+              </div>
+            </div>
+            <div class="page-support">
+              <ul class="page-support__list">
+                <li class="page-support__phone">+7 495 961-94-21</li>
+                <li class="page-support__working-hours">Ежедневно с 10:00 до 20:00</li>
+                <li class="page-support__callback">
+                  <a class="page-support__callback-btn" href="#">обратный звонок</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <nav class="main-nav">
+          <a class="config-toggle" href="#">
+            <span class="config-toggle__icon">
+              <img src="img/icon-config-mobile.svg" width="16" height="16">
+            </span>
+            <span class="config-toggle__text">Toggle Config Menu</span>
+          </a>
+          <a class="catalog-button" href="#">
+            <span class="catalog-button__icon">
+              <img src="img/icon-catalog-mobile.svg" width="10" height="10">
+            </span>
+            <span class="catalog-button__text">Каталог товаров</span>
+          </a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item iconed">
+              <a class="main-nav__link" href="#">Велосипеды</a>
+              <span class="main-nav__link"></span>
+              <div class="main-nav__dropdown-menu">
+                <div class="main-nav__dropdown-list">
+                  <ul class="dropdown__inner-list">
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Хардтейлы</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Комфорт</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Фикс</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Шоссейные</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Город и шоссе</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Комфорт</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Фикс</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Шоссейные</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Складные</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 16”</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 20”</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 24”</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 1</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Женские</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Комфорт</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Фитнес</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Двухподвес</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Двухподвес и аксессеры для велосипедов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Запчасти</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Гибриды</h4>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Фетбайки</h4>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Трюковые</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">BMX</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Дерт\Стрит</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Электровелосипеды и аксессуары</h4>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Детские</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Беговелы</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">12 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">14 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">18 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">20 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">24 дюймов</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="main-nav__dropdown-extra">
+                  <div class="main-nav__dropdown-extra-wrapper">
+                    <h3 class="main-nav__dropdown-extra-title">Женские</h3>
+                    <div class="main-nav__dropdown-extra-pic">
+                      <img src="img/dropdown-extra.jpg">
+                    </div>
+                    <div class="main-nav__dropdown-extra-desc">
+                      <p>
+                        <strong>Женские</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                      <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и
+                        сами амортизаторы (длина в мм.)</p>
+                      <p>
+                        <strong>Прочитайте подробно о
+                          <a href="#">Двухподвесных велосипедах</a> на нашем блоге</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Аксессуары</a>
+              <div class="main-nav__dropdown-menu">
+                <div class="main-nav__dropdown-list">
+                  <ul class="dropdown__inner-list">
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Хардтейлы</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Комфорт</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Фикс</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Шоссейные</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Город и шоссе</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Комфорт</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Фикс</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Шоссейные</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Складные</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 16”</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 20”</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 24”</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Колеса 1</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Женские</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Комфорт</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Фитнес</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Двухподвес</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Двухподвес и аксессеры для велосипедов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Запчасти</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Гибриды</h4>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Фетбайки</h4>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Трюковые</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">BMX</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Дерт\Стрит</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Электровелосипеды и аксессуары</h4>
+                      </div>
+                    </li>
+                    <li class="dropdown__inner-item">
+                      <div class="dropdown__submenu">
+                        <div class="dropdown__submenu-pic">
+                          <img src="img/img-hardtail-menu.jpg">
+                        </div>
+                        <h4 class="dropdown__submenu-title">Детские</h4>
+                        <ul class="dropdown__submenu-list">
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">Беговелы</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">12 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">14 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">18 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">20 дюймов</a>
+                          </li>
+                          <li class="dropdown__submenu-item">
+                            <a class="dropdown__submenu-link" href="#">24 дюймов</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="main-nav__dropdown-extra">
+                  <div class="main-nav__dropdown-extra-wrapper carded">
+                    <ul class="dropdown-extra__brand-list">
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                      <li class="dropdown-extra__brand-item">
+                        <img class="dropdown-extra__brand-pic" src="img/img-brand.jpg">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Запчасти</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Гироскутеры</a>
+              <div class="main-nav__dropdown-menu">
+                <ul class="main-nav__dropdown-inner">
+                  <div class="main-nav__dropdown-list">
+                    <ul class="dropdown__inner-list">
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Хардтейлы</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Город и шоссе</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Складные</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Женские</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Двухподвес</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Гибриды</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Фетбайки</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Трюковые</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Электровелосипеды и аксессуары</h4>
+                        </div>
+                      </li>
+                      <li class="dropdown__inner-item">
+                        <div class="dropdown__submenu">
+                          <div class="dropdown__submenu-pic">
+                            <img src="img/img-hardtail-menu.jpg">
+                          </div>
+                          <h4 class="dropdown__submenu-title">Детские</h4>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Самокаты</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Ремонт и обслуживание</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Акции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Бренды</a>
+            </li>
+          </ul>
+        </nav>
+        <main>
+          <div class="item-page__wrapper">
+            <div class="breadcrumb">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <a href="#">Главная</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <a href="#">Велосипеды</a>
+                </li>
+                <li class="breadcrumb__item">
+                  <a href="#">Двухподвес</a>
+                </li>
+              </ul>
+            </div>
+            <div class="item-page__title">Велосипед едвухподвесный Giant Anthem Advanced 27.5 1 (2016)</div>
+            <div class="item-page__main">
+              <div class="item-page__slider">
+                <div class="item-short__descr">Элегантный классический дизайн, удобная посадка, помогающая сохранить королевскую осанку, надежность и безопасность: CENTURION CITY 3.0 (2016) - велосипед для настоящих леди.</div>
+                <div class="slideshow">
+                  <ul class="slideshow__image">
+                    <li class="slideshow__image-item">
+                      <img src="img/img-item-page-main.jpg" alt="Item Page Slide">
+                    </li>
+                    <li class="slideshow__image-item">
+                      <img src="img/img-item-1.jpg" alt="Item Page Slide">
+                    </li>
+                    <li class="slideshow__image-item">
+                      <img src="img/img-item-2.jpg" alt="Item Page Slide">
+                    </li>
+                    <li class="slideshow__image-item">
+                      <img src="img/img-item-3.jpg" alt="Item Page Slide">
+                    </li>
+                  </ul>
+                  <ul class="slideshow__thumbs">
+                    <li class="slideshow__thumbs-item active">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-page-main.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                    <li class="slideshow__thumbs-item">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-1.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                    <li class="slideshow__thumbs-item">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-2.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                    <li class="slideshow__thumbs-item">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-3.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                    <li class="slideshow__thumbs-item">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-1.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                    <li class="slideshow__thumbs-item">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-2.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                    <li class="slideshow__thumbs-item">
+                      <a class="slideshow__thumbs-link" href="">
+                        <img src="img/img-item-3.jpg" alt="Item Page Slide">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="item-page__price">
+                  <div class="item-page__price-text">Цена</div>
+                  <div class="item-page__price-amount">
+                    <div class="new-price">
+                      <span>27450</span> руб.</div>
+                    <div class="old-price">
+                      <span>30450</span> руб.</div>
+                    <div class="advantage-badge">
+                      <div class="advantage-badge__label" style="background-color: #6cbf00">экономия
+                        <i>10%</i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-page__config">
+                  <ul class="config-links__list">
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-women-bike.svg" width="24" height="16" alt="icon">
+                        </span>
+                        <span class="config-links__text">Двухподвес</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-user-config.svg" width="21" height="24 " alt="icon">
+                        </span>
+                        <span class="config-links__text">Мужской</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon">
+                        </span>
+                        <span class="config-links__text">Дороги и бездорожье</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-user-config.svg" width="21" height="24 " alt="icon">
+                        </span>
+                        <span class="config-links__text">Дисковый гидравлический Shimano</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-women-bike.svg" width="24" height="16" alt="icon">
+                        </span>
+                        <span class="config-links__text">Двухподвес</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-user-config.svg" width="21" height="24 " alt="icon">
+                        </span>
+                        <span class="config-links__text">Мужской</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon">
+                        </span>
+                        <span class="config-links__text">Дороги и бездорожье</span>
+                      </a>
+                    </li>
+                    <li class="config-links__item">
+                      <a class="config-links__link" href="#" alt="Config link">
+                        <span class="config-links__icon">
+                          <img src="img/icon-user-config.svg" width="21" height="24 " alt="icon">
+                        </span>
+                        <span class="config-links__text">Мужской</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item-page__options">
+                <div class="options__inner">
+                  <div class="options__price">
+                    <div class="item-page__price">
+                      <div class="item-page__price-amount">
+                        <div class="new-price">
+                          <span>27450</span> руб.</div>
+                        <div class="old-price">
+                          <span>30450</span> руб.</div>
+                        <div class="advantage-badge">
+                          <div class="advantage-badge__label" style="background-color: #6cbf00">экономия
+                            <i>10%</i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-short__descr">Элегантный классический дизайн, удобная посадка, помогающая сохранить королевскую осанку, надежность и безопасность: CENTURION CITY 3.0 (2016) - велосипед для настоящих леди.</div>
+                  <div class="options__item-stock-infos">
+                    <div class="options__marking">Артикул: VL-1102</div>
+                    <div class="options__stock catalog-item__stock stock in-stock">Есть в наличии</div>
+                  </div>
+                  <div class="options__size">
+                    <div class="options__size-title">
+                      <h5 class="options__size-title-text">размер рамы</h5>
+                      <span>?</span>
+                    </div>
+                    <ul class="options__list">
+                      <li class="options__list-item">
+                        <a href="#">18"</a>
+                      </li>
+                      <li class="options__list-item">
+                        <a href="#">20"</a>
+                      </li>
+                      <li class="options__list-item">
+                        <a href="#">20,5"</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="options__color">
+                    <div class="options__title">цвет:</div>
+                    <ul class="options__colors-list">
+                      <li class="options__colors-item">
+                        <a class="color" href="#" style="background-color: white; border-color: #ccc">черный
+                          <i style="background-color: #000"></i>
+                        </a>
+                        <span>Черный</span>
+                      </li>
+                      <li class="options__colors-item">
+                        <a class="color" href="#" style="background-color: white; border-color: #ffd800">Желтый
+                          <i style="background-color: #ffd800"></i>
+                        </a>
+                        <span>Желтый</span>
+                      </li>
+                      <li class="options__colors-item">
+                        <a class="color" href="#" style="background-color: white; border-color: #00d2ff">Желтый
+                          <i style="background-color: #00d2ff"></i>
+                        </a>
+                        <span>Синий</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="options__wheel">
+                    <div class="options__size-title">
+                      <h5 class="options__size-title-text">Размер колеса:</h5>
+                      <span>?</span>
+                    </div>
+                    <ul class="options__list options__list--vertical">
+                      <li class="options__list-item">
+                        <div class="label-wrapper">
+                          <input type="radio" id="s" name="size">
+                          <label for="s">S</label>
+                        </div>
+                      </li>
+                      <li class="options__list-item">
+                        <div class="label-wrapper">
+                          <input type="radio" id="l" name="size">
+                          <label for="l">L</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="options__form-elements">
+                    <ul class="options__list options__list--vertical">
+                      <li class="options__list-item">
+                        <div class="label-wrapper">
+                          <input type="checkbox" id="assembly">
+                          <label for="assembly">Сборка велосипеда в мастерской - 2000 р.</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="options__form-wrapper">
+                    <div class="label-wrapper">
+                      <label for="pokrishka">Покрышка</label>
+                      <input type="checkbox" id="pokrishka"> </div>
+                    <div class="select-wrapper">
+                      <select>
+                        <option value="Ultra1">Ultrathin SCOTT - 2000 р.</option>
+                        <option value="Ultra2">Ultrathin SCOTT2 - 3000 р.</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button class="options__btn-cart" type="submit">
+                    <i>
+                      <img src="img/icon-add-to-cart.svg" width="20" height="25" alt="cart btn icon">
+                    </i>
+                    <span>добавить в корзину</span>
+                  </button>
+                  <button class="options__btn-buy" type="submit">купить в 1 клик</button>
+                  <a class="options__add-compare" href="#">Добавить на сравнение</a>
+                </div>
+              </div>
+              <div class="item-page__extra-infos">
+                <div class="item-page__extra-top">
+                  <div class="item-page__extra-left">
+                    <div class="shipping-title">
+                      <b>Доставка</b>
+                      <strong>бесплатно</strong>
+                      <br> в пределах МКАД</div>
+                    <div class="self-pickup">
+                      <span>Самовывоз: </span>
+                      <a href="#">
+                        <i>м. Сокольники, Сокольническая пл. дом 9, кв. 2</i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="item-page__extra-right">
+                    <h5 class="payment-title">Онлайн оплата, в кредит и рассрочку</h5>
+                    <ul class="payment__list">
+                      <li class="payment-item">
+                        <img src="img/visa.png" alt="card type">
+                      </li>
+                      <li class="payment-item">
+                        <img src="img/visa.png" alt="card type">
+                      </li>
+                      <li class="payment-item">
+                        <img src="img/visa.png" alt="card type">
+                      </li>
+                      <li class="payment-item">
+                        <img src="img/visa.png" alt="card type">
+                      </li>
+                      <li class="payment-item">
+                        <img src="img/visa.png" alt="card type">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="item-page__extra-bottom">
+                  <a href="#">Не совсем то, что искали?
+                    <strong>Подберите по конфигуратору</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item-page__descr">
+              <div class="item-descr">
+                <p>Идеальный байк для прогулок по улицам родного города и парковым тропинкам. Для комфорта хозяйки,
+                  <strong>CENTURION CITY 3.0</strong> оборудован алюминиевой рамой изящной формы, которая допускает катание в юбке. Защита цепи убережет длинную одежду от попадания в механизм. За
+                  <a href="#">плавность движения отвечают</a> большие колеса диаметром 28 дюймов, трансмиссия на три скорости и мягкое седло. Надежное торможение обеспечат ножные тормоза. В базовую комплектацию входят металлические крылья, задний багажник и закрепленная
+                  на передней раме корзина для личных вещей и покупок.</p>
+                <div class="item-descr__image">
+                  <img src="img/img-item-descr.jpg" Item Description image>
+                </div>
+                <p>Очень часто среди начинающих байкеров разгораются споры о том, какие тормоза для горного велосипеда лучше: дисковые или v-brake. В последнее время даже на недорогие велосипеды производители MTB начали ставить диски, но «настоящие» гидравлические
+                  дисковые тормоза все же стоят немалых денег. Тем не менее поклонников v-brake становится все меньше и меньше.</p>
+                <div class="item-descr__brand">
+                  <div class="item-descr__brand-title">
+                    <img src="img/logo-shimano.jpg" Item logo>
+                  </div>
+                  <div class="item-descr__brand-info">
+                    <p>Японская компания Shimano Industrial была основана в 1921 году и первоначально занималась механической обработкой металла, имея в распоряжении всего один токарный станок, а первыми ее изделиями стали запасные части для велосипедов.
+                      Вскоре товар стал популярен, Shimano разработала очередные новинки для велосипедов и успешно работала на этой ниве в течение нескольких десятилетий, развиваясь и преумножая свои успехи в велосипедной индустрии. В 1950 годах диапазон
+                      продукции Shimano уже включал задний переключатель и 3-х скоростную планетарную втулку. Нацеленность на разработку компонентов для многоскоростного велосипеда привела к разработке более совершенных систем переключения и втулок —
+                      и, в итоге, полной линейке компонентов.</p>
+                  </div>
+                  <a class="item-descr__brand-link" href="">Посмотреть все товары бренда Shimano</a>
+                </div>
+              </div>
+              <div class="item-tech">
+                <table class="item-tech__list">
+                  <tr class="title">
+                    <th colspan="2">Корпус</th>
+                  </tr>
+                  <tr>
+                    <td>Тип тормозов</td>
+                    <td>ножной</td>
+                  </tr>
+                  <tr>
+                    <td>Диаметр колеса</td>
+                    <td>28</td>
+                  </tr>
+                  <tr>
+                    <td>Материал рамы</td>
+                    <td>алюминий</td>
+                  </tr>
+                  <tr>
+                    <td>Тип амортизированной вилки</td>
+                    <td>жесткая</td>
+                  </tr>
+                  <tr>
+                    <td>Тип заднего амортизатора</td>
+                    <td>без амортизатора</td>
+                  </tr>
+                  <tr>
+                    <td>Количество скоростей</td>
+                    <td>3</td>
+                  </tr>
+                  <tr class="title">
+                    <th colspan="2">Вилка</th>
+                  </tr>
+                  <tr>
+                    <td>Задний переключатель</td>
+                    <td>Shimano Nexus,</td>
+                  </tr>
+                  <tr>
+                    <td>Вилка</td>
+                    <td>Inter-3 City, сталь</td>
+                  </tr>
+                  <tr>
+                    <td>Бренд</td>
+                    <td>CUB</td>
+                  </tr>
+                  <tr>
+                    <td>задняя втулка</td>
+                    <td>Disc QR, алюминиевый сплав</td>
+                  </tr>
+                  <tr>
+                    <td>спицы</td>
+                    <td>Нержавеющая сталь</td>
+                  </tr>
+                  <tr class="title">
+                    <th colspan="2">Колеса</th>
+                  </tr>
+                  <tr>
+                    <td>передняя покрышка</td>
+                    <td>Kenda Kwick Roller Holiday, 40 мм</td>
+                  </tr>
+                  <tr>
+                    <td>задняя покрышка</td>
+                    <td>Kenda Kwick Roller Holiday, 40 мм</td>
+                  </tr>
+                  <tr>
+                    <td>подседельный штырь</td>
+                    <td>Suspension SP-71, 27.2 мм</td>
+                  </tr>
+                  <tr>
+                    <td>кассета</td>
+                    <td>Sunrace CS 11-32, 9 скоростей</td>
+                  </tr>
+                  <tr>
+                    <td>передний переключатель</td>
+                    <td>Shimano Altus</td>
+                  </tr>
+                  <tr>
+                    <td>задний переключатель</td>
+                    <td>Shimano Deore</td>
+                  </tr>
+                  <tr>
+                    <td>манетки</td>
+                    <td>Shimano Altus, rapidfire</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="item-feedback-wrapper">
+                <div class="item-feedback item-feedback--empty">
+                  <h3 class="item-feedback__title">
+                    <strong>Напишите отзыв о товаре,</strong>
+                    <span>сделайте выбор легче для других покупателей</span>
+                  </h3>
+                  <div class="item-feedback__btn-wrapped">
+                    <a class="item-feedback__btn" href="">
+                      <i>
+                        <img src="img/icon-feedback.svg" width="20" height="18" alt="iconfeedback">
+                      </i>
+                      <span>Написать отзыв</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer class="page-foooter"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+      dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </footer>
+    <!-- build:js js/vendor.min.js -->
+    <!-- bower:js -->
+    <script src="/js/vendor/jquery/dist/jquery.js"></script>
+    <script src="/js/vendor/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <script src="/js/vendor/qtip2/jquery.qtip.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script>
+      var scr = {
+        "scripts": [
+        {
+          "src": "js/libs.min.js",
+          "async": false
+        },
+        {
+          "src": "js/common.js",
+          "async": false
+        }]
+      };
+      ! function(t, n, r)
+      {
+        "use strict";
+        var c = function(t)
+        {
+          if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+          for (var r = 0; r < t.length; r++)
+          {
+            var c = n.createElement("script"),
+              e = t[r];
+            c.src = e.src, c.async = e.async, n.body.appendChild(c)
+          }
+          return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function()
+        {
+          c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function()
+        {
+          c(r.scripts)
+        }) : t.onload = function()
+        {
+          c(r.scripts)
+        }
+      }(window, document, scr);
+    </script>
+  </body>
+</html>

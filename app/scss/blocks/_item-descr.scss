@@ -1,0 +1,258 @@
+/* item-top Styles */
+
+.item-page__descr {
+	p {
+		text-align: left;
+	}
+}
+
+.item-descr {
+	a {
+		display: inline;
+	}
+
+	font-size: 14px;
+	
+	h1, h2, h3, h4, h5 {
+		font-weight: 700;
+	}
+
+	h1 {
+		font-size: 35px;
+		//margin-bottom: 15px;
+	}
+
+	h2 {
+		font-size: 30px;
+		//margin-bottom: 13px;
+	}
+
+	h3 {
+		font-size: 25px;
+		//margin-bottom: 10px;
+	}
+
+	h4 {
+		font-size: 20px;
+		//margin-bottom: 9px;
+	}
+
+	h5 {
+		font-size: 15px;
+		//margin-bottom: 7px;
+	}
+
+	blockquote {
+		font-style: italic;
+		color: #666;
+		font-size: 14px;
+		font-weight: 400;
+		//padding: 20px;
+		margin-bottom: 20px;
+	}
+
+	.code-block {
+		background-color: #ededed;
+		border-radius: 3px;
+		font-size: 14px;
+		padding: 10px;
+		margin-bottom: 20px;
+		a {
+			font-size: 14px;
+			color: $blue-link;
+		}
+	}
+
+	ul {
+		list-style-type:disc;
+		margin-bottom: 20px;
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	ol {
+		list-style-type:decimal;
+		margin-bottom: 20px;
+		li {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	table {
+		margin-bottom: 20px;
+
+		td {
+			width: 33%;
+			border: 1px solid $bd-grey;
+			padding-top: 18px;
+			padding-bottom: 21px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+}// item descr
+.item-descr__tags {
+	margin-bottom: 20px;
+	display: flex;
+	//justify-content: space-between;
+	//flex-wrap: wrap;
+	//align-items: center;
+	align-content: center;
+	span, a {
+		//display: inline-block;
+	}
+	.tags-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	a {
+		padding: 5px 10px;
+		color: #999;
+		font-family: Arial;
+		font-size: 12px;
+		font-weight: 400;
+		background-color: #f2f2f2;
+		border: 2px solid transparent;
+		border-radius: 50px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+		&:hover {
+			border-color: $red-base;
+			color: #000;
+			background-color: #fff;
+		}
+	}
+}
+
+
+.item-descr p {
+	margin-bottom: 20px;
+}
+
+.item-descr p a {
+	font-size: 14px;
+	display: inline;
+	color: $blue-link;
+}
+
+.item-descr__image {
+	//padding-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.item-descr {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 20px;
+	}
+
+	.item-descr__image {
+		width: auto;
+	}
+
+	
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	.item-descr__brand {
+		display: none;
+	}
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.item-page__descr {
+		margin-bottom: 60px;
+	}
+
+	.item-descr {
+		
+	}
+	
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.item-descr {
+		margin-bottom: 20px;
+		width: 59%;
+		float: left;
+		margin-bottom: 43px;
+	}
+
+	.item-descr__brand {
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		padding: 20px;
+		padding-bottom: 35px;
+		position: relative;
+		text-align: center;
+	}
+
+	.item-descr__brand-title {
+		width: 140px;
+		margin-bottom: 29px;
+		text-align: center;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.item-descr__brand-link {
+		position: absolute;
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 50px;
+		//height: 31px;
+		//line-height: 31px;
+		padding-top: 10px;
+		padding-bottom: 8px;
+		padding-left: 16px;
+		padding-right: 16px;
+		color: $blue-link;
+		font-weight: 700;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		//bottom: -29px;
+		//bottom: -50%;
+		bottom: -18px;
+		//z-index: 10;
+
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+/* item-top  End*/
+

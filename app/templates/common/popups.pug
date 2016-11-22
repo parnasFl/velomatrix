@@ -1,0 +1,119 @@
+//-Написать отзыв
+.feedback-write-popup__outer
+	.feedback-write-popup
+		a.popup-close(href="#") Закрыть окошку
+		.feedback-form__wrapper
+			form
+				h3.feedback-form__title Написать отзыв
+				ul.feedback-form__rating
+					li.feedback-form__rating-item Оцените товар
+					li.feedback-form__rating-item.rating-info
+						ul.item__rating
+							li.item__rating-item.item__rating-item--full
+							li.item__rating-item.item__rating-item--full
+							li.item__rating-item.item__rating-item--full
+							li.item__rating-item
+							li.item__rating-item
+					li.feedback-form__rating-item: a.rating-clear(href="#") очистить
+				.feedback-form__inner
+					.input-wrapper
+						label Заголовок
+							input(type='text', name="", id="")
+					.input-wrapper
+						label Текст отзывы
+							textarea(placeholder="Опишите подробнее свои впечатления о товаре. Чем бы Вы хотели поделиться с другими покупателями?", name="", id="")
+					.feedback-form__meta
+						.input-wrapper.name
+							label Ваше имя
+								input(type='text', name="", id="", value="Фарход")
+						.feedback-captcha
+								.input-wrapper
+										label Код каптчи
+											input(type='text', name="", id="")
+								.captcha-input
+									a.update-btn(href="#")
+										img(src="img/icon-refresh.svg", alt="", width="16", height="16")
+									.captcha-input__image
+										img(src="img/img-captcha.jpg", alt="captcha")
+					button.feedback-form__btn(type="submit") добавить отзыв
+
+//-Товар добавлен в корзину
+.added-to-cart__outer 
+	.added-to-cart
+		a.popup-close(href="#") Закрыть окошку
+		.added-to-cart__inner
+			form
+				.added-to-cart__title ТОВАР ДОБАВЛЕН В КОРЗИНУ
+				.added-to-cart__content-wrapper
+					.added-to-cart__content
+						.added-to-cart__content-image
+							img(src="img/img-item-7.jpg", alt="Item image")
+						.added-to-cart__content-descr
+							a.item-name(href="#") Велосипед МТВ Author Solution 29 Grande Azzuro (Black / Canary Yellow)-Black (2016)
+							.added-to-cart__price
+								.item__descr-price
+									.price__inner
+										.price.new-price <span>22000</span> руб
+										.price.old-price <span>22000</span> руб
+					.added-to-cart__quantity
+						div Кол-во:
+						select
+							option(value="1") 1
+							option(value="1") 2
+							option(value="1") 3
+						a(href="#") удалить
+				.added-to-cart__footer
+					a.added-to-cart__continue-btn(href="#") продолжить покупки
+					button.added-to-cart__checkout-btn(type="submit") оформить заказ
+
+//-быстрая покупка
+.quick-buy__outer
+	.quick-buy
+		a.popup-close(href="#") Закрыть окошку
+		.quick-buy__inner
+			.added-to-cart__content
+				.added-to-cart__content-image
+					img(src="img/img-item-7.jpg", alt="Item image")
+				.added-to-cart__content-descr
+					a.item-name(href="#") Велосипед МТВ Author Solution 29 Grande Azzuro (Black / Canary Yellow)-Black (2016)
+					.added-to-cart__price
+						.item__descr-price
+							.price__inner
+								.price.new-price <span>22000</span> руб
+								.price.old-price <span>22000</span> руб
+		.quick-buy__form
+			form
+				.popup-input-wrapper
+					input(type="text", placeholder="Ваще имя")
+					input(type="tel", placeholder="Контактный телефон")
+				button.quick-buy__btn(type="submit") заказать
+
+//-ваш заказ оформлен
+.order-complete__outer
+	.order-complete
+		a.popup-close(href="#") Закрыть окошку
+		.order-complete__inner
+			.order-complete__top
+				.ura Ура!
+				.order-complete__title Ваш заказ оформлен!
+			.order-complete__info
+				.order-complete__num Номер вашего заказа <span>#100790</span>
+				div Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.
+			.order-complete__info.
+				<i></i>Обработка заказов Понедельник-Пятница с 9.00 до 18.00 по МСК. Суббота и Восресение выходные
+
+//- типовой поп-ап
+.simple-popup__outer
+	.simple-popup
+		a.popup-close(href="#") Закрыть окошку
+		.simple-popup__inner
+			.simple-popup__descr
+				div Описание поп-ап окошки
+			.simple-popup__status Запрос отправлено
+			form
+				.popup-input-wrapper
+					input(type="text", placeholder="Поля 1")
+					input(type="tel", placeholder="Поля 1")
+				button.quick-buy__btn(type="submit") кнопка
+
+

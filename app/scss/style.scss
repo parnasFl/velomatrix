@@ -13,6 +13,9 @@
 //Components
 //@import "components/font-awesome";
 @import "components/_buttons";
+@import "components/_items";
+@import "components/_forms";
+@import "components/_popups";
 
 
 
@@ -48,7 +51,18 @@
 @import "blocks/_catalog-bottom";
 
 
+/* Item Page Styles */
 
+@import "blocks/_item-top";
+@import "blocks/_item-main-left";
+@import "blocks/_item-main-right";
+@import "blocks/_item-main-bottom";
+@import "blocks/_item-descr";
+@import "blocks/_item-tech-info";
+@import "blocks/_item-feedback";
+
+/* Feedback Page Styles */
+@import "blocks/_feedback-main";
 
 //Customized vendor less/css style
 //@import "vendor/_slick-theme";

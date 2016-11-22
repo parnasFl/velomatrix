@@ -1,0 +1,283 @@
+
+/* .feedback Styles */
+
+.feedback-form__wrapper {
+	padding: 20px;
+	font-size: 14px;
+	margin-bottom: 20px;
+
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-form__title {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.feedback-form__rating {
+	text-align: center;
+
+	.item__rating-item {
+		width: 24px;
+		height: 24px;
+		background-size: 24px 24px;
+	}
+}
+
+.feedback-form__rating-item {
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.rating-clear {
+	color: #69c;
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.feedback-form__inner {
+
+}
+
+.feedback-form__input-wrapper {
+
+}
+
+.feedback-form__meta {
+	
+}
+
+.feedback-captcha {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	.input-wrapper {
+		display: inline-block;
+		vertical-align: bottom;
+		margin-bottom: 0;
+	}
+	input {
+		width: 90px;
+	}
+}
+
+.captcha-input {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.update-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	margin-right: 12px;
+}
+
+.captcha-input__image {
+	display: inline-block;
+	vertical-align: middle;
+	width: 120px;
+}
+
+.feedback-form__btn {
+	@include btn--red;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.feedback-page__wrapper {
+		padding-left: 10px;
+		padding-right: 10px;
+
+		.breadcrumb {
+			border-top: none;
+			padding-top: 0;
+		}
+	}
+
+	.feedback__title {
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+
+	.feedback__items-li {
+		margin-bottom: 10px;
+	}
+
+	.feedback .item-feedback__btn {
+		display: inline-block;
+	}
+
+	.feedback-form__meta {
+		margin-bottom: 20px;
+	}
+}
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.feedback-page__wrapper {
+		width: 718px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin: 0 auto;
+	}
+
+	.feedback__items-list {
+		width: 678px;
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	
+
+	.feedback__items-li {
+		margin-bottom: 20px;
+	}
+
+	.feedback__title {
+		font-size: 20px;
+		font-weight: 400;
+		margin-bottom: 20px;
+	}
+
+	.feedback-form__wrapper {
+		
+	}
+
+	.feedback-form__title {
+		margin-bottom: 30px;
+	}
+
+	.feedback-form__rating {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+		.feedback-form__rating-item {
+			margin-bottom: 0;
+
+			&:not(:first-child) {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.feedback-form__meta {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		.input-wrapper {
+			margin-bottom: 0;
+
+			&.name {
+				flex-basis: 300px;
+				input {
+					
+				}
+			}
+		}
+	} // FEEDBACK-FORM__META
+
+	.feedback-captcha {
+		//display: flex;
+		//justify-content: space-between;
+	}
+
+	.captcha-input {
+		margin-left: 15px;
+	}
+
+	.feedback-form__btn {
+		margin-bottom: 10px;
+	}
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.feedback-page__wrapper {
+		padding-top: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
+
+		.item-feedback-wrapper {
+			width: 727px;
+			margin: 0 auto;
+			margin-bottom: 40px;
+		}
+
+		.item-feedback__single {
+			margin-bottom: 0;
+			&:not(:last-child) {
+				margin-bottom: 35px;
+			}
+		}
+
+		.item-feedback {
+			margin-bottom: 40px;
+		}
+
+		.item-feedback--empty {
+			margin-bottom: 40px;
+		}
+	}
+
+
+	.feedback__title {
+		font-size: 40px;
+		font-weight: 300;
+		margin-bottom: 40px;
+	}
+
+	.feedback__items-list {
+		width: 727px;
+		margin: 0 auto;
+	}
+	
+	.feedback-form__wrapper {
+		width: 727px;
+		margin: 0 auto;
+	}
+
+}
+
+
+/* feedback  End*/
+

@@ -18,7 +18,11 @@ $tablet-widths: "(min-width: 600px)";
 $desktop-widths: "(min-width: 1024px)";
 //$tablet-widths: 768px;
 //$desktop-widths: 1200px;
-
+$mobileonly: "@media (max-width: 767px)";
+$mobtabonly: "@media (max-width: 1023px)";
+$tabonly: "@media (min-width:768px) and (max-width: 1023px)";
+$tabdeskonly: "@media (min-width: 768px)";
+$deskonly: "@media (min-width: 1024px)";
 
 //** Background color for `<body>`.
 $body-bg:               #fff;
@@ -52,7 +56,7 @@ $link-hover-decoration: none;
 $ff-regular: proxima_nova, Helvetica, sans-serif;
 $ff-custom: bad_scriptregular;
 
-$font-size-base:          16px;
+$font-size-base:          14px;
 
 $font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)); // ~30px

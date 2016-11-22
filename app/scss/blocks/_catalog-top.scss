@@ -17,6 +17,9 @@
 	margin-right: 26px;
 	a {
 		display: block;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	&:not(:last-child) {
 		&::after {
@@ -24,7 +27,7 @@
 			top: 50%;
 			margin-top: -4px;
 			right: -17px;
-			width: 5px;
+			width: 8px;
 			height: 8px;
 			background-image: url('../img/icon-breadcrumb.svg');
 			background-size: 5px 8px;
@@ -84,9 +87,15 @@
 		margin: 0 auto;
 	}
 	.breadcrumb {
-		margin-bottom: 20px;
 		width: 718px;
 		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+
+	.breadcrumb {
+		
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
@@ -100,11 +109,7 @@
 	padding-right: 20px;
 }
 
-.breadcrumb {
-	
-	padding-left: 20px;
-	padding-right: 20px;
-}
+
 
 } //(min-width: 768px)
 
@@ -118,7 +123,7 @@
 	}
 
 	.breadcrumb {
-		padding-left: 2.237136465324%;
+		//padding-left: 2.237136465324%;
 		padding-right: 2.237136465324%;
 	}
 }

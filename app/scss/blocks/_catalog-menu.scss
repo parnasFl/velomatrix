@@ -184,18 +184,22 @@
 	}
 
 	.catalog-menu__list {
-		@include clearfix;
+		//@include clearfix;
+		font-size: 0;
 	}
 
 	.catalog-menu__li {
-
+	
 	}
 
 	.catalog-menu__item {
-		float: left;
+		//float: left;
+		display: inline-block;
+		vertical-align: top;
 		width: 20%;
 		padding-left: 2.237136465324%;
-		padding-right: 2.237136465324em;
+		padding-right: 2.237136465324%;
+		margin-bottom: 40px;
 	}
 
 	.catalog-menu__name {
