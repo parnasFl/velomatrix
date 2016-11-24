@@ -31,9 +31,10 @@
 		content: '';
 		position: absolute;
 		left: 50%;
-		top: -32px;
+		top: -23px;
 		margin-left: -5px;
-		background: url("../img/icon-more-cats.png") 0 0 no-repeat;
+		background: url("../img/icon-more-cats.svg") 0 0 no-repeat;
+		background-size: 9px 16px;
 		width: 9px;
 		height: 16px;
 	}
@@ -141,40 +142,43 @@
 
 	.bic-item--sales-leader-first {
 		&.bic-item {
+			padding-left: 2.322340919647%;
 			padding-right: 0;
 		}
 
 		.bic-item__descr-wrapper {
-			margin-left: 2.322340919647%;
+			//margin-left: 2.322340919647%;
+			//padding-right: 2.322340919647%;
 		}
 	}
 
 	.bic-item {
-		padding-left: 2.322340919647%;
+		//padding-left: 2.322340919647%;
 		padding-right: 2.322340919647%;
 		font-size: 0;
 		position: relative;
 		display: flex; //?
 		align-items: center;//?
 		margin-bottom: 30px;
-
-		&:before, &:after {
-			content: '';
-			position: absolute;
-			left: 0; right: 0;
-			height: 1px;
-			opacity: 0.1;
-			background-color: black;
-			z-index: -1;
-		}
-
-		&:before {
-			top: 20px;
-		}
 		
-		&:after {
-			bottom: 20px;
-		}
+		
+		// &:before, &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: 0; right: 0;
+		// 	height: 1px;
+		// 	opacity: 0.1;
+		// 	background-color: black;
+		// 	z-index: -1;
+		// }
+
+		// &:before {
+		// 	top: 20px;
+		// }
+		
+		// &:after {
+		// 	bottom: 20px;
+		// }
 
 	}
 
@@ -186,6 +190,9 @@
 		@include clearfix;
 		padding-top: 20px;
 		padding-bottom: 20px;
+		padding-left: 2.322340919647%;
+		border-bottom: 1px solid $bd-grey;
+		border-top: 1px solid $bd-grey;
 		//padding-right: 22.449295556588%;
 
 		

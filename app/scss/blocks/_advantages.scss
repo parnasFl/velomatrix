@@ -268,16 +268,21 @@
 
 	.advantages__item-icon {
 		//width: 29.855480813189%;
-		width: 24.771636476235%;
+		//width: 24.771636476235%;
+		width: 18%;
 		float: left;
 		//margin-right: 1.548227279765%;
+		img {
+			max-width: 85%;
+		}
 	}
 
 	.advantages__item-content {
 		//width: 70.144519186811%;
 		padding-left: 6.192909119059%;
-		width: 75.228363523765%;
+		width: 82%;
 		float: right;
+
 	}
 
 	.advantages__item-title {

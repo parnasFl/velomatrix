@@ -59,6 +59,12 @@ a {
 	font-size: 17px;
 	display: inline-block;
 	vertical-align: middle;
+
+	em {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 12px;
+	}
 }
 
 .sales-leader__marking {
@@ -407,12 +413,16 @@ a {
 		right: 20px;
 		bottom: 20px;
 		@include link-text-indent;
-		background: url("../img/icon-cat-arrow.png") 0 0 no-repeat;
-		background-size: 19px 19px;
+		background: url("../img/icon-cat-arrow.svg") no-repeat;
+		background-size: 5px 7px;
+		border: 1px solid $bd-grey;
+		border-radius: 50%;
+		background-position: 50% 50%;
 
 		&:hover {
-			background: url("../img/icon-cat-arrow-hover.png") 0 0 no-repeat;
-			background-size: 19px 19px;
+			border-color: $red-base;
+			background-image: url("../img/icon-cat-arrow-hover.svg");
+			background-size: 5px 7px;
 		}
 	}
 

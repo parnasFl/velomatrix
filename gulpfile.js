@@ -28,6 +28,7 @@ var gulp           = require('gulp'),
 //Compiling PUG files
 gulp.task('pug', function () {
 	gulp.src('app/templates/pages/*.pug')
+	//gulp.src('app/*.pug')
 		.pipe(pug({
 			pretty: true
 		}))
@@ -36,7 +37,7 @@ gulp.task('pug', function () {
 				ignorePath: /^(\.\.\/)*\.\./
 		}))
 		.on('error', log)
-		.pipe(prettify({indent_size: 2}))
+		//.pipe(prettify({indent_size: 2}))
 		.pipe(gulp.dest('app/'))
 		.pipe(reload({stream: true}));
 });
@@ -67,9 +68,11 @@ gulp.task('libs', function() {
 });
 
 //Local browserSync Server
-gulp.task('server', ['pug'],function(){
+//gulp.task('server', ['pug'],function(){
+gulp.task('server',function(){
 	browserSync({
 		notify: false,
+		port: 9000,
 		server: {
 			baseDir: 'app'
 		}
@@ -90,9 +93,9 @@ gulp.task('useref', function(){
 
 	return gulp.src('app/*.html')
 		//.pipe(gulpRemoveHtml())
-		.pipe(fileinclude({
-			prefix: '@@'
-		}))
+		// .pipe(fileinclude({
+		// 	prefix: '@@'
+		// }))
 		.pipe(useref())
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', cleanCSS({compatibility: 'ie8'})))
@@ -112,10 +115,10 @@ gulp.task('fonts', function(){
 //Copying Images
 gulp.task('images', function(){
 	return gulp.src('app/img/**/*')
-	.pipe(imagemin({
-		progressive: true,
-		interlaced: true
-	}))
+	// .pipe(imagemin({
+	// 	progressive: true,
+	// 	interlaced: true
+	// }))
 	.pipe(gulp.dest('dist/img'));
 });
 
@@ -137,15 +140,14 @@ gulp.task('css', function(){
 			]).pipe(gulp.dest('dist/css'));
 });
 
-//CSS files
+//JS files
 gulp.task('js', function(){
 	return gulp.src([
 			'app/js/common.js',
-			'app/js/lib.min.js',
-			'app/js/vendor/picturefill/dist/picturefill.min.js'
+			'app/js/libs.min.js'
+			//'app/js/picturefill.min.js'
 			]).pipe(gulp.dest('dist/js'));
 });
-
 
 //Build and display the size of build folder
 gulp.task('dist', ['useref', 'css','js','images', 'fonts', 'extras'], function(){
@@ -157,20 +159,20 @@ gulp.task('build', ['clean', 'pug'], function() {
 	gulp.start('dist');
 });
 
-
 //=========================================================
 //=========================================================
 //========================Watch and Default================
 
 //Watch Tasks
-gulp.task('watch',['pug', 'scss', 'libs'], function () {
-	gulp.watch('app/templates/**/*.pug', ['pug']);
+gulp.task('watch',['server', 'pug', 'scss', 'libs'], function () {
+	gulp.watch('app/**/*.pug', ['pug']);
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);
-	gulp.watch([
-		'app/js/**/*.js',
-		'app/css/**/*.css'
-	]).on('change', reload);
+	gulp.watch('app/js/**/*.js', browserSync.reload);
+	// gulp.watch([
+	// 	'app/js/**/*.js',
+	// 	'app/css/**/*.css'
+	// ]).on('change', reload);
 });
 
 //Default Tasks
