@@ -120,7 +120,7 @@
 
 	.main-nav__item {
 		@include justified-menu_item;
-		
+		position: static;
 	}
 	
 	.main-nav__link {
@@ -132,9 +132,15 @@
 	.main-nav__dropdown-menu {
 		width: 100%;
 		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 100;
 		display: none;
-		
+		background-color: #e5e5e5;
 		border-top: 3px solid $red-base;
+		&.current {
+			display: block;
+		}
 	}
 
 	.main-nav__dropdown-list {
