@@ -3,6 +3,7 @@
 .config {
 	position: relative;
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+	z-index: 200;
 }
 
 .config__inner {
@@ -356,6 +357,18 @@
 @media (max-width: 1023px) {
 
 }//@media (max-width: 1023px) 
+
+/* Only Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.config-panel__menu-type--toggle {
+		height: 51px;
+		min-height: 51px;
+		// .config-panel__menu-type {
+		// 	width: 51px;
+		// }
+	}
+}
+
 
 
 /* Only tablet&desktop styles 

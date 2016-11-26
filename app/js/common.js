@@ -119,5 +119,72 @@ $(function(){
 							.closest('.config-panel__item')
 							.removeClass('remove-pseudo-border');
 		});
+
 	})();
+
+	/*Desktop Dropdown Menu*/
+	(function(){
+
+		// $('.main-nav__item').hover(function(){
+		// 	clearTimeout($.data(this, 'timer'));
+		// 	$('.main-nav__dropdown-menu', this).stop(true, true).slideDown(300);
+		// }, function () {
+		// 	$.data(this, 'timer', setTimeout($.proxy(function(){
+		// 		$('.main-nav__dropdown-menu', this).stop(true, true).slideUp(300);
+		// 	}, this), 300));
+		
+		// });
+
+	})(); //incapsulation
+
+	/*Tablet & Mobile Menu*/
+
+	$('.main-nav__link').on('click', function(){
+		if($(window).width() < 1023) {
+			var menuItem = $(this).closest('.main-nav__item');
+
+			if($('.main-nav').hasClass('.open-category')) {
+				$('.main-nav').removeClass('.open-category');
+			}
+
+			$('.main-nav').addClass('.open-category');
+			menuItem.siblings().removeClass('opened-category')
+			menuItem.addClass('opened-category');
+		}
+	});
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
