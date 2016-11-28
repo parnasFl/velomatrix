@@ -31,6 +31,9 @@
 		right: 0;
 		bottom: 0;
 		margin: auto;
+		svg * {
+			fill: #000;
+		}
 	}
 	
 	.cart__btn-text {

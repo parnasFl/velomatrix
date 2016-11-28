@@ -63,8 +63,8 @@
 	.bic-item__descr-title-link {
 		&:hover {
 			.bic-item__descr-title-icon {
-			background: url("../img/icon-cat-arrow-hover.png") 0 0 no-repeat;
-			background-size: 19px 19px;
+			background-image: url("../img/icon-cat-arrow-hover.svg");
+			border-color: $red-base;
 			}
 		}
 	}
@@ -77,10 +77,15 @@
 	.bic-item__descr-title-icon {
 		display: inline-block;
 		vertical-align: middle;
-		background: url("../img/icon-cat-arrow.png") 0 0 no-repeat;
-		background-size: 19px 19px;
-		width: 19px;
-		height: 19px;
+		background-color: white;
+		border: 1px solid #c6c6c6;
+		background-image: url("../img/icon-cat-arrow.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 5px 7px;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
 		margin-left: 5px;
 	}
 
