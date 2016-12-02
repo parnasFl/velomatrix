@@ -151,7 +151,41 @@
 		width: 678px;
 		margin-left: auto;
 		margin-right: auto;
-	} 
+	}
+
+	.accessories {
+		.category-item__pic-inner {
+			img {
+				max-width: 60%;
+			}
+		}
+	}
+
+	.category-item.category-item--narrow {
+		img {
+			top: 60px;
+		}
+	}
+
+	.category-item.category-item--wide.scate {
+		img {
+			top: 30px;
+		}
+	}
+
+	.category-item__brands-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.category-item__brands-item {
+			flex-basis: 80px;
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
 }
 
 
@@ -235,19 +269,7 @@
 		margin: 0 auto;
 	}
 
-	.category-item__brands-list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.category-item__brands-item {
-		flex-basis: 80px;
-		&:not(:last-child) {
-			margin-right: 30px;
-		}
-	}
+	
 	
 	.category-item__filter {
 		width: 100%;
@@ -309,6 +331,7 @@
 
 		img {
 			@include img-center;
+			max-width: 85%;
 		}
 	}
 }
@@ -328,7 +351,8 @@
 		margin-bottom: 40px;
 	}
 	.main-slider {
-		width: 58.677813903081%;
+		//width: 58.677813903081%;
+		width: 58.696%;
 		//flex-basis: 58.677813903081%;
 		margin-bottom: 20px;
 		//min-height: 400px;
@@ -342,9 +366,11 @@
 		padding-right: 20px;
 		padding-bottom: 20px;
 		position: relative;
+
 		&.category-item--slider {
 			flex-basis: 38.470469850608%;
 		}
+
 		flex-basis: 38.396036538164%;
 
 		&.category-item--narrow {
@@ -354,6 +380,7 @@
 				width: 225%;
 				img {
 					width: 100%;
+					top: 60px;
 				}
 			}
 		}
@@ -379,12 +406,47 @@
 			background-size: 399px 351px;
 		}
 
+		&.accessories {
+			.category-item__pic-inner {
+				img {
+					
+				}
+			}
+		}
+
 		&.default-height {
 			.category-item__desc {
 				position: relative;
 				height: 360px;
 			}
 		}
+
+		&.samokat {
+			.category-item__pic-inner {
+				img {
+					max-width: 85%;
+				}
+			}
+		}
+
+		&.scate {
+			.category-item__pic-inner {
+				margin-top: 20px;
+				img {
+					max-width: 85%;
+				}
+			}
+		}
+
+		&.gyroscooter {
+			.category-item__pic-inner {
+				img {
+					max-width: 85%;
+				}
+			}
+		}
+
+
 	} // category-item
 	
 	.category-item__label {
@@ -463,9 +525,27 @@
 		img {
 			@include img-center;
 		}
-	}
-	
 
+	}
+
+	// .category-item__pic-inner {
+		
+	// 	background-color: red;
+	// }
+	
+	.category-item__brands-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.category-item__brands-item {
+		flex-basis: 80px;
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
 
 	.category-item__footer {
 		display: block;

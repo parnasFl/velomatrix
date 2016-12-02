@@ -4,6 +4,22 @@
 	p {
 		text-align: left;
 	}
+
+	&.not-full-descr {
+		.item-descr {
+			float: none;
+			margin: 0 auto;
+		}
+		.item-feedback-wrapper {
+			float: none;
+			margin: 0 auto;
+		}
+
+		.item-tech {
+			float: none;
+			margin: 0 auto;
+		}
+	}
 }
 
 .item-descr {
@@ -66,6 +82,7 @@
 	ul {
 		list-style-type:disc;
 		margin-bottom: 20px;
+		padding-left: 20px;
 		li {
 			margin: 0;
 			padding: 0;
@@ -75,6 +92,7 @@
 	ol {
 		list-style-type:decimal;
 		margin-bottom: 20px;
+		padding-left: 20px;
 		li {
 			margin: 0;
 			padding: 0;

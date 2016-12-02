@@ -9,7 +9,13 @@ $(function(){
 		$('.main-slider--js').slick({
 			autoplay: true,
 			dots: true,
-			accessibility: false
+			accessibility: false,
+			responsive: [{
+					breakpoint: 767,
+					settings: {
+							arrows:false
+					}
+			}]
 		});
 
 	})();
@@ -718,8 +724,25 @@ $(function(){
 			==============================================*/
 			(function(){
 				$('.styled select').selectric();
+
+				$('.catalog-list__filter-settings select').selectric();
 			})();
 
+
+			/*---------Search button hover
+			============================================*/
+			(function(){
+				$('.search__btn').mouseover(function(){
+					$(this).find('img').attr({
+						'src':'img/icon-search-hover.svg'
+					});
+				}).mouseout(function(){
+					$(this).find('img').attr({
+						'src':'img/icon-search.svg'
+					});
+				});
+
+			})();
 }); // Jquery $ Function
 
 

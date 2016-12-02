@@ -31,7 +31,7 @@
 		top: 0;
 		bottom: 0;
 		background-color: #000;
-		opacity: .8;
+		opacity: .3;
 		z-index: -1;
 	}
 }
@@ -208,8 +208,8 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.home-articles {
-		padding-top: 20px;
-		padding-bottom: 40px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 		padding-left: 2.322340919647%;
 		padding-right: 2.322340919647%;
 		@include clearfix;
@@ -240,13 +240,14 @@
 	}
 	.home-articles__content-item {
 		&:not(:first-child) {
-			padding-top: 10px;
+			padding-top: 8px;
 		}
-		padding-bottom: 10px;
+		padding-bottom: 8px;
 		line-height: 1.4;
 	}
 	.home-articles__content-all-arts-link {
 		border-bottom: none;
+		padding-bottom: 0;
 	}
 }
 

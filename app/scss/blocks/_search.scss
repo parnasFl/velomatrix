@@ -145,7 +145,52 @@ input.search__input{
 		display: none;
 	}
 
-	
+	.page-search__suggest {
+		width: 100%;
+		position: absolute;
+		top: 40px;
+		background-color: white;
+		border: 2px solid #ed0000;
+		border-radius: 0px 0px 3px 3px;
+		z-index: 100;
+	}
+
+	.page-search__suggest-wrapper {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.page-search__suggest-item {
+		
+		margin-bottom: 20px;
+	}
+
+	.page-search__suggest-pic {
+		width: 50px;
+		height: 50px;
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		position: relative;
+		img {
+			@include img-center;
+		}
+	}
+
+	.page-search__suggest-content {
+
+	}
+
+	.page-search__suggest-title {
+
+	}
+
+	.page-search__suggest-price {
+
+		.regular {
+
+		}
+	}
+
 }//(min-width: 768px)
 
 
@@ -154,14 +199,43 @@ input.search__input{
 @media (min-width: 1024px) {
 	.page-search {
 		width: 39.539899352983%;
+		position: relative;
 	}
 
 	.page-search__wrapper {
 		width: 100%;
+
 	}
 
 	.search {
 		width: 100%;
 	}
+
+	.page-search__hint {
+		position: absolute;
+		margin-top: 5px;
+	}
+
+	.page-search__hint-wrapper {
+		display: flex;
+		font-size: 13px;
+		span {
+			color: #999;
+		}
+		a {
+			color: $blue-link;
+			text-decoration: underline;
+			margin-left: 5px;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+
+
+
+
+
 }//(min-width: 1024px
 /* Search Block Styles End*/

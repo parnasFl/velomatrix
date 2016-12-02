@@ -42,6 +42,7 @@
 
 	.page-support__callback-btn {
 		margin-bottom: 10px;
+
 	}
 }
 
@@ -70,6 +71,12 @@
 		font-weight: 400;
 		color: #666;
 
+	}
+
+	.page-support__callback-btn {
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }//(min-width: 1024px
 
