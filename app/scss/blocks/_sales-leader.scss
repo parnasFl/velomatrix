@@ -419,10 +419,10 @@ a {
 		border-radius: 50%;
 		background-position: 50% 50%;
 
-		&:hover {
+		&:hover,
+		&.hovered {
 			border-color: $red-base;
 			background-image: url("../img/icon-cat-arrow-hover.svg");
-			background-size: 5px 7px;
 		}
 	}
 

@@ -8,10 +8,12 @@
 	vertical-align: top;
 	width: 60px;
 	text-align: center;
+	position: relative;
 }
 
 .config-links__link {
 	display: block;
+	position: relative;
 	&:hover {
 		.config-links__icon {
 			border-color: #ed0000;
@@ -33,6 +35,56 @@
 		position: absolute;
 		top: 0;bottom: 0;right: 0;left: 0;
 		margin: auto;
+	}
+}
+
+.config-icon-tooltip {
+	position: absolute;
+	display: none;
+	font-size: 12px;
+	width: 290px;
+	//min-height: 100px;
+	background-color: #ffee9c;
+	border-radius: 3px;
+	box-shadow: 3.5px 3.5px 5px rgba(97, 90, 54, 0.22);
+	z-index: 2000;
+	text-align: left;
+	left: -118px;
+	//left: 0px;
+	top: 80%;
+	padding: 10px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 35px;
+		background:transparent;
+		top: -19px;
+	}
+	.text {
+		position: relative;
+		&:before {
+				top: -20px;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(255, 238, 156, 0);
+				border-bottom-color: #ffee9c;
+				border-width: 5px;
+				margin-left: -3px;
+		}
+		
+	}
+	a {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 

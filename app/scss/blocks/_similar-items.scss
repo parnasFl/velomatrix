@@ -1,23 +1,19 @@
 /* .also buyed Styles */
-
-.also-buyed {
-	//margin-bottom: 20px;
-	//margin-top: -50px;
-	.slick-list {
-		overflow: visible;
-	}
-}
-
-.also-buyed__title {
+.similar-items__title {
 	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 10px;
 	margin-left: 20px;
 }
+
+.similar-items {
+	//margin-top: -70px;
+	//margin-bottom: -80px;
+}
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
 @media (max-width: 767px) {
-	.also-buyed {
+	.similar-items {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -51,7 +47,7 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	.also-buyed {
+	.similar-items {
 		//width: 100%;
 		//margin: 0 auto;
 		.slick-slide {

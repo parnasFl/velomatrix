@@ -34,6 +34,7 @@
 	margin-bottom: 20px;
 
 	span {
+		position: relative;
 		display: inline-block;
 		vertical-align: middle;
 		width: 16px;
@@ -251,6 +252,38 @@ button.options__btn-buy:disabled {
 	margin: 0 auto;
 	&:hover {
 		border-color: transparent;
+	}
+}
+
+.options-tooltip {
+	display: none;
+	position: absolute;
+	width: 290px;
+	background-color: #ffee9c;
+	border-radius: 3px;
+	box-shadow: 3.5px 3.5px 5px rgba(97, 90, 54, 0.22);
+	left: -122px;
+	top: 20px;
+	line-height: 1.4;
+	padding: 10px;
+	font-size: 12px;
+	z-index: 10;
+	text-align: left;
+	&::before {
+		content: '';
+		background-color: rgba(255,255,255,.1);
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 22px;
+		top: -13px;
+	}
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 /* ==============Only Mobile Styles * 767 * ==============

@@ -89,6 +89,8 @@ input {
 		&:-ms-input-placeholder {
 			color: transparent;
 		}
+
+		outline: none;
 	}
 } //velomatrix
 
@@ -115,12 +117,25 @@ textarea {
 		&:-ms-input-placeholder {
 			color: transparent;
 		}
+
+		outline: none;
 	}
 }
 
 .input-wrapper {
 	margin-bottom: 20px;
+	&.mistake {
+		position: relative;
+		margin-bottom: 30px;
+		input {
+			border-color: $red-base;
+		}
 
+		.mistake-test {
+			position: absolute;
+			color: $red-base;
+		}
+	}
 }
 
 .input-wrapper label {

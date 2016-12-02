@@ -88,9 +88,61 @@ $(function(){
 			============================================*/
 			(function(){
 				$('.also-buyed__carousel-wrap').slick({
+					infinite: true,
 					slidesToShow: 4,
 					slidesToScroll: 1,
-					accessibility: false
+					accessibility: false,
+					dots: false,
+					responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							infinite: true,
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							infinite: true,
+							slidesToScroll: 1,
+							slidesToShow: 1,
+							dots: false
+						}
+					}
+					]
+				});
+			})();
+
+		/*Item page 'also-buyed' carousel- http://kenwheeler.github.io/slick/
+			============================================*/
+			(function(){
+				$('.similar-items__carousel-wrap').slick({
+					infinite: true,
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					accessibility: false,
+					dots: false,
+					responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							infinite: true,
+							slidesToShow: 3,
+							slidesToScroll: 1
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							infinite: true,
+							slidesToScroll: 1,
+							slidesToShow: 1,
+							dots: false
+						}
+					}
+					]
 				});
 			})();
 
@@ -257,16 +309,7 @@ $(function(){
 	
 	/*---------Mobile Config Menu toggle
 	============================================*/
-	/*$('.config-toggle').on('click', function(e){
-		e.preventDefault();
-
-
-
-		$(this).closest('.main-content')
-				.siblings('.config').fadeToggle();
-
-	});*/
-
+	
 	$('.config-toggle').on('click', function(e){
 		e.preventDefault();
 
@@ -694,12 +737,26 @@ $(function(){
 
 			/* Catalog config icons hover
 			==============================================*/
-			$('.catalog-item__conficons-link').hover(function(){
-				$(this).closest('.catalog-item__conficons-item')
-							.addClass('show-all');
-			}, function(){
-				$(this).removeClass('show-all');
-			});
+
+			(function(){
+				$('.catalog-item__conficons-link').mouseover(function(){
+					$(this).closest('.catalog-item__conficons-list')
+					.find('.catalog-item__conficons-item')
+												.removeClass('hide-all');
+				});
+				// $('.catalog-item__conficons').mouseout(function(){
+				// 	$(this).find('.catalog-item__conficons-item')
+				// 						.addClass('hide-all');
+				// });
+
+			})();
+
+			// $('.catalog-item__conficons-link').hover(function(){
+			// 	$(this).closest('.catalog-item__conficons-item')
+			// 				.addClass('show-all');
+			// }, function(){
+			// 	$(this).removeClass('show-all');
+			// });
 
 
 			/* Catalog item hover
@@ -743,6 +800,99 @@ $(function(){
 				});
 
 			})();
+
+			/*---------Config hover
+			============================================*/
+			(function(){
+				// $('.config-links__link').mouseover(function(){
+				// 	$(this).closest('.wrapper')
+				// 				.find('.config')
+				// 				.children('');
+				// }).mouseout(function(){
+				// 	$(this).find('img').attr({
+				// 		'src':'img/icon-search.svg'
+				// 	});
+				// });
+
+			})();
+
+
+			/*---------Config icons hover display
+			============================================*/
+			(function(){
+				$('.config-links__link').hover(function(){
+					$(this)
+					.find('.config-icon-tooltip')
+					.stop(true, true)
+					.slideToggle('fast');
+				});
+
+			})();
+
+			/*// Info block tooltip
+			(function(){
+				$('.config-panel__menu-title i').hover(function(){
+					$(this).find('div').stop(true, true).slideToggle('fast');
+				});
+
+			})();*/
+
+			/*---------Catalog Config icons hover display
+			============================================*/
+			(function(){
+				$('.catalog-item__conficons-item').hover(function(){
+					$(this)
+					.find('.config-icon-tooltip')
+					.stop(true, true)
+					.slideToggle('fast');
+				});
+
+			})();
+
+			/*---------Options panel tooltip
+			============================================*/
+			(function(){
+				$('.options__size-title span').hover(function(){
+					$(this)
+					.find('.options-tooltip')
+					.stop(true, true)
+					.slideToggle('fast');
+				});
+
+			})();
+
+			/*---------Show more cats
+			============================================*/
+			$('.show-more-cats').on('click',function(e){
+				e.preventDefault();
+
+				if(!$('.bic-item').hasClass('show-more-items')) {
+					$(this).siblings('.bic-item')
+									.addClass('show-more-items');
+				}
+				else {
+					$(this).siblings('.bic-item')
+									.removeClass('show-more-items');
+				}
+			});
+
+			/*Sales Leader first Hover
+			==============================================*/
+			(function(){
+				
+					$('.sales-leader__img, .sales-leader__title').hover(function(){
+						$(this).closest('.bic-item__sales-leader')
+						.find('.sales-leader__arrow')
+						.addClass('hovered');
+					},function(){
+						$(this).closest('.bic-item__sales-leader')
+						.find('.sales-leader__arrow')
+						.removeClass('hovered');
+					});
+				
+			})();
+
+//sales-leader__img
 }); // Jquery $ Function
 
 

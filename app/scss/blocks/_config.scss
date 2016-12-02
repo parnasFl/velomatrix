@@ -389,6 +389,19 @@
 	margin-bottom: 20px;
 }
 
+
+button.config-submit-show[disabled=disabled],
+button.config-submit-show:disabled {
+	@include btn--red--disabled;
+}
+
+button.config-submit-detailed[disabled=disabled],
+button.config-submit-detailed:disabled {
+	@include btn--transparent--disabled;
+}
+
+
+
 .show-more {
 	display: inline-block;
 	font-size: 12px;

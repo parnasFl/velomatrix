@@ -59,6 +59,55 @@
 // }
 
 /* Arrows */
+.also-buyed {
+	.slick-prev,
+	.slick-next {
+		top: 40%;
+			@media (max-width: 1023px) {
+				top: 20%;
+			}
+	}
+
+	.slick-prev {
+		left: 0;
+		@media (max-width: 1023px) {
+			left: -20px;
+		}
+	}
+
+	.slick-next {
+		right: 0;
+		@media (max-width: 1023px) {
+			right: -10px;
+		}
+	}
+
+}
+
+.similar-items {
+	.slick-prev,
+	.slick-next {
+		top: 40%;
+			@media (max-width: 1023px) {
+				top: 20%;
+			}
+	}
+
+	.slick-prev {
+		left: 0;
+		@media (max-width: 1023px) {
+			left: -20px;
+		}
+	}
+
+	.slick-next {
+		right: 0;
+		@media (max-width: 1023px) {
+			right: -10px;
+		}
+	}
+
+}
 
 .slick-prev,
 .slick-next {
