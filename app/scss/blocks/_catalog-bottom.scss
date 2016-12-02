@@ -88,14 +88,7 @@
 /* ============== Only Mobile&Tablet styles * 1023 * ======
 *******************************************************/
 @media (max-width: 1023px) {
-	.cat-bottom__loader-btn {
-		@include btn--transparent-round;
-		padding-left: 40px;
-		padding-right: 40px;
-		text-transform: none;
-		font-size: 12px;
-		font-weight: 400;
-	}
+	
 	
 	.cat-bottom__text {
 		display: none;
@@ -114,7 +107,14 @@
 /* ==============Tablet Media queries============
 *******************************************************/
 @media (min-width: 768px) {
-
+	.cat-bottom__loader-btn {
+		@include btn--transparent-round;
+		padding-left: 40px;
+		padding-right: 40px;
+		text-transform: none;
+		font-size: 12px;
+		font-weight: 400;
+	}
 
 } //(min-width: 768px)
 

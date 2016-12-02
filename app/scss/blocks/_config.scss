@@ -1,11 +1,26 @@
 /* Config Panel Styles */
 
 .config {
+	//width: 51px;
 	position: relative;
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
 	z-index: 200;
 	//display: none;
+	// &.make-invisible {
+	// 	z-index: -1;
+	// }
+	&.hide {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	&.show {
+		@media (max-width: 767px) {
+			display: block;
+		}
+	}
 }
+
 
 .config__inner {
 	position: fixed;
@@ -15,10 +30,14 @@
 	//background: #ffeded; // then delete
 	background: #fff; // then delete
 	z-index: 10;
-	overflow: hidden;
+	overflow: auto;
 
 	&.make-it-scroll {
 		position: absolute;
+	}
+
+	@media (max-width: 767px) {
+		//width: 0;
 	}
 }
 
@@ -222,7 +241,9 @@
 		line-height: 16px;
 		text-align: center;
 		display: none;
-		
+		&.hover {
+			display: block;
+		}
 	}
 
 	div {
@@ -379,6 +400,16 @@
 		border-color: transparent;
 	}
 }
+
+.config-menu-item-btn {
+	@include btn--red;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	text-transform: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
 /* Only mobile styles 
 =========================================*/
 
@@ -396,12 +427,30 @@
 
 /* Only Tablet Styles */
 @media (min-width: 768px) and (max-width: 1023px) {
+	.config {
+		flex-basis: 54px;
+	}
+
 	.config-panel__menu-type--toggle {
 		height: 51px;
 		min-height: 51px;
 		// .config-panel__menu-type {
 		// 	width: 51px;
 		// }
+	}
+	.config-panel__menu-type--toggle {
+		line-height: 51px;
+	}
+
+
+	.config-main-toggle {
+		width: 51px;
+		min-height: 51px;
+		position: relative;
+
+		img {
+			@include img-center;
+		}
 	}
 }
 
@@ -412,10 +461,9 @@
 /*Tablet Media queries*/
 @media (min-width: 768px) {
 	.config {
-		flex-basis: 50px;
-		outline: 1px solid red;
-		outline: 1px solid $bd-grey;
-		min-height: 100%;
+		//flex-basis: 51px;
+		//min-height: 100%;
+		//box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
 	}
 }
 
@@ -427,6 +475,11 @@
 		//flex-basis: 3.594536304817%;
 		flex-basis: 51px;
 	}
+
+	.config-panel__menu-type--toggle {
+		//line-height: 75px;
+	}
+
 }
 
 /* Config Panel Styles End*/

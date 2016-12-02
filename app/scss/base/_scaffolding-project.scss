@@ -44,6 +44,7 @@ body {
 	display: flex;
 	max-width: 1341px;
 	margin: 0 auto;
+	position: relative;
 }
 
 .main-content {
@@ -111,9 +112,9 @@ body {
 
 
 footer.page-footer {
-	min-height: $footer-height;
-	width: 100%;
-	margin-top: -$footer-height!important;
+	//min-height: $footer-height;
+	//width: 100%;
+	//margin-top: -$footer-height!important;
 	position: relative;
 	//min-width: $container-width + 20px;
 }

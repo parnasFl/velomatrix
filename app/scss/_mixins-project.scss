@@ -11,7 +11,7 @@
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 @import "_vars-project";
 
-@mixin clearfix {
+@mixin clearfix {	
   &:before,
   &:after {
     content: " "; // 1

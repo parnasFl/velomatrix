@@ -1,0 +1,63 @@
+/* .also buyed Styles */
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	
+	
+	 
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.also-buyed {
+		width: 100%;
+		margin: 0 auto;
+
+		.catalog-item {
+			//width: 25%;
+		}
+
+		.slick-list {
+			//display: flex;
+			//justify-content: space-between;
+			.slick-slide {
+			}
+		}
+	}
+
+	.slick-slide .catalog-item__inner {
+		margin-right: 0;
+		margin-left: 6.495%;
+		margin-right: 6.495%;
+	}
+
+}
+
+
+/* item-top  End*/
+

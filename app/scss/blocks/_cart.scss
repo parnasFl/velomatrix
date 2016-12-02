@@ -39,6 +39,7 @@
 	.cart__btn-text {
 		position: relative;
 		@include link-text-indent;
+
 		i {
 			position: absolute;
 			display: block;
@@ -74,6 +75,38 @@
 	.cart__btn-post-icon {
 		display: none;
 	}
+
+	.cart__btn {
+		width: 51px;
+		height: 51px;
+	}
+
+	.cart__btn-text {
+		i {
+			position: absolute;
+			display: block;
+			font-size: 12px;
+			color: #fff;
+			font-family: $ff-regular;
+			font-weight: 900;
+			top: 15px;
+			right: 9px;
+			z-index: 1;
+			font-style: normal;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: red;
+				top: -10px;
+				right: -4px;
+				z-index: -1;
+			}
+		}
+	}
+
 }//(min-width: 768px)
 
 /*Tablet Media queries*/

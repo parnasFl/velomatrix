@@ -10,7 +10,35 @@ select {
 	width: 100%;
 	border: none;
 	border: 0;
+
 }
+
+// .styled {
+// 	background-image: url("../img/icon-select.svg");
+// 	background-position: 96% 0;
+// 	background-repeat: no-repeat;
+// 	background-size: 8px 5px;
+// 	height: 35px;
+// 	overflow: hidden;
+// 	//width: 240px;
+// 	border: 1px solid $bd-grey;
+	
+	
+
+// 	select {
+// 		display: inline-block;
+// 		background-image:none;
+// 		border: none;
+// 		font-size: 14px;
+// 		padding-left: 10px;
+// 		padding-right: 10px;
+// 		padding-top: 7px;
+// 		padding-bottom: 5px;
+// 	}
+// }
+
+
+
 .input-wrapper {
 	input, textarea {
 		margin-top: 10px;

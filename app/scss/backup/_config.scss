@@ -1,0 +1,477 @@
+/* Config Panel Styles */
+
+.config {
+	width: 51px;
+	position: relative;
+	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+	z-index: 200;
+	//display: none;
+}
+
+.config-wrap {}
+
+.config__inner {
+	position: fixed;
+	//position: relative;
+	top: 0;
+	height: 100%;
+	//background: #ffeded; // then delete
+	background: #fff; // then delete
+	z-index: 10;
+	overflow: auto;
+
+	&.make-it-scroll {
+		position: absolute;
+	}
+}
+
+
+.config-panel {
+	position: relative;
+	font-size: 13px;
+}
+
+/* Main li item */
+.config-panel__item {
+	position: relative;
+	min-height: 51px;
+	border-bottom: 1px solid $bd-grey;
+	background-color: #fff;
+	&:hover {
+		box-shadow: inset -2px 0 0 $red-base;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 51px;
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		width: 1px;
+		background-color: #e5e5e5;
+	}
+} // .config-panel__item
+
+// helper class for jquery
+.show-hover-shadow {
+	&:hover {
+		box-shadow: inset -2px 0 0 $red-base!important;
+	}
+}
+
+// helper class for jquery
+.hide-hover-shadow {
+	&:hover {
+		box-shadow: none!important;
+	}
+}
+
+// helper class for jquery
+.remove-pseudo-border {
+	&::after {
+		content: none;
+	}
+}
+// helper class for jquery
+.menu-content__hover {
+	box-shadow: inset 3px 0 0 $red-base;
+} //helper class for js
+
+/* Main li item first line*/
+.config-panel__item--toggle {
+	
+	&:hover {
+		box-shadow: none!important;
+	}
+
+	.config-panel__menu-content {
+		border: none;
+	}
+} // .config-panel__item--toggle
+
+/* Подберите себе text */
+.config-panel__top-text {
+	padding-left: 20px;
+	font-weight: 700;
+	font-size: 13px;
+	z-index: 20;
+
+	span,i {
+		white-space: nowrap;
+	}
+
+	i {
+		font-weight: 900;
+		display: block;
+		text-transform: uppercase;
+		color: $red-base;
+	}
+} //.config-panel__top-text
+
+
+.config-main-toggle {
+	text-indent: -10000px; //?
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 75px;
+
+	img {
+		@include img-center;
+	}
+} // main config click button
+
+.config-panel__menu-content {
+	background-color: #fff;
+	width: 0;
+	min-height: 0;
+	transition: all .3s ease-in-out;
+		
+	&.toggle-open {
+		width: 250px;
+		height: 100%;
+	}
+}
+
+.config-panel__menu-content--toggle {
+	background-color: #fff;
+	width: 0;
+	min-height: 0;
+	transition: all .3s ease-in-out;
+	
+	&.toggle-open {
+		width: 250px;
+		min-height: 75px;
+ }
+}
+
+.config-panel__menu-content-wrap {
+	opacity: 0;
+	transition: all .3s ease-in-out;
+	transition-delay: .1s;
+	
+	&.toggle-visible {
+		opacity: 1;
+	}
+}
+
+.config-panel__menu-type--toggle {
+	min-height: 75px;
+	line-height: 75px;
+	.config-panel__menu-type {
+		width: 51px;
+	}
+} // toggle menu li
+
+
+
+/* each main li inner */
+.config-panel__inner-section {
+	color: #000;
+	display: flex;
+	align-items: flex-start;
+	&.inner-section--toggle {
+		align-items: center;
+	}
+} // 
+
+.config-panel__menu-type {
+	width: 51px;
+	
+	&.current {
+		//box-shadow: inset -2px 0 0 $red-base;
+	}
+}
+
+
+
+.config-panel__menu-type-link {
+	text-indent: -10000px;
+	display: block;
+	width: 100%;
+	height: 51px;
+	position: relative;
+	img {
+		@include img-center;
+	}
+}
+
+.config-panel__menu-title {
+	height: 50px;
+	line-height: 50px;
+	padding-left: 10px;
+	position: relative;
+	
+	span {
+		font-weight: 700;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+	span , i {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	i {
+		font-size: 10px;
+		width: 16px;
+		height: 16px;
+		background-color: #ffee9c;
+		border-radius: 2px;
+		color: #000;
+		margin-left: 5px;
+		line-height: 16px;
+		text-align: center;
+		display: none;
+		
+	}
+
+	div {
+		display: none;
+		position: absolute;
+		width: 220px;
+		background-color: #ffee9c;
+		border-radius: 3px;
+		box-shadow: 3.5px 3.5px 5px rgba(97, 90, 54, 0.22);
+		left: 10px;
+		top: 40px;
+		line-height: 1.4;
+		padding: 10px;
+		font-size: 12px;
+		z-index: 10;
+		text-align: left;
+		&::before {
+			content: '';
+			background-color: rgba(255,255,255,.1);
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 22px;
+			top: -13px;
+		}
+		a {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+	}
+}
+
+.tip-show {
+	display: inline-block!important;
+}
+
+
+
+.config-panel__menu-wrapper {
+	display: none;
+}
+
+
+
+.config-panel__menu-list {
+	padding-left: 10px;
+	padding-bottom: 20px;
+	//display: none;
+}
+
+.config-panel__menu {
+	display: flex;
+	align-items: center;
+}
+
+.config-panel__menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 10px;
+	&:nth-child(n+6) {
+		display: none;
+	}
+
+	&.show-all {
+		&:nth-child(n+6) {
+			display:  flex;
+		}
+	}
+}
+
+.config-panel__menu-icon {
+	//@include link-text-indent;
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	img {
+		@include img-center;
+	}
+}
+
+.config-panel__menu-options-wrapper {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+
+	&>div {
+		order:-1;
+	}
+}
+
+// .config-panel__checkbox {
+// 	order: -1;
+// }
+
+.config-panel__label {
+	margin-left: 10px;
+}
+
+.form-submit {
+	.config-panel__menu-content-wrap {
+		padding-top: 20px;
+		text-align: center;
+	}
+
+	.result {
+		font-weight: 700;
+		font-size: 12px;
+		margin-bottom: 20px;
+	}
+
+	&:hover {
+		box-shadow: none;
+	}
+}
+
+.config-submit-show {
+	@include btn--red;
+	display: block;
+	width: 170px;
+	margin: auto;
+	font-size: 11px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.config-submit-detailed {
+	@include btn--transparent-full;
+	text-transform: inherit;
+	display: block;
+	width: 170px;
+	margin: auto;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.show-more {
+	display: inline-block;
+	font-size: 12px;
+	color: #999;
+	margin-left: 5px;
+	border-bottom: 1px dashed #999;
+
+	&:hover {
+		border-color: transparent;
+	}
+}
+
+.config-menu-item-btn {
+	@include btn--red;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	text-transform: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* Only mobile styles 
+=========================================*/
+
+@media (max-width: 767px) {
+	.config {
+		display: none;
+	}
+}
+
+/* Only mobile&tablet styles 
+=========================================*/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+/* Only Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.config-panel__menu-type--toggle {
+		height: 51px;
+		min-height: 51px;
+		// .config-panel__menu-type {
+		// 	width: 51px;
+		// }
+	}
+}
+
+
+
+/* Only tablet&desktop styles 
+=========================================*/
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+	.config {
+		//flex-basis: 50px;
+		min-height: 100%;
+		//box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+	}
+}
+
+
+
+/*Only Desktop Media queries*/
+@media (min-width: 1024px) {
+	.config {
+		//flex-basis: 3.594536304817%;
+		flex-basis: 51px;
+	}
+}
+
+/* Config Panel Styles End*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tablet Media queries*/
+@media (min-width: 768px) {
+
+}
+
+
+
+/*Desktop Media queries*/
+@media (min-width: 1024px) {
+
+}

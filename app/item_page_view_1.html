@@ -13,25 +13,16 @@
 <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 <!-- Temporary Settings-->
 <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
-    <script>
-      !function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);
-      
-    </script>
-    <!-- Load Fonts CSS Start-->
-    <script>
-      loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
-      //loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
-    </script>
-    <!-- Load Fonts CSS End--><script type="text/javascript" src="https://yastatic.net/browser-updater/v1/script.js" charset="utf-8"></script><script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"ru","browsers":{"ie":"9"},"theme":"yellow"});</script>
-<!-- build:css css/vendor.css -->
+<!-- Temporary Settings End-->
+    <!--Then uncomment below--><!-- build:css css/vendor.min.css -->
 <!-- bower:css -->
 <link rel="stylesheet" href="/js/vendor/magnific-popup/dist/magnific-popup.css" />
 <link rel="stylesheet" href="/js/vendor/qtip2/jquery.qtip.css" />
 <!-- endbower -->
 <!-- endbuild -->
-    <!-- Load Custom CSS Start--><script>loadCSS( "css/style.min.css?ver=1.0.0", false, "all" );</script>
-    <!-- Load Custom CSS End--><!-- Temporary Settings End-->
-    <!--Then uncomment below--><!-- Custom Browsers Color Start -->
+<link rel="stylesheet" href="css/fonts.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<!-- Custom Browsers Color Start -->
 <!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#000">
 <!-- Windows Phone -->
@@ -585,7 +576,7 @@
                         </li>
                         <li class="config-panel__menu-item filter-btn"><i class="config-panel__menu-icon"></i>
                           <div class="config-panel__menu-options-wrapper">
-                            <button class="menu-item-btn" type="submit">показать результаты</button>
+                            <button class="config-menu-item-btn" type="submit">показать результаты</button>
                           </div>
                         </li>
                         <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
@@ -729,7 +720,7 @@
             <div class="cart"><a class="cart__btn" href="#"><span class="cart__btn-pre-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 475 442"><style>.st0{fill:#000;}</style><path class="st0" d="M197.8 262.3c4 9.5 7.5 18.6 14.5 25.8 4.7 4.9 10.6 6.6 17.2 6.6 59.2 0 118.3 0 177.5-.1 6.5 0 11.8 2.1 15.4 7.6 6.5 9.9-.3 23.5-12.3 24.6-1.5.1-3 .1-4.5.1-57.3 0-114.7-.3-172 .1-26.1.2-44.5-10.9-56.7-33.5-9.9-18.3-16.1-37.9-23-57.4-15.9-45.4-31.8-90.8-47.6-136.3-4.4-12.6-9-25-17.6-35.6-6.8-8.3-15.5-12.3-26.2-12.2-8.2.1-16.3.1-24.5 0-9.8-.1-16.8-6.8-16.9-15.9-.1-9.3 7.1-16.3 17.1-16.2 12.6.1 25.4-1.1 37.9 1.2 19.4 3.6 33.3 15 43.8 31.2 5.6 8.7 10.2 17.9 13.5 27.7 1.2 3.6 3 4.6 6.8 4.6 79.3-.1 158.6-.1 238-.1 13.5 0 27-.1 40.5.1 9.9.1 19.1 2.6 26.5 9.6 9.8 9.3 12.1 21.2 9.6 33.5-6.1 30.5-14.3 60.5-29.1 88.2-5.1 9.6-11.2 18.5-18.9 26.3-13.2 13.3-29 20.1-47.9 20-51.7-.1-103.3 0-155 0-1.9.1-3.7.1-6.1.1zm178.4-113.5c.1 9.4 7 16.5 16.4 16.6 8.6.1 16.1-7.3 16-15.9 0-9.5-7.4-16.6-17-16.4-8.2.1-15.5 7.6-15.4 15.7zm-161.3 0c.1-8.2-7.4-15.6-16-15.8-8.9-.1-16.3 7.2-16.4 16-.1 8.5 7 16.1 15 16.3 9.9.3 17.2-6.7 17.4-16.5zm96.8 49.1c.1-8.6-7.1-16-15.6-16.2-9.3-.2-16.6 6.8-16.8 16-.2 8.6 7.3 16.2 16.1 16.2 8.9.1 16.3-7.2 16.3-16zm.1-48.7c.1 9.1 7.1 16.2 16.1 16.1 9 0 16.1-7.2 16.1-16.2 0-9.1-7.5-16.3-16.6-16.2-8.6.3-15.7 7.7-15.6 16.3zm-32.5-.2c-.1-8.9-7.5-16.2-16.3-16-9.2.2-16.2 7.7-16 16.9.2 8.5 7.6 15.5 16.3 15.4 9 0 16.1-7.3 16-16.3zm96.9 48.9c.1-9-6.9-16.1-16-16.3-8.6-.1-16 6.9-16.2 15.5-.2 9.2 6.9 16.7 16 16.8 8.9.1 16.1-7 16.2-16zm-161.3-.1c0 8.9 7.4 16.2 16.1 16.1 9.2-.1 16.2-7.5 16.1-16.7-.1-8.5-7.4-15.6-16.1-15.6-9.1.1-16.2 7.2-16.1 16.2zM384.2 424c-22.2 0-40.2-18.1-40.3-40.3 0-22.3 18-40.5 40.2-40.5 22.4-.1 40.8 18.3 40.6 40.7 0 22-18.3 40.1-40.5 40.1zM263.1 383.6c0 22.3-18 40.3-40.1 40.4-22.4 0-40.6-18.2-40.5-40.7.1-22.2 18.3-40.3 40.5-40.2 22.2.1 40.2 18.3 40.1 40.5z"/></svg></span>
                 <div class="cart__btn-text">В корзине <i>10</i> товаров</div><span class="cart__btn-post-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 493 351"><style>.st0{fill:#020202;}</style><path class="st0" d="M362.5 208.9H55.1c-19 0-33.5-13.5-34-31.4-.4-17.7 13.5-32.5 31.1-33.3 2-.1 4 0 6 0h298.5c1.9 0 3.9.5 6.8-.8-1.7-1.4-3.1-2.5-4.3-3.7-23.4-23.3-46.8-46.5-70.1-69.9-9.7-9.7-11.9-22.7-6.5-35 5.5-12.5 17.5-20.1 31-19.5 7.8.3 14.6 3.3 20.1 8.8 43.8 43.7 87.6 87.3 131.2 131.1 11.9 12 11.9 29.8.6 42.4-1.9 2.1-3.9 4.1-5.9 6.1-41.5 41.4-83.1 82.9-124.5 124.3-9.2 9.2-20 12.5-32.4 8.6-12.3-3.9-19.7-12.7-22.3-25.3-2.2-11.2 1.5-20.6 9.5-28.6 23-22.9 46-45.9 69-68.8 1.3-1.3 2.8-2.3 4.2-3.5-.1-.6-.4-1.1-.6-1.5z"/></svg></span></a></div>
           </div>
-          <div class="bottom-bar">
+          <div class="bottom-bar bottom-bar--illustrated">
             <div class="page-logo"><a class="page-logo__link" href="#"><span class="page-logo__img">
                   <picture>
                     <source media="(min-width:768px)" srcset="img/logo-desktop@3x.png"><img src="img/logo_mobile.png" alt="Logo" width="83" height="15">
@@ -999,21 +990,30 @@
               <div class="item-page__slider">
                 <div class="item-short__descr">Элегантный классический дизайн, удобная посадка, помогающая сохранить королевскую осанку, надежность и безопасность: CENTURION CITY 3.0 (2016) - велосипед для настоящих леди.</div>
                 <div class="slideshow">
-                  <ul class="slideshow__image">
-                    <li class="slideshow__image-item"><img src="img/img-item-page-main.jpg" alt="Item Page Slide"></li>
-                    <li class="slideshow__image-item"><img src="img/img-item-1.jpg" alt="Item Page Slide"></li>
-                    <li class="slideshow__image-item"><img src="img/img-item-2.jpg" alt="Item Page Slide"></li>
-                    <li class="slideshow__image-item"><img src="img/img-item-3.jpg" alt="Item Page Slide"></li>
-                  </ul>
-                  <ul class="slideshow__thumbs">
-                    <li class="slideshow__thumbs-item active"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-page-main.jpg" alt="Item Page Slide"></a></li>
-                    <li class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-1.jpg" alt="Item Page Slide"></a></li>
-                    <li class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-2.jpg" alt="Item Page Slide"></a></li>
-                    <li class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-3.jpg" alt="Item Page Slide"></a></li>
-                    <li class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-1.jpg" alt="Item Page Slide"></a></li>
-                    <li class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-2.jpg" alt="Item Page Slide"></a></li>
-                    <li class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href=""><img src="img/img-item-3.jpg" alt="Item Page Slide"></a></li>
-                  </ul>
+                  <div class="slideshow__image">
+                    <div class="slideshow__image-wrap">
+                      <div class="slideshow__image-item"><img src="img/img-item-page-main.jpg" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-slide-5.jpg" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-2.jpg" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-3.jpg" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-3.jpg" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-slide-6.jpg" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-slide-7.png" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-slide-8.png" alt="Item Page Slide"></div>
+                      <div class="slideshow__image-item"><img src="img/img-item-slide-9.jpg" alt="Item Page Slide"></div>
+                    </div>
+                  </div>
+                  <div class="slideshow__thumbs">
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-page-main.jpg" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-slide-5.jpg" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-2.jpg" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-3.jpg" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-3.jpg" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-slide-6.jpg" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-slide-7.png" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-slide-8.png" alt="Item Page Slide"></a></div>
+                    <div class="slideshow__thumbs-item"><a class="slideshow__thumbs-link" href="#"><img src="img/img-item-slide-9.jpg" alt="Item Page Slide"></a></div>
+                  </div>
                 </div>
                 <div class="item-page__price">
                   <div class="item-page__price-text">Цена</div>
@@ -1108,7 +1108,7 @@
                       <label for="pokrishka">Покрышка</label>
                       <input type="checkbox" id="pokrishka">
                     </div>
-                    <div class="select-wrapper">
+                    <div class="select-wrapper styled">
                       <select>
                         <option value="Ultra1">Ultrathin SCOTT - 2000 р.</option>
                         <option value="Ultra2">Ultrathin SCOTT2 - 3000 р.</option>
@@ -1243,23 +1243,223 @@
                 </div>
               </div>
             </div>
+            <div class="also-buyed">
+              <h5 class="also-buyed__title">Покупатели, которые приобрели Велосипед едвухподвесный Giant Anthem Advanced 27.5 1 (2016), также купили</h5>
+              <div class="also-buyed__carousel">
+                <ul class="also-buyed__carousel-wrap">
+                  <li class="catalog-item">
+                    <div class="catalog-item__inner"><a class="catalog-item__images" href="#"><img src="img/img-item-5.jpg" alt="Item Pic">
+                        <div class="sales-leader__badge"><i><img src="img/icon-flame.svg" width="14" height="19" alt="sales leader icon"></i><span>Лидер <br>продаж</span></div></a>
+                      <div class="catalog-item__descr"><a class="catalog-item__title" href="#">Велосипед Bulls Sharptail 3 Disc 27,5 (2016)</a>
+                        <div class="catalog-item__price-wrapper">
+                          <div class="catalog-item__price regular"><span>16800</span> руб.</div>
+                        </div>
+                        <div class="catalog-item__advantage-badge" style="background-color: #6cbf00">экономия <span>10%</span></div>
+                        <div class="catalog-item__marking">Артикул: VL-2927AB</div>
+                        <div class="catalog-item__stock stock">Есть в наличии</div><a class="catalog-item__arrow" href="#"><i><svg xmlns="http://www.w3.org/2000/svg" width="209" height="284" viewBox="0 0 209 284"><style>.st0{fill:#C6C6C6;}</style><path class="st0" d="M171.1 140c-4.4 4.8-8.3 9.3-12.4 13.7-13 13.6-26.2 27-39.2 40.6-8.2 8.5-16.1 17.2-24.1 26-3.1 3.5-6.6 5-11.4 4.9-11-.3-22-.1-34.5-.1 27.5-28.8 54.2-56.6 81.4-85.1-26.9-28.3-53.5-56.2-80.1-84.1 1-1.6 2.5-.8 3.6-.8 10.7-.1 21.3.1 32 0 2.9 0 5.1.8 7.1 2.9 22 23.1 44.1 46.2 66.1 69.4 3.8 3.8 7.5 8.1 11.5 12.6z"/></svg></i></a><span class="visually-hidden">Посмотреть товар</span>
+                      </div>
+                      <div class="catalog-item__conficons">
+                        <ul class="catalog-item__conficons-list">
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-women-bike.svg" width="24" height="16" alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-user-config.svg" width="21" height="24 " alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-item__inner"><a class="catalog-item__images" href="#"><img src="img/img-item-5.jpg" alt="Item Pic">
+                        <div class="sales-leader__badge"><i><img src="img/icon-flame.svg" width="14" height="19" alt="sales leader icon"></i><span>Лидер <br>продаж</span></div></a>
+                      <div class="catalog-item__descr"><a class="catalog-item__title" href="#">Велосипед Bulls Sharptail 3 Disc 27,5 (2016)</a>
+                        <div class="catalog-item__price-wrapper">
+                          <div class="catalog-item__price regular"><span>16800</span> руб.</div>
+                        </div>
+                        <div class="catalog-item__advantage-badge" style="background-color: #6cbf00">экономия <span>10%</span></div>
+                        <div class="catalog-item__marking">Артикул: VL-2927AB</div>
+                        <div class="catalog-item__stock stock">Есть в наличии</div><a class="catalog-item__arrow" href="#"><i><svg xmlns="http://www.w3.org/2000/svg" width="209" height="284" viewBox="0 0 209 284"><style>.st0{fill:#C6C6C6;}</style><path class="st0" d="M171.1 140c-4.4 4.8-8.3 9.3-12.4 13.7-13 13.6-26.2 27-39.2 40.6-8.2 8.5-16.1 17.2-24.1 26-3.1 3.5-6.6 5-11.4 4.9-11-.3-22-.1-34.5-.1 27.5-28.8 54.2-56.6 81.4-85.1-26.9-28.3-53.5-56.2-80.1-84.1 1-1.6 2.5-.8 3.6-.8 10.7-.1 21.3.1 32 0 2.9 0 5.1.8 7.1 2.9 22 23.1 44.1 46.2 66.1 69.4 3.8 3.8 7.5 8.1 11.5 12.6z"/></svg></i></a><span class="visually-hidden">Посмотреть товар</span>
+                      </div>
+                      <div class="catalog-item__conficons">
+                        <ul class="catalog-item__conficons-list">
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-women-bike.svg" width="24" height="16" alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-user-config.svg" width="21" height="24 " alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-item__inner"><a class="catalog-item__images" href="#"><img src="img/img-item-5.jpg" alt="Item Pic">
+                        <div class="sales-leader__badge"><i><img src="img/icon-flame.svg" width="14" height="19" alt="sales leader icon"></i><span>Лидер <br>продаж</span></div></a>
+                      <div class="catalog-item__descr"><a class="catalog-item__title" href="#">Велосипед Bulls Sharptail 3 Disc 27,5 (2016)</a>
+                        <div class="catalog-item__price-wrapper">
+                          <div class="catalog-item__price regular"><span>16800</span> руб.</div>
+                        </div>
+                        <div class="catalog-item__advantage-badge" style="background-color: #6cbf00">экономия <span>10%</span></div>
+                        <div class="catalog-item__marking">Артикул: VL-2927AB</div>
+                        <div class="catalog-item__stock stock">Есть в наличии</div><a class="catalog-item__arrow" href="#"><i><svg xmlns="http://www.w3.org/2000/svg" width="209" height="284" viewBox="0 0 209 284"><style>.st0{fill:#C6C6C6;}</style><path class="st0" d="M171.1 140c-4.4 4.8-8.3 9.3-12.4 13.7-13 13.6-26.2 27-39.2 40.6-8.2 8.5-16.1 17.2-24.1 26-3.1 3.5-6.6 5-11.4 4.9-11-.3-22-.1-34.5-.1 27.5-28.8 54.2-56.6 81.4-85.1-26.9-28.3-53.5-56.2-80.1-84.1 1-1.6 2.5-.8 3.6-.8 10.7-.1 21.3.1 32 0 2.9 0 5.1.8 7.1 2.9 22 23.1 44.1 46.2 66.1 69.4 3.8 3.8 7.5 8.1 11.5 12.6z"/></svg></i></a><span class="visually-hidden">Посмотреть товар</span>
+                      </div>
+                      <div class="catalog-item__conficons">
+                        <ul class="catalog-item__conficons-list">
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-women-bike.svg" width="24" height="16" alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-user-config.svg" width="21" height="24 " alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-item__inner"><a class="catalog-item__images" href="#"><img src="img/img-item-5.jpg" alt="Item Pic">
+                        <div class="sales-leader__badge"><i><img src="img/icon-flame.svg" width="14" height="19" alt="sales leader icon"></i><span>Лидер <br>продаж</span></div></a>
+                      <div class="catalog-item__descr"><a class="catalog-item__title" href="#">Велосипед Bulls Sharptail 3 Disc 27,5 (2016)</a>
+                        <div class="catalog-item__price-wrapper">
+                          <div class="catalog-item__price regular"><span>16800</span> руб.</div>
+                        </div>
+                        <div class="catalog-item__advantage-badge" style="background-color: #6cbf00">экономия <span>10%</span></div>
+                        <div class="catalog-item__marking">Артикул: VL-2927AB</div>
+                        <div class="catalog-item__stock stock">Есть в наличии</div><a class="catalog-item__arrow" href="#"><i><svg xmlns="http://www.w3.org/2000/svg" width="209" height="284" viewBox="0 0 209 284"><style>.st0{fill:#C6C6C6;}</style><path class="st0" d="M171.1 140c-4.4 4.8-8.3 9.3-12.4 13.7-13 13.6-26.2 27-39.2 40.6-8.2 8.5-16.1 17.2-24.1 26-3.1 3.5-6.6 5-11.4 4.9-11-.3-22-.1-34.5-.1 27.5-28.8 54.2-56.6 81.4-85.1-26.9-28.3-53.5-56.2-80.1-84.1 1-1.6 2.5-.8 3.6-.8 10.7-.1 21.3.1 32 0 2.9 0 5.1.8 7.1 2.9 22 23.1 44.1 46.2 66.1 69.4 3.8 3.8 7.5 8.1 11.5 12.6z"/></svg></i></a><span class="visually-hidden">Посмотреть товар</span>
+                      </div>
+                      <div class="catalog-item__conficons">
+                        <ul class="catalog-item__conficons-list">
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-women-bike.svg" width="24" height="16" alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-user-config.svg" width="21" height="24 " alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="catalog-item">
+                    <div class="catalog-item__inner"><a class="catalog-item__images" href="#"><img src="img/img-item-5.jpg" alt="Item Pic">
+                        <div class="sales-leader__badge"><i><img src="img/icon-flame.svg" width="14" height="19" alt="sales leader icon"></i><span>Лидер <br>продаж</span></div></a>
+                      <div class="catalog-item__descr"><a class="catalog-item__title" href="#">Велосипед Bulls Sharptail 3 Disc 27,5 (2016)</a>
+                        <div class="catalog-item__price-wrapper">
+                          <div class="catalog-item__price regular"><span>16800</span> руб.</div>
+                        </div>
+                        <div class="catalog-item__advantage-badge" style="background-color: #6cbf00">экономия <span>10%</span></div>
+                        <div class="catalog-item__marking">Артикул: VL-2927AB</div>
+                        <div class="catalog-item__stock stock">Есть в наличии</div><a class="catalog-item__arrow" href="#"><i><svg xmlns="http://www.w3.org/2000/svg" width="209" height="284" viewBox="0 0 209 284"><style>.st0{fill:#C6C6C6;}</style><path class="st0" d="M171.1 140c-4.4 4.8-8.3 9.3-12.4 13.7-13 13.6-26.2 27-39.2 40.6-8.2 8.5-16.1 17.2-24.1 26-3.1 3.5-6.6 5-11.4 4.9-11-.3-22-.1-34.5-.1 27.5-28.8 54.2-56.6 81.4-85.1-26.9-28.3-53.5-56.2-80.1-84.1 1-1.6 2.5-.8 3.6-.8 10.7-.1 21.3.1 32 0 2.9 0 5.1.8 7.1 2.9 22 23.1 44.1 46.2 66.1 69.4 3.8 3.8 7.5 8.1 11.5 12.6z"/></svg></i></a><span class="visually-hidden">Посмотреть товар</span>
+                      </div>
+                      <div class="catalog-item__conficons">
+                        <ul class="catalog-item__conficons-list">
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-women-bike.svg" width="24" height="16" alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-user-config.svg" width="21" height="24 " alt="icon"></a></li>
+                          <li class="catalog-item__conficons-item"><a class="catalog-item__conficons-link" href="#"><img src="img/icon-bike-frame.svg" width="24" height="13" alt="icon"></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </main>
+        <footer class="page-footer">
+          <div class="page-footer__top">
+            <div class="page-footer__top-wrap">
+              <ul class="page-footer__support-list">
+                <li class="page-footer__support-tel"><span class="page-footer__support-tel-icon"><img src="img/icon-phone-stroked.svg" width="16" height="16" alt="icon"></span><span class="page-footer__support-tel-num">+7 495 961-94-21</span></li>
+                <li class="page-footer__support-tel last-phone"><span class="page-footer__support-tel-icon"><img src="img/icon-phone-stroked.svg" width="16" height="16" alt="icon"></span><span class="page-footer__support-tel-num">+7 495 246-0-245</span></li>
+                <li class="page-footer__support-schedule">Ежедневно с 10:00 до 20:00</li>
+                <li class="page-footer__support-mail"><span class="social-icon"><img src="img/icon-send.svg" width="16" height="16" alt="icon"></span><a class="mail-address" href="mailto:info@velomatrix.ru">info@velomatrix.ru</a></li>
+                <li class="page-footer__support-skype"><span class="social-icon"><img src="img/icon-skype.svg" width="15" height="15" alt="icon"></span><a class="skypel-address" href="skype:velomatrix?call">velomatrix</a></li>
+              </ul>
+              <dl class="footer-info-block">
+                <dd>
+                  <h5 class="footer-info-block__title">Информация</h5>
+                </dd>
+                <dt>
+                  <ul class="footer-info-block__list">
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Доставка и оплата</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">О нас</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Размер рамы</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Обзоры новинок</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Карта сайта</a></li>
+                  </ul>
+                </dt>
+              </dl>
+              <dl class="footer-info-block">
+                <dd>
+                  <h5 class="footer-info-block__title">Служба поддержки</h5>
+                </dd>
+                <dt>
+                  <ul class="footer-info-block__list">
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Связаться с нами</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Возврат товара</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Гарантия</a></li>
+                  </ul>
+                </dt>
+              </dl>
+              <dl class="footer-info-block">
+                <dd>
+                  <h5 class="footer-info-block__title">Сервис</h5>
+                </dd>
+                <dt>
+                  <ul class="footer-info-block__list">
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Выбираем велосипед</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Услуги веломастерской</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Видеообзоры</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Отзывы</a></li>
+                    <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Информация о гарантии</a></li>
+                  </ul>
+                </dt>
+              </dl>
+              <dl class="footer-info-block footer-info-block--subscribe">
+                <dd>
+                  <h5 class="footer-info-block__title">Подписывайтесь</h5>
+                </dd>
+                <dt>
+                  <ul class="footer-info-block__list">
+                    <style>
+                      #ins-bg::before {
+                      	background-color: #ff4800;
+                      	background-image: url("../img/icon-instagram.svg");
+                      	background-size: 18px 18px;
+                      }
+                      #vk-bg::before {
+                      	background-color: #356b87;
+                      	background-image: url("../img/icon-vk.png");
+                      	background-size: 14px 7px;
+                      }
+                    </style>
+                    <li class="footer-info-block__item social"><a class="footer-info-block__link instagram" href="#" id="ins-bg"><span>Instagram</span><i>/velomatrix</i></a></li>
+                    <li class="footer-info-block__item social"><a class="footer-info-block__link vk" href="#" id="vk-bg"><span>Вконтакте</span><i>vk.com/velomatrix</i></a></li>
+                  </ul>
+                </dt>
+              </dl>
+              <dl class="footer-info-block">
+                <dd>
+                  <h5 class="footer-info-block__title">Отзывы</h5>
+                </dd>
+                <dt>
+                  <ul class="footer-info-block__list">
+                    <li class="footer-info-block__item yandex-feedback"><a class="footer-info-block__link" href="#"><img src="img/img-yandex.jpg" alt="Yandex market image"></a></li>
+                  </ul>
+                </dt>
+              </dl>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="col-left"><a class="logo-footer" href=""><img src="img/logo-desktop@3x.png" alt="Footer logo"></a>
+              <div class="footer-copyright">
+                <p>© 2013-2016 Velomatrix.ru</p>
+                <p>м. Сокольники, Сокольническая площадь, д.9, к.2</p>
+              </div>
+            </div>
+            <div class="col-right">
+              <ul class="payment-systems">
+                <li><a href=""><img src="img/img-visa.jpg"></a></li>
+                <li><a href=""><img src="img/img-mastercard.jpg"></a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </div>
-    </div>
-    <footer class="page-foooter">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </footer><!-- build:js js/vendor.min.js -->
+    </div><!-- build:js js/vendor.min.js -->
 <!-- bower:js -->
 <script src="/js/vendor/jquery/dist/jquery.js"></script>
 <script src="/js/vendor/magnific-popup/dist/jquery.magnific-popup.js"></script>
 <script src="/js/vendor/qtip2/jquery.qtip.js"></script>
 <script src="/js/vendor/iCheck/icheck.min.js"></script>
+<script src="/js/vendor/slick-carousel/slick/slick.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
     <script>

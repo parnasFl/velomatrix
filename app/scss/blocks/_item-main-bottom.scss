@@ -148,18 +148,20 @@
 		width: 313px;
 		float: left;
 		position: relative;
+		//background-color: blue;
+		&:after {
+			@include pseudo;
+			background-image: url("../img/brand_arrow.svg");
+			margin-top: -24px;
+			//border: 1px solid #000;
 
-		// &:after {
-		// 	@include pseudo;
-		// 	//background-image: url("../img/arrow-item-page2.png");
-		// 	width: 11px;
-		// 	height: 48px;
-		// 	//background-size: 11px 48px;
-		// 	left: 51px;
-		// 	top: 50%;
-		// 	margin-top: -24px;
-		// 	//border: 1px solid #000;
-		// }
+			width: 41px;
+			height: 62px;
+			background-size: 60px 60px;
+			left: 20px;
+			top: 40%;
+			margin-top: -24px;
+		}
 	}
 
 	.item-page__extra-left {

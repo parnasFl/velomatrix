@@ -34,7 +34,8 @@ gulp.task('pug', function () {
 		}))
 		.pipe(wiredep({
 				//directory: './app/js/vendor',
-				ignorePath: /^(\.\.\/)*\.\./
+				ignorePath: /^(\.\.\/)*\.\./,
+				exclude: ['app/js/vendor/slick-carousel/slick/slick.css']
 		}))
 		.on('error', log)
 		//.pipe(prettify({indent_size: 2}))
@@ -58,7 +59,9 @@ gulp.task('scss', function () {
 //Script Task for concat and minifying base jquery plgs
 gulp.task('libs', function() {
 	return gulp.src([
-		'app/js/libs/slick.min.js'
+		//'app/js/libs/slick.min.js'
+		//'app/js/libs/jquery.hoverontouch.js'
+		'app/js/libs/jquery.selectric.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

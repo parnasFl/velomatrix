@@ -1,16 +1,93 @@
 /*Slick based Slider*/
-// (function(){
-// 	$('.main-slider--js').slick({
-// 		infinite: true,
-// 		slidesToShow: 1,
-// 		slidesToScroll: 1,
-// 		arrows: true,
-// 		dots: true
-// 	});
-// })();
+
 
 $(function(){
-	
+	/*---------Index Slider - http://kenwheeler.github.io/slick/
+		============================================*/
+
+	(function(){
+		$('.main-slider--js').slick({
+			autoplay: true,
+			dots: true,
+			accessibility: false
+		});
+
+	})();
+
+	/*---------Item page carousel - http://kenwheeler.github.io/slick/
+		============================================*/
+		(function(){
+				$('.slideshow__thumbs-link').on('click', function(e){
+					e.preventDefault();
+				});
+			$('.slideshow__image-wrap').slick({
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							arrows: false,
+							fade: true,
+							asNavFor: '.slideshow__thumbs',
+							accessibility: false,
+							responsive: [{
+									breakpoint: 1023,
+									settings: {
+											slidesToShow: 1,
+											slidesToScroll: 1
+									}
+							}, {
+									breakpoint: 767,
+									settings: {
+											slidesToShow: 1,
+											slidesToScroll: 1,
+											arrows: false,
+											dots: true,
+											asNavFor: null
+									}
+							}]
+					});
+					$('.slideshow__thumbs').slick({
+							// rows: 2,
+							slidesToShow: 6,
+							slidesToScroll: 1,
+							asNavFor: '.slideshow__image-wrap',
+							dots: false,
+							arrows: false,
+							centerMode: false,
+							focusOnSelect: true,
+							vertical: true,
+							accessibility: false,
+							// variableWidth: true
+							responsive: [
+							{
+								breakpoint: 1023,
+								settings: {
+									vertical: false,
+									slidesToShow: 4,
+									slidesToScroll: 1
+								}
+							},
+							{
+								breakpoint: 767,
+								settings: {
+									vertical: false,
+									slidesToScroll: 1,
+									dots: false,
+									asNavFor: null
+								}
+							}
+							]
+					});
+		})();
+
+		/*Item page 'also-buyed' carousel- http://kenwheeler.github.io/slick/
+			============================================*/
+			(function(){
+				$('.also-buyed__carousel-wrap').slick({
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					accessibility: false
+				});
+			})();
+
 	/*---------Config Menu
 	============================================*/
 
@@ -36,8 +113,9 @@ $(function(){
 											.find('.config-panel__menu-content-wrap');
 
 
-			$this.parent().addClass('current');
-			menuContent.toggleClass('toggle-open', 300)
+
+			//$this.parent().addClass('current');
+			menuContent.toggleClass('toggle-open', 100)
 				.promise()
 				.done(function(){
 					if(menuContentWrap.hasClass('toggle-visible')){
@@ -47,13 +125,14 @@ $(function(){
 						menuContentWrap.addClass('toggle-visible');
 					}
 
-					if ($('.config__inner').hasClass('make-it-scroll')) {
-						$('.config__inner').removeClass('make-it-scroll');
-					}
-					else {
-						$('.config__inner').addClass('make-it-scroll');
-						 $("html, body").animate({ scrollTop: 0 }, "slow");
-					}
+					// if ($('.config__inner').hasClass('make-it-scroll')) {
+					// 	$('.config__inner').removeClass('make-it-scroll');
+					// }
+					// else {
+					// 	$('.config__inner').addClass('make-it-scroll');
+					// 	 $("html, body").animate({ scrollTop: 0 }, "slow");
+					// }
+					//above code is commented for enabling overflow scroll!!!!
 				});
 
 				menuItem.addClass('hide-hover-shadow');
@@ -63,18 +142,34 @@ $(function(){
 			if(menuContent.hasClass('toggle-open')) {
 				$('.config__inner').css({
 					'box-shadow': '8px 0 8px rgba(0, 0, 0, 0.14)',
-					'overflow' : 'visible'
+					'overflow' : 'auto'
 				});
-			} else {
+
+				$(this).closest('.config-panel')
+								.find('.config-main-toggle')
+								.find('img').attr({
+															'src': 'img/icon-close-2.svg',
+															'width' : '14',
+															'height' : '14'
+														});
+				} else {
 				$('.config__inner').css({
-				'box-shadow': 'none',
-				'overflow' : 'hidden'
+				'box-shadow': 'none'
+				// 'overflow' : 'hidden'
 				});
 
 				$('.config-panel__menu-wrapper').css({
 					'display' : 'none'
 				});
-			}
+
+				$(this).closest('.config-panel')
+								.find('.config-main-toggle')
+								.find('img').attr({
+															'src': 'img/icon-config-toggle.svg',
+															'width' : '26',
+															'height' : '31'
+														});
+				}
 
 			if(!menuContent.hasClass('toggle-open')) {
 				menuItem.removeClass('hide-hover-shadow')
@@ -92,8 +187,8 @@ $(function(){
 		$('.config-panel__menu-title').on('click', function(){
 			var $this = $(this);
 
-			$this.next().slideToggle();
-			$this.find('i').toggleClass('tip-show');
+			$this.next().stop(true, true).slideToggle();
+			$this.find('i').stop(true, true).toggleClass('tip-show');
 		});
 
 		// Info block tooltip
@@ -103,6 +198,8 @@ $(function(){
 			});
 
 		})();
+
+		//$('.config-panel__menu-title i').hoverOnTouch({});
 
 	})();
 
@@ -150,6 +247,48 @@ $(function(){
 
 			
 		});
+	})();
+	
+	/*---------Mobile Config Menu toggle
+	============================================*/
+	/*$('.config-toggle').on('click', function(e){
+		e.preventDefault();
+
+
+
+		$(this).closest('.main-content')
+				.siblings('.config').fadeToggle();
+
+	});*/
+
+	$('.config-toggle').on('click', function(e){
+		e.preventDefault();
+
+		var $this = $(this),
+		container = $this.closest('.config-panel'),
+		menuContentAll = container.
+										find('.config-panel__menu-content--toggle',
+												'.config-panel__menu-content'),
+		menuContent =  container.
+										find('.config-panel__menu-content');
+
+		$(this).closest('.wrapper')
+					.find('.config').addClass('show');
+		
+		if (!menuContent.hasClass('toggle-open')) {
+			$('.config-main-toggle, .config-panel__menu-type-link')
+			.trigger('click');
+		}
+	});
+
+	(function(){
+		
+		// $('.config-main-toggle').on('click', function(){
+		// 		//$('.config').removeClass('show');
+		// 		console.log(this);
+		// 	});
+		
+		
 	})();
 	
 
@@ -351,7 +490,7 @@ $(function(){
 		(function(){
 			if($(window).width() > 1023) {
 				$('.top-bar__user').hover(function(){
-					$(this).find('ul').stop(true, true).slideToggle('fast');
+					$(this).closest('.top-bar__user').find('ul').stop(true, true).slideToggle('fast');
 				});
 			}
 		})();
@@ -370,9 +509,11 @@ $(function(){
 						
 						if(wrapper.hasClass('mobile-side-menu')) {
 							wrapper.removeClass('mobile-side-menu');
+							//$('.config').removeClass('make-invisible');
 						}
 
 						wrapper.addClass('mobile-side-menu');
+						//$('.config').addClass('make-invisible');
 						sideNav.addClass('side-menu-opened')
 										.animate({
 											left: 0
@@ -383,8 +524,8 @@ $(function(){
 											}
 											mainC.append('<div class="overlay"></div>');
 											$('html, body').css({
-											    overflow: 'hidden',
-											    height: '100%'
+													overflow: 'hidden',
+													height: '100%'
 											});
 										});
 
@@ -416,7 +557,7 @@ $(function(){
 				}); 
 				
 
-			/*Back and close
+			/*Back and close button of side menu
 			==============================================*/
 			$('.mobile-menu__close-btn').on('click', function(e){
 							
@@ -455,7 +596,129 @@ $(function(){
 
 			})();
 
+			/*Mobile search toggle
+			==============================================*/
+			(function(){
+				$('.top-bar__search-toggle').on('click', function(e){
+					e.preventDefault();
+					$('.page-search').stop(true, true).slideToggle('fast', function(){
+							if($('.page-search').is(':hidden')) {
+								$('.page-search').removeAttr('style');
+							}
+					});
+				});
 
+				$('.search__delete').on('click', function(e){
+					e.preventDefault();
+					$('.page-search').slideUp('fast', function(){
+						$('.page-search').removeAttr('style');
+					});
+				});
+			})();
+
+			/*Mobile phone toggle
+			==============================================*/
+			(function(){
+				$('.top-bar__phone-toggle').on('click', function(e){
+					e.preventDefault();
+
+					$('.page-support').slideToggle('fast');
+				});
+
+			})();
+
+			/*Mobile Footer Info block toggle
+			==============================================*/
+
+				(function(){
+				
+				$('.footer-info-block__title').on('click', function(){
+					//console.log('test');
+					if ($(window).width() < 768) {
+						
+						var $this = $(this),
+								titleContainer = $this
+																.closest('.footer-info-block'),
+								titleContainerSib = titleContainer
+																		.siblings('.footer-info-block');
+
+
+
+						titleContainerSib.find('dt').slideUp(500, function(){
+							titleContainerSib.find('.footer-info-block__title')
+							.removeClass('plus');
+							titleContainerSib.find('dt').removeAttr('style');
+						});
+
+
+						if(!$this.hasClass('plus')) {
+							$this.parent().next('dt').slideDown(500, function(){
+								$this.addClass('plus');
+							});
+						}
+						else {
+							$this.parent().next('dt').slideUp(500, function(){
+								$this.removeClass('plus');
+								$this.parent().next('dt').removeAttr('style');
+							});
+						}
+					}
+				});
+
+			})();
+
+			/*Catalog Menu Hover
+			==============================================*/
+			(function(){
+				
+					$('.catalog-menu__image').hover(function(){
+						$(this).siblings('.catalog-menu__content')
+						.find('.catalog-menu__name')
+						.stop(true, true)
+						.css('color', '#6699cc');
+					},function(){
+						$(this).siblings('.catalog-menu__content')
+						.find('.catalog-menu__name')
+						.stop(true, true)
+						.css('color', '#000');
+					});
+				
+			})();
+			//$('.catalog-menu__image');
+
+			/* Catalog config icons hover
+			==============================================*/
+			$('.catalog-item__conficons-link').hover(function(){
+				$(this).closest('.catalog-item__conficons-item')
+							.addClass('show-all');
+			}, function(){
+				$(this).removeClass('show-all');
+			});
+
+
+			/* Catalog item hover
+			==============================================*/
+			$('.catalog-item__images').hover(function(){
+				$(this).closest('.catalog-item__inner')
+							.addClass('shadowed');
+				$(this).closest('.catalog-item__inner')
+							.find('.catalog-item__arrow')
+							.addClass('hovered');
+
+			}, function(){
+				$(this).closest('.catalog-item__inner')
+							.removeClass('shadowed');
+				$(this).closest('.catalog-item__inner')
+							.find('.catalog-item__arrow')
+							.removeClass('hovered');
+			});
+
+
+			/* Styling Select - http://selectric.js.org/
+			==============================================*/
+			(function(){
+				$('.styled select').selectric();
+			})();
 
 }); // Jquery $ Function
 

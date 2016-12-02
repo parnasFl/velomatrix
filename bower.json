@@ -15,10 +15,11 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.1",
+    "jquery": "2.2.4",
     "magnific-popup": "Magnific-Popup#^1.1.0",
     "qtip2": "^2.2.1",
-    "iCheck": "^1.0.2"
+    "iCheck": "^1.0.2",
+    "slick-carousel": "slick.js#^1.6.0"
   },
   "overrides": {
     "qtip2": {

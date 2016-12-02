@@ -60,14 +60,23 @@
 @import "blocks/_item-descr";
 @import "blocks/_item-tech-info";
 @import "blocks/_item-feedback";
+@import "blocks/_also-buyed";
 
 /* Feedback Page Styles */
 @import "blocks/_feedback-main";
 
+
+/* Footer Page Styles */
+@import "blocks/_footer";
+
+
 //Customized vendor less/css style
-// @import "vendor/_slick-theme";
-// @import "vendor/_slick";
+
+@import "vendor/_slick-theme";
+@import "vendor/_slick";
 
 @import "vendor/_all-icheck";
+@import "vendor/_selectric";
+//@import "vendor/_bxslider";
 //@import "vendor/_custom-chr";
 

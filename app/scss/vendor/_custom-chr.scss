@@ -12,6 +12,8 @@
     background: url(../img/custom-chr.png) no-repeat;
     border: none;
     cursor: pointer;
+
+    flex-shrink: 0;
 }
 
 .icheckbox_polaris {

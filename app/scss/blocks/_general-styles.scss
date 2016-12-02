@@ -1,5 +1,26 @@
 /* General Styles*/
 
+@media (max-width: 1023px) and (min-width: 768px) {
+	.wrapper.mobile-side-menu {
+		
+		.config {
+			z-index: -1;
+			//position: relative;
+			//left: -50px;
+		}
+		.config {
+			//position: static;
+			display: none;
+		}
+
+		.main-content {
+			//margin-left: 50px;
+			//z-index: 1500;
+		}
+	}
+}
+
+
 @media (max-width: 1023px) {
 	
 	.wrapper.mobile-side-menu {

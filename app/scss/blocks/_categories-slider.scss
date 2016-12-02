@@ -14,7 +14,7 @@
 .main-slider__item {
 	
 	&:nth-child(n+2) {
-		display: none;
+		//display: none;
 	}
 }//.main-slider__item
 
@@ -146,6 +146,12 @@
 		width: 718px;
 		margin: 0 auto;
 	}
+
+	.main-slider {
+		width: 678px;
+		margin-left: auto;
+		margin-right: auto;
+	} 
 }
 
 
@@ -322,7 +328,8 @@
 		margin-bottom: 40px;
 	}
 	.main-slider {
-		flex-basis: 58.677813903081%;
+		width: 58.677813903081%;
+		//flex-basis: 58.677813903081%;
 		margin-bottom: 20px;
 		//min-height: 400px;
 		align-self: flex-start;
