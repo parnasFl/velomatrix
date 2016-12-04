@@ -382,6 +382,9 @@
 	
 	.top-bar__address-text {
 		color: #666;
+		span {
+			border-bottom: 1px solid #d4d4d4;
+		}
 	}
 	
 }
@@ -437,7 +440,7 @@
 	.top-bar__address-text {
 		color: #666666;
 		word-wrap: break-word;
-		text-decoration: underline;
+		//text-decoration: underline;
 		margin-left: 5px;
 		font-size: 1.3rem;
 		&:hover {
@@ -578,6 +581,9 @@
 	.top-bar__menu-link {
 		color: #000;
 		font-size: 1.4rem;
+		&:hover {
+			color: lighten(#000, 40%);
+		}
 	}
 
 	.top-bar__menu-item--iconed {
@@ -590,6 +596,9 @@
 			color: #008dc1;
 			font-weight: 700;
 			padding-left: 5px;
+			&:hover {
+				color: lighten(#008dc1, 30%);
+			}
 		}
 
 		.top-bar__menu-icon {

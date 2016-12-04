@@ -19,7 +19,7 @@ $(function(){
 		});
 
 	})();
-
+		//#config
 	/*---------Item page carousel - http://kenwheeler.github.io/slick/
 		============================================*/
 		(function(){
@@ -56,7 +56,7 @@ $(function(){
 							slidesToScroll: 1,
 							asNavFor: '.slideshow__image-wrap',
 							dots: false,
-							arrows: false,
+							arrows: true,
 							centerMode: false,
 							focusOnSelect: true,
 							vertical: true,
@@ -200,7 +200,7 @@ $(function(){
 			if(menuContent.hasClass('toggle-open')) {
 				$('.config__inner').css({
 					'box-shadow': '8px 0 8px rgba(0, 0, 0, 0.14)',
-					'overflow' : 'auto'
+					//'overflow-y' : 'scroll'
 				});
 
 				$(this).closest('.config-panel')
@@ -329,16 +329,31 @@ $(function(){
 			.trigger('click');
 		}
 	});
-
+	
 	(function(){
+		$('.item-page__conf-link').on('click', function(e){
+			e.preventDefault();
+
+			var $this = $(this),
+			container = $this.closest('.config-panel'),
+			menuContentAll = container.
+											find('.config-panel__menu-content--toggle',
+													'.config-panel__menu-content'),
+			menuContent =  container.
+											find('.config-panel__menu-content');
+
+			$(this).closest('.wrapper')
+						.find('.config').addClass('show');
+			
+			if (!menuContent.hasClass('toggle-open')) {
+				$('.config-main-toggle, .config-panel__menu-type-link')
+				.trigger('click');
+			}
+		});
 		
-		// $('.config-main-toggle').on('click', function(){
-		// 		//$('.config').removeClass('show');
-		// 		console.log(this);
-		// 	});
 		
 		
-	})();
+	})(); //
 	
 
 	
@@ -696,7 +711,9 @@ $(function(){
 						titleContainerSib.find('dt').slideUp(500, function(){
 							titleContainerSib.find('.footer-info-block__title')
 							.removeClass('plus');
-							titleContainerSib.find('dt').removeAttr('style');
+							titleContainerSib.find('dt').slideUp(300, function(){
+								//titleContainerSib.find('dt').removeAttr('style');
+							});
 						});
 
 
@@ -735,38 +752,46 @@ $(function(){
 			})();
 			//$('.catalog-menu__image');
 
-			/* Catalog config icons hover
-			==============================================*/
-
 			(function(){
-				$('.catalog-item__conficons-link').mouseover(function(){
-					$(this).closest('.catalog-item__conficons-list')
-					.find('.catalog-item__conficons-item')
-												.removeClass('hide-all');
+				$('.catalog-menu__name').mouseover(function(){
+					$(this).closest('.catalog-menu__item')
+									.find('.catalog-menu__image')
+									.addClass('hovered');
+				}).mouseout(function(){
+					$(this).closest('.catalog-menu__item')
+									.find('.catalog-menu__image')
+									.removeClass('hovered');
 				});
-				// $('.catalog-item__conficons').mouseout(function(){
-				// 	$(this).find('.catalog-item__conficons-item')
-				// 						.addClass('hide-all');
-				// });
 
 			})();
 
-			// $('.catalog-item__conficons-link').hover(function(){
-			// 	$(this).closest('.catalog-item__conficons-item')
-			// 				.addClass('show-all');
-			// }, function(){
-			// 	$(this).removeClass('show-all');
-			// });
+			/* Catalog config icons hover
+			==============================================*/
 
+			// (function(){
+			// 	$('.catalog-item__conficons-link').mouseover(function(){
+			// 		$(this).closest('.catalog-item__conficons-list')
+			// 		.find('.catalog-item__conficons-item')
+			// 									.removeClass('hide-all');
+			// 	});
+			// 	// $('.catalog-item__conficons').mouseout(function(){
+			// 	// 	$(this).find('.catalog-item__conficons-item')
+			// 	// 						.addClass('hide-all');
+			// 	// });
+
+			// })();
 
 			/* Catalog item hover
 			==============================================*/
-			$('.catalog-item__images').hover(function(){
+			$('.catalog-item__images, .catalog-item__inner, .catalog-item__title').hover(function(){
 				$(this).closest('.catalog-item__inner')
 							.addClass('shadowed');
 				$(this).closest('.catalog-item__inner')
 							.find('.catalog-item__arrow')
 							.addClass('hovered');
+				$(this).closest('.catalog-item__inner')
+							.find('.catalog-item__conficons-item')
+							.removeClass('hide-all');
 
 			}, function(){
 				$(this).closest('.catalog-item__inner')
@@ -774,6 +799,9 @@ $(function(){
 				$(this).closest('.catalog-item__inner')
 							.find('.catalog-item__arrow')
 							.removeClass('hovered');
+				$(this).closest('.catalog-item__inner')
+							.find('.catalog-item__conficons-item')
+							.addClass('hide-all');
 			});
 
 
@@ -820,7 +848,7 @@ $(function(){
 			/*---------Config icons hover display
 			============================================*/
 			(function(){
-				$('.config-links__link').hover(function(){
+				$('.config-links__item').hover(function(){
 					$(this)
 					.find('.config-icon-tooltip')
 					.stop(true, true)
@@ -828,14 +856,6 @@ $(function(){
 				});
 
 			})();
-
-			/*// Info block tooltip
-			(function(){
-				$('.config-panel__menu-title i').hover(function(){
-					$(this).find('div').stop(true, true).slideToggle('fast');
-				});
-
-			})();*/
 
 			/*---------Catalog Config icons hover display
 			============================================*/
@@ -891,6 +911,45 @@ $(function(){
 					});
 				
 			})();
+
+			/*Custom scroll
+			==============================================*/
+			(function(){
+				// $('.config__inner').niceScroll({
+				// 	cursorcolor:"#e5e5e5",
+				// 	cursorwidth: "5px",
+				// 	 horizrailenabled: false
+				// });
+
+				 // $("body").niceScroll();
+				
+				// $(".config__inner").mouseover(function() {
+				//     $(".config__inner").getNiceScroll().resize();
+				// });
+			})();
+
+			/*---------Main Menu items hover effect
+			============================================*/
+			(function(){
+				$('.main-nav__item').mouseover(function(){
+					$(this).siblings('.main-nav__item')
+									.find('.main-nav__link-text')
+									.addClass('hovered');
+									// .animate({
+									// 	opacity: 0.25
+									// }, 300);
+				}).mouseout(function(){
+					$(this).siblings('.main-nav__item')
+									.find('.main-nav__link-text')
+									.removeClass('hovered');
+				// 					.animate({
+				// 						opacity: 1
+				// 					}, 300);
+				});
+
+			})();
+
+
 
 //sales-leader__img
 }); // Jquery $ Function

@@ -61,7 +61,8 @@ gulp.task('libs', function() {
 	return gulp.src([
 		//'app/js/libs/slick.min.js'
 		//'app/js/libs/jquery.hoverontouch.js'
-		'app/js/libs/jquery.selectric.min.js'
+		'app/js/libs/jquery.selectric.min.js',
+		'app/js/vendor/jquery.nicescroll/dist/jquery.nicescroll.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

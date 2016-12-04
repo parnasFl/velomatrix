@@ -9,6 +9,7 @@
 	// &.make-invisible {
 	// 	z-index: -1;
 	// }
+	//border-right: 1px solid #000;
 	&.hide {
 		@media (max-width: 767px) {
 			display: none;
@@ -30,7 +31,10 @@
 	//background: #ffeded; // then delete
 	background: #fff; // then delete
 	z-index: 10;
-	overflow: auto;
+	//overflow: auto;
+	overflow: hidden;
+	overflow-y: auto;
+	//overflow: auto;
 
 	&.make-it-scroll {
 		position: absolute;
@@ -423,6 +427,35 @@ button.config-submit-detailed:disabled {
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+
+
+/*
+ *  STYLE 3
+ */
+
+// .config__inner::-webkit-scrollbar-track
+// {
+// 	//-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+// 	background-color: #fff;
+// 	border-radius: 5px;
+// }
+
+// .config__inner::-webkit-scrollbar
+// {
+// 	width: 5px;
+// 	background-color: #fff;
+// }
+
+// .config__inner::-webkit-scrollbar-thumb
+// {
+// 	background-color: #e5e5e5;
+// 	//width: 5px;
+// 	border-radius: 5px;
+// }
+
+
+
 /* Only mobile styles 
 =========================================*/
 

@@ -150,15 +150,19 @@
 *******************************************************/
 @media (min-width: 768px) and (max-width: 1023px) {
 	.advantages {
+		
+		
+		
+	}
+
+	.advantages__inner {
 		width: 718px;
 		margin: 0 auto;
 		
-		border-left: 1px solid $bd-grey;
-		border-right: 1px solid $bd-grey;
+		//border-left: 1px solid $bd-grey;
+		//border-right: 1px solid $bd-grey;
 		padding-left: 20px;
 		padding-right: 20px;
-		
-		
 	}
 
 	.advantages__list {
@@ -181,6 +185,10 @@
 		&:not(:last-child) {
 			border-right: 1px solid $bd-grey;
 			padding-right: 15px;
+		}
+
+		&:first-child {
+			////border: none;
 		}
 	}
 
@@ -209,7 +217,11 @@
 
 	.advantages {
 		border-top: 1px solid $bd-grey;
-		border-bottom: 1px solid $bd-grey;
+		//border-bottom: 1px solid $bd-grey;
+	}
+
+	.advantages__inner {
+
 	}
 
 	.advantages__item {

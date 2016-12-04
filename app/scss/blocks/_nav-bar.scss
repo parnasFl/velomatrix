@@ -596,8 +596,8 @@
 	.main-nav__item:hover .main-nav__dropdown-menu {
 		opacity: 1;
 		max-height: 1000px;
-		transition: opacity 0.3s ease 0.5s,
-								max-height 0.3s ease 0.5s;
+		transition: opacity 0.3s ease 0.2s,
+								max-height 0.3s ease 0.2s;
 	}
 
 	.main-nav__dropdown-menu {
@@ -616,8 +616,8 @@
 		font-weight: 600;
 		font-size: 18px;
 		color: #000;
-		padding-top: 30px;
-		padding-bottom: 25px;
+		padding-top: 25px;
+		padding-bottom: 20px;
 		position: relative;
 		
 		//Menu dropdown styles
@@ -638,6 +638,15 @@
 	.main-nav__link-icon {
 		display: inline-block;
 		vertical-align: baseline;
+	}
+
+	.main-nav__link-text {
+		transition: color .3 ease;
+		color: black;
+		&.hovered {
+			color: #d4d4d4;
+			transition: color .3 ease;
+		}
 	}
 	.main-nav__link-icon {
 		width: 20px;

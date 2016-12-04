@@ -16,6 +16,11 @@
 	.similar-items {
 		padding-left: 10px;
 		padding-right: 10px;
+
+		.catalog-item {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
 	}
 } // media query
 

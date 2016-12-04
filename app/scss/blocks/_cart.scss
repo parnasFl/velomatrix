@@ -119,7 +119,11 @@
 /*Desktop Media queries*/
 @media (min-width: 1024px) {
 	.cart {
-		
+		&.cart--empty {
+			.cart__btn {
+				background-color: #f89999;
+			}
+		}
 	}
 
 	.cart__btn {

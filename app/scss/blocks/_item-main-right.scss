@@ -4,12 +4,13 @@
 }
 
 .options__item-stock-infos {
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
 .options__marking, .options__stock {
 	display: inline-block;
 	vertical-align: baseline;
+	margin-bottom: 0!important;
 }
 
 .options__marking {
@@ -23,10 +24,10 @@
 }
 
 .options__size {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 
 	.options__list-item {
-		margin-bottom: 10px;
+		//margin-bottom: 10px;
 	}
 }
 

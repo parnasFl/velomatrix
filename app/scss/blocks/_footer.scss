@@ -111,7 +111,7 @@
 	}
 
 	.page-footer__support-list {
-		margin-bottom: 10px;
+		//margin-bottom: 10px;
 	}
 
 	.page-footer__support-tel {
@@ -285,13 +285,13 @@
 	
 		
 
-		padding-top: 30px;
+		//padding-top: 30px;
 	}
 
 	
 
 	.page-footer__top {
-		
+			border-top: 1px solid $bd-grey;
 			border-bottom: 1px solid $bd-grey;
 	}
 
@@ -322,7 +322,9 @@
 	}
 
 	.footer-info-block__item {
-		margin-bottom: 10px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
 	}
 
 	.page-footer__bottom {
@@ -333,7 +335,7 @@
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 20px;
-		padding-bottom: 20px;
+		//padding-bottom: 20px;
 	}
 
 	.logo-footer {
@@ -379,10 +381,10 @@
 
 	.page-footer__top-wrap {
 		width: 100%;
-		padding-top: 40px;
+		padding-top: 30px;
 		padding-left: 2.327385570209%;
 		padding-right: 2.327385570209%;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 	}
 
 	.page-footer__support-list {

@@ -25,6 +25,7 @@
 	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	border: 1px solid transparent
 }
 
 @media (max-width: 767px) {
@@ -34,6 +35,8 @@
 		text-align: center;
 		border-bottom: 1px solid $bd-grey;
 		display: none;
+		padding-top: 20px;
+		padding-bottom: 10px;
 	}
 	
 	.page-support__working-hours {
@@ -75,7 +78,8 @@
 
 	.page-support__callback-btn {
 		&:hover {
-			text-decoration: underline;
+			background-color: lighten(#e5e5e5, 4%);
+			border-color: $bd-grey;
 		}
 	}
 }//(min-width: 1024px
