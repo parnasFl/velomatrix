@@ -28,6 +28,11 @@
 
 	.options__list-item {
 		//margin-bottom: 10px;
+		&.selected {
+			a {
+				border-color: $red-base;
+			}
+		}
 	}
 }
 
@@ -74,12 +79,6 @@
 .options__list-item {
 	display: inline-block;
 	margin-right: 10px;
-
-	&.active {
-		a {
-			border-color: $red-base;
-		}
-	}
 
 	a {
 		display: block;

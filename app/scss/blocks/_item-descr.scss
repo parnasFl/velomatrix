@@ -8,16 +8,20 @@
 	&.not-full-descr {
 		.item-descr {
 			float: none;
-			margin: 0 auto;
+			//margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		.item-feedback-wrapper {
 			float: none;
-			margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 		.item-tech {
 			float: none;
-			margin: 0 auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }
@@ -228,6 +232,10 @@
 		padding-bottom: 35px;
 		position: relative;
 		text-align: center;
+		
+		.not-full-descr & {
+			//margin-bottom: 40px;
+		}
 	}
 
 	.item-descr__brand-title {

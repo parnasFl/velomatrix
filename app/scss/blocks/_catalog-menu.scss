@@ -204,6 +204,9 @@
 
 	.catalog-menu__name {
 		font-size: 20px;
+		&:hover {
+			color: #6699cc;
+		}
 	}
 
 	.catalog-menu__image {

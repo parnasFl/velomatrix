@@ -153,6 +153,27 @@
 		margin-right: auto;
 	}
 
+	// .main-slider--js {
+	// 	.main-slider__item {
+	// 		img {
+	// 			visibility:hidden;
+	// 		}
+
+	// 		&:first-child {
+	// 			img {
+	// 				visibility: hidden;
+	// 			}
+	// 		}
+	// 	}
+	// 	&.slick-initialized {
+	// 		.main-slider__item {
+	// 			img {
+	// 				visibility: hidden;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
 	.accessories {
 		.category-item__pic-inner {
 			img {
@@ -357,6 +378,7 @@
 		margin-bottom: 20px;
 		//min-height: 400px;
 		align-self: flex-start;
+		//overflow: hidden;
 	}
 
 	.category-item {

@@ -596,16 +596,26 @@
 	.main-nav__item:hover .main-nav__dropdown-menu {
 		opacity: 1;
 		max-height: 1000px;
-		transition: opacity 0.3s ease 0.2s,
-								max-height 0.3s ease 0.2s;
+		// transition: opacity 0.3s ease 0.3s,
+		// 						max-height 0.3s ease 0.3s;
+		transition-property: opacity, max-height;
+		transition-duration: 300ms, 300ms;
+		transition-timing-function: linear, linear;
+		transition-delay: 300ms, 300ms;
 	}
 
 	.main-nav__dropdown-menu {
 		//Dropdown Styles Begin
+		
+		transition: opacity 200ms ease 300ms,
+								max-height 200ms ease 200ms;
+		// transition-property: opacity, max-height;
+		// transition-duration: 0.3s, 0.3s;
+		// transition-timing-function: ease-in, ease-in;
+		// transition-delay: 0.3s, 0.3s;
 		opacity: 0;
-		max-height: 0px;
-		transition: opacity 0.5s ease 0.3s,
-								max-height 1s ease 0.3s;
+		max-height: 0;
+
 		overflow:hidden;
 		//Dropdown Styles End
 	}
@@ -618,6 +628,8 @@
 		color: #000;
 		padding-top: 25px;
 		padding-bottom: 20px;
+		//padding-left: 20px;
+		//padding-right: 20px;
 		position: relative;
 		
 		//Menu dropdown styles
@@ -632,6 +644,13 @@
 			opacity:0;
 			transition: opacity 0.0s ease 0.3s;
 		}
+
+		&:hover {
+			.main-nav__link-text {
+				color: $red-base;
+				transition: color .2s;
+			}
+		}
 	}
 	
 	.main-nav__link-text,
@@ -641,11 +660,15 @@
 	}
 
 	.main-nav__link-text {
-		transition: color .3 ease;
+		transition: color .3s ease;
 		color: black;
 		&.hovered {
 			color: #d4d4d4;
-			transition: color .3 ease;
+			transition: color .3s ease;
+		}
+		&.selfHover {
+			color: $red-base;
+			transition: color .3s ease;
 		}
 	}
 	.main-nav__link-icon {
@@ -669,11 +692,7 @@
 		background-color: white;
 		
 		//Dropdown Styles Begin
-		opacity: 0;
-		max-height: 0px;
-		transition: opacity 0.0s ease 0.3s,
-								max-height 0.0s ease 0.3s;
-		overflow:hidden;
+	
 		//Dropdown Styles End
 
 		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);

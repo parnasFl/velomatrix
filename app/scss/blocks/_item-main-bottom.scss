@@ -287,10 +287,14 @@
 
 	.item-page__extra-right {
 		padding-left: 3%;
+		padding-right: 3%;
 	}
 
 	.shipping-title br {
 		display: none;
+		@media (max-width: 1100px) {
+			display: block;
+		}
 	}
 	
 	.shipping-title {
@@ -348,6 +352,7 @@
 		&:not(:last-child) {
 			margin-right: 4%;
 		}
+		margin-bottom: 10px;
 	}
 
 	.item-page__extra-bottom {

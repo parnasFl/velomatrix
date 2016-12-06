@@ -21,7 +21,7 @@
 						Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
 						<a href="#">Прочитать подробно</a>
 			ul.options__list
-				li.options__list-item
+				li.options__list-item.selected
 					a(href="#") 18"
 				li.options__list-item
 					a(href="#") 20"
@@ -31,16 +31,16 @@
 			.options__title цвет:
 			ul.options__colors-list
 				li.options__colors-item
-					a(href="#", style="background-color: white; border-color: #ccc;").color черный
-						i(style="background-color: #000;")
+					a.color-link(href="#", style="background-color: white; border-color: #fff;").color черный
+						i(style="background-color: #000;" data-color="#ccc")
 					span Черный
 				li.options__colors-item
-					a(href="#", style="background-color: white; border-color: #ffd800;").color Желтый
-						i(style="background-color: #ffd800;")
+					a.color-link(href="#", style="background-color: white; border-color: #fff;").color Желтый
+						i(style="background-color: #ffd800;" data-color="#ffd800")
 					span Желтый
 				li.options__colors-item
-					a(href="#", style="background-color: white; border-color: #00d2ff;").color Желтый
-						i(style="background-color: #00d2ff;")
+					a.color-link(href="#", style="background-color: white; border-color: #fff;").color Желтый
+						i(style="background-color: #00d2ff;" data-color="#00d2ff")
 					span Синий
 		.options__wheel
 			.options__size-title

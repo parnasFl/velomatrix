@@ -9,7 +9,7 @@
 
 // $slick-font-path: "./fonts/" !default;
 // $slick-font-family: "slick" !default;
-// $slick-loader-path: "./" !default;
+$slick-loader-path: "./" !default;
 // $slick-arrow-color: white !default;
 // $slick-dot-color: black !default;
 // $slick-dot-color-active: $slick-dot-color !default;
@@ -21,7 +21,7 @@
 // $slick-opacity-on-hover: 1 !default;
 // $slick-opacity-not-active: 0.25 !default;
 
-/* @function slick-image-url($url) {
+@function slick-image-url($url) {
 	@if function-exists(image-url) {
 		@return image-url($url);
 	}
@@ -37,7 +37,25 @@
 	@else {
 		@return url($slick-font-path + $url);
 	}
-} */
+} 
+
+// .slick-slider {
+//     background: url(loader.gif);
+// }
+// .slick-slider .slick-list { 
+//     opacity: 0; 
+//     position: absolute; 
+// }
+// .main-slider--js.slick-initialized {
+//     .main-slider__item {
+//     	display: block;
+//     }
+// }
+// .slick-slider.slick-initialized .slick-list { 
+//     opacity: 1;
+//     position: relative;
+//     transition: opacity 0.2s ease-in;
+// }
 
 /* Slider */
 
@@ -46,6 +64,10 @@
 		background: #fff url("../img/ajax-loader.gif") center center no-repeat;
 	}
 }
+
+// .main-slider--js {
+// 	overflow: hidden;
+// }
 
 /* Icons */
 // @if $slick-font-family == "slick" {
@@ -57,6 +79,100 @@
 // 		font-style: normal;
 // 	}
 // }
+
+//.slideshow__thumbs arrow 
+@media (min-width: 1024px) {
+	.slideshow__thumbs {
+		position: relative;
+		.slick-prev,
+		.slick-next {
+			position: absolute;
+			@include link-text-indent;
+			width: 30px;
+			height: 30px;
+			background-size: 30px 20px;
+			cursor: pointer;
+			z-index: 10;
+			margin-top: -22px;
+			left: 50%;
+			margin-left: -15px;
+			padding: 0;
+			border: none;
+			outline: none;
+			transform: scale(1);
+			transition: transform .2s ease;
+			box-shadow: none;
+			border-radius: none;
+			bottom: 0;
+			top: 103%;
+			&:hover,
+			&:focus {
+				transform: scale(1.1);
+				transition: transform .2s ease;
+			}
+		} 
+
+		.slick-prev {
+			//bottom: -200px;
+				background-image: url("../img/icon-pr-down.svg");
+			&:hover {
+				background-image: url("../img/icon-pr-down-hover.svg");
+			}
+
+			// @media (max-width: 1023px) {
+			// 	top: 55%;
+			// 	//margin-top: 0px;
+			// 	background-image: url("../img/icon-pr-right.svg");
+			// 	left: 100%;
+			// 	&:hover {
+			// 		background-image: url("../img/icon-pr-right-hover.svg");
+			// 	}
+			// }
+		}
+
+		.slick-next {
+			top: -1%;
+			background-image: url("../img/icon-pr-up.svg");
+			&:hover {
+				background-image: url("../img/icon-pr-up-hover.svg");
+			}
+
+			// @media (max-width: 1023px) {
+			// 	top: 55%;
+			// 	left: -10px;
+			// 	background-image: url("../img/icon-pr-left.svg");
+			// 	&:hover {
+			// 		background-image: url("../img/icon-pr-left-hover.svg");
+			// 	}
+
+			// }
+		}
+	}
+}
+
+@media (max-width:1023px) {
+	.slideshow__thumbs {
+		.slick-prev {
+			background-image: url("../img/icon-next.svg");
+			top: 50%;
+			
+			left: 90%;
+			&:hover {
+				background-image: url("../img/icon-next-hover.svg");
+			}
+		}
+		.slick-next {
+			background-image: url("../img/icon-prev.svg");
+			top: 50%;
+			left: -20px;
+			&:hover {
+				background-image: url("../img/icon-prev-hover.svg");
+			}
+		}
+	}
+}
+
+
 
 /* Arrows */
 .also-buyed {

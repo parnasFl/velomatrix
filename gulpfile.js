@@ -51,7 +51,7 @@ gulp.task('scss', function () {
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleanCSS())
+	//.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(reload({stream: true}));
 });
@@ -59,10 +59,11 @@ gulp.task('scss', function () {
 //Script Task for concat and minifying base jquery plgs
 gulp.task('libs', function() {
 	return gulp.src([
-		//'app/js/libs/slick.min.js'
+		//'app/js/libs/slick.min.js',
 		//'app/js/libs/jquery.hoverontouch.js'
-		'app/js/libs/jquery.selectric.min.js',
-		'app/js/vendor/jquery.nicescroll/dist/jquery.nicescroll.min.js'
+		'app/js/libs/jquery.hoverdelay.min.js',
+		'app/js/libs/jquery.selectric.min.js'
+		//'app/js/vendor/jquery.nicescroll/dist/<jquery class="nicescroll"></jquery>.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

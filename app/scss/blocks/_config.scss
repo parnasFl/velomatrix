@@ -5,6 +5,7 @@
 	position: relative;
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
 	z-index: 200;
+
 	//display: none;
 	// &.make-invisible {
 	// 	z-index: -1;
@@ -33,7 +34,10 @@
 	z-index: 10;
 	//overflow: auto;
 	overflow: hidden;
-	overflow-y: auto;
+	//overflow-y: auto;
+	border-right: 1px solid $bd-grey;
+	border-left: 1px solid $bd-grey;
+
 	//overflow: auto;
 
 	&.make-it-scroll {
@@ -55,10 +59,16 @@
 .config-panel__item {
 	position: relative;
 	min-height: 51px;
-	border-bottom: 1px solid $bd-grey;
+	//border-bottom: 1px solid $bd-grey;
+	//border-right: 1px solid $bd-grey;
+	//border-left: 1px solid $bd-grey;
 	background-color: #fff;
+	&:not(:last-child) {
+		border-bottom: 1px solid $bd-grey;
+	}
 	&:hover {
 		box-shadow: inset -2px 0 0 $red-base;
+		border-right-color: transparent;
 	}
 
 	&::after {
@@ -78,12 +88,19 @@
 	&:hover {
 		box-shadow: inset -2px 0 0 $red-base!important;
 	}
+	&:last-child {
+		border-bottom: none;
+	}
 }
 
 // helper class for jquery
 .hide-hover-shadow {
 	&:hover {
 		box-shadow: none!important;
+	}
+	
+	&:last-child {
+		border-bottom: 1px solid $bd-grey;
 	}
 }
 
@@ -174,6 +191,11 @@
 	&.toggle-visible {
 		opacity: 1;
 	}
+
+	&.menu-content--footer {
+		//border-bottom: 1px solid $bd-grey;
+		min-height: 100%;
+	}
 }
 
 .config-panel__menu-type--toggle {
@@ -227,6 +249,7 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		white-space: nowrap;
+		cursor: pointer;
 	}
 
 	span , i {
@@ -362,6 +385,10 @@
 		font-weight: 700;
 		font-size: 12px;
 		margin-bottom: 20px;
+	}
+
+	&.border-bottom {
+		border-bottom: 1px solid $bd-grey;
 	}
 
 	&:hover {
