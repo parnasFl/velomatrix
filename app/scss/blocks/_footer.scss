@@ -1,7 +1,7 @@
 /* .page-footer Styles */
 .page-footer {
 	font-size: 14px;
-
+	z-index: -1;
 	a {
 		&:hover {
 			color: $blue-link;

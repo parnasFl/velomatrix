@@ -546,7 +546,11 @@ button.config-submit-detailed:disabled {
 @media (min-width: 1024px) {
 	.config {
 		//flex-basis: 3.594536304817%;
-		flex-basis: 51px;
+		//flex-basis: 51px;
+		width: 51px;
+		position: absolute;
+		left: 0;
+		top: 0;
 	}
 
 	.config-panel__menu-type--toggle {

@@ -42,9 +42,15 @@ body {
 
 .wrapper {
 	display: flex;
-	max-width: 1341px;
+	max-width: 2048px;
 	margin: 0 auto;
 	position: relative;
+	justify-content: center;
+}
+
+.main-content__wrapper {
+	//display: flex;
+	//justify-content: center;
 }
 
 .main-content {
@@ -53,6 +59,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+
 	//min-width: 320px;
 	@media (min-width:768px) {
 		width: auto;
@@ -61,6 +68,7 @@ body {
 
 	@media (min-width:1024px) {
 		max-width: 1341px;
+		//padding-left: 51px;
 	}
 }
 
