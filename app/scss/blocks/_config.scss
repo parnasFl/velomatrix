@@ -19,8 +19,32 @@
 	&.show {
 		@media (max-width: 767px) {
 			display: block;
+
+			.config-panel__menu-content {
+				//width: 0;
+				//min-height: 0;
+				//transition: all .3s;
+			}
+
+			.config-panel__menu-content-wrap {
+				//transition: all .3s;
+				//opacity: 0;
+			}
 		}
+
+		
 	}
+
+	// .config-panel__menu-content {
+	// 	width: 0;
+	// 	min-height: 0;
+	// 	transition: all .3s;
+	// }
+
+	// .config-panel__menu-content-wrap {
+	// 	transition: all .3s;
+	// 	opacity: 0;
+	// }
 }
 
 
