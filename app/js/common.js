@@ -210,6 +210,7 @@ $(function(){
 					//above code is commented for enabling overflow scroll!!!!
 				});
 
+				/**/
 				menuItem.addClass('hide-hover-shadow');
 				
 			//menuItem.toggleClass('.remove-pseudo-border');
