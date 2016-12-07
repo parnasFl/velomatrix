@@ -419,7 +419,20 @@
 		padding-bottom: 18px;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid $bd-grey;
+		//border-bottom: 1px solid $bd-grey;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 100%;
+			//margin-left: -200px;
+			//margin-right: -200px;
+			background-color: $bd-grey;
+			left: -1000px;
+			right: -1000px;
+			height: 1px;
+			width: 500%;
+		}
 	}
 
 	.top-bar__address {
