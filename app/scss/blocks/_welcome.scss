@@ -42,12 +42,31 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.welcome {
-		padding-left: 2.322340919647%;
-		padding-right: 2.322340919647%;
-		padding-top: 30px;
-		padding-bottom: 30px;
-		border-top: 1px solid $bd-grey;
+		// padding-left: 2.322340919647%;
+		// padding-right: 2.322340919647%;
+		// padding-top: 30px;
+		// padding-bottom: 30px;
+		margin-left: 51px;
 
+		@media (min-width: 1680px) {
+			margin-left: 0px;
+		}
+		border-top: 1px solid $bd-grey;
+		.main-content {
+			width: auto;
+			padding-left: 2.322340919647%;
+			padding-right: 2.322340919647%;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1341px;
+			@media (min-width: 1680px) {
+				max-width: 1550px;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 
 	}
 	.welcome__title {

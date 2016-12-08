@@ -615,7 +615,7 @@ $(function(){
 										.animate({
 											left: 0
 										},300, function(){
-											var mainC = $('.main-content');
+											var mainC = $('body'); // Updated * was '.main-content'
 											if(mainC.has('.overlay')) {
 												$('.overlay').remove();
 											}

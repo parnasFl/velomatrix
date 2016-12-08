@@ -208,12 +208,37 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.home-articles {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		padding-left: 2.322340919647%;
-		padding-right: 2.322340919647%;
-		@include clearfix;
+		// padding-top: 30px;
+		// padding-bottom: 30px;
+		// padding-left: 2.322340919647%;
+		// padding-right: 2.322340919647%;
+		// @include clearfix;
+		padding-right: 0;
+		padding-left: 0;
 		margin-bottom: 40px;
+		margin-left: 51px;
+
+		@media (min-width: 1680px) {
+			margin-left: 0;
+		}
+
+		.main-content {
+			@include clearfix;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-left: 2.322340919647%;
+			padding-right: 2.322340919647%;
+			margin-left: auto;
+			margin-right: auto;
+			width: auto;
+			max-width: 1341px;
+			@media (min-width: 1680px) {
+				max-width: 1550px;
+
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 	}
 
 	.home-articles__banner {

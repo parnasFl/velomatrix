@@ -565,12 +565,37 @@
 	}
 
 	.main-nav {
-		padding-left: 3.306973400431%;
-		padding-right: 3.306973400431%;
+		// padding-left: 3.306973400431%;
+		// padding-right: 3.306973400431%;
 		border-bottom: 1px solid $bd-grey;
-		width: 100%;
-		border-left: 1px solid $bd-grey;
-		border-right: 1px solid $bd-grey;
+		// width: 100%;
+		// border-left: 1px solid $bd-grey;
+		// border-right: 1px solid $bd-grey;
+		margin-left: 51px;
+		//margin-right: 51px;
+		margin-left: 51px;
+		@media (min-width: 1680px) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.main-content {
+			padding-left: 2.25%;
+			padding-right: 2.25%;
+			//border-bottom: 1px solid $bd-grey;
+			width: 100%;
+			//border-left: 1px solid $bd-grey;
+			//border-right: 1px solid $bd-grey;
+			max-width: 1341px;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			@media (min-width: 1680px) {
+				max-width: 1550px;
+
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 	}
 
 	.main-nav__list {

@@ -52,44 +52,47 @@ body {
 	//display: flex;
 	//justify-content: center;
 	width: 100%;
+	//margin-left: 51px;
 }
 
-.main-content {
+.main-content--outer {
 	width: auto;
 	min-height: 100%;
 	position: relative;
 	//overflow: hidden;
 	z-index: 1;
+	margin-left: auto;
+	margin-right: auto;
 
 	//min-width: 320px;
 	@media (min-width:768px) {
 		width: auto;
-		width: 718px;
+		//width: 718px;
 	}
 
 	@media (min-width:1024px) {
 		max-width: 1341px;
-		//padding-left: 51px;
+		//margin-left: 51px;
 	}
 
 	@media (min-width:1680px) {
 		max-width: 1550px;
-		//padding-left: 51px;
+		//margin-left: 51px;
 	}
 }
 
-.main-content:after {
-	content: "";
-	display: none;
-	//height: $footer-height;
-	min-height: $footer-height;
-	overflow: hidden;
+// .main-content:after {
+// 	content: "";
+// 	display: none;
+// 	//height: $footer-height;
+// 	min-height: $footer-height;
+// 	overflow: hidden;
 
-	@media #{$tablet-widths} {
-		display: block;
-		min-height: $footer-height;
-	}
-}
+// 	@media #{$tablet-widths} {
+// 		display: block;
+// 		min-height: $footer-height;
+// 	}
+// }
 
 
 // .wrapper {
