@@ -567,10 +567,17 @@
 	.main-nav {
 		padding-left: 3.306973400431%;
 		padding-right: 3.306973400431%;
+		border-top: 1px solid $bd-grey;
 		border-bottom: 1px solid $bd-grey;
 		width: 100%;
 		border-left: 1px solid $bd-grey;
 		border-right: 1px solid $bd-grey;
+		border-radius: 3px;
+	}
+
+	.nav-wrapper {
+		padding-left: 2.25%;
+		padding-right: 2.25%;
 	}
 
 	.main-nav__list {
@@ -582,6 +589,12 @@
 	.main-nav__item {
 		@include justified-menu_item;
 		position: static;
+		// &:first-child {
+		// 	padding-left: 30px;
+		// }
+		// &:last-child {
+		// 	padding-right: 30px;
+		// }
 	}
 
 	.main-nav__item-pic {
