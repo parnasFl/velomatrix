@@ -174,7 +174,7 @@
 		border: none;
 		margin-bottom: 50px;
 		margin-left: 51px;
-		@media (min-width: 1680px) {
+		@media (min-width: 1681px) {
 			margin-left: 0;
 		}
 		.main-content {
@@ -188,8 +188,14 @@
 			margin-right: auto;
 
 			@media (min-width: 1680px) {
-				max-width: 1550px;
+				// max-width: 1550px;
 
+				//padding-left: 0;
+				//padding-right: 0;
+			}
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
 				padding-left: 0;
 				padding-right: 0;
 			}

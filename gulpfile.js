@@ -33,14 +33,15 @@ gulp.task('pug', function () {
 			pretty: true
 		}))
 		.pipe(wiredep({
-				//directory: './app/js/vendor',
+				directory: './app/js/vendor',
 				ignorePath: /^(\.\.\/)*\.\./,
 				exclude: ['app/js/vendor/slick-carousel/slick/slick.css']
 		}))
-		.on('error', log)
+		//.on('error', log)
 		//.pipe(prettify({indent_size: 2}))
 		.pipe(gulp.dest('app/'))
-		.pipe(reload({stream: true}));
+		//.pipe(reload({stream: true}));
+		.pipe(browserSync.stream());
 });
 
 //SCSS Task
@@ -62,7 +63,8 @@ gulp.task('libs', function() {
 		//'app/js/libs/slick.min.js',
 		//'app/js/libs/jquery.hoverontouch.js'
 		'app/js/libs/jquery.hoverdelay.min.js',
-		'app/js/libs/jquery.selectric.min.js'
+		'app/js/libs/jquery.selectric.min.js',
+		'app/js/vendor/OwlCarousel/owl-carousel/owl.carousel.min.js'
 		//'app/js/vendor/jquery.nicescroll/dist/<jquery class="nicescroll"></jquery>.min.js'
 		])
 		.pipe(concat('libs.min.js'))
@@ -186,17 +188,17 @@ gulp.task('default', ['server', 'watch']);
 //*************Functions************
 //============================================
 
-var log = function (error) {
-	console.log([
-		'',
-		//'-------------ERROR MESSAGE START--------------',
-		('[' + error.name + ' in' + error.plugin + ']'),
-		error.message,
-		//'-------------ERROR MESSAGE END----------------',
-		''
-].join('\n'));
-this.end();
-};
+// var log = function (error) {
+// 	console.log([
+// 		'',
+// 		//'-------------ERROR MESSAGE START--------------',
+// 		('[' + error.name + ' in' + error.plugin + ']'),
+// 		error.message,
+// 		//'-------------ERROR MESSAGE END----------------',
+// 		''
+// ].join('\n'));
+// this.end();
+// };
 
 
 gulp.task('clear', function () {

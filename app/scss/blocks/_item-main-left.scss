@@ -366,6 +366,18 @@
 	.item-page__wrapper {
 		padding-left: 2.2%;
 		padding-right: 2.2%;
+		margin-left: 51px;
+
+		.main-content {
+			width: auto;
+			max-width: 1341px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+			}
+		}
 	}
 
 	.item-page__slider {

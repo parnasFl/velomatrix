@@ -170,8 +170,49 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.catalog-menu {
-		//padding-left: 2.322340919647%;
-		//padding-right: 2.322340919647%;
+		// padding-left: 2.322340919647%;
+		// padding-right: 2.322340919647%;
+		margin-left: 51px;
+		// @media (min-width: 1680px) {
+		// 	margin-left: 0;
+		// }
+
+		.main-content {
+			width: auto;
+			max-width: 1341px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 2.322340919647%;
+			padding-right: 2.322340919647%;
+			//outline: 1px solid #999;
+			
+			@media (min-width:1440px) {
+				//padding-left: 0;
+				//padding-right: 0;
+			}
+			@media (min-width: 1680px) {
+				padding-left: 0%;
+				padding-right: 0%;
+				//padding-left: 1.79%;
+				//padding-right: 1.79%;
+				// .catalog-menu__title {
+				// 	margin-left: 0;
+				// }
+
+				// .catalog-menu__item {
+				// 	&:first-child {
+				// 		padding-left: 0;
+				// 	}
+				// 	&:nth-child(5n+1) {
+				// 		padding-left: 0;
+				// 	}
+				// }
+			}
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+			}
+		}
 	}
 
 	.catalog-menu__header {
@@ -180,12 +221,13 @@
 
 	.catalog-menu__title {
 		font-size: 50px;
-		margin-left: 2.237136465324%;
+		//margin-left: 2.237136465324%;
 	}
 
 	.catalog-menu__list {
 		//@include clearfix;
 		font-size: 0;
+		margin-right: -3.824626865672%;
 	}
 
 	.catalog-menu__li {
@@ -196,10 +238,12 @@
 		//float: left;
 		display: inline-block;
 		vertical-align: top;
-		width: 20%;
-		padding-left: 2.237136465324%;
-		padding-right: 2.237136465324%;
+		//width: 20%;
+		width: 16.044776119403%;
+		//padding-left: 2.237136465324%;
+		//padding-right: 2.237136465324%;
 		margin-bottom: 40px;
+		margin-right: 3.824626865672%;
 	}
 
 	.catalog-menu__name {

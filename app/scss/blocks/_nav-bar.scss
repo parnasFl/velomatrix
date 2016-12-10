@@ -573,14 +573,15 @@
 		// border-right: 1px solid $bd-grey;
 		margin-left: 51px;
 		//margin-right: 51px;
-		margin-left: 51px;
-		@media (min-width: 1680px) {
+		@media (min-width: 1681px) {
 			margin-left: 0;
-			margin-right: 0;
+			//margin-right: 0;
 		}
 		.main-content {
 			padding-left: 2.25%;
 			padding-right: 2.25%;
+			//padding-left: 30px;
+			//padding-right: 30px;
 			//border-bottom: 1px solid $bd-grey;
 			width: 100%;
 			//border-left: 1px solid $bd-grey;
@@ -590,8 +591,14 @@
 			margin-right: auto;
 			position: relative;
 			@media (min-width: 1680px) {
-				max-width: 1550px;
+				// max-width: 1550px;
 
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
 				padding-left: 0;
 				padding-right: 0;
 			}
@@ -652,7 +659,7 @@
 		font-weight: 600;
 		font-size: 18px;
 		color: #000;
-		padding-top: 25px;
+		padding-top: 20px;
 		padding-bottom: 20px;
 		//padding-left: 20px;
 		//padding-right: 20px;

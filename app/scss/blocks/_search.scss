@@ -233,6 +233,20 @@ input.search__input{
 			&.new {
 				color: $red-base;
 			}
+
+			&.old {
+				position: relative;
+				&:after {
+					content: '';
+					position: relative;
+					width: 100%;
+					left: 0;
+					right: 0;
+					top: 50%;
+					background-color: rgba(0,0,0,.3);
+					height: 1px;
+				}
+			}
 		}
 
 		&>div {

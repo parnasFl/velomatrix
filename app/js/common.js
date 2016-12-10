@@ -110,6 +110,7 @@ $(function(){
 					slidesToScroll: 1,
 					accessibility: false,
 					dots: false,
+					adaptiveHeight:true,
 					responsive: [
 					{
 						breakpoint: 1023,
@@ -130,6 +131,11 @@ $(function(){
 					}
 					]
 				});
+
+				// $('#also-buyed-car').owlCarousel({
+				// 	items:4
+					
+				// });
 			})();
 
 		/*Item page 'also-buyed' carousel- http://kenwheeler.github.io/slick/
