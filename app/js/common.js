@@ -785,7 +785,7 @@ $(function(){
 						$(this).siblings('.catalog-menu__content')
 						.find('.catalog-menu__name')
 						.stop(true, true)
-						.css('color', '#000');
+						.removeAttr('style');
 					});
 				
 			})();
@@ -967,15 +967,24 @@ $(function(){
 			==============================================*/
 			(function(){
 				
-					$('.sales-leader__img, .sales-leader__title').hover(function(){
-						$(this).closest('.bic-item__sales-leader')
-						.find('.sales-leader__arrow')
+					// $('.sales-leader__img, .sales-leader__title').hover(function(){
+					// 	$(this).closest('.bic-item__sales-leader')
+					// 	.find('.sales-leader__arrow')
+					// 	.addClass('hovered');
+					// },function(){
+					// 	$(this).closest('.bic-item__sales-leader')
+					// 	.find('.sales-leader__arrow')
+					// 	.removeClass('hovered');
+					// });
+
+					$('.bic-item__sales-leader').hover(function(){
+						$(this).find('.sales-leader__arrow')
 						.addClass('hovered');
 					},function(){
-						$(this).closest('.bic-item__sales-leader')
-						.find('.sales-leader__arrow')
+						$(this).find('.sales-leader__arrow')
 						.removeClass('hovered');
 					});
+					//bic-item__sales-leader
 				
 			})();
 
@@ -1042,6 +1051,26 @@ $(function(){
 					}
 			});
 
+			$('.options__color').on('click','.color-text',function(e){
+				e.preventDefault();
+				
+				var color = $(this).siblings('.color-link').find('i').data('color'),
+						otherColor = $(this).closest('.options__colors-item')
+								.siblings('.options__colors-item'),
+						parent = $(this).closest('.options__colors-item');
+						$this = $(this);
+
+					otherColor.removeClass('selected');
+					otherColor.find('.color-link').css('border-color', '#fff');
+					parent.addClass('selected');
+
+					if(parent.hasClass('selected')) {
+						$this.siblings('.color-link').css({
+							'border-color' : color
+						});
+					}
+			});
+
 			/*---------Item page size choose
 			============================================*/
 			$('.options__size').on('click','.options__list-item a',function(e){
@@ -1056,11 +1085,14 @@ $(function(){
 					parent.addClass('selected');
 
 			});
-			/*---------HIde slider images until load of document
+			/*---------Main page cats hover
 			============================================*/
-			$(window).load(function(){
-				//$('.slideshow__image-item img').css();
-			});
+			(function(){
+				$('.category-item').hover(function() {
+					$(this).find('.category-item__desc').toggleClass('hover');
+				});
+
+			})();
 
 }); // Jquery $ Function
 

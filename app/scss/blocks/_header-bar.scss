@@ -385,7 +385,16 @@
 		border-bottom: 1px solid $bd-grey;
 		
 		&.bottom-bar--illustrated {
-			background-size: cover;
+			
+			.main-content {
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				@media (min-width: 1681px) {
+					background-size: 1280px 100%;
+					background-position: center center;
+				}
+			}
 		}
 
 		.main-content {

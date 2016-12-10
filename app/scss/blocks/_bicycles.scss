@@ -39,7 +39,8 @@
 .show-more-cats {
 	display: table;
 	margin: auto;
-	margin-top: 20px;
+	//margin-top: 20px;
+	margin-top: 40px;
 	position: relative;
 	&:before {
 		content: '';
@@ -197,7 +198,15 @@
 		// position: relative;
 		// display: flex; //?
 		// align-items: center;//?
-		margin-bottom: 30px;
+
+
+		//margin-bottom: 30px;
+		margin-bottom: 0;
+		&:last-child {
+			margin-bottom: 30px;
+		}
+
+
 		border-bottom: 1px solid $bd-grey;
 		&:first-child {
 			border-top: 1px solid $bd-grey;

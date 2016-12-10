@@ -4,8 +4,8 @@
 	//margin-bottom: 20px;
 	//margin-top: -50px;
 	.slick-list {
-		//overflow: visible;
-		overflow-y: visible;
+		overflow-y: visible!important;
+		overflow-x: hidden;
 	}
 }
 
@@ -72,7 +72,9 @@
 		.slick-list {
 			//display: flex;
 			//justify-content: space-between;
-			overflow-y: visible;
+			//position: static;
+			overflow: visible;
+			//overflow-x: hidden;
 			.slick-slide {
 			}
 		}

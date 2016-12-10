@@ -25,12 +25,17 @@
 
 .category-item__desc {
 	display: flex;
+	transition: all .3s ease;
 
+	&.hover,
 	&:hover {
+		
 		.category-item__title-icon {
 			border-color: $red-base;
+			transition: all .3s ease;
 			svg * {
 				fill: $red-base;
+				transition: all .3s ease;
 			}
 		}
 	}
@@ -483,6 +488,10 @@
 			.category-item__pic-inner {
 				img {
 					max-width: 85%;
+
+					@media (min-width: 1680px) {
+						max-width: 78%;
+					}
 				}
 			}
 		}
@@ -500,6 +509,9 @@
 			.category-item__pic-inner {
 				img {
 					max-width: 85%;
+					@media (min-width: 1680px) {
+						max-width: 70%;
+					}
 				}
 			}
 		}
