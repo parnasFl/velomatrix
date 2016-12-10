@@ -33,9 +33,9 @@ gulp.task('pug', function () {
 			pretty: true
 		}))
 		.pipe(wiredep({
-				directory: './app/js/vendor',
+				//directory: './app/js/vendor',
 				ignorePath: /^(\.\.\/)*\.\./,
-				exclude: ['app/js/vendor/slick-carousel/slick/slick.css']
+				exclude: './app/js/vendor/picturefill/dist/picturefill.min.js'
 		}))
 		//.on('error', log)
 		//.pipe(prettify({indent_size: 2}))

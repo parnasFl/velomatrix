@@ -367,7 +367,9 @@
 		padding-left: 2.2%;
 		padding-right: 2.2%;
 		margin-left: 51px;
-
+		@media (min-width: 1681px) {
+				margin-left: 0;
+		}
 		.main-content {
 			width: auto;
 			max-width: 1341px;

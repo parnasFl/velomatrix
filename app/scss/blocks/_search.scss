@@ -238,7 +238,7 @@ input.search__input{
 				position: relative;
 				&:after {
 					content: '';
-					position: relative;
+					position: absolute;
 					width: 100%;
 					left: 0;
 					right: 0;

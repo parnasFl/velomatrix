@@ -689,7 +689,7 @@
 	.main-nav__link-text,
 	.main-nav__link-icon {
 		display: inline-block;
-		vertical-align: baseline;
+		vertical-align: middle;
 	}
 
 	.main-nav__link-text {
@@ -705,12 +705,23 @@
 		}
 	}
 	.main-nav__link-icon {
-		width: 20px;
-		height: 14px;
+		//display: flex;
+		//justify-content: center;
+		//align-items: center;
+		width: 23px;
+		height: 20px;
 		position: relative;
+		background: url('../img/icon-hot2.png') 1px 1px no-repeat;
+		background-size: 20px 14px;
 		img {
 			@include img-center;
 		}
+		color: #fff;
+		font-size: 7px;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 23px;
+		padding-left: 4px;
 	}
 
 	.main-nav__dropdown-menu {
