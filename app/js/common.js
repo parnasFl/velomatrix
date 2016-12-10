@@ -345,26 +345,6 @@ $(function(){
 	/*---------Mobile Config Menu toggle
 	============================================*/
 	
-	// $('.config-toggle').on('click', function(e){
-	// 	e.preventDefault();
-
-	// 	var $this = $(this),
-	// 	container = $this.closest('.config-panel'),
-	// 	menuContentAll = container.
-	// 									find('.config-panel__menu-content--toggle',
-	// 											'.config-panel__menu-content'),
-	// 	menuContent =  container.
-	// 									find('.config-panel__menu-content');
-
-	// 	$(this).closest('.wrapper')
-	// 				.find('.config').addClass('show');
-		
-	// 	if (!menuContent.hasClass('toggle-open')) {
-	// 		$('.config-main-toggle, .config-panel__menu-type-link')
-	// 		.trigger('click');
-	// 	}
-	// });
-
 	$('.config-toggle').on('click', function(e){
 		e.preventDefault();
 
@@ -430,21 +410,34 @@ $(function(){
 				item.removeClass('hide-hover-shadow')
 								.addClass('show-hover-shadow');
 			}
-			//parent.addClass('opened');
 		}
 
 
 		if(parent.hasClass('opened')) {
 			$('.js-config-toggle').trigger('click');
 		}
-
-
-
-
-
-
-
 	});
+
+	/*THis piece of script uses some code 
+	from other script which is above actually these:*/
+	
+		// if($(window).width() < 768) {
+
+		// 	if($('.config').hasClass('show')) {
+		// 		$('.config').addClass('opened');
+
+		// 			if($('.config').hasClass('opened')) {
+		// 				$('.config').removeClass('show');
+		// 				menuContent.removeClass('toggle-open',100)
+		// 				.promise()
+		// 				.done(function(){
+		// 					menuContentWrap.removeClass('toggle-visible');
+		// 					$('.config').removeClass('opened');
+		// 				});
+		// 			}//$('.config').hasClass('opened')
+		// 	}//$('.config').hasClass('show')
+		// }//($(window).width() < 768)
+	
 
 
 
