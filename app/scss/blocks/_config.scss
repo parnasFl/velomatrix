@@ -11,6 +11,10 @@
 	// 	z-index: -1;
 	// }
 	//border-right: 1px solid #000;
+	@media (max-width: 767px) {
+		left: -51px;
+		transition: all .3s ease;
+	}
 	&.hide {
 		@media (max-width: 767px) {
 			display: none;
@@ -18,8 +22,9 @@
 	}
 	&.show {
 		@media (max-width: 767px) {
-			display: block;
-
+			//display: block;
+			left: 0;
+			transition: all .3s ease;
 			.config-panel__menu-content {
 				//width: 0;
 				//min-height: 0;
@@ -512,7 +517,7 @@ button.config-submit-detailed:disabled {
 
 @media (max-width: 767px) {
 	.config {
-		display: none;
+		//display: none;
 	}
 }
 
