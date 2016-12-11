@@ -110,7 +110,6 @@ $(function(){
 					slidesToScroll: 1,
 					accessibility: false,
 					dots: false,
-					adaptiveHeight:true,
 					responsive: [
 					{
 						breakpoint: 1023,
@@ -132,10 +131,7 @@ $(function(){
 					]
 				});
 
-				// $('#also-buyed-car').owlCarousel({
-				// 	items:4
-					
-				// });
+				
 			})();
 
 		/*Item page 'also-buyed' carousel- http://kenwheeler.github.io/slick/
@@ -1136,6 +1132,21 @@ $(function(){
 			(function(){
 				$('.category-item').hover(function() {
 					$(this).find('.category-item__desc').toggleClass('hover');
+				});
+
+			})();
+
+			/*---------Config icons sync hover
+			============================================*/
+			(function(){
+				$('.search__btn').mouseover(function(){
+					$(this).find('img').attr({
+						'src':'img/icon-search-hover.svg'
+					});
+				}).mouseout(function(){
+					$(this).find('img').attr({
+						'src':'img/icon-search.svg'
+					});
 				});
 
 			})();
