@@ -55,22 +55,45 @@
 	.similar-items {
 		//width: 100%;
 		//margin: 0 auto;
+		//overflow-x: hidden;
+		//overflow-y: scroll;
+		position: relative;
+		&.zi {
+			z-index: -1;
+		}
 		.slick-slide {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
+
 		.catalog-item {
 			width: 100%;
-			
+			//z-index: -1;
 		}
 
 		.slick-list {
 			//display: flex;
 			//justify-content: space-between;
 			//overflow: visible;
+			//z-index: -1;
+			//overflow-y: visible;
+			//	overflow-x: hidden;
+			
+
+			transition: opacity .3s;
 			.slick-slide {
+				opacity:0;
+				pointer-events: none;
+				transition: opacity .3s;
+				&.slick-active {
+					opacity:1;
+					pointer-events: auto;
+				}
 			}
+
+			
 		}
+
 	}
 
 	.slick-slide .catalog-item__inner {

@@ -64,7 +64,7 @@ gulp.task('libs', function() {
 		//'app/js/libs/jquery.hoverontouch.js'
 		'app/js/libs/jquery.hoverdelay.min.js',
 		'app/js/libs/jquery.selectric.min.js',
-		'app/js/vendor/OwlCarousel/owl-carousel/owl.carousel.min.js'
+		'app/js/libs/owl.carousel.min.js'
 		//'app/js/vendor/jquery.nicescroll/dist/<jquery class="nicescroll"></jquery>.min.js'
 		])
 		.pipe(concat('libs.min.js'))

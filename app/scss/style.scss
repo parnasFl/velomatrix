@@ -62,6 +62,7 @@
 @import "blocks/_item-feedback";
 @import "blocks/_also-buyed";
 @import "blocks/_similar-items";
+@import "blocks/_new-slider";
 
 /* Feedback Page Styles */
 @import "blocks/_feedback-main";
@@ -79,7 +80,7 @@
 
 @import "vendor/_all-icheck";
 @import "vendor/_selectric";
-//@import "../js/vendor/OwlCarousel/owl-carousel/owl.carousel.css";
+@import "vendor/_owl.carousel";
 //@import "../js/vendor/unslider/dist/css/unslider-dots.css";
 //@import "vendor/_bxslider";
 //@import "vendor/_custom-chr";

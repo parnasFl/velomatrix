@@ -12,8 +12,9 @@
 	// }
 	//border-right: 1px solid #000;
 	@media (max-width: 767px) {
-		left: -51px;
+		//left: -51px;
 		transition: all .3s ease;
+		display: none;
 	}
 	&.hide {
 		@media (max-width: 767px) {
@@ -22,8 +23,8 @@
 	}
 	&.show {
 		@media (max-width: 767px) {
-			//display: block;
-			left: 0;
+			display: block;
+			//left: 0;
 			transition: all .3s ease;
 			.config-panel__menu-content {
 				//width: 0;

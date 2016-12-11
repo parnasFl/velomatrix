@@ -1,15 +1,10 @@
 /* .also buyed Styles */
 
-.also-buyed {
-	//margin-bottom: 20px;
-	//margin-top: -50px;
-	.slick-list {
-		//overflow-y: visible!important;
-		//overflow-x: hidden;
-	}
+.new-slider {
+	
 }
 
-.also-buyed__title {
+.new-slider__title {
 	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 20px;
@@ -18,7 +13,7 @@
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
 @media (max-width: 767px) {
-	.also-buyed {
+	.new-slider {
 		padding-left: 10px;
 		padding-right: 10px;
 
@@ -57,11 +52,7 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	.also-buyed {
-		position: relative;
-		&.zi {
-			z-index: -1;
-		}
+	.new-slider {
 		//width: 100%;
 		//margin: 0 auto;
 		.slick-slide {
@@ -70,28 +61,17 @@
 		}
 		.catalog-item {
 			width: 100%;
-			//position: static;
+			
 		}
 
 		.slick-list {
 			//display: flex;
 			//justify-content: space-between;
-			//overflow: visible;
-			//z-index: -1;
+			//position: static;
 			overflow: visible;
-			//	overflow-x: hidden;
-			pointer-events: none;
-			transition: opacity .3s;
+			//overflow-x: hidden;
 			.slick-slide {
-				opacity:0;
-				transition: opacity .3s;
-				&.slick-active {
-					opacity:1;
-					pointer-events: auto;
-				}
 			}
-
-			
 		}
 	}
 

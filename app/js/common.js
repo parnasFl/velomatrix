@@ -1,19 +1,3 @@
-/*Slick based Slider*/
-$(document).ready(function(){
-	// $('.main-slider--js').slick({
-	// 		autoplay: true,
-	// 		dots: true,
-	// 		accessibility: false,
-	// 		slidesToShow: 1,
-	// 		slidesToScroll: 1,
-	// 		responsive: [{
-	// 				breakpoint: 767,
-	// 				settings: {
-	// 						arrows:false
-	// 				}
-	// 		}]
-	// 	});
-});
 
 $(function(){
 	/*---------Index Slider - http://kenwheeler.github.io/slick/
@@ -163,6 +147,29 @@ $(function(){
 					}
 					]
 				});
+			})();
+		/*Item page 'also-buyed' carousel- http://kenwheeler.github.io/slick/
+			============================================*/
+			(function(){
+
+				// $('.new-slider__carousel-wrap').owlCarousel({
+				// 	loop:true,
+				// 	    margin:10,
+				// 	    nav:true,
+				// 	    //autoWidth: true,
+				// 	    responsive:{
+				// 	        0:{
+				// 	            items:1
+				// 	        },
+				// 	        600:{
+				// 	            items:3
+				// 	        },
+				// 	        1000:{
+				// 	            items:4
+				// 	        }
+				// 	    }
+				// });
+
 			})();
 
 	/*---------Config Menu
@@ -1139,19 +1146,47 @@ $(function(){
 			/*---------Config icons sync hover
 			============================================*/
 			(function(){
-				$('.search__btn').mouseover(function(){
-					$(this).find('img').attr({
-						'src':'img/icon-search-hover.svg'
-					});
+				// $('.search__btn').mouseover(function(){
+				// 	$(this).find('img').attr({
+				// 		'src':'img/icon-search-hover.svg'
+				// 	});
+				// }).mouseout(function(){
+			// 	$(this).find('img').attr({
+				// 		'src':'img/icon-search.svg'
+				// 	});
+				// });
+
+			})();
+
+			/*---------Config icons sync hover
+			============================================*/
+			(function(){
+				$('.item-carousel .catalog-item').mouseover(function(){
+					var that = $(this);
+
+					 that.closest('.slick-list').css('overflow', 'visible');
+					 that.closest('.item-carousel')
+					 				.siblings('.item-carousel')
+					 				.addClass('zi');
 				}).mouseout(function(){
-					$(this).find('img').attr({
-						'src':'img/icon-search.svg'
-					});
+					 that.closest('.slick-list').css('overflow', 'hidden');
+					 that.closest('.item-carousel')
+					 				.siblings('.item-carousel')
+					 				.removeClass('zi');
 				});
 
 			})();
 
-}); // Jquery $ Function
+			/*---------Config icons sync hover
+			============================================*/
+			(function(){
+				$('.dropdown__submenu-pic').hover(function() {
+					$(this).siblings('.dropdown__submenu-title').toggleClass('hover');
+				});
+
+			})();
+
+}); // Jquery $ Function ...similar-items
 
 
 

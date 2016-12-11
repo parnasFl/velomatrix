@@ -590,7 +590,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			position: relative;
-			
+
 			// @media (min-width: 1440px) {
 			// 	padding-left: 0;
 			// 	padding-right: 0;
@@ -690,6 +690,22 @@
 				transition: color .2s;
 			}
 		}
+
+		// &.iconed {
+		// 	position: relative;
+		// 	&:before {
+		// 		content: 'hot';
+		// 		color: #fff;
+		// 		font-size: 7px;
+		// 		font-weight: 600;
+		// 		text-transform: uppercase;
+		// 		background: url('../img/icon-hot2.png') 0 0 no-repeat;
+		// 		top: 0;
+		// 		right: 0;
+		// 		width: 20px;
+		// 		height: 14px;
+		// 	}
+		// }
 	}
 	
 	.main-nav__link-text,
@@ -714,20 +730,41 @@
 		//display: flex;
 		//justify-content: center;
 		//align-items: center;
-		width: 23px;
-		height: 20px;
+		width: 20px;
+		height: 14px;
+		// position: relative;
+		// background: url('../img/icon-hot2.png') 1px 1px no-repeat;
+		// background-size: 20px 14px;
 		position: relative;
-		background: url('../img/icon-hot2.png') 1px 1px no-repeat;
-		background-size: 20px 14px;
-		img {
-			@include img-center;
+		top: -6px;
+		//left: 4px;
+		// img {
+		// 	@include img-center;
+		// }
+		// color: #fff;
+		// font-size: 7px;
+		// font-weight: 600;
+		// text-transform: uppercase;
+		//line-height: 23px;
+		//padding-left: 4px;
+
+		&:after {
+			content: 'hot';
+			color: #fff;
+			font-size: 7px;
+			font-weight: 600;
+			position: absolute;
+			text-transform: uppercase;
+			background: url('../img/icon-hot-s.svg') -3px 0px no-repeat;
+			//background: url('../img/icon-hot2.png') 0px -1px no-repeat;
+			background-size: 25px 18px;
+			top: 4px;
+			left: 4px;
+			width: 20px;
+			height: 14px;
+			line-height: 21px;
+			padding-left: 3px;
 		}
-		color: #fff;
-		font-size: 7px;
-		font-weight: 600;
-		text-transform: uppercase;
-		line-height: 23px;
-		padding-left: 4px;
 	}
 
 	.main-nav__dropdown-menu {
@@ -810,7 +847,7 @@
 	.dropdown__submenu-link {
 		word-wrap: break-word;
 
-		&:hover {
+		&:hover, &.hover {
 			color: $red-base;
 		}
 	}
@@ -897,7 +934,7 @@
 		position: relative;
 		margin-right: 6.15%;
 		margin-bottom: 20px;
-
+		transition: border-color .3s ease;
 		&:nth-child(3n) {
 			margin-right: 0;
 		}
@@ -908,6 +945,11 @@
 			max-height:90%;
 			top: 0;
 			left: 0;right: 0;bottom: 0;margin: auto;
+		}
+
+		&:hover {
+			transition: border-color .3s ease;
+			border-color: $red-base;
 		}
 	}
 
