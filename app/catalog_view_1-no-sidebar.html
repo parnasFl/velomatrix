@@ -755,7 +755,7 @@
             <ul class="main-nav__list">
               <li class="main-nav__item iconed">
                 <div class="main-nav__dropdown-menu">
-                  <div class="main-nav__dropdown-menu__inner">
+                  <div class="main-nav__dropdown-menu__inner" data-type="hardtail">
                     <div class="main-nav__dropdown-list">
                       <ul class="dropdown__inner-list">
                         <li class="dropdown__inner-item">
@@ -768,7 +768,7 @@
                             </ul>
                           </div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="city">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="#">Город и шоссе</a>
                             <ul class="dropdown__submenu-list">
                               <li class="dropdown__submenu-item"><a class="dropdown__submenu-link" href="#">Комфорт</a></li>
@@ -777,7 +777,7 @@
                             </ul>
                           </div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="folding">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Складные</a>
                             <ul class="dropdown__submenu-list">
                               <li class="dropdown__submenu-item"><a class="dropdown__submenu-link" href="#">Колеса 16”</a></li>
@@ -787,7 +787,7 @@
                             </ul>
                           </div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="women">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Женские</a>
                             <ul class="dropdown__submenu-list">
                               <li class="dropdown__submenu-item"><a class="dropdown__submenu-link" href="#">Комфорт</a></li>
@@ -795,7 +795,7 @@
                             </ul>
                           </div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="dual-pendant">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Двухподвес</a>
                             <ul class="dropdown__submenu-list">
                               <li class="dropdown__submenu-item"><a class="dropdown__submenu-link" href="#">Двухподвес и аксессеры для велосипедов</a></li>
@@ -803,13 +803,13 @@
                             </ul>
                           </div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="hybrid">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Гибриды</a></div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="fatbike">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Фетбайки</a></div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="stunt">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Трюковые</a>
                             <ul class="dropdown__submenu-list">
                               <li class="dropdown__submenu-item"><a class="dropdown__submenu-link" href="#">BMX</a></li>
@@ -817,10 +817,10 @@
                             </ul>
                           </div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="electro">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Электровелосипеды и аксессуары</a></div>
                         </li>
-                        <li class="dropdown__inner-item">
+                        <li class="dropdown__inner-item" data-type="children">
                           <div class="dropdown__submenu"><a class="dropdown__submenu-pic" href=""><img src="img/img-hardtail-menu.jpg"></a><a class="dropdown__submenu-title" href="">Детские</a>
                             <ul class="dropdown__submenu-list">
                               <li class="dropdown__submenu-item"><a class="dropdown__submenu-link" href="#">Беговелы</a></li>
@@ -836,12 +836,86 @@
                     </div>
                     <div class="main-nav__dropdown-extra">
                       <div class="main-nav__dropdown-extra-wrapper">
-                        <h3 class="main-nav__dropdown-extra-title">Женские</h3>
-                        <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
-                        <div class="main-nav__dropdown-extra-desc">
-                          <p><strong>Женские</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
-                          <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
-                          <p><strong>Прочитайте подробно о <a href="#">Двухподвесных велосипедах</a> на нашем блоге</strong></p>
+                        <div class="dropdown-extra__brand-list"><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-brand.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-logo-cube.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-logo-giant.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-logo-kellys.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-logo-merida.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-logo-trek.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-brand.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-brand.jpg"></a><a class="dropdown-extra__brand-item" href=""><img class="dropdown-extra__brand-pic" src="img/img-brand.jpg"></a></div>
+                        <div class="subcategory-descr hardtail">
+                          <h3 class="main-nav__dropdown-extra-title">Хардтейл</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Женские</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr city">
+                          <h3 class="main-nav__dropdown-extra-title">Город и шоссе</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Город и шоссе</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr folding">
+                          <h3 class="main-nav__dropdown-extra-title">Складные</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Складные</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr women">
+                          <h3 class="main-nav__dropdown-extra-title">Женские</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Женские</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr dual-pendant">
+                          <h3 class="main-nav__dropdown-extra-title">Двухподвес</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Двухподвес</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr hybrid">
+                          <h3 class="main-nav__dropdown-extra-title">Гибриды</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Гибриды</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr fatbike">
+                          <h3 class="main-nav__dropdown-extra-title">Фетбайки</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Фетбайки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr stunt">
+                          <h3 class="main-nav__dropdown-extra-title">Трюковые</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Трюковые</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr electro">
+                          <h3 class="main-nav__dropdown-extra-title">Электровелосипеды</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Электровелосипеды</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
+                        </div>
+                        <div class="subcategory-descr children">
+                          <h3 class="main-nav__dropdown-extra-title">Детские</h3>
+                          <div class="main-nav__dropdown-extra-pic"><img src="img/dropdown-extra.jpg"></div>
+                          <div class="main-nav__dropdown-extra-desc">
+                            <p><strong>Детские</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.</p>
+                            <p>Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)</p>
+                          </div>
                         </div>
                       </div>
                     </div>
