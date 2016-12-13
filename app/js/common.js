@@ -1178,47 +1178,39 @@ $(function(){
 
 			})();
 
-			/*---------Config icons sync hover
+			/*---------Menu dropdown 
 			============================================*/
 			(function(){
-				$('.dropdown__submenu-pic').hover(function() {
-					$(this).siblings('.dropdown__submenu-title').toggleClass('hover');
-				});
+					$('.dropdown__inner-item').mouseenter(function(){
+						var that = $(this),
+						subCatType = that.data('type'),
+						brandList = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.dropdown-extra__brand-list'),
+						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.subcategory-descr');
 
-			})();
+						that.find('.dropdown__submenu-title').addClass('hover');
+						brandList.hide();
+						if(subCatDescr.hasClass(subCatType)) {
+							$("."+subCatType).show();
+						}
+						//console.log(subCatType);
+					}).mouseleave(function(){
+						var that = $(this),
+						subCatType = that.data('type'),
+						brandList = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.dropdown-extra__brand-list'),
+						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.subcategory-descr');
+
+						$("."+subCatType).hide();
+						brandList.show();
+						that.find('.dropdown__submenu-title').removeClass('hover');
+					});
+
+				})();
+			
 
 }); // Jquery $ Function ...similar-items
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
