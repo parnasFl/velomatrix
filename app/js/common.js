@@ -1169,6 +1169,7 @@ $(function(){
 					 				.siblings('.item-carousel')
 					 				.addClass('zi');
 				}).mouseout(function(){
+					var that = $(this);
 					 that.closest('.slick-list').css('overflow', 'hidden');
 					 that.closest('.item-carousel')
 					 				.siblings('.item-carousel')
