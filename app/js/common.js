@@ -1181,7 +1181,7 @@ $(function(){
 			/*---------Menu dropdown 
 			============================================*/
 			(function(){
-					$('.dropdown__inner-item').mouseenter(function(){
+					/*$('.dropdown__inner-item').mouseenter(function(){
 						var that = $(this),
 						subCatType = that.data('type'),
 						brandList = that.closest('.main-nav__dropdown-menu__inner')
@@ -1206,7 +1206,7 @@ $(function(){
 						$("."+subCatType).hide();
 						brandList.show();
 						that.find('.dropdown__submenu-title').removeClass('hover');
-					});
+					});*/
 
 				})();
 			
