@@ -1257,14 +1257,17 @@ $(function(){
 					}, 500);
 
 					// For Dropdown menu subcat links hover
-					$('.dropdown__submenu-link').hover(function(){
-							$(this).closest('.dropdown__submenu')
-											.find('.dropdown__submenu-title')
-											.removeClass('hover');
-					},function(){
-						$(this).closest('.dropdown__submenu')
-										.find('.dropdown__submenu-title')
-										.addClass('hover');
+					// $('.dropdown__submenu-link').hover(function(){
+					// 		$(this).closest('.dropdown__submenu')
+					// 						.find('.dropdown__submenu-title')
+					// 						.removeClass('hover');
+					// },function(){
+					// 	$(this).closest('.dropdown__submenu')
+					// 					.find('.dropdown__submenu-title')
+					// 					.addClass('hover');
+					// });
+					$('.dropdown__submenu-pic').hover(function() {
+						$(this).siblings('.dropdown__submenu-title').toggleClass('hover');
 					});
 
 					// $('.dropdown__inner-list').hover(function(){
