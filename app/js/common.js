@@ -1178,12 +1178,107 @@ $(function(){
 
 			})();
 
-			/*---------Config icons sync hover
+			/*---------Menu dropdown
 			============================================*/
 			(function(){
-				$('.dropdown__submenu-pic').hover(function() {
-					$(this).siblings('.dropdown__submenu-title').toggleClass('hover');
-				});
+				// $('.dropdown__inner-item').mouseenter(function(){
+				// 		var that = $(this),
+				// 		subCatType = that.data('type'),
+				// 		brandList = that.closest('.main-nav__dropdown-menu__inner')
+				// 										.find('.dropdown-extra__brand-list'),
+				// 		subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+				// 										.find('.subcategory-descr');
+
+				// 		that.find('.dropdown__submenu-title').addClass('hover');
+				// 		//brandList.hide();
+				// 		brandList.fadeOut(100);
+				// 		if(subCatDescr.hasClass(subCatType)) {
+				// 			$("."+subCatType).fadeIn(100);
+				// 		}
+						
+				// 	}).mouseleave(function(){
+				// 		var that = $(this),
+				// 		subCatType = that.data('type'),
+				// 		brandList = that.closest('.main-nav__dropdown-menu__inner')
+				// 										.find('.dropdown-extra__brand-list'),
+				// 		subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+				// 										.find('.subcategory-descr');
+
+				// 		$("."+subCatType).fadeOut(100);
+				// 		brandList.fadeIn(100);
+				// 		that.find('.dropdown__submenu-title').removeClass('hover');
+				// 	});
+
+
+
+					// $('.dropdown__inner-list').hover(function(){
+					// 		var that = $(this);
+							
+					// 		// that.closest('.main-nav__dropdown-menu__inner')
+					// 		// 		.find('.dropdown-extra__brand-list')
+					// 		// 		.hide();
+					// 		console.log(that);
+					// 		//console.log(subCatType);
+					// 	}).mouseleave(function(){
+					// 		var that = $(this);
+														
+					// 		that.closest('.main-nav__dropdown-menu__inner')
+					// 				.find('.dropdown-extra__brand-list')
+					// 				.show();
+							
+					// 	});
+
+					$('.dropdown__inner-item').hover(function(){
+						var that = $(this),
+						subCatType = that.data('type'),
+						brandList = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.dropdown-extra__brand-list'),
+						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.subcategory-descr');
+
+						//that.find('.dropdown__submenu-title').addClass('hover');
+						brandList.hide();
+						//brandList.fadeOut(100);
+						if(subCatDescr.hasClass(subCatType)) {
+							$("."+subCatType).fadeIn(100);
+						}
+					},function(){
+						var that = $(this),
+						subCatType = that.data('type'),
+						brandList = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.dropdown-extra__brand-list'),
+						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+														.find('.subcategory-descr');
+
+						$("."+subCatType).fadeOut(100);
+						//brandList.fadeIn(500);
+						brandList.delay(2000).show();
+						//that.find('.dropdown__submenu-title').removeClass('hover');
+					}, 500);
+
+					// For Dropdown menu subcat links hover
+					$('.dropdown__submenu-link').hover(function(){
+							$(this).closest('.dropdown__submenu')
+											.find('.dropdown__submenu-title')
+											.removeClass('hover');
+					},function(){
+						$(this).closest('.dropdown__submenu')
+										.find('.dropdown__submenu-title')
+										.addClass('hover');
+					});
+
+					// $('.dropdown__inner-list').hover(function(){
+					// 	var that = $(this);
+													
+					// 	that.closest('.main-nav__dropdown-menu__inner')
+					// 			.find('.dropdown-extra__brand-list')
+					// 			.hide();
+					// 								console.log(that);
+					// },function(){
+					// 	that.closest('.main-nav__dropdown-menu__inner')
+					// 			.find('.dropdown-extra__brand-list')
+					// 			.show();
+					// }, 1000);
 
 			})();
 

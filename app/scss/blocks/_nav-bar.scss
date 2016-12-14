@@ -620,6 +620,32 @@
 	.main-nav__item {
 		@include justified-menu_item;
 		position: static;
+		
+
+		&.arrow {
+
+			.main-nav__link {
+				position: relative;
+				&:before {
+					content: '';
+					position: absolute;
+					background: url("../img/icon-nav-down.svg") 0 0 no-repeat;
+					background-size: 7px 5px;
+					right: -15px;
+					top: 50%;
+					margin-top: -1px;
+					width: 7px;
+					height: 5px;
+				}
+			}
+			&:hover {
+				.main-nav__link {
+					&:before {
+						background-image: url('../img/icon-nav-up.svg');
+					}
+				}
+			}
+		}
 	}
 
 	.main-nav__item-pic {
@@ -794,6 +820,7 @@
 	.main-nav__dropdown-menu__inner {
 		display: flex;
 		justify-content: space-between;
+		min-height: 450px;
 	}
 
 	.main-nav__dropdown-list {
@@ -829,9 +856,39 @@
 
 	.dropdown__inner-item {
 		width: 20%;
-		margin-bottom: 20px;
+		//padding-bottom: 10px;
 		padding-left: 3.191489361702%;
 		word-wrap: break-word;
+		&.no-pic {
+			line-height: 1;
+			padding-bottom: 20px;
+			.dropdown__submenu-title {
+				position: relative;
+				line-height: 1;
+				margin-bottom: 0;
+				&:before {
+					content: '';
+					position: absolute;
+					background-color: #fff;
+					width: 5px;
+					height: 5px;
+					border: 1px solid #bebebe;
+					left: -14px;top: 5px;
+					border-radius: 50%;
+					transition: all .3s ease;
+				}
+				&:hover {
+					&:before {
+						transition: all .3s ease;
+						background-color: $red-base;
+						border-color: $red-base;
+					}
+				}
+				&.childHover {
+					color: #000!important;
+				}
+			}
+		}
 	}
 
 	.dropdown__submenu-pic {
@@ -949,10 +1006,31 @@
 		}
 
 		&:hover {
-			transition: border-color .3s ease;
-			border-color: $red-base;
+			transition: transform .3s ease;
+			transform: scale(1.1);
 		}
 	}
+
+	.main-nav__dropdown-extra-wrapper {
+
+			position: relative;
+		}
+
+		.subcategory-descr {
+			display: none;
+			//position: relative;
+			//right:9999px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			// opacity: 0;
+			// transition: all .3s ease;
+			// &.back {
+			// 	transition: all .3s ease;
+			// 	opacity: 1;
+			// 	right: 0;
+			// }
+		}
 
 }//(min-width: 1024px
 

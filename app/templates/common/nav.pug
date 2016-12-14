@@ -11,12 +11,12 @@ nav.main-nav
 		a.category-name(href="#")
 			span.category-name__text lolo
 		ul.main-nav__list
-			li.main-nav__item.iconed
+			li.main-nav__item.arrow
 				.main-nav__dropdown-menu
-					.main-nav__dropdown-menu__inner(data-type="hardtail")
+					.main-nav__dropdown-menu__inner
 						.main-nav__dropdown-list
 							ul.dropdown__inner-list
-								li.dropdown__inner-item
+								li.dropdown__inner-item(data-type="hardtail")
 									.dropdown__submenu
 										a.dropdown__submenu-pic(href="#")
 											img(src="img/img-hardtail-menu.jpg")
@@ -234,114 +234,91 @@ nav.main-nav
 					span.main-nav__link-text Велосипеды
 					i.main-nav__link-icon
 						//img(src="img/icon-hot.svg", width="20", height="14", alt="icon")
-					//- strong.main-nav__item-pic
+					strong.main-nav__item-pic
 							img(src="img/img-item-1.jpg", alt="Menu item Image")
-			li.main-nav__item
+			li.main-nav__item.arrow
 				.main-nav__dropdown-menu
 					.main-nav__dropdown-menu__inner
 						.main-nav__dropdown-list
 							ul.dropdown__inner-list
-								li.dropdown__inner-item
+								li.dropdown__inner-item.no-pic(data-type="bolt")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Хардтейлы
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Комфорт
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Фикс
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Шоссейные
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Болты
+								li.dropdown__inner-item.no-pic(data-type="vilka")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Город и шоссе
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Комфорт
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Фикс
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Шоссейные
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Вилки
+								li.dropdown__inner-item.no-pic(data-type="vinos")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Складные
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Колеса 16”
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Колеса 20”
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Колеса 24”
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Колеса 1
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Выносы
+								li.dropdown__inner-item.no-pic(data-type="grips")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Женские
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Комфорт
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Фитнес
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Грипсы и обмотка
+								li.dropdown__inner-item.no-pic(data-type="backtrans")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Двухподвес
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Двухподвес и аксессеры для велосипедов
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Запчасти
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Задний переключатель
+								li.dropdown__inner-item.no-pic(data-type="rul")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Гибриды
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Рулевые колонки
+								li.dropdown__inner-item.no-pic(data-type="karetka")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Фетбайки
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Каретки
+								li.dropdown__inner-item.no-pic(data-type="kasseta")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Трюковые
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") BMX
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Дерт\Стрит
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Кассеты и трещотки
+								li.dropdown__inner-item.no-pic(data-type="kolodka")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Электровелосипеды и аксессуары
-								li.dropdown__inner-item
+										a.dropdown__submenu-title(href="#") Колодки
+								li.dropdown__inner-item.no-pic(data-type="manetka")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Детские
-										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Беговелы
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") 12 дюймов
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") 14 дюймов
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") 18 дюймов
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") 20 дюймов
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") 24 дюймов
+										a.dropdown__submenu-title(href="#") Манетки
+								li.dropdown__inner-item.no-pic(data-type="osi")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Оси
+								li.dropdown__inner-item.no-pic(data-type="petuh")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Петухи
+								li.dropdown__inner-item.no-pic(data-type="shtir")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Подседельные штыри
+								li.dropdown__inner-item.no-pic(data-type="podshibnik")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Подшипники
+								li.dropdown__inner-item.no-pic(data-type="pokrishka")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Покрышки
+								li.dropdown__inner-item.no-pic(data-type="trosik")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Рубашки, тросики, наконечники
+								li.dropdown__inner-item.no-pic(data-type="seat")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Седла
+								li.dropdown__inner-item.no-pic(data-type="brake")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Тормоза
+								li.dropdown__inner-item.no-pic(data-type="brake-disk")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Тормозные диски
+								li.dropdown__inner-item.no-pic(data-type="brake-tool")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Тормозные ручки
+								li.dropdown__inner-item.no-pic(data-type="homut")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Хомуты подседельные
+								li.dropdown__inner-item.no-pic(data-type="winter-pokrishka")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Зимние покрышки
+								li.dropdown__inner-item.no-pic(data-type="tools")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Инструменты
+								li.dropdown__inner-item.no-pic(data-type="cameras")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Камеры
+								li.dropdown__inner-item.no-pic(data-type="shatun")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Шатуны/Системы
+								li.dropdown__inner-item.no-pic(data-type="eks")
+									.dropdown__submenu
+										a.dropdown__submenu-title(href="#") Эксцентрики
 						.main-nav__dropdown-extra
 							.main-nav__dropdown-extra-wrapper.carded
 								.dropdown-extra__brand-list
@@ -363,6 +340,240 @@ nav.main-nav
 										img.dropdown-extra__brand-pic(src="img/img-brand.jpg")
 									a.dropdown-extra__brand-item(href="")
 										img.dropdown-extra__brand-pic(src="img/img-brand.jpg")
+								.subcategory-descr.bolt(data-type="bolt")
+									h3.main-nav__dropdown-extra-title Болты
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Болты</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.vilka
+									h3.main-nav__dropdown-extra-title Вилки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Вилки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.vinos
+									h3.main-nav__dropdown-extra-title Выносы
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Выносы</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.grips
+									h3.main-nav__dropdown-extra-title Грипсы и обмотка
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Грипсы и обмотка</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.backtrans
+									h3.main-nav__dropdown-extra-title Задний переключатель
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Задний переключатель</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.rul
+									h3.main-nav__dropdown-extra-title Рулевые колонки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Рулевые колонки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.karetka
+									h3.main-nav__dropdown-extra-title Каретки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Каретки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.kasseta
+									h3.main-nav__dropdown-extra-title Кассеты и трещотки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Кассеты и трещотки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.kolodka
+									h3.main-nav__dropdown-extra-title Колодки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Колодки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.manetka
+									h3.main-nav__dropdown-extra-title Манетки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Манетки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.osi
+									h3.main-nav__dropdown-extra-title Оси
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Оси</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.petuh
+									h3.main-nav__dropdown-extra-title Петухи
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Петухи</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.shtir
+									h3.main-nav__dropdown-extra-title Подседельные штыри
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Подседельные штыри</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.podshibnik
+									h3.main-nav__dropdown-extra-title Подшипники
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Подшипники</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.pokrishka
+									h3.main-nav__dropdown-extra-title Покрышки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Покрышки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.trosik
+									h3.main-nav__dropdown-extra-title Рубашки, тросики, наконечники
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Рубашки, тросики, наконечники</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.seat
+									h3.main-nav__dropdown-extra-title Седла
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Седла</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.brake
+									h3.main-nav__dropdown-extra-title Тормоза
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Тормоза</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.brake-disk
+									h3.main-nav__dropdown-extra-title Тормозные диски
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Тормозные диски</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.brake-tool
+									h3.main-nav__dropdown-extra-title Тормозные ручки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Тормозные ручки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.homut
+									h3.main-nav__dropdown-extra-title Хомуты подседельныеи
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Хомуты подседельныеи</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.winter-pokrishka
+									h3.main-nav__dropdown-extra-title Зимние покрышки
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Зимние покрышки</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.tools
+									h3.main-nav__dropdown-extra-title Инструменты
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Инструменты</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.cameras
+									h3.main-nav__dropdown-extra-title Камеры
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Камеры</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.shatun
+									h3.main-nav__dropdown-extra-title Шатуны/Системы
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Шатуны/Системы</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.eks
+									h3.main-nav__dropdown-extra-title Эксцентрики
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Эксцентрики</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
 				a.main-nav__link(href="#")
 					span.main-nav__link-text Аксессуары
 					strong.main-nav__item-pic
@@ -372,7 +583,7 @@ nav.main-nav
 					span.main-nav__link-text Запчасти
 					strong.main-nav__item-pic
 						img(src="img/img-item-3.jpg", alt="Menu item Image")
-			li.main-nav__item
+			li.main-nav__item.arrow
 				.main-nav__dropdown-menu
 					.main-nav__dropdown-menu__inner
 						.main-nav__dropdown-list.main-nav__dropdown-list--full
