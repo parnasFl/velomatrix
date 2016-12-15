@@ -203,22 +203,24 @@ $(function(){
 																'height' : '14'
 															});
 					} else {
-					$('.config__inner').css({
-					'box-shadow': 'none',
-					'overflow' : 'hidden'
-					});
+						$('.config__inner').animate({ scrollTop: 0 }, "slow");
+						$('.config__inner').css({
+						'box-shadow': 'none',
+						'overflow' : 'hidden'
+						});
 
-					$('.config-panel__menu-wrapper').css({
-						'display' : 'none'
-					});
+						$('.config-panel__menu-wrapper').css({
+							'display' : 'none'
+						});
 
-					$(this).closest('.config-panel')
-									.find('.config-main-toggle')
-									.find('img').attr({
-																'src': 'img/icon-config-toggle.svg',
-																'width' : '26',
-																'height' : '31'
-															});
+						$(this).closest('.config-panel')
+										.find('.config-main-toggle')
+										.find('img').attr({
+																	'src': 'img/icon-config-toggle.svg',
+																	'width' : '26',
+																	'height' : '31'
+																});
+
 					}
 
 				if(!menuContent.hasClass('toggle-open')) {
@@ -292,50 +294,7 @@ $(function(){
 	})();
 
 
-	/*---------Config Menu hover red border
-	============================================*/
-	(function(){
-		$('.config-panel__menu-content').mouseover(function(){
-			//$(this).siblings("div").toggle();
-			$(this).addClass('menu-content__hover');
-			$(this).closest('.config-panel__item').css({
-				'box-shadow' : 'none'
-			}).addClass('remove-pseudo-border');
-		}).mouseout(function(){
-			$(this).removeClass('menu-content__hover')
-							.closest('.config-panel__item')
-							.removeClass('remove-pseudo-border');
-		});
-
-	})();
-
-	/*---------Config Menu '.show-more' button script
-	============================================*/
-	(function(){
-		$('.show-more').on('click', function(e){
-			e.preventDefault();
-			$this = $(this);
-
-			if(!$this.hasClass('showed')) {
-				$this.addClass('showed')
-							.closest('.config-panel__menu-list')
-							.find('.config-panel__menu-item')
-							.addClass('show-all');
-				$this.find('span').text('скрыть');
-			}
-			else {
-				$this.removeClass('showed')
-						.closest('.config-panel__menu-list')
-						.find('.config-panel__menu-item')
-						.removeClass('show-all');
-
-				$this.find('span').text('показать еще');
-			}
-			
-
-			
-		});
-	})();
+	
 	
 	/*---------Mobile Config Menu toggle
 	============================================*/
@@ -434,6 +393,80 @@ $(function(){
 		// }//($(window).width() < 768)
 	
 
+		/*---------Config icons hover sync 
+		============================================*/
+		(function(){
+			$('.config-links__item, .catalog-item__conficons-item').mouseenter(function(){
+				var that = $(this),
+				bodyWrapper = that.closest('.wrapper'),
+				configPanel = bodyWrapper.find('.config-panel'),
+				configItem = configPanel.find('.config-panel__item'),
+				data = that.data('icon');
+
+				$('.config-panel>li').each(function(index, element){
+					if($(this).data('icon') === data) {
+						$(this).addClass('icon-hover');
+					}
+					
+				});
+				//console.log(configPanel.children());
+				// if(configItem.hasClass(data)) {
+				// 	console.log(configItem);
+				// }
+			}).mouseleave(function(){
+				var that = $(this),
+				bodyWrapper = that.closest('.wrapper'),
+				configPanel = bodyWrapper.find('.config-panel'),
+				configItem = configPanel.find('.config-panel__item'),
+				data = that.data('icon');
+
+				$('.config-panel>li').removeClass('icon-hover');
+			});
+
+		})();
+
+		/*---------Config icons click sync
+		============================================*/
+		(function(){
+			$('.config-links__item, .catalog-item__conficons-item').on('click', function(e){
+				var that = $(this),
+				bodyWrapper = that.closest('.wrapper'),
+				configPanel = bodyWrapper.find('.config-panel'),
+				configItem = configPanel.find('.config-panel__item'),
+				data = that.data('icon');
+
+				e.preventDefault();
+				
+
+				$('.js-config-toggle').trigger('click');
+
+				$('.config-panel>li').each(function(index, element){
+
+					if($(this).data('icon') === data) {
+						$(this).addClass('opened');
+						var elem = $('.opened');
+
+						if(elem.find('.config-panel__menu-wrapper').hasClass('visible')) {
+							//elem.trigger('click');
+							elem.find('.config-panel__menu-wrapper').css('display', 'none');
+							$(this).find('.config-panel__menu-title span').next('i').removeClass('tip-show');
+							elem.find('.config-panel__menu-wrapper').removeClass('visible');
+							//elem.removeClass('opened');
+						}
+						else {
+							$(this).find('.config-panel__menu-title span')
+											.trigger('click');
+											elem.find('.config-panel__menu-wrapper').addClass('visible');
+						}
+						
+					}
+					
+				});
+				
+			});
+
+		})();
+
 
 
 	/*---------Item page Config panel opener link
@@ -461,7 +494,52 @@ $(function(){
 		
 		
 		
-	})(); //
+	})();
+
+	/*---------Config Menu hover red border
+	============================================*/
+	(function(){
+		$('.config-panel__menu-content').mouseover(function(){
+			//$(this).siblings("div").toggle();
+			$(this).addClass('menu-content__hover');
+			$(this).closest('.config-panel__item').css({
+				'box-shadow' : 'none'
+			}).addClass('remove-pseudo-border');
+		}).mouseout(function(){
+			$(this).removeClass('menu-content__hover')
+							.closest('.config-panel__item')
+							.removeClass('remove-pseudo-border');
+		});
+
+	})();
+
+	/*---------Config Menu '.show-more' button script
+	============================================*/
+	(function(){
+		$('.show-more').on('click', function(e){
+			e.preventDefault();
+			$this = $(this);
+
+			if(!$this.hasClass('showed')) {
+				$this.addClass('showed')
+							.closest('.config-panel__menu-list')
+							.find('.config-panel__menu-item')
+							.addClass('show-all');
+				$this.find('span').text('скрыть');
+			}
+			else {
+				$this.removeClass('showed')
+						.closest('.config-panel__menu-list')
+						.find('.config-panel__menu-item')
+						.removeClass('show-all');
+
+				$this.find('span').text('показать еще');
+			}
+			
+
+			
+		});
+	})();
 	
 
 	
@@ -1266,77 +1344,7 @@ $(function(){
 
 			})();
 
-			/*---------Config icons sync hover
-			============================================*/
-			(function(){
-				$('.config-links__item, .catalog-item__conficons-item').mouseenter(function(){
-					var that = $(this),
-					bodyWrapper = that.closest('.wrapper'),
-					configPanel = bodyWrapper.find('.config-panel'),
-					configItem = configPanel.find('.config-panel__item'),
-					data = that.data('icon');
 
-					$('.config-panel>li').each(function(index, element){
-						if($(this).data('icon') === data) {
-							$(this).addClass('icon-hover');
-						}
-						
-					});
-					//console.log(configPanel.children());
-					// if(configItem.hasClass(data)) {
-					// 	console.log(configItem);
-					// }
-				}).mouseleave(function(){
-					var that = $(this),
-					bodyWrapper = that.closest('.wrapper'),
-					configPanel = bodyWrapper.find('.config-panel'),
-					configItem = configPanel.find('.config-panel__item'),
-					data = that.data('icon');
-
-					$('.config-panel>li').removeClass('icon-hover');
-				});
-
-			})();
-
-			/*---------Config icons sync click
-			============================================*/
-			// (function(){
-			// 	$('.config-links__item, .catalog-item__conficons-item').on('click', function(e){
-			// 		var that = $(this),
-			// 		bodyWrapper = that.closest('.wrapper'),
-			// 		configPanel = bodyWrapper.find('.config-panel'),
-			// 		configItem = configPanel.find('.config-panel__item'),
-			// 		data = that.data('icon');
-
-			// 		e.preventDefault();
-					
-
-			// 		$('.js-config-toggle').trigger('click');
-
-			// 		$('.config-panel>li').each(function(index, element){
-
-			// 			if($(this).data('icon') === data) {
-			// 				$(this).addClass('opened');
-			// 				var elem = $('.opened');
-
-			// 				if(elem.find('.config-panel__menu-wrapper').hasClass('visible')) {
-			// 					//elem.trigger('click');
-			// 					elem.find('.config-panel__menu-wrapper').css('display', 'none');
-			// 					$(this).find('.config-panel__menu-title span').next('i').removeClass('tip-show');
-			// 					elem.find('.config-panel__menu-wrapper').removeClass('visible');
-			// 					//elem.removeClass('opened');
-			// 				}
-			// 				else {
-			// 					$(this).find('.config-panel__menu-title span')
-			// 									.trigger('click');
-			// 									elem.find('.config-panel__menu-wrapper').addClass('visible');
-			// 				}
-							
-			// 			}
-						
-			// 		});
-			// 	});
-			// })();
 			
 }); // Jquery $ Function ...similar-items
 
