@@ -18,23 +18,25 @@ nav.main-nav
 							ul.dropdown__inner-list
 								li.dropdown__inner-item(data-type="hardtail")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="#")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Хардтейлы
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic.js-subcat-hover(href="#")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title.js-subcat-hover(href="#") Хардтейлы
 										ul.dropdown__submenu-list
-											li.dropdown__submenu-item
+											li.dropdown__submenu-item(data-subtype="comfort")
 												a.dropdown__submenu-link(href="#") Комфорт
-											li.dropdown__submenu-item
+											li.dropdown__submenu-item(data-subtype="fix")
 												a.dropdown__submenu-link(href="#") Фикс
-											li.dropdown__submenu-item
+											li.dropdown__submenu-item(data-subtype="road")
 												a.dropdown__submenu-link(href="#") Шоссейные
-											li.dropdown__submenu-item
-												a.dropdown__submenu-link(href="#") Шоссейные
+											li.dropdown__submenu-item(data-subtype="road2")
+												a.dropdown__submenu-link(href="#") Шоссейные2
 								li.dropdown__inner-item(data-type="city")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="#") Город и шоссе
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="#") Город и шоссе
 										ul.dropdown__submenu-list
 											li.dropdown__submenu-item
 												a.dropdown__submenu-link(href="#") Комфорт
@@ -44,9 +46,10 @@ nav.main-nav
 												a.dropdown__submenu-link(href="#") Шоссейные
 								li.dropdown__inner-item(data-type="folding")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Складные
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Складные
 										ul.dropdown__submenu-list
 											li.dropdown__submenu-item
 												a.dropdown__submenu-link(href="#") Колеса 16”
@@ -58,9 +61,10 @@ nav.main-nav
 												a.dropdown__submenu-link(href="#") Колеса 1
 								li.dropdown__inner-item(data-type="women")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Женские
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Женские
 										ul.dropdown__submenu-list
 											li.dropdown__submenu-item
 												a.dropdown__submenu-link(href="#") Комфорт
@@ -68,9 +72,10 @@ nav.main-nav
 												a.dropdown__submenu-link(href="#") Фитнес
 								li.dropdown__inner-item(data-type="dual-pendant")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Двухподвес
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Двухподвес
 										ul.dropdown__submenu-list
 											li.dropdown__submenu-item
 												a.dropdown__submenu-link(href="#") Двухподвес и аксессеры для велосипедов
@@ -78,19 +83,22 @@ nav.main-nav
 												a.dropdown__submenu-link(href="#") Запчасти
 								li.dropdown__inner-item(data-type="hybrid")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Гибриды
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Гибриды
 								li.dropdown__inner-item(data-type="fatbike")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Фетбайки
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Фетбайки
 								li.dropdown__inner-item(data-type="stunt")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Трюковые
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Трюковые
 										ul.dropdown__submenu-list
 											li.dropdown__submenu-item
 												a.dropdown__submenu-link(href="#") BMX
@@ -98,14 +106,16 @@ nav.main-nav
 												a.dropdown__submenu-link(href="#") Дерт\Стрит
 								li.dropdown__inner-item(data-type="electro")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Электровелосипеды и аксессуары
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Электровелосипеды и аксессуары
 								li.dropdown__inner-item(data-type="children")
 									.dropdown__submenu
-										a.dropdown__submenu-pic(href="")
-											img(src="img/img-hardtail-menu.jpg")
-										a.dropdown__submenu-title(href="") Детские
+										.dropdown__submenu-header
+											a.dropdown__submenu-pic(href="")
+												img(src="img/img-hardtail-menu.jpg")
+											a.dropdown__submenu-title(href="") Детские
 										ul.dropdown__submenu-list
 											li.dropdown__submenu-item
 												a.dropdown__submenu-link(href="#") Беговелы
@@ -230,6 +240,42 @@ nav.main-nav
 											<strong>Детские</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
 										p.
 											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.comfort
+									h3.main-nav__dropdown-extra-title Комфорт
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Комфорт</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.fix
+									h3.main-nav__dropdown-extra-title Фикс
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Фикс</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.road
+									h3.main-nav__dropdown-extra-title Шоссейные
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Шоссейные</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
+								.subcategory-descr.road2
+									h3.main-nav__dropdown-extra-title Шоссейные2
+									.main-nav__dropdown-extra-pic
+										img(src="img/dropdown-extra.jpg")
+									.main-nav__dropdown-extra-desc
+										p.
+											<strong>Шоссейные2</strong> — это тип рамы горного велосипеда, имеющий передний и задний амортизаторы.
+										p.
+											Данный тип велосипеда предназначен для поездок в горах и по пересеченной местности. Имеются несколько направлений данного типа (кросскантри, фрирайд, эндуро, даунхил и т.д ). В зависимости от типа трасс меняется и тип подвески и сами амортизаторы (длина в мм.)
 				a.main-nav__link.iconed(href="#")
 					span.main-nav__link-text Велосипеды
 					i.main-nav__link-icon
@@ -243,82 +289,108 @@ nav.main-nav
 							ul.dropdown__inner-list
 								li.dropdown__inner-item.no-pic(data-type="bolt")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Болты
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Болты
 								li.dropdown__inner-item.no-pic(data-type="vilka")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Вилки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Вилки
 								li.dropdown__inner-item.no-pic(data-type="vinos")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Выносы
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Выносы
 								li.dropdown__inner-item.no-pic(data-type="grips")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Грипсы и обмотка
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Грипсы и обмотка
 								li.dropdown__inner-item.no-pic(data-type="backtrans")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Задний переключатель
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Задний переключатель
 								li.dropdown__inner-item.no-pic(data-type="rul")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Рулевые колонки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Рулевые колонки
 								li.dropdown__inner-item.no-pic(data-type="karetka")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Каретки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Каретки
 								li.dropdown__inner-item.no-pic(data-type="kasseta")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Кассеты и трещотки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Кассеты и трещотки
 								li.dropdown__inner-item.no-pic(data-type="kolodka")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Колодки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Колодки
 								li.dropdown__inner-item.no-pic(data-type="manetka")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Манетки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Манетки
 								li.dropdown__inner-item.no-pic(data-type="osi")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Оси
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Оси
 								li.dropdown__inner-item.no-pic(data-type="petuh")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Петухи
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Петухи
 								li.dropdown__inner-item.no-pic(data-type="shtir")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Подседельные штыри
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Подседельные штыри
 								li.dropdown__inner-item.no-pic(data-type="podshibnik")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Подшипники
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Подшипники
 								li.dropdown__inner-item.no-pic(data-type="pokrishka")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Покрышки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Покрышки
 								li.dropdown__inner-item.no-pic(data-type="trosik")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Рубашки, тросики, наконечники
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Рубашки, тросики, наконечники
 								li.dropdown__inner-item.no-pic(data-type="seat")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Седла
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Седла
 								li.dropdown__inner-item.no-pic(data-type="brake")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Тормоза
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Тормоза
 								li.dropdown__inner-item.no-pic(data-type="brake-disk")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Тормозные диски
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Тормозные диски
 								li.dropdown__inner-item.no-pic(data-type="brake-tool")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Тормозные ручки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Тормозные ручки
 								li.dropdown__inner-item.no-pic(data-type="homut")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Хомуты подседельные
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Хомуты подседельные
 								li.dropdown__inner-item.no-pic(data-type="winter-pokrishka")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Зимние покрышки
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Зимние покрышки
 								li.dropdown__inner-item.no-pic(data-type="tools")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Инструменты
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Инструменты
 								li.dropdown__inner-item.no-pic(data-type="cameras")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Камеры
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Камеры
 								li.dropdown__inner-item.no-pic(data-type="shatun")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Шатуны/Системы
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Шатуны/Системы
 								li.dropdown__inner-item.no-pic(data-type="eks")
 									.dropdown__submenu
-										a.dropdown__submenu-title(href="#") Эксцентрики
+										.dropdown__submenu-header
+											a.dropdown__submenu-title(href="#") Эксцентрики
 						.main-nav__dropdown-extra
 							.main-nav__dropdown-extra-wrapper.carded
 								.dropdown-extra__brand-list

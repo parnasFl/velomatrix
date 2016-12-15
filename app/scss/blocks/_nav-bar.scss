@@ -858,11 +858,11 @@
 	.dropdown__inner-item {
 		width: 20%;
 		//padding-bottom: 10px;
-		padding-left: 3.191489361702%;
+		//padding-left: 3.191489361702%;
 		word-wrap: break-word;
 		&.no-pic {
 			line-height: 1;
-			padding-bottom: 20px;
+			
 			.dropdown__submenu-title {
 				position: relative;
 				line-height: 1;
@@ -889,10 +889,17 @@
 					color: #000!important;
 				}
 			}
+			.dropdown__submenu-header {
+				padding-bottom: 20px;
+			}
 		}
+	}
+	.dropdown__submenu-header {
+		padding-left: 16%;
 	}
 
 	.dropdown__submenu-pic {
+		display: block;
 		width: 65.104166666667%;
 		height: 70px;
 		position: relative;
@@ -914,11 +921,14 @@
 	.dropdown__submenu-title {
 		font-size: 16px;
 		font-weight: 700;
-		margin-bottom: 10px;
+		//margin-bottom: 10px;
+		padding-bottom: 10px;
 	}
 
 	.dropdown__submenu-item {
-		margin-bottom: 10px;
+		//margin-bottom: 10px;
+		padding-bottom: 10px;
+		padding-left: 16%;
 	}
 
 	.dropdown__submenu-link {

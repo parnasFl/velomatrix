@@ -93,12 +93,20 @@
 	//border-right: 1px solid $bd-grey;
 	//border-left: 1px solid $bd-grey;
 	background-color: #fff;
+	transition: all .3s ease;
 	&:not(:last-child) {
 		border-bottom: 1px solid $bd-grey;
 	}
 	&:hover {
 		box-shadow: inset -2px 0 0 $red-base;
 		border-right-color: transparent;
+	}
+	&.icon-hover {
+		transition: all .3s ease;
+		box-shadow: inset 2px 0 0 0 $red-base!important;
+		svg * {
+			fill: $red-base;
+		}
 	}
 
 	&::after {
@@ -111,6 +119,9 @@
 		width: 1px;
 		background-color: #e5e5e5;
 	}
+	// svg * {
+	// 	fill: #000;
+	// }
 } // .config-panel__item
 
 // helper class for jquery
@@ -178,7 +189,7 @@
 
 
 .config-main-toggle {
-	text-indent: -10000px; //?
+	
 	position: relative;
 	display: block;
 	width: 100%;
@@ -259,14 +270,28 @@
 
 
 .config-panel__menu-type-link {
-	text-indent: -10000px;
+	//text-indent: -10000px;
 	display: block;
 	width: 100%;
 	height: 51px;
 	position: relative;
+	svg {
+		@include img-center;
+		
+	}
 	img {
 		@include img-center;
 	}
+
+	svg * {
+		fill: #000;
+
+
+	}
+	.placeholder * {
+		fill: #e4e4e4;
+	}
+
 }
 
 .config-panel__menu-title {
