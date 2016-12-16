@@ -4,7 +4,7 @@
 	//width: 51px;
 	position: relative;
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
-	z-index: 200;
+	z-index: 1000;
 
 	//display: none;
 	// &.make-invisible {
@@ -134,6 +134,8 @@
 	}
 }
 
+
+
 // helper class for jquery
 .hide-hover-shadow {
 	&:hover {
@@ -156,6 +158,11 @@
 	box-shadow: inset 3px 0 0 $red-base;
 } //helper class for js
 
+.menu-content__hover--input {
+	box-shadow: inset 3px 0 0 $red-base;
+	transition: box-shadow .3s ease;
+	//margin-left: 1px;
+}
 /* Main li item first line*/
 .config-panel__item--toggle {
 	
@@ -427,7 +434,8 @@
 // }
 
 .config-panel__label {
-	margin-left: 10px;
+	//margin-left: 10px;
+	padding-left: 10px;
 }
 
 .form-submit {
@@ -534,6 +542,33 @@ button.config-submit-detailed:disabled {
 // 	background-color: #e5e5e5;
 // 	//width: 5px;
 // 	border-radius: 5px;
+// }
+
+
+//Style4 - Custom scroll
+/* Turn on custom 8px wide scrollbar */
+// ::-webkit-scrollbar {
+//   width: 8px; /* 1px wider than Lion. */
+//   /* This is more usable for users trying to click it. */
+//   background-color: rgba(0,0,0,0);
+//   -webkit-border-radius: 100px;
+// }
+// /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+// ::-webkit-scrollbar:hover {
+//   background-color: rgba(0, 0, 0, 0.09);
+// }
+
+// /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+// ::-webkit-scrollbar-thumb:vertical {
+//   /* This is the EXACT color of Mac OS scrollbars. 
+//      Yes, I pulled out digital color meter */
+//   //background: rgba(0,0,0,0.5);
+//   background: rgba(0,0,0,0.15);
+//   -webkit-border-radius: 100px;
+// }
+// ::-webkit-scrollbar-thumb:vertical:active {
+//   background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+//   -webkit-border-radius: 100px;
 // }
 
 

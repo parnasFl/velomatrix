@@ -3,8 +3,11 @@
 
 
 .catalog-top__image {
+
 	img {
 		//min-width: 100%;
+		display: table;
+		margin: 0 auto;
 	}
 }
 
@@ -137,7 +140,7 @@
 			max-width: 1341px;
 			margin-left: auto;
 			margin-right: auto;
-			outline: 1px solid $bd-grey;
+			//outline: 1px solid $bd-grey;
 			//padding-left: 2.237136465324%;
 			//padding-right: 2.237136465324%;
 

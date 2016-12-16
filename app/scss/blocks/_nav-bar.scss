@@ -20,6 +20,7 @@
 	.main-nav {
 		margin-bottom: 10px;
 		position: relative;
+		
 	}
 
 	.catalog-button {
@@ -567,7 +568,7 @@
 	.main-nav {
 		// padding-left: 3.306973400431%;
 		// padding-right: 3.306973400431%;
-		border-bottom: 1px solid $bd-grey;
+		//border-bottom: 1px solid $bd-grey;
 		// width: 100%;
 		// border-left: 1px solid $bd-grey;
 		// border-right: 1px solid $bd-grey;
@@ -792,6 +793,7 @@
 			line-height: 3.2;
 			//padding-top: .5px;
 			padding-left: 3px;
+			-webkit-font-smoothing: subpixel-antialiased;
 		}
 	}
 
@@ -821,7 +823,7 @@
 	.main-nav__dropdown-menu__inner {
 		display: flex;
 		justify-content: space-between;
-		min-height: 450px;
+		//min-height: 450px;
 	}
 
 	.main-nav__dropdown-list {

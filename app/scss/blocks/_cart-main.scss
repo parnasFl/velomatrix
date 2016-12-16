@@ -34,7 +34,10 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	
+	.cart-main {
+		width: 960px;
+		margin: auto;
+	}
 }
 
 

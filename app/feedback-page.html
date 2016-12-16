@@ -678,7 +678,16 @@
             </div>
           </div>
           <div class="bottom-bar bottom-bar--illustrated">
-            <div class="main-content" style="background-image: url('img/img-header-illustration.png')">
+            <style>
+              @media (min-width: 1681px) {
+              	.bottom-bar--illustrated .main-content {
+              		background-image: url('img/img-header-illustration.png');
+              		background-size: 1280px 100%!important;
+              		background-position: center 40px;
+              	}
+              }
+            </style>
+            <div class="main-content">
               <div class="page-logo"><a class="page-logo__link" href="#"><span class="page-logo__img">
                     <picture>
                       <source media="(min-width:768px)" srcset="img/logo-desktop@3x.png"><img src="img/logo_mobile.png" alt="Logo" width="83" height="15">
@@ -746,7 +755,7 @@
             <ul class="main-nav__list">
               <li class="main-nav__item arrow">
                 <div class="main-nav__dropdown-menu">
-                  <div class="main-nav__dropdown-menu__inner">
+                  <div class="main-nav__dropdown-menu__inner" style="min-height:450px">
                     <div class="main-nav__dropdown-list">
                       <ul class="dropdown__inner-list">
                         <li class="dropdown__inner-item" data-type="hardtail">
@@ -961,7 +970,7 @@
               </li>
               <li class="main-nav__item arrow">
                 <div class="main-nav__dropdown-menu">
-                  <div class="main-nav__dropdown-menu__inner">
+                  <div class="main-nav__dropdown-menu__inner" style="min-height:450px">
                     <div class="main-nav__dropdown-list">
                       <ul class="dropdown__inner-list">
                         <li class="dropdown__inner-item no-pic" data-type="bolt">
@@ -1315,7 +1324,7 @@
               <li class="main-nav__item"><a class="main-nav__link" href="#"><span class="main-nav__link-text">Запчасти</span><strong class="main-nav__item-pic"><img src="img/img-item-3.jpg" alt="Menu item Image"></strong></a></li>
               <li class="main-nav__item arrow">
                 <div class="main-nav__dropdown-menu">
-                  <div class="main-nav__dropdown-menu__inner">
+                  <div class="main-nav__dropdown-menu__inner" style="min-height:450px">
                     <div class="main-nav__dropdown-list main-nav__dropdown-list--full">
                       <ul class="dropdown__inner-list">
                         <li class="dropdown__inner-item">

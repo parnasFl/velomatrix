@@ -1,9 +1,40 @@
 /* .cart-top Styles */
+.cart-top__title {
+	font-weight: 700;
+	text-transform: uppercase;
+}
 
+.cart-top__notification {
+	background-color: #8bbe4f;
+	border-radius: 3px;
+	padding: 10px 20px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	text-align: center;
+}
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
 @media (max-width: 767px) {
+	.main-content {
+		//padding-left: 10px;
+		//padding-right: 10px;
+	}
 
+	.cart-top__title {
+		font-size: 20px;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.cart-top__link {
+		display: none;
+	}
+
+	.cart-top__notification {
+		font-size: 13px;
+	}
 } // media query
 
 
@@ -26,7 +57,75 @@
 *******************************************************/
 @media (min-width: 768px) {
 	
-	
+	.cart-top {
+
+		.main-content {
+			width: 768px;
+			margin: auto;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.cart-top__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+
+	.cart-top__title {
+		order:1;
+		font-size: 30px;
+	}
+
+	.cart-top__link {
+		font-size: 14px;
+		color: $blue-link;
+		position: relative;
+		
+		span {
+			transition: all .3s ease;
+		}
+		&:hover {
+			//color: lighten($blue-link, 10%);
+			
+			span {
+				transition: all .3s ease;
+				border-bottom: 1px solid lighten($blue-link, 10%);
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: cover;
+			top: 50%;
+			margin-top: -8px;
+			
+			width: 13px;
+			height: 17px;
+		}
+	}
+
+	.cart-top__link--back {
+		padding-left: 20px;
+		&::before {
+			left: 0;
+			background-image: url("../img/icon-prev-cart.svg");
+		}
+	}
+
+	.cart-top__link--checkout {
+		order: 2;
+		padding-right: 20px;
+		&::before {
+			right: 0;
+			background-image: url("../img/icon-next-cart.svg");
+		}
+	}
 	 
 } //(min-width: 768px)
 
@@ -34,7 +133,13 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	
+	.cart-top {
+		
+		.main-content {
+			width: 960px;
+			
+		}
+	}
 }
 
 

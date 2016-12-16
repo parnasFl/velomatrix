@@ -1,5 +1,7 @@
 /* main-layout--checkout Styles */
-
+.cart-wrapper {
+	background-color: #f2f2f2;
+}
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
 @media (max-width: 767px) {
@@ -34,7 +36,33 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	
+	.wrapper--checkout {
+
+		.main-content__wrapper {
+			
+		}
+
+		.page-header {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+		.top-bar {
+			display: none;
+		}
+
+		.bottom-bar {
+			margin-left: 0;
+		}
+
+		.page-search {
+			display: none;
+		}
+
+		.main-nav {
+			display: none;
+		}
+	}
 }
 
 

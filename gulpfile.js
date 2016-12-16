@@ -61,11 +61,9 @@ gulp.task('scss', function () {
 gulp.task('libs', function() {
 	return gulp.src([
 		//'app/js/libs/slick.min.js',
-		//'app/js/libs/jquery.hoverontouch.js'
 		'app/js/libs/jquery.hoverdelay.min.js',
 		'app/js/libs/jquery.selectric.min.js',
-		'app/js/libs/owl.carousel.min.js'
-		//'app/js/vendor/jquery.nicescroll/dist/<jquery class="nicescroll"></jquery>.min.js'
+		'app/js/libs/perfect-scrollbar.jquery.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())

@@ -45,6 +45,24 @@
 	height: 100%;
 }
 
+.overlay2 {
+	//position: absolute;
+	background-color: rgba(255, 255,255, 0.6);
+	z-index: 999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	a {
+		width: 100%;
+		height: 100%;
+		cursor: default;
+	}
+}
+
 @media (max-width: 767px) {
 	.page-header {
 		
@@ -71,6 +89,7 @@
 
 	.bottom-bar {
 		flex-direction: column;
+
 	}
 
 	.top-bar__search-toggle {
@@ -390,10 +409,7 @@
 				background-size: cover;
 				background-repeat: no-repeat;
 
-				@media (min-width: 1681px) {
-					background-size: 1280px 100%;
-					background-position: center center;
-				}
+				
 			}
 		}
 
@@ -701,7 +717,7 @@
 		.main-content {
 			width: auto;
 			padding-top: 33px;
-			padding-bottom: 38px;
+			padding-bottom: 37px;
 			justify-content: space-between;
 			align-items: center;
 			margin-left: auto;
