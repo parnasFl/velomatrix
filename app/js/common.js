@@ -170,7 +170,6 @@ $(function(){
 					.done(function(){
 						if(menuContentWrap.hasClass('toggle-visible')){
 								menuContentWrap.removeClass('toggle-visible');
-								$('body').removeClass('overlayed');
 								$('body').find('.overlay2').remove();
 								$('html, body').removeAttr('style');
 								//menuContentWrap.removeClass('toggle-visible');
@@ -179,7 +178,6 @@ $(function(){
 							menuContentWrap.addClass('toggle-visible');
 
 							$('body').append('<div class="overlay2"><a href="#"></a></div>');
-							$('body').addClass('overlayed');
 							$('html, body').css({
 									overflow: 'hidden',
 									height: '100%'
@@ -254,7 +252,6 @@ $(function(){
 							.done(function(){
 								menuContentWrap.removeClass('toggle-visible');
 
-								$('body').removeClass('overlayed');
 								$('body').find('.overlay2').remove();
 								$('html, body').removeAttr('style');
 								$('.config').removeClass('opened');
@@ -342,6 +339,12 @@ $(function(){
 				}
 				else {
 					contentWrap.addClass('toggle-visible');
+
+					$('body').append('<div class="overlay2"><a href="#"></a></div>');
+					$('html, body').css({
+							overflow: 'hidden',
+							height: '100%'
+					});
 				}
 			});
 
@@ -470,8 +473,7 @@ $(function(){
 					.done(function(){
 						if(contentWrap.hasClass('toggle-visible')){
 							contentWrap.removeClass('toggle-visible');
-							//menuContentWrap.removeClass('toggle-visible');
-							$('body').removeClass('overlayed');
+							
 							$('body').find('.overlay2').remove();
 							$('html, body').removeAttr('style');
 						}
@@ -479,7 +481,6 @@ $(function(){
 							contentWrap.addClass('toggle-visible');
 
 							$('body').append('<div class="overlay2"><a href="#"></a></div>');
-							$('body').addClass('overlayed');
 							$('html, body').css({
 									overflow: 'hidden',
 									height: '100%'
@@ -1065,46 +1066,9 @@ $(function(){
 
 			})();
 
-			/* Catalog config icons hover
-			==============================================*/
-
-			// (function(){
-			// 	$('.catalog-item__conficons-link').mouseover(function(){
-			// 		$(this).closest('.catalog-item__conficons-list')
-			// 		.find('.catalog-item__conficons-item')
-			// 									.removeClass('hide-all');
-			// 	});
-			// 	// $('.catalog-item__conficons').mouseout(function(){
-			// 	// 	$(this).find('.catalog-item__conficons-item')
-			// 	// 						.addClass('hide-all');
-			// 	// });
-
-			// })();
-
 			/* Catalog item hover
 			==============================================*/
-			// $('.catalog-item__images, .catalog-item__inner, .catalog-item ,.catalog-item__title').hover(function(){
-			// 	$(this).closest('.catalog-item__inner')
-			// 				.addClass('shadowed');
-			// 	$(this).closest('.catalog-item__inner')
-			// 				.find('.catalog-item__arrow')
-			// 				.addClass('hovered');
-			// 	$(this).closest('.catalog-item__inner')
-			// 				.find('.catalog-item__conficons-item')
-			// 				.removeClass('hide-all');
-
-			// }, function(){
-			// 	$(this).closest('.catalog-item__inner')
-			// 				.removeClass('shadowed');
-			// 	$(this).closest('.catalog-item__inner')
-			// 				.find('.catalog-item__arrow')
-			// 				.removeClass('hovered');
-			// 	$(this).closest('.catalog-item__inner')
-			// 				.find('.catalog-item__conficons-item')
-			// 				.addClass('hide-all');
-			// });
-
-
+			
 			$('.catalog-item__inner').hover(function(){
 				$(this).addClass('shadowed');
 				$(this).find('.catalog-item__arrow')
@@ -1416,7 +1380,7 @@ $(function(){
 			(function(){
 				$('body').on('click','.overlay2 a',function(e){
 					e.preventDefault();
-					$('body').removeClass('overlayed');
+					
 					$('body').find('.overlay2').remove();
 					$('html, body').removeAttr('style');
 
@@ -1441,6 +1405,17 @@ $(function(){
 							$('.config').removeClass('show');
 						}
 					}
+
+					if($('.config-panel__item').hasClass('opened')) {
+						$('.config-panel__item').removeClass('opened');
+					}
+
+					if($('.config-panel__menu-wrapper').hasClass('visible')) {
+						$('.config-panel__menu-wrapper').css('display', 'none');
+						$('.config-panel__item').find('.config-panel__menu-title span').next('i').removeClass('tip-show');
+						$('.config-panel__menu-wrapper').removeClass('visible');
+					}
+
 				});
 			})();
 }); // Jquery $ Function ...similar-items
