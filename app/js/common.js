@@ -115,7 +115,7 @@ $(function(){
 				
 			})();
 
-		/*Item page 'also-buyed' carousel- http://kenwheeler.github.io/slick/
+		/*Item page 'similar-items' carousel- http://kenwheeler.github.io/slick/
 			============================================*/
 			(function(){
 				$('.similar-items__carousel-wrap').slick({
@@ -286,7 +286,7 @@ $(function(){
 			else {
 				$this.find('i').stop(true, true).addClass('tip-show');
 			}
-			//$this.find('i').stop(true, true).toggleClass('tip-show');
+			
 		});
 
 		// Config Menu inner accordion tooltip
@@ -593,7 +593,7 @@ $(function(){
 
 			timer = setTimeout(function () {
 				$('.config-panel>li:not(:first-child)').addClass('icon-hover');
-				//$('.config-panel>li:last-child)').removeClass('icon-hover');
+				
 
 			}, 500);
 			
@@ -617,7 +617,7 @@ $(function(){
 	============================================*/
 	(function(){
 		$('.config-panel__menu-content').mouseover(function(){
-			//$(this).siblings("div").toggle();
+			
 			$(this).addClass('menu-content__hover');
 			$(this).closest('.config-panel__item').css({
 				'box-shadow' : 'none'
@@ -848,7 +848,6 @@ $(function(){
 			$('input').iCheck({
 				checkboxClass: 'icheckbox_polaris',
 				radioClass: 'iradio_polaris'
-				//increaseArea: '-10%' // optional
 			});
 		})();
 
@@ -876,11 +875,9 @@ $(function(){
 						
 						if(wrapper.hasClass('mobile-side-menu')) {
 							wrapper.removeClass('mobile-side-menu');
-							//$('.config').removeClass('make-invisible');
 						}
 
 						wrapper.addClass('mobile-side-menu');
-						//$('.config').addClass('make-invisible');
 						sideNav.addClass('side-menu-opened')
 										.animate({
 											left: 0
@@ -1155,18 +1152,20 @@ $(function(){
 
 			/*---------Show more cats
 			============================================*/
-			$('.show-more-cats').on('click',function(e){
-				e.preventDefault();
+			(function(){
+				$('.show-more-cats').on('click',function(e){
+					e.preventDefault();
 
-				if(!$('.bic-item').hasClass('show-more-items')) {
-					$(this).siblings('.bic-item')
-									.addClass('show-more-items');
-				}
-				else {
-					$(this).siblings('.bic-item')
-									.removeClass('show-more-items');
-				}
-			});
+					if(!$('.bic-item').hasClass('show-more-items')) {
+						$(this).siblings('.bic-item')
+										.addClass('show-more-items');
+					}
+					else {
+						$(this).siblings('.bic-item')
+										.removeClass('show-more-items');
+					}
+				});
+			})();
 
 			/*Sales Leader first Hover
 			==============================================*/
@@ -1205,55 +1204,57 @@ $(function(){
 
 			/*---------Item page options color choose
 			============================================*/
-			$('.options__color').on('click','.color-link',function(e){
-				e.preventDefault();
-				
-				var color = $(this).find('i').data('color'),
-						otherColor = $(this).closest('.options__colors-item')
-								.siblings('.options__colors-item'),
-						parent = $(this).closest('.options__colors-item');
-						$this = $(this);
+			(function(){
+				$('.options__color').on('click','.color-link',function(e){
+					e.preventDefault();
+					
+					var color      = $(this).find('i').data('color'),
+							otherColor = $(this).closest('.options__colors-item').siblings('.options__colors-item'),
+							parent     = $(this).closest('.options__colors-item');
+							$this      = $(this);
 
-					otherColor.removeClass('selected');
-					otherColor.find('.color-link').css('border-color', '#fff');
-					parent.addClass('selected');
 
-					if(parent.hasClass('selected')) {
-						$this.css({
-							'border-color' : color
-						});
-					}
-			});
 
-			$('.options__color').on('click','.color-text',function(e){
-				e.preventDefault();
-				
-				var color = $(this).siblings('.color-link').find('i').data('color'),
-						otherColor = $(this).closest('.options__colors-item')
-								.siblings('.options__colors-item'),
-						parent = $(this).closest('.options__colors-item');
-						$this = $(this);
+						otherColor.removeClass('selected');
+						otherColor.find('.color-link').css('border-color', '#fff');
+						parent.addClass('selected');
 
-					otherColor.removeClass('selected');
-					otherColor.find('.color-link').css('border-color', '#fff');
-					parent.addClass('selected');
+						if(parent.hasClass('selected')) {
+							$this.css({
+								'border-color' : color
+							});
+						}
+				});
 
-					if(parent.hasClass('selected')) {
-						$this.siblings('.color-link').css({
-							'border-color' : color
-						});
-					}
-			});
+				$('.options__color').on('click','.color-text',function(e){
+					e.preventDefault();
+							
+					var color      = $(this).siblings('.color-link').find('i').data('color'),
+							otherColor = $(this).closest('.options__colors-item').siblings('.options__colors-item'),
+							parent     = $(this).closest('.options__colors-item');
+							$this      = $(this);
+
+						otherColor.removeClass('selected');
+						otherColor.find('.color-link').css('border-color', '#fff');
+						parent.addClass('selected');
+
+						if(parent.hasClass('selected')) {
+							$this.siblings('.color-link').css({
+								'border-color' : color
+							});
+						}
+				});
+			})();
+			
 
 			/*---------Item page size choose
 			============================================*/
 			$('.options__size').on('click','.options__list-item a',function(e){
 				e.preventDefault();
 				
-				var otherSize = $(this).closest('.options__list-item')
-								.siblings('.options__list-item'),
-						parent = $(this).closest('.options__list-item');
-						$this = $(this);
+				var otherSize = $(this).closest('.options__list-item').siblings('.options__list-item'),
+						parent    = $(this).closest('.options__list-item');
+						$this     = $(this);
 
 					otherSize.removeClass('selected');
 					parent.addClass('selected');
@@ -1280,6 +1281,7 @@ $(function(){
 					 				.addClass('zi');
 				}).mouseout(function(){
 					var that = $(this);
+
 					 that.closest('.slick-list').css('overflow', 'hidden');
 					 that.closest('.item-carousel')
 					 				.siblings('.item-carousel')
@@ -1293,9 +1295,9 @@ $(function(){
 			(function(){
 					$('.dropdown__submenu-header').hover(function(){
 
-						var that = $(this),
-						subCatType = that.closest('.dropdown__inner-item').data('type'),
-						brandList = that.closest('.main-nav__dropdown-menu__inner')
+						var that    = $(this),
+						subCatType  = that.closest('.dropdown__inner-item').data('type'),
+						brandList   = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.dropdown-extra__brand-list'),
 						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.subcategory-descr');
@@ -1307,9 +1309,9 @@ $(function(){
 						}
 						
 					},function(){
-						var that = $(this),
-						subCatType = that.closest('.dropdown__inner-item').data('type'),
-						brandList = that.closest('.main-nav__dropdown-menu__inner')
+						var that    = $(this),
+						subCatType  = that.closest('.dropdown__inner-item').data('type'),
+						brandList   = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.dropdown-extra__brand-list'),
 						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.subcategory-descr');
@@ -1334,11 +1336,11 @@ $(function(){
 
 					$('.dropdown__submenu-item').hover(function(){
 
-						var that = $(this),
+						var that       = $(this),
 						subLinkCatType = that.data('subtype'),
-						brandList = that.closest('.main-nav__dropdown-menu__inner')
+						brandList      = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.dropdown-extra__brand-list'),
-						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+						subCatDescr    = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.subcategory-descr');
 
 						brandList.hide();
@@ -1347,11 +1349,11 @@ $(function(){
 							$("."+subLinkCatType).addClass('active');
 						}
 					},function(){
-						var that = $(this),
+						var that       = $(this),
 						subLinkCatType = that.data('subtype'),
-						brandList = that.closest('.main-nav__dropdown-menu__inner')
+						brandList      = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.dropdown-extra__brand-list'),
-						subCatDescr = that.closest('.main-nav__dropdown-menu__inner')
+						subCatDescr    = that.closest('.main-nav__dropdown-menu__inner')
 														.find('.subcategory-descr');
 
 						if(subCatDescr.hasClass('active')) {
@@ -1368,27 +1370,32 @@ $(function(){
 			})();
 
 
-			/*---------Custom scroll
+			/*---------Custom scroll - http://noraesae.github.io/perfect-scrollbar/
 			============================================*/
 			(function(){
 				$('.config__inner').perfectScrollbar();
 			})();
 
 
-			/*---------Overlay click
+			/*---------White Overlay click
 			============================================*/
 			(function(){
 				$('body').on('click','.overlay2 a',function(e){
 					e.preventDefault();
+
+					var configItem     = $('.config-panel__item'),
+							menuContent    = $('.config-panel__menu-content'),
+							configInner    = $('.config__inner'),
+							configMenuWrap = $('.config-panel__menu-wrapper');
 					
 					$('body').find('.overlay2').remove();
 					$('html, body').removeAttr('style');
 
-					$('.config-panel__menu-content').removeClass('toggle-open');
+					menuContent.removeClass('toggle-open');
 					$('.config-panel__menu-content-wrap').removeClass('toggle-visible');
 
-					$('.config__inner').animate({ scrollTop: 0 }, "slow");
-					$('.config__inner').css({
+					configInner.animate({ scrollTop: 0 }, "slow");
+					configInner.css({
 					'box-shadow': 'none',
 					'overflow' : 'hidden'
 					});
@@ -1399,6 +1406,7 @@ $(function(){
 																						'width' : '26',
 																						'height' : '31'
 																					});
+						configItem.find('.config-panel__menu-wrapper').css('display', 'none');
 
 					if ($(window).width() < 768) {
 						if($('.config').hasClass('show')) {
@@ -1406,14 +1414,14 @@ $(function(){
 						}
 					}
 
-					if($('.config-panel__item').hasClass('opened')) {
-						$('.config-panel__item').removeClass('opened');
+					if(configItem.hasClass('opened')) {
+						configItem.removeClass('opened');
 					}
 
-					if($('.config-panel__menu-wrapper').hasClass('visible')) {
-						$('.config-panel__menu-wrapper').css('display', 'none');
-						$('.config-panel__item').find('.config-panel__menu-title span').next('i').removeClass('tip-show');
-						$('.config-panel__menu-wrapper').removeClass('visible');
+					if(configMenuWrap.hasClass('visible')) {
+						configItem.find('.config-panel__menu-wrapper').css('display', 'none');
+						configItem.find('.config-panel__menu-title span').next('i').removeClass('tip-show');
+						configItem.find('.config-panel__menu-wrapper').removeClass('visible');
 					}
 
 				});
