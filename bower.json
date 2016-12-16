@@ -16,11 +16,8 @@
   ],
   "dependencies": {
     "jquery": "2.2.4",
-    "magnific-popup": "Magnific-Popup#^1.1.0",
     "iCheck": "^1.0.2",
-    "slick-carousel": "slick.js#^1.6.0",
-    "bxslider-4": "^4.2.5",
-    "df-visible": "jquery-visible#^1.2.0"
+    "slick-carousel": "slick.js#^1.6.0"
   },
   "overrides": {
     "qtip2": {

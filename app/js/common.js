@@ -563,18 +563,15 @@ $(function(){
 		$('.item-page__conf-link').on('click', function(e){
 			e.preventDefault();
 
-			var $this      = $(this),
-			container      = $this.closest('.config-panel'),
-			menuContentAll = container.find('.config-panel__menu-content--toggle',
-													'.config-panel__menu-content'),
+			var that      = $(this),
+			container      = that.closest('.config-panel'),
 			menuContent    = container.find('.config-panel__menu-content');
 
-			$(this).closest('.wrapper')
-						.find('.config').addClass('show');
+			// that.closest('.wrapper')
+			// 			.find('.config').addClass('show');
 			
 			if (!menuContent.hasClass('toggle-open')) {
-				$('.config-main-toggle, .config-panel__menu-type-link')
-				.trigger('click');
+				$('.js-config-toggle').trigger('click');
 			}
 		});
 		
