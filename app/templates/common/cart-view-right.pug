@@ -1,37 +1,46 @@
 .cart-checkout
-	.cart-checkout__cost-wrapper
-		.cart-checkout__cost
-			.cart-checkout__cost-wrapper
-				.cart-checkout__cost-text Подытог
-				.cart-checkout__cost-amount 69 770 р.
-			.cart-checkout__cost-wrapper
-				.cart-checkout__cost-text скидка
-				.cart-checkout__cost-amount -100 р.
-		.cart-checkout__cost-final
-			.cost-final-text
-				span Итого
-				em без учета стоимости доставки
-			.cost-final-amount 69 670 Р.
-		button.cart-checkout__checkout-btn(type=submit) Оформить заказ
-		button.cart-checkout__checkout-tel-buy(type=submit) купить это заказ по телефону
-	.cart-checkout__coupon
-		a.counon__btn(href="") Активировать купон
-	.cart-checkout__bottom
-		.cart-checkout__payments
-			h6.cart-checkout__payments-title Онлайн оплата, в кредит и рассрочку
-			ul.cart-checkout__payments-list
-				li.cart-checkout__payments-item
-					img(src="img/img-visa.jpg")
-				li.cart-checkout__payments-item
-					img(src="img/img-mastercard.jpg.jpg")
-				li.cart-checkout__payments-item
-					img(src="img/img-visa.jpg")
-				li.cart-checkout__payments-item
-					img(src="img/img-mastercard.jpg.jpg")
-				li.cart-checkout__payments-item
-					img(src="img/img-visa.jpg")
-		.cart-checkout__delivery.
-			<strong>Доставка <b>бесплатно</b></strong> в пределах МКАД
-		.cart-checkout__address
-			span Самовывоз:
-			a(href="") м. Сокольники,Сокольническая пл. дом 9, кв. 2
+	.cart-checkout__inner
+		.cart-checkout__cost-wrapper
+			.cart-checkout__cost
+				.cart-checkout__cost-container
+					.cart-checkout__cost-text Подытог
+					.cart-checkout__cost-amount 69 770 р.
+				.cart-checkout__cost-container
+					.cart-checkout__cost-text скидка
+					.cart-checkout__cost-amount -100 р.
+			.cart-checkout__cost-final
+				.cost-final-text
+					span Итого
+					em без учета стоимости<br> доставки
+				.cost-final-amount 69 670 Р.
+			.cart-checkout__btn-wrapper
+				button.cart-checkout__checkout-btn(type=submit) Оформить заказ
+				button.cart-checkout__checkout-tel-buy(type=submit) купить это заказ по телефону
+		.cart-checkout__coupon
+			a.coupon__btn(href="") <span>Активировать купон</span>
+			form
+				.checkout-coupon-container
+					.checkput-coupon-input
+						label Введите код купон
+						input(value="", placeholder="Введите код купона")
+					button.checkout-coupon-btn(type="submit") активировать
+					span.coupon-error Неверный код купона
+		.cart-checkout__bottom
+			.cart-checkout__payments
+				h6.cart-checkout__payments-title Онлайн оплата, в кредит и рассрочку
+				ul.cart-checkout__payments-list
+					li.cart-checkout__payments-item
+						img(src="img/img-visa.jpg")
+					li.cart-checkout__payments-item
+						img(src="img/img-mastercard.jpg")
+					li.cart-checkout__payments-item
+						img(src="img/img-visa.jpg")
+					li.cart-checkout__payments-item
+						img(src="img/img-mastercard.jpg")
+					li.cart-checkout__payments-item
+						img(src="img/img-visa.jpg")
+			.cart-checkout__delivery.
+				<strong>Доставка <b>бесплатно</b></strong> <br>в пределах МКАД
+			.cart-checkout__address
+				span Самовывоз:
+				a(href="") м. Сокольники,<br>Сокольническая пл. дом 9, кв. 2

@@ -17,6 +17,7 @@
 <!-- endbuild -->
 <link rel="stylesheet" href="css/fonts.min.css">
 <link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/style-cart.min.css">
 <!-- Custom Browsers Color Start -->
 <!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#000">
@@ -29,7 +30,623 @@
   <body><!--[if lt IE 10 ]>
 <p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
 <![endif]-->
-    <div class="wrapper wrapper--checkout">
+    <div class="wrapper wrapper--cart">
+      <div class="config">
+        <div class="config__inner">
+          <ul class="config-panel">
+            <li class="config-panel__item config-panel__item--toggle">
+              <ul class="config-panel__inner-section inner-section--toggle">
+                <li class="config-panel__menu-type config-panel__menu-type--toggle"><a class="config-main-toggle js-config-toggle" href="#"><img src="img/icon-config-toggle.svg" width="26" height="31" alt="icon-toggle"></a></li>
+                <li class="config-panel__menu-content--toggle">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__top-text"><span>Подберите себе</span><i>подходящий товар</i></div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="whom">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Кому"><a class="config-panel__menu-type-link js-config-type" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 282 528">
+<style type="text/css">.st0{fill:#000;}</style><path class="st0" d="M72 331.7c-23.8 4.2-41.2-3.4-51.3-21.9 -3.1-5.7-4.7-11.6-4.7-18.1 0.1-26.8 0.2-53.6-0.1-80.5 -0.1-13.6 3.6-26 11.1-37.2 12.1-18.1 28.1-30.9 49.8-35.6 2.2-0.5 4.5-0.6 7.4-1 -11.4-17.8-15.7-36.7-9.5-57.2 4.8-16 14.4-28.7 27.9-38.5 25.4-18.4 57-17.4 81.8 2.4 28.6 22.8 34 52.6 17.1 92.9 32.9 6.9 54.8 26 64.7 58.3 1.3 4.1 1.7 8.5 1.7 12.8 0 27.7 0 55.3 0 83 0 23.9-19.6 43.1-43.5 42.6 -4.1-0.1-8.1-1.4-12.4-2.1 0 25.4 0 50.8 0 76.1 0 15.8 0 31.7 0 47.5 0 21.7-13.2 38.9-34.2 44.6 -11.6 3.2-22 0.4-31.6-6.4 -1.3-1-2.6-2-4.2-3.2 -6.1 4.3-12.5 7.9-19.8 9.8 -27.2 7-50.4-19.1-50.2-39.7C72.2 420.3 72 380.2 72 340 72 337.4 72 334.7 72 331.7zM100.1 347.6C100.1 347.6 100.1 347.6 100.1 347.6c0 24.2 0 48.3 0 72.5 0 13.5-0.1 27 0 40.5 0.1 9.2 3.6 12.6 12.8 12.5 1 0 2 0 3-0.1 8.5-0.4 11.8-3.6 11.9-12 0.1-37.8 0.1-75.6 0.1-113.5 0-9.5 5.7-15.7 14.3-15.6 8.2 0.1 13.8 6.3 13.8 15.6 0 14.7 0 29.3 0 44 0 23.3 0 46.7 0.1 70 0 6.6 2.4 10 7.7 11.3 12.1 3 20.1-3.2 20.1-15.5 0-1 0-2 0-3 0-73 0-146 0-218.9 0-2.9 0.3-5.6 1.8-8.2 3.2-5.4 9.5-8.2 15.3-6.9 6.6 1.6 11 7 11 14.2 0.1 19.7 0 39.3 0.1 59 0 8.3 3.3 11.4 11.5 11.5 1 0 2 0 3 0.1 10 0.8 13.2-1.9 13.3-11.8 0.1-28.7 0.3-57.3 0-86 -0.3-22.6-19.7-41.2-42.3-41.4 -8.3-0.1-16.7 0-25 0 -7.6 0-13.7-3.6-15.1-9.8 -1.9-8.5-0.9-15.5 6.6-20.3 19-12.3 25.4-34.5 16.3-55.5 -6.6-15.2-18.9-22.4-34.9-23.3 -17.2-0.9-32 4.4-40.1 20.6 -7.8 15.5-7.4 31.2 3.2 45.7 3.8 5.2 8.9 8.9 13.8 13 5.1 4.2 6.9 13.3 4.4 20.3 -2.2 6-7.4 9.3-15 9.3 -8.3 0.1-16.7 0-25 0 -22.3 0.2-41.7 18.2-42.1 40.4 -0.6 29.1-0.2 58.3-0.1 87.5 0 3.7 0.9 7.5 4.4 9.6 5.9 3.4 12.3 2.9 18.3 0.5 5.1-2.1 5.1-7.3 5.1-12.1 0-18.5 0-37 0-55.5 0-9.9 5.7-16.4 14.2-16.3 8.4 0.1 13.9 6.5 13.9 16.1C100.1 273.3 100.1 310.4 100.1 347.6z"/>
+</svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Кому</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-man.svg" width="15" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="for-man">Мужчина</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="for-man" disabled>
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-woman.svg" width="19" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="for-woman">Женщина</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="for-woman" disabled checked>
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-boy.svg" width="16" height="19" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="for-boy">Мальчик</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="for-boy">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-kid.svg" width="20" height="18" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="for-kid">Девочка</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="for-kid">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-kid2.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="for-kid2">Младенцу</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="for-kid2">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="where">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Где кататься"><a class="config-panel__menu-type-link js-config-type" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 518 392"><style>.st0{fill:#000;}</style><path class="st0" d="M275.7 253.4h-31.5c.5 6 .5 11.9.1 17.8-4.4 54.1-47.8 97.1-100.8 99.7-54.9 2.6-102.6-34.8-112.2-88.4-4.2-23.4-1.3-46.2 9.8-67.5 24.8-48 49.8-95.8 74.7-143.7 4.9-9.5 10.4-18.6 17.5-26.6 17-19.4 44.6-26.9 69.2-18.7 23.4 7.8 39.5 29.2 41.7 55.2 1.1 12.8.1 25.6.7 38.6h30.4c0-9.9-.1-19.7 0-29.4.1-15.7 3.7-30.4 13.1-43.2 22.6-30.9 70.2-32.9 96.8-4.2 8.7 9.4 14.9 20.4 20.8 31.6 24.2 46.6 48.6 93.1 72.6 139.8 34.1 66.2-8.4 146.6-82.4 155.7-32 4-60.5-4.9-84.5-26.3-26.2-23.3-37.9-53-36-88v-2.4zm136-93.1c.4.1.7.3 1.1.4 0-.4-.1-.8-.1-1.2-7.6-15.3-15.4-30.5-22.8-45.9-3.3-6.9-8.4-11.4-15.2-14.2-6.5-2.6-13.3-4.3-20.3-4.6-28.6-1.4-49.5 20.2-48.4 45.9.5 11.3.1 22.6.1 34v11.9c1.3-1.2 1.9-1.7 2.5-2.3 17.3-16.1 37.8-24.8 61.2-27.5 14.3-1.8 28.1-.1 41.9 3.5zm-303.4 0c1-.2 2-.3 2.9-.5 37.6-9.2 71.1-1.2 100.2 24.5.7.6 1.1 1.8 2.5 1.2 0-16.6.1-33.2-.1-49.8-.1-4.8-1.4-9.5-3.3-14-8.8-21-32.5-31.6-56.8-25.1-8.6 2.3-17.3 5-21.8 13.5-8.5 16.3-16.5 32.9-24.7 49.4 0 .4-.1.8-.1 1.2.5-.2.8-.3 1.2-.4zm274.6 179.9c43-.2 77-34.4 76.8-77.3-.2-42.4-34.8-76.4-77.4-76.1-42.6.3-76.5 34.6-76.2 77.3.2 42.3 34.6 76.4 76.8 76.1zm-246 .1c42.6.1 77-34 77.1-76.5.1-42.6-34-76.8-76.6-76.9-42.5-.1-76.8 33.7-77 75.9-.4 42.9 33.6 77.3 76.5 77.5zM245 151.1v71.2h29.9v-71.2H245zm63.3-74.3c16-9.8 33.1-14.3 53-12.5-10.5-9.5-21.3-12.8-33.6-9.4-11 3-16.6 11.2-19.4 21.9zm-97.7-.9c-1.5-9.9-6.8-16.7-15.7-20.1-13.3-5-25-1.4-36.1 8.3 9.6-.3 18.4-.3 27 1.9 8.7 2.1 16.7 5.9 24.8 9.9z"/><path class="st0" d="M326.6 263.4c0-30.8 25.5-56.3 56.3-56.2 31.1.1 56.3 25.5 56.2 56.8 0 30.5-25.5 56-56 56-31.1 0-56.5-25.4-56.5-56.6zm56.1 25.7c14.5.1 25.7-11 25.7-25.5 0-14.4-11.1-25.6-25.6-25.6-14.1 0-25.4 11.2-25.6 25.2-.2 14.3 11.2 25.8 25.5 25.9zM193.4 263.6c-.1 31.1-25.7 56.5-56.7 56.3-30.6-.2-55.8-25.6-55.8-56.2 0-31.2 25.4-56.6 56.5-56.6 30.6.1 56.1 25.7 56 56.5zm-56.7 25.5c14.5.1 25.9-10.9 26.1-25.2.2-14.3-11.2-25.8-25.4-25.9-14.4-.1-25.7 11.1-25.7 25.5-.2 14.2 10.8 25.4 25 25.6z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Где кататься</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="smooth">Ровные дороги</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="smooth">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="off-road">Бездорожье</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="off-road">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="mixed-road">Дороги и бездорожье</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="mixed-road">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="price">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Цена"><a class="config-panel__menu-type-link js-config-type" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="21" viewBox="0 0 124 214"><style>.st0{fill:#000;}</style><path class="st0" d="M58.3 195.8v-17.6c-18-1.6-33.8-7.5-46.2-21.4 3.2-4.1 6.3-8.2 9.7-12.6 10 10.3 21.7 17 36.4 18.8v-47.2c0-2.4-1.7-2.4-3.3-2.9-7.2-2.1-14.2-4.5-20.9-7.8-24.1-12.2-21.8-42.6-4.4-55.8 8.4-6.4 18-9.1 28.7-10.2V21h12.4v18.4c15.5 1.8 28.8 7.1 39.7 18.4-3.3 4-6.5 8-9.9 12.1-4.4-3.7-8.6-7.5-13.7-10-4.9-2.4-10.1-4.2-15.9-5v43.4c1.9 1.6 4.6 1.7 7 2.5 5.8 1.9 11.6 4.1 17 7.1 11.9 6.6 18.4 16.5 18.4 30.3 0 14.3-5.9 25.4-18.2 32.8-7.4 4.4-15.7 6.1-24.5 7.2v17.6H58.3zm12.6-33.2c14.5-.2 25.3-10.2 25.1-22.9-.2-10.8-12.6-21.5-25.1-21.3v44.2zm-12.8-108c-14.7 1-24.1 9-24.3 20.4-.1 9.9 10.2 18.3 24.3 19.7V54.6z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Цена</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">До 20 т.р</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">20-40 т.р</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">40-60 т.р</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">60-100 т.р</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">> 100 т.р</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="type">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Тип велосипеда"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Тип велосипеда</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">Хардтейл</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">Двухподвес</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">Гибрид</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">BMX</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 4</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 3</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 2</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 2</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 2</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 2</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">Дёрт/Стрит 2</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li><a class="show-more" href=""><span>показать еще</span></a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="diametr">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Диаметр колес"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Диаметр колес</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">12</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">14</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">16</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">18</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">20</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">24</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">26</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">27.5</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">28</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="more-100">29</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="more-100">
+                          </div>
+                        </li><a class="show-more" href="">показать еще</a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data="height">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Рост ребенка"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Рост ребенка</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">До 98 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">До 115 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">120-130 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">130-150 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="frame">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Тип рамы"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Тип рамы</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">До 98 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">До 115 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">120-130 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">130-150 см</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="rear">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Задний переключатель"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Задний переключатель</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">SIS</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">Tourney</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">Acera</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">Altus</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">Alivio</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="brake">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Тип тормоза"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Тип тормоза</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">Ободной v-brake</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">Дисковый механический Tektro</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">Дисковый механический Promax</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">Дисковый гидравлический Shimano</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">Дисковый гидравлический Avid</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="vilka">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Вилка"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>Вилка</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">Жесткие</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">Пружинные</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">Пружинно-эластомерные</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">ДПружинно-маслянные</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item filter-btn"><i class="config-panel__menu-icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <button class="config-menu-item-btn" type="submit">показать результаты</button>
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">Воздушные</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li><a class="show-more" href="">показать еще</a>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item" data-icon="brand">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type" title="Бренд"><a class="config-panel__menu-type-link js-config-type" href="#"><svg class="placeholder" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 286 286"><style>.st0{fill:#E4E4E4;}</style><path class="st0" d="M144.5 52c28.5 0 57 .1 85.5-.1 4.5 0 6.1 1.1 6.1 5.9-.1 57.5-.1 115 0 172.4 0 4.2-1.1 5.9-5.6 5.8-57.6-.1-115.3-.1-172.9 0-4 0-5.6-1.1-5.6-5.4.1-57.8.1-115.6 0-173.4 0-4.3 1.6-5.3 5.6-5.3 28.9.2 57.9.1 86.9.1z"/></svg></a></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap">
+                    <div class="config-panel__menu-title"><span>бренд</span><i>?
+                        <div>
+                          Двухподвесные велосипеды 451 моделей
+                          Главное отличие двухподвесных велосипедов от всех остальных разновидностей – это наличие передней и задней амортизации.
+                          <a href="#">Прочитать подробно</a>
+                        </div></i></div>
+                    <div class="config-panel__menu-wrapper">
+                      <ul class="config-panel__menu-list">
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="20">SIS</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="20">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="40">Tourney</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="40">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="60">Acera</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="60">
+                          </div>
+                        </li>
+                        <li class="config-panel__menu-item"><i class="config-panel__menu-icon"><img src="img/icon-placeholder.svg" width="20" height="20" alt="Config icon"></i>
+                          <div class="config-panel__menu-options-wrapper">
+                            <label class="config-panel__label" for="100">Alivio</label>
+                            <input class="config-panel__checkbox" type="checkbox" id="100">
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="config-panel__item form-submit">
+              <ul class="config-panel__inner-section">
+                <li class="config-panel__menu-type"></li>
+                <li class="config-panel__menu-content">
+                  <div class="config-panel__menu-content-wrap menu-content--footer">
+                    <div class="result">Найдено <span>11</span> совпадение</div>
+                    <button class="config-submit-show" type="submit">показать</button>
+                    <button class="config-submit-detailed" type="submit">Подробный фильтр</button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div class="main-content__wrapper">
         <header class="page-header">
           <div class="top-bar">
@@ -723,11 +1340,12 @@
             <div class="cart-main">
               <div class="cart-items">
                 <ul class="cart-items__list">
-                  <li class="cart-item"><a class="cart-item__pic" href=""><img src="img/img-item-4.jpg" alt="cart item"></a>
+                  <li class="cart-item"><a class="cart-item__pic" href="#"><img src="img/img-item-4.jpg" alt="cart item"></a>
                     <div class="cart-item__content">
-                      <div class="cart-item__descr">
-                        <div class="cart-item__descr-title">Самокат "Globber" MY TOO 18.0 с ручн. тормозом</div>
-                        <div class="cart-item__descr-marking">Артикул: 0192-11-SB</div>
+                      <div class="cart-item__content-wrapper">
+                        <div class="cart-item__descr"><a class="cart-item__descr-title" href="#">Самокат "Globber" MY TOO 18.0 с ручн. тормозом</a>
+                          <div class="cart-item__descr-marking">Артикул: 0192-11-SB</div>
+                        </div>
                       </div>
                       <div class="cart-item__options">
                         <div class="cart-item__options-price">
@@ -738,27 +1356,30 @@
                         </div>
                         <div class="cart-item__options-count">
                           <label class="cart-item__label">Кол-во</label>
-                          <select>
-                            <option value="1">1</option>
-                            <option value="1">2</option>
-                            <option value="1">3</option>
-                          </select>
+                          <div class="styled">
+                            <select>
+                              <option value="1">1</option>
+                              <option value="1">2</option>
+                              <option value="1">33</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div><a class="cart-item__delete">Удалить товар</a>
                   </li>
                   <li class="cart-item"><a class="cart-item__pic" href=""><img src="img/img-item-1.jpg" alt="cart item"></a>
                     <div class="cart-item__content">
-                      <div class="cart-item__descr">
-                        <div class="cart-item__descr-title">Велосипед "Bulls" Bushtail 29 (2016)                         </div>
-                        <div class="cart-item__descr-marking">Артикул: 0292</div>
+                      <div class="cart-item__content-wrapper">
+                        <div class="cart-item__descr"><a class="cart-item__descr-title" href="#">Велосипед "Bulls" Bushtail 29 (2016)                         </a>
+                          <div class="cart-item__descr-marking">Артикул: 0292</div>
+                        </div>
                         <div class="cart-item__descr-option">
                           <div class="option-wrapper">
                             <input type="checkbox" id="pokrishka">
                             <label for="pokrishka">Покрышка</label>
                           </div>
                           <div class="option-wrapper">
-                            <div class="select-option">
+                            <div class="select-option styled">
                               <select>
                                 <option value="1">Ultrathin SCOTT - 2000 р.</option>
                                 <option value="2">Ultrathin SCOTT - 3000 р.</option>
@@ -775,34 +1396,40 @@
                             <div class="price-block__amount new">2900 Р.</div>
                             <div class="price-block__amount old">3300 Р.</div>
                           </div>
+                          <div class="advantage-badge">
+                            <div class="advantage-badge__label" style="background-color: #6cbf00">экономия <i>10%</i></div>
+                          </div>
                         </div>
                         <div class="cart-item__options-count">
                           <label class="cart-item__label">Кол-во</label>
-                          <select>
-                            <option value="1">1</option>
-                            <option value="1">2</option>
-                            <option value="1">3</option>
-                          </select>
+                          <div class="styled">
+                            <select>
+                              <option value="1">1</option>
+                              <option value="1">2</option>
+                              <option value="1">3</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div><a class="cart-item__delete">Удалить товар</a>
                   </li>
-                  <li class="cart-item"><a class="cart-item__pic" href=""><img src="img/img-item-5.jpg" alt="cart item"></a>
+                  <li class="cart-item"><a class="cart-item__pic" href=""><img src="img/img-item-1.jpg" alt="cart item"></a>
                     <div class="cart-item__content">
-                      <div class="cart-item__descr">
-                        <div class="cart-item__descr-title">Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.</div>
-                        <div class="cart-item__descr-marking">Артикул: 0292</div>
+                      <div class="cart-item__content-wrapper">
+                        <div class="cart-item__descr"><a class="cart-item__descr-title" href="#">Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.</a>
+                          <div class="cart-item__descr-marking">Артикул: 0292</div>
+                        </div>
                         <div class="cart-item__descr-option">
                           <div class="option-wrapper">
                             <input type="checkbox" id="spec-pack">
                             <label for="spec-pack">Специальная упаковка</label>
                           </div>
                           <div class="option-wrapper">
-                            <div class="select-option">
+                            <div class="select-option styled">
                               <select disabled>
-                                <option value="1">Ultrathin SCOTT - 2000 р.</option>
-                                <option value="2">Ultrathin SCOTT - 3000 р.</option>
-                                <option value="3">Ultrathin SCOTT - 4000 р.</option>
+                                <option value="1">Из дверева - 1200 р.</option>
+                                <option value="2">Из дверева - 12003 р.</option>
+                                <option value="3">Из дверева - 120220 р.</option>
                               </select>
                             </div>
                           </div>
@@ -817,11 +1444,13 @@
                         </div>
                         <div class="cart-item__options-count">
                           <label class="cart-item__label">Кол-во</label>
-                          <select>
-                            <option value="1">1</option>
-                            <option value="1">2</option>
-                            <option value="1">3</option>
-                          </select>
+                          <div class="styled">
+                            <select>
+                              <option value="1">1</option>
+                              <option value="1">2</option>
+                              <option value="1">3</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div><a class="cart-item__delete">Удалить товар</a>
@@ -831,43 +1460,56 @@
                   <div class="cart-item__bottom-content">
                     Вы можете использовать свой партнерский бонус в <b>205730</b> баллов для получения дополнительной скидки в размере
                     <strong>44 870 Р. </strong>
-                  </div>
-                  <div class="cart-item__bottom-btn">использовать бонусные баллы</div>
+                  </div><a class="cart-item__bottom-btn" href="#">использовать бонусные баллы</a>
                 </div>
               </div>
               <div class="cart-checkout">
-                <div class="cart-checkout__cost-wrapper">
-                  <div class="cart-checkout__cost">
-                    <div class="cart-checkout__cost-wrapper">
-                      <div class="cart-checkout__cost-text">Подытог</div>
-                      <div class="cart-checkout__cost-amount">69 770 р.</div>
+                <div class="cart-checkout__inner">
+                  <div class="cart-checkout__cost-wrapper">
+                    <div class="cart-checkout__cost">
+                      <div class="cart-checkout__cost-container">
+                        <div class="cart-checkout__cost-text">Подытог</div>
+                        <div class="cart-checkout__cost-amount">69 770 р.</div>
+                      </div>
+                      <div class="cart-checkout__cost-container">
+                        <div class="cart-checkout__cost-text">скидка</div>
+                        <div class="cart-checkout__cost-amount">-100 р.</div>
+                      </div>
                     </div>
-                    <div class="cart-checkout__cost-wrapper">
-                      <div class="cart-checkout__cost-text">скидка</div>
-                      <div class="cart-checkout__cost-amount">-100 р.</div>
+                    <div class="cart-checkout__cost-final">
+                      <div class="cost-final-text"><span>Итого</span><em>без учета стоимости<br> доставки</em></div>
+                      <div class="cost-final-amount">69 670 Р.</div>
+                    </div>
+                    <div class="cart-checkout__btn-wrapper">
+                      <button class="cart-checkout__checkout-btn">Оформить заказ</button>
+                      <button class="cart-checkout__checkout-tel-buy">купить это заказ по телефону</button>
                     </div>
                   </div>
-                  <div class="cart-checkout__cost-final">
-                    <div class="cost-final-text"><span>Итого</span><em>без учета стоимости доставки</em></div>
-                    <div class="cost-final-amount">69 670 Р.</div>
+                  <div class="cart-checkout__coupon"><a class="coupon__btn" href=""><span>Активировать купон</span></a>
+                    <form>
+                      <div class="checkout-coupon-container">
+                        <div class="checkput-coupon-input">
+                          <label>Введите код купон</label>
+                          <input value="" placeholder="Введите код купона">
+                        </div>
+                        <button class="checkout-coupon-btn" type="submit">активировать</button><span class="coupon-error">Неверный код купона</span>
+                      </div>
+                    </form>
                   </div>
-                  <button class="cart-checkout__checkout-btn">Оформить заказ</button>
-                  <button class="cart-checkout__checkout-tel-buy">купить это заказ по телефону</button>
-                </div>
-                <div class="cart-checkout__coupon"><a class="counon__btn" href="">Активировать купон</a></div>
-                <div class="cart-checkout__bottom">
-                  <div class="cart-checkout__payments">
-                    <h6 class="cart-checkout__payments-title">Онлайн оплата, в кредит и рассрочку</h6>
-                    <ul class="cart-checkout__payments-list">
-                      <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
-                      <li class="cart-checkout__payments-item"><img src="img/img-mastercard.jpg.jpg"></li>
-                      <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
-                      <li class="cart-checkout__payments-item"><img src="img/img-mastercard.jpg.jpg"></li>
-                      <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
-                    </ul>
+                  <div class="cart-checkout__bottom">
+                    <div class="cart-checkout__payments">
+                      <h6 class="cart-checkout__payments-title">Онлайн оплата, в кредит и рассрочку</h6>
+                      <ul class="cart-checkout__payments-list">
+                        <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
+                        <li class="cart-checkout__payments-item"><img src="img/img-mastercard.jpg"></li>
+                        <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
+                        <li class="cart-checkout__payments-item"><img src="img/img-mastercard.jpg"></li>
+                        <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
+                      </ul>
+                    </div>
+                    <div class="cart-checkout__delivery"><strong>Доставка <b>бесплатно</b></strong> <br>в пределах МКАД</div>
+                    <div class="cart-checkout__address"><span>Самовывоз:</span><a href="">м. Сокольники,<br>Сокольническая пл. дом 9, кв. 2</a></div>
                   </div>
-                  <div class="cart-checkout__delivery"><strong>Доставка <b>бесплатно</b></strong> в пределах МКАД</div>
-                  <div class="cart-checkout__address"><span>Самовывоз:</span><a href="">м. Сокольники,Сокольническая пл. дом 9, кв. 2</a></div>
                 </div>
               </div>
             </div>
@@ -990,7 +1632,8 @@
     <script>
       var scr = {"scripts":[
       {"src" : "js/libs.min.js", "async" : false},
-      {"src" : "js/common.js", "async" : false}
+      {"src" : "js/common.js", "async" : false},
+      {"src" : "js/common-cart.js", "async" : false}
       ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
     </script>
   </body>

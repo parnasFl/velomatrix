@@ -279,6 +279,10 @@
 	.home-articles__content-all-arts-link {
 		border-bottom: none;
 		padding-bottom: 0;
+
+		&::before {
+			margin-top: 0px;
+		}
 	}
 }
 

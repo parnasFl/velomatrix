@@ -1,0 +1,101 @@
+/* .checkout-top Styles */
+
+.checkout-top {
+	padding-top: 18px;
+	padding-bottom: 16px;
+	background-color: #fff;
+	border-bottom: 1px solid $bd-grey;
+}
+
+.checkout-top__inner {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.checkout-top__cartback {
+	color: $blue-link;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.checkout-top__order-total {
+	
+}
+
+.checkout-top__title {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.checkout-top {
+		margin-bottom: 10px;
+	}
+
+	.checkout-top__cartback,
+	.checkout-top__order-total {
+		display: none;
+	}
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.checkout-top {
+
+		.main-content {
+			width: 768px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.checkout-top {
+		margin-bottom: 20px;
+	}
+
+	.checkout-top__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	 
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.checkout-top {
+
+		.main-content {
+			width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
+/* .checkout-top  End*/
+

@@ -1,0 +1,64 @@
+extends ../layouts/main-layout--checkoutonly
+
+block title
+	title CHECKOUT - step 0
+
+block content
+	.cart-wrapper
+		include ../common/checkout-top
+		.checkout-nav
+			ul.checkout-nav__list
+				li.checkout-nav__item.active
+					a.checkout-nav__link(href="#")
+						span.num 1
+						i.text Контактная информация
+				li.checkout-nav__item
+					a.checkout-nav__link(href="#")
+						span.num 2
+						i.text Доставка
+				li.checkout-nav__item
+					a.checkout-nav__link(href="#")
+						span.num 3
+						i.text оплата
+				li.checkout-nav__item
+					a.checkout-nav__link(href="#")
+						span.num 4
+						i.text Потверждение заказа
+		.checkout-main__steps
+			form
+				.checkout-main__steps-inner
+					.checkout__step-header
+						h2.checkout__step-title
+							span 1. Информация о покупатели
+					.checkout__step-content
+						.checkout__no-reg
+							h4.checkout__no-reg-title
+								span Покупка без регистрации
+							.no-reg__form-wrapper
+								.checkout__input-wrap
+									label Имя
+										input(name="")
+								.checkout__input-wrap
+									label Фамилия
+										input(name="")
+								.checkout__input-wrap
+									label Телефон
+										input(name="", type="tel")
+								.checkout__input-wrap
+									label Email<sup>*</sup>
+										input(name="", type="email", value="hi@designmyshop.ru")
+						.checkout__reg-info
+							.checkout__reg-info-inner
+								.reg-info__top
+									.reg-info__input-wrapper
+										input(type="checkbox", id="reg")
+										label(for="reg").
+											Зарегистрироваться как постоянный покупатель
+								.reg-info__content
+									p.
+										Зарегистрированные покупатели получают накопительные бонусные баллы и скидки на будущие заказы
+									.reg-benefits.
+										Этот заказ добавит <b>+1099,9 баллов</b> к вашему партнерскому бонусу.
+					.no-reg-checkout-btn
+						button(type="submit") Продолжить оформление
+

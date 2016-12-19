@@ -1,4 +1,7 @@
 /* .cart-wrapper Styles */
+.cart-wrapper {
+	background-color: #f2f2f2;
+}
 
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
@@ -11,7 +14,9 @@
 /* ============== Only Mobile&Tablet styles * 1023 * ======
 *******************************************************/
 @media (max-width: 1023px) {
-
+	.cart-wrapper {
+		border-bottom: 1px solid $bd-grey;
+	}
 }//@media (max-width: 1023px) 
 
 
@@ -35,7 +40,8 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.cart-wrapper {
-		background-color: #f2f2f2;
+		border-top: 1px solid $bd-grey;
+		border-bottom: 1px solid $bd-grey;
 	}
 }
 

@@ -982,8 +982,10 @@ $(function(){
 			(function(){
 				$('.top-bar__phone-toggle').on('click', function(e){
 					e.preventDefault();
-
-					$('.page-support').slideToggle('fast');
+					if ($(window).width() < 768) {
+						$('.page-support').slideToggle('fast');
+					}
+					
 				});
 
 			})();

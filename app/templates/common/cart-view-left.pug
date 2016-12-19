@@ -1,12 +1,13 @@
 .cart-items
 	ul.cart-items__list
 		li.cart-item
-			a.cart-item__pic(href="")
+			a.cart-item__pic(href="#")
 				img(src="img/img-item-4.jpg", alt="cart item")
 			.cart-item__content
-				.cart-item__descr
-					.cart-item__descr-title Самокат "Globber" MY TOO 18.0 с ручн. тормозом
-					.cart-item__descr-marking Артикул: 0192-11-SB
+				.cart-item__content-wrapper
+					.cart-item__descr
+						a.cart-item__descr-title(href="#") Самокат "Globber" MY TOO 18.0 с ручн. тормозом
+						.cart-item__descr-marking Артикул: 0192-11-SB
 				.cart-item__options
 					.cart-item__options-price
 						.price-text Цена
@@ -14,24 +15,26 @@
 							.price-block__amount 15 770 Р.
 					.cart-item__options-count
 						label.cart-item__label Кол-во
-						select
-							option(value="1") 1
-							option(value="1") 2
-							option(value="1") 3
+						.styled
+							select
+								option(value="1") 1
+								option(value="1") 2
+								option(value="1") 33
 			a.cart-item__delete Удалить товар
 		li.cart-item
 			a.cart-item__pic(href="")
 				img(src="img/img-item-1.jpg", alt="cart item")
 			.cart-item__content
-				.cart-item__descr
-					.cart-item__descr-title Велосипед "Bulls" Bushtail 29 (2016)                         
-					.cart-item__descr-marking Артикул: 0292
+				.cart-item__content-wrapper
+					.cart-item__descr
+						a.cart-item__descr-title(href="#") Велосипед "Bulls" Bushtail 29 (2016)                         
+						.cart-item__descr-marking Артикул: 0292
 					.cart-item__descr-option
 						.option-wrapper
 							input(type="checkbox", id="pokrishka")
 							label(for="pokrishka") Покрышка
 						.option-wrapper
-							.select-option
+							.select-option.styled
 								select
 									option(value="1") Ultrathin SCOTT - 2000 р.
 									option(value="2") Ultrathin SCOTT - 3000 р.
@@ -42,30 +45,34 @@
 						.price-block
 							.price-block__amount.new 2900 Р.
 							.price-block__amount.old 3300 Р.
+						.advantage-badge
+							.advantage-badge__label(style="background-color: #6cbf00;") экономия <i>10%</i>
 					.cart-item__options-count
 						label.cart-item__label Кол-во
-						select
-							option(value="1") 1
-							option(value="1") 2
-							option(value="1") 3
+						.styled
+							select
+								option(value="1") 1
+								option(value="1") 2
+								option(value="1") 3
 			a.cart-item__delete Удалить товар
 		li.cart-item
 			a.cart-item__pic(href="")
-				img(src="img/img-item-5.jpg", alt="cart item")
+				img(src="img/img-item-1.jpg", alt="cart item")
 			.cart-item__content
-				.cart-item__descr
-					.cart-item__descr-title Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.
-					.cart-item__descr-marking Артикул: 0292
+				.cart-item__content-wrapper
+					.cart-item__descr
+						a.cart-item__descr-title(href="#") Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.
+						.cart-item__descr-marking Артикул: 0292
 					.cart-item__descr-option
 						.option-wrapper
 							input(type="checkbox", id="spec-pack")
 							label(for="spec-pack") Специальная упаковка
 						.option-wrapper
-							.select-option
+							.select-option.styled
 								select(disabled)
-									option(value="1") Ultrathin SCOTT - 2000 р.
-									option(value="2") Ultrathin SCOTT - 3000 р.
-									option(value="3") Ultrathin SCOTT - 4000 р.
+									option(value="1") Из дверева - 1200 р.
+									option(value="2") Из дверева - 12003 р.
+									option(value="3") Из дверева - 120220 р.
 				.cart-item__options
 					.cart-item__options-price
 						.price-text Цена
@@ -73,13 +80,14 @@
 							.price-block__amount 15 770 Р.
 					.cart-item__options-count
 						label.cart-item__label Кол-во
-						select
-							option(value="1") 1
-							option(value="1") 2
-							option(value="1") 3
+						.styled
+							select
+								option(value="1") 1
+								option(value="1") 2
+								option(value="1") 3
 			a.cart-item__delete Удалить товар
 	.cart-item__bottom
 		.cart-item__bottom-content.
 			Вы можете использовать свой партнерский бонус в <b>205730</b> баллов для получения дополнительной скидки в размере
 			<strong>44 870 Р. </strong>
-		.cart-item__bottom-btn использовать бонусные баллы
+		a.cart-item__bottom-btn(href="#") использовать бонусные баллы

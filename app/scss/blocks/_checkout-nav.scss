@@ -1,0 +1,174 @@
+/* checkout nav Styles */
+
+
+.checkout-nav {
+	margin: 0 auto;
+	//position: relative;
+}
+
+.checkout-nav__item {
+	display: inline-block;
+	&:not(:last-child) {
+		margin-right: 20px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			background: url("../img/icon-cat-arrow.svg") 0 0 no-repeat;
+			width: 5px;
+			height: 10px;
+			background-size: cover;
+			top: 50%;
+			margin-top: -5px;
+
+		}
+	}
+}
+
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	
+
+	.checkout-nav {
+		display: table;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 50px;
+	}
+
+	.checkout-nav__item {
+		&:not(:last-child) {
+			margin-right: 40px;
+
+			&::after {
+				right: -25px;
+				
+			}
+		}
+
+		&.active {
+			.num {
+				color: $red-base;
+			}
+		}
+	}
+
+	.checkout-nav__link {
+		width: 35px;
+		height: 35px;
+		line-height: 32px;
+		background-color: white;
+		border: 2px solid #e5e5e5;
+		border-radius: 10px;
+		color: #999;
+		text-align: center;
+		font-weight: 700;
+		.text {
+			display: none;
+		}
+
+		&:hover {
+			.num {
+				color: $red-base;
+			}
+		}
+	}
+	
+
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.checkout-nav {
+		display: table;
+		margin: 0 auto;
+		margin-bottom: 25px;
+		
+		
+	}
+	.checkout-nav__list {
+		//padding-left: 25px;
+		//padding-right: 25px;
+	}
+	.checkout-nav__item {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-right: 45px;
+
+			&::after {
+				right: -25px;
+				
+			}
+		}
+
+		&.active {
+			.text {
+				color: $red-base;
+			}
+		}
+
+		&.passed {
+			.text {
+				color: $blue-link;
+			}
+		}
+
+		&:first-child {
+			margin-left: 25px;
+		}
+
+		&:last-child {
+			margin-right: 25px;
+		}
+	}
+
+	.checkout-nav__link {
+		.num {
+			display: none;
+		}
+		.text {
+			text-transform: uppercase;
+			font-weight: 700;
+			color: #999;
+		}
+
+		&:hover {
+			.text {
+				color: $red-base;
+			}
+		}
+	}
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	
+}
+
+
+/* main-layout--checkout  End*/
+

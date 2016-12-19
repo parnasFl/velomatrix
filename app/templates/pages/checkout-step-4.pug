@@ -1,0 +1,175 @@
+extends ../layouts/main-layout--checkoutonly
+
+block title
+	title Потверждение заказа
+
+block content
+	.cart-wrapper.checkout-shipping.checkout-confirmation
+		include ../common/checkout-top
+		.checkout-nav
+			ul.checkout-nav__list
+				li.checkout-nav__item.passed
+					a.checkout-nav__link(href="#")
+						span.num 1
+						i.text Контактная информация
+				li.checkout-nav__item.passed
+					a.checkout-nav__link(href="#")
+						span.num 2
+						i.text Доставка
+				li.checkout-nav__item.passed
+					a.checkout-nav__link(href="#")
+						span.num 3
+						i.text оплата
+				li.checkout-nav__item.active
+					a.checkout-nav__link(href="#")
+						span.num 4
+						i.text Потверждение заказа
+		.checkout-main__steps
+			form
+				.checkout-main__steps-inner
+					.checkout__step-header
+						h2.checkout__step-title
+							span 4. Потверждение заказа
+					.checkout__step-content
+						.shipping-type.confirmation-top
+							.shipping-type__inner
+								ul.order__details-list
+									li.order__details-item.receiver
+										.item-details-wrapper
+											b Получатель:
+											strong  Сайдуллаев Фархад
+									li.order__details-item.shipping
+										.item-details-wrapper
+											span Доставка:
+											em  Курьер
+										.item-details-wrapper
+											b Адрес доставки:
+											strong.
+												Россиская Федерация, Московский область, Москва, улица Пушкина, дом 32, подъезд 1,
+												домофон 332
+									li.order__details-item.payment
+										.item-details-wrapper
+											span Оплата:
+											em  QIWI
+						.shipping-type.confirmation-bottom
+							.shipping-type__inner
+								h2.order-conf__title Состав заказа
+								.order__items-list-header
+									.name Наименование
+									.quantity Количество
+									.sum Сумма
+								table.order__goods-list
+									tr.checkout__main-tr
+										td.order__goods-item
+											table.inner-table
+												tr.main-item-row
+													td.item-image
+														a(href="#")
+															img(src="./img/img-item-1.jpg")
+													td.item-name
+														a.item-name__text(href="") Велосипед "Bulls" Bushtail 29 (2016)
+														span.item-marking Артикул: <i class="artikul-id">0BB101</i>
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 15 770
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 15 770
+														span.item-total__currency  Р.
+												tr.item-addon
+													td.item-image
+														i.three-dot
+													td.item-name
+														h5.item-name__text + Подарочная упаковка
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 100
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 100
+														span.item-total__currency  Р.
+												tr.item-addon
+													td.item-image
+														i.three-dot
+													td.item-name
+														h5.item-name__text + Собрать велосипед в магазине
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 970
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 970
+														span.item-total__currency  Р.
+									tr.checkout__main-tr
+										td.order__goods-item
+											table.inner-table
+												tr.main-item-row
+													td.item-image
+														a(href="#")
+															img(src="./img/img-item-1.jpg")
+													td.item-name
+														a.item-name__text(href="") Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.
+														span.item-marking Артикул: <i class="artikul-id">0BB101</i>
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 3300
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 15 770
+														span.item-total__currency  Р.
+									tr.checkout__main-tr
+										td.order__goods-item
+											table.inner-table
+												tr.main-item-row
+													td.item-image
+														a(href="#")
+															img(src="./img/img-item-1.jpg")
+													td.item-name
+														a.item-name__text(href="") Самокат "Globber" MY TOO 18.0 с ручн. тормозом
+														span.item-marking Артикул: <i class="artikul-id">0192-11-SB</i>
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 1990
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 15 7700
+														span.item-total__currency  Р.
+								.confirmation-bottom__discount
+									.discount-text Скидка
+									.discount-amount
+										.num -100
+										.currency Р.
+								.confirmation-bottom__total
+									.discount-text Итоговая стоимость без учета доставки:
+									.discount-amount
+										.num 29 770
+										.currency Р.
+								.confirmation-bottom__agreement
+									input(type="checkbox", id="agree")
+									label(for="agree").
+										Я ознакомился (ознакомилась) с <a href="#">Условиями предоставления</a> услуг и принимаю их
+								.confirmation-bottom__comments
+									label(for="conf-comments")
+									textarea(id="conf-comments")
+					.no-reg-checkout-btn
+						button(type="submit") закончить оформление заказа

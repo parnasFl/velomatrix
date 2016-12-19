@@ -1,6 +1,8 @@
 /* main-layout--checkout Styles */
-.cart-wrapper {
-	background-color: #f2f2f2;
+.wrapper--cart {
+	.page-footer__top {
+		display: none;
+	}
 }
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
@@ -13,7 +15,12 @@
 /* ============== Only Mobile&Tablet styles * 1023 * ======
 *******************************************************/
 @media (max-width: 1023px) {
+	.wrapper--cart {
 
+		.main-nav {
+			margin-bottom: 0;
+		}
+	}
 }//@media (max-width: 1023px) 
 
 
@@ -27,6 +34,11 @@
 /* ==============Tablet Media queries============
 *******************************************************/
 @media (min-width: 768px) {
+	.wrapper--cart {
+		.config {
+			display: none;
+		}
+	}
 	
 	
 	 
@@ -36,8 +48,8 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	.wrapper--checkout {
-
+	.wrapper--cart {
+		
 		.main-content__wrapper {
 			
 		}
@@ -53,6 +65,7 @@
 
 		.bottom-bar {
 			margin-left: 0;
+			border-bottom: 0;
 		}
 
 		.page-search {
@@ -61,6 +74,18 @@
 
 		.main-nav {
 			display: none;
+		}
+
+		.page-footer {
+			margin-left: 0;
+		}
+		.page-footer__bottom {
+			//margin-left: 0;
+			.main-content {
+				width: 960px;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 	}
 }
