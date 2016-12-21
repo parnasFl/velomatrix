@@ -36,9 +36,10 @@ block content
 								ul.shipping-info__list
 									li.shipping-info__item
 										.shipping-info__select-wrapper
-											input(type="radio", id="pickpoint",name="shipping")
-											label(for="pickpoint").
-												<b>Pickpoint - </b>
+											input(type="radio", id="pickpoint",name="shipping", class="js-checkoutSelect")
+											label(for="pickpoint")
+												img(src="img/img-picpoint.jpg")
+												b Pickpoint - 
 										.delivery-price <span>500</span> руб.
 									li.shipping-info__item.delivery-info.
 										Доставка осуществляется в постаматы и пункты выдачи PickPoint
@@ -53,8 +54,9 @@ block content
 								ul.shipping-info__list
 									li.shipping-info__item
 										.shipping-info__select-wrapper
-											input(type="radio", id="boxberry",name="shipping")
+											input(type="radio", id="boxberry",name="shipping", class="js-checkoutSelect")
 											label(for="boxberry")
+												img(src="img/img-boxberry.jpg")
 												b Boxberry - 
 										.delivery-alert.
 											Для расчета стоимости доставки укажите регион доставки
@@ -71,8 +73,9 @@ block content
 								ul.shipping-info__list
 									li.shipping-info__item
 										.shipping-info__select-wrapper
-											input(type="radio", id="pochta",name="shipping")
+											input(type="radio", id="pochta",name="shipping", class="js-checkoutSelect")
 											label(for="pochta")
+												img(src="img/img-pochtaru.jpg")
 												b Почта России - 
 										.delivery-price <span>2735,63</span> руб.
 										.styled

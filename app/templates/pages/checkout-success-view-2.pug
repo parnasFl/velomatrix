@@ -1,7 +1,62 @@
-extends ../layouts/main-layout
+extends ../layouts/main-layout--tablet-no-config
 
 block title
-	title Каталог пуст
+	title Ваш заказ оформлен
 
 block content
-	include ../common/catalog-top-empty
+	.checkout-success
+		.main-content
+			.success-block
+				.success__notification
+					.succes__ura Ура!
+					.success__done Ваш заказ оформлен!
+				.success-block__inner
+					form
+						.success-section
+							.success__thanks.
+								Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.
+							.success__num-text Номер вашего заказа
+							.success__num 100954
+						.success-section
+							.success-form-wrapper
+								.success__input-wrapper
+									label Мобильный телефон номер
+										input(type="tel", value="998912300001")
+									.example-text Пример, 79261234567
+								button.bill-btn(type="submit") Выставить счет QIWI
+						.success-section
+							.success-form-wrapper
+								.success__input-wrapper
+									label Мобильный телефон номер
+										input(type="tel", value="998912300001")
+									.example-text Пример, 79261234567
+								.error-wrapper
+									.success__input-error Укажите пожалуйста номер мобильного телефона
+								button.bill-btn(type="submit") Выставить счет QIWI
+						.success-section
+							.redirect-text.
+								 Перенаправление на сайт
+								«Яндекс.Денег» для оплаты... 
+							.success-form-wrapper
+								button.bill-btn(type="submit").
+									Оплатить заказ на сайте Яндекс.Деньги
+						.success-section
+							p.order-process-schedule
+								span.
+									Обработка заказов Понедельник-Пятница
+									с 9.00 до 18.00 по МСК. Суббота и
+									Восресение выходные
+							p.
+								Для контакта с нами, пожалуйста, используйте:
+							p
+								span Телефон : <a class="tel" href="#">+7 495 961-94-21</a>
+								span.
+									( <a class="callback" href="#">заказать обратный звонок</a> )
+							p
+								span Электронную почту:  
+								a(class="email" href="")  zakaz@velomatrix.ru
+						.success-section.bottom-links
+							.bottom-link
+								a(href="#") Посмотреть еще велосипедов
+							.bottom-link
+								a(href="#") Перейти на главную страницу

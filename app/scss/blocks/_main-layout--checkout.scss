@@ -38,10 +38,17 @@
 		.config {
 			display: none;
 		}
+
+		.page-footer__bottom {
+			padding-left: 0!important;
+			padding-right: 0!important;
+			//padding-bottom: 20px;
+		}
 	}
 	
 	
-	 
+	
+
 } //(min-width: 768px)
 
 
@@ -49,6 +56,11 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.wrapper--cart {
+
+		.main-content {
+			padding-left: 0!important;
+			padding-right: 0!important;
+		}
 		
 		.main-content__wrapper {
 			

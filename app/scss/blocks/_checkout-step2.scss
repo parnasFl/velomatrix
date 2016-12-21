@@ -20,9 +20,17 @@
 	label {
 		margin-left: 10px;
 		//line-height: 1;
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
 		b, strong {
 			font-size: 18px;
 			font-weight: 700;
+			vertical-align: middle;
+		}
+		b {
+			margin-left: 10px;
 		}
 	}
 

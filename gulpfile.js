@@ -46,12 +46,7 @@ gulp.task('pug', function () {
 
 //Compiling 1 PUG file
 gulp.task('pug-self', function () {
-	gulp.src([
-		'app/templates/pages/checkout-step-4.pug',
-		'app/templates/pages/catalog-empty.pug',
-		'app/templates/pages/checkout-success-view-1.pug',
-		'app/templates/pages/checkout-success-view-2.pug'
-		])
+	gulp.src(	'app/templates/pages/cart-empty.pug')
 	//gulp.src('app/*.pug')
 		.pipe(pug({
 			pretty: true
@@ -193,8 +188,8 @@ gulp.task('build', ['clean', 'pug'], function() {
 //========================Watch and Default================
 
 //Watch Tasks
-gulp.task('watch',['server', 'pug-self', 'scss', 'libs'], function () {
-	gulp.watch('app/**/*.pug', ['pug-self']);
+gulp.task('watch',['server', 'pug-self','pug', 'scss', 'libs'], function () {
+	gulp.watch('app/**/*.pug', ['pug-self', 'pug']);
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch('app/js/**/*.js', browserSync.reload);

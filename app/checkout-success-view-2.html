@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <title>cart-view1</title>
+    <title>Ваш заказ оформлен</title>
     <meta charset="utf-8">
     <meta name="description" content="Bicycles online Store">
     <meta name="keywords" content="bicycles">
@@ -17,6 +17,7 @@
 <!-- endbuild -->
 <link rel="stylesheet" href="css/fonts.min.css">
 <link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/style-cart.min.css">
 <!-- Custom Browsers Color Start -->
 <!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#000">
@@ -29,7 +30,7 @@
   <body><!--[if lt IE 10 ]>
 <p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
 <![endif]-->
-    <div class="wrapper wrapper--cart">
+    <div class="wrapper tablet-no-config">
       <div class="config">
         <div class="config__inner">
           <ul class="config-panel">
@@ -1324,191 +1325,68 @@
           </div>
         </nav>
         <main>
-          <div class="cart-wrapper">
-            <div class="cart-top">
-              <div class="main-content">
-                <div class="cart-top__header"><a class="cart-top__link cart-top__link--back" href=""><span>Назад к покупкам</span></a><a class="cart-top__link cart-top__link--checkout" href=""><span>Оформить заказ</span></a>
-                  <h2 class="cart-top__title">Корзина</h2>
+          <div class="checkout-success">
+            <div class="main-content">
+              <div class="success-block">
+                <div class="success__notification">
+                  <div class="succes__ura">Ура!</div>
+                  <div class="success__done">Ваш заказ оформлен!</div>
                 </div>
-                <div class="cart-top__notification">
-                  Этот заказ добавит +1099,9 бонусных баллов, которые вы затем сможете использовать для получения
-                  дополнительных скидок.
-                </div>
-              </div>
-            </div>
-            <div class="cart-main">
-              <div class="cart-items">
-                <ul class="cart-items__list">
-                  <li class="cart-item"><a class="cart-item__pic" href="#"><img src="img/img-item-4.jpg" alt="cart item"></a>
-                    <div class="cart-item__content">
-                      <div class="cart-item__content-wrapper">
-                        <div class="cart-item__descr"><a class="cart-item__descr-title" href="#">Самокат "Globber" MY TOO 18.0 с ручн. тормозом</a>
-                          <div class="cart-item__descr-marking">Артикул: 0192-11-SB</div>
+                <div class="success-block__inner">
+                  <form>
+                    <div class="success-section">
+                      <div class="success__thanks">Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.</div>
+                      <div class="success__num-text">Номер вашего заказа</div>
+                      <div class="success__num">100954</div>
+                    </div>
+                    <div class="success-section">
+                      <div class="success-form-wrapper">
+                        <div class="success__input-wrapper">
+                          <label>Мобильный телефон номер
+                            <input type="tel" value="998912300001">
+                          </label>
+                          <div class="example-text">Пример, 79261234567</div>
                         </div>
-                      </div>
-                      <div class="cart-item__options">
-                        <div class="cart-item__options-price">
-                          <div class="price-text">Цена</div>
-                          <div class="price-block">
-                            <div class="price-block__amount">15 770 Р.</div>
-                          </div>
-                        </div>
-                        <div class="cart-item__options-count">
-                          <label class="cart-item__label">Кол-во</label>
-                          <div class="styled">
-                            <select>
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">33</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div><a class="cart-item__delete">Удалить товар</a>
-                  </li>
-                  <li class="cart-item"><a class="cart-item__pic" href=""><img src="img/img-item-1.jpg" alt="cart item"></a>
-                    <div class="cart-item__content">
-                      <div class="cart-item__content-wrapper">
-                        <div class="cart-item__descr"><a class="cart-item__descr-title" href="#">Велосипед "Bulls" Bushtail 29 (2016)                         </a>
-                          <div class="cart-item__descr-marking">Артикул: 0292</div>
-                        </div>
-                        <div class="cart-item__descr-option">
-                          <div class="option-wrapper">
-                            <input type="checkbox" id="pokrishka">
-                            <label for="pokrishka">Покрышка</label>
-                          </div>
-                          <div class="option-wrapper">
-                            <div class="select-option styled">
-                              <select>
-                                <option value="1">Ultrathin SCOTT - 2000 р.</option>
-                                <option value="2">Ultrathin SCOTT - 3000 р.</option>
-                                <option value="3">Ultrathin SCOTT - 4000 р.</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cart-item__options">
-                        <div class="cart-item__options-price">
-                          <div class="price-text">Цена</div>
-                          <div class="price-block">
-                            <div class="price-block__amount new">2900 Р.</div>
-                            <div class="price-block__amount old">3300 Р.</div>
-                          </div>
-                          <div class="advantage-badge">
-                            <div class="advantage-badge__label" style="background-color: #6cbf00">экономия <i>10%</i></div>
-                          </div>
-                        </div>
-                        <div class="cart-item__options-count">
-                          <label class="cart-item__label">Кол-во</label>
-                          <div class="styled">
-                            <select>
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">3</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div><a class="cart-item__delete">Удалить товар</a>
-                  </li>
-                  <li class="cart-item"><a class="cart-item__pic" href=""><img src="img/img-item-1.jpg" alt="cart item"></a>
-                    <div class="cart-item__content">
-                      <div class="cart-item__content-wrapper">
-                        <div class="cart-item__descr"><a class="cart-item__descr-title" href="#">Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.</a>
-                          <div class="cart-item__descr-marking">Артикул: 0292</div>
-                        </div>
-                        <div class="cart-item__descr-option">
-                          <div class="option-wrapper">
-                            <input type="checkbox" id="spec-pack">
-                            <label for="spec-pack">Специальная упаковка</label>
-                          </div>
-                          <div class="option-wrapper">
-                            <div class="select-option styled">
-                              <select disabled>
-                                <option value="1">Из дверева - 1200 р.</option>
-                                <option value="2">Из дверева - 12003 р.</option>
-                                <option value="3">Из дверева - 120220 р.</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cart-item__options">
-                        <div class="cart-item__options-price">
-                          <div class="price-text">Цена</div>
-                          <div class="price-block">
-                            <div class="price-block__amount">15 770 Р.</div>
-                          </div>
-                        </div>
-                        <div class="cart-item__options-count">
-                          <label class="cart-item__label">Кол-во</label>
-                          <div class="styled">
-                            <select>
-                              <option value="1">1</option>
-                              <option value="1">2</option>
-                              <option value="1">3</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                    </div><a class="cart-item__delete">Удалить товар</a>
-                  </li>
-                </ul>
-                <div class="cart-item__bottom">
-                  <div class="cart-item__bottom-content">
-                    Вы можете использовать свой партнерский бонус в <b>205730</b> баллов для получения дополнительной скидки в размере
-                    <strong>44 870 Р. </strong>
-                  </div><a class="cart-item__bottom-btn" href="#">использовать бонусные баллы</a>
-                </div>
-              </div>
-              <div class="cart-checkout">
-                <div class="cart-checkout__inner">
-                  <div class="cart-checkout__cost-wrapper">
-                    <div class="cart-checkout__cost">
-                      <div class="cart-checkout__cost-container">
-                        <div class="cart-checkout__cost-text">Подытог</div>
-                        <div class="cart-checkout__cost-amount">69 770 р.</div>
-                      </div>
-                      <div class="cart-checkout__cost-container">
-                        <div class="cart-checkout__cost-text">скидка</div>
-                        <div class="cart-checkout__cost-amount">-100 р.</div>
+                        <button class="bill-btn" type="submit">Выставить счет QIWI</button>
                       </div>
                     </div>
-                    <div class="cart-checkout__cost-final">
-                      <div class="cost-final-text"><span>Итого</span><em>без учета стоимости<br> доставки</em></div>
-                      <div class="cost-final-amount">69 670 Р.</div>
-                    </div>
-                    <div class="cart-checkout__btn-wrapper">
-                      <button class="cart-checkout__checkout-btn">Оформить заказ</button>
-                      <button class="cart-checkout__checkout-tel-buy">купить это заказ по телефону</button>
-                    </div>
-                  </div>
-                  <div class="cart-checkout__coupon"><a class="coupon__btn" href=""><span>Активировать купон</span></a>
-                    <form>
-                      <div class="checkout-coupon-container">
-                        <div class="checkput-coupon-input">
-                          <label>Введите код купон</label>
-                          <input value="" placeholder="Введите код купона">
+                    <div class="success-section">
+                      <div class="success-form-wrapper">
+                        <div class="success__input-wrapper">
+                          <label>Мобильный телефон номер
+                            <input type="tel" value="998912300001">
+                          </label>
+                          <div class="example-text">Пример, 79261234567</div>
                         </div>
-                        <button class="checkout-coupon-btn" type="submit">активировать</button><span class="coupon-error">Неверный код купона</span>
+                        <div class="error-wrapper">
+                          <div class="success__input-error">Укажите пожалуйста номер мобильного телефона</div>
+                        </div>
+                        <button class="bill-btn" type="submit">Выставить счет QIWI</button>
                       </div>
-                    </form>
-                  </div>
-                  <div class="cart-checkout__bottom">
-                    <div class="cart-checkout__payments">
-                      <h6 class="cart-checkout__payments-title">Онлайн оплата, в кредит и рассрочку</h6>
-                      <ul class="cart-checkout__payments-list">
-                        <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
-                        <li class="cart-checkout__payments-item"><img src="img/img-mastercard.jpg"></li>
-                        <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
-                        <li class="cart-checkout__payments-item"><img src="img/img-mastercard.jpg"></li>
-                        <li class="cart-checkout__payments-item"><img src="img/img-visa.jpg"></li>
-                      </ul>
                     </div>
-                    <div class="cart-checkout__delivery"><strong>Доставка <b>бесплатно</b></strong> <br>в пределах МКАД</div>
-                    <div class="cart-checkout__address"><span>Самовывоз:</span><a href="">м. Сокольники,<br>Сокольническая пл. дом 9, кв. 2</a></div>
-                  </div>
+                    <div class="success-section">
+                      <div class="redirect-text">
+                         Перенаправление на сайт
+                        «Яндекс.Денег» для оплаты... 
+                      </div>
+                      <div class="success-form-wrapper">
+                        <button class="bill-btn" type="submit">Оплатить заказ на сайте Яндекс.Деньги</button>
+                      </div>
+                    </div>
+                    <div class="success-section">
+                      <p class="order-process-schedule"><span>
+                          Обработка заказов Понедельник-Пятница
+                          с 9.00 до 18.00 по МСК. Суббота и
+                          Восресение выходные</span></p>
+                      <p>Для контакта с нами, пожалуйста, используйте:</p>
+                      <p><span>Телефон : <a class="tel" href="#">+7 495 961-94-21</a></span><span>( <a class="callback" href="#">заказать обратный звонок</a> )</span></p>
+                      <p><span>Электронную почту:  </span><a class="email" href=""> zakaz@velomatrix.ru</a></p>
+                    </div>
+                    <div class="success-section bottom-links">
+                      <div class="bottom-link"><a href="#">Посмотреть еще велосипедов</a></div>
+                      <div class="bottom-link"><a href="#">Перейти на главную страницу</a></div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

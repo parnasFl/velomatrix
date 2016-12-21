@@ -71,11 +71,23 @@
 /* Footer Page Styles */
 @import "blocks/_footer";
 
-/* Checkout */
+/* Cart */
 @import "blocks/_main-layout--checkout";
 @import "blocks/_cart-wrapper";
 @import "blocks/_cart-top";
 @import "blocks/_cart-main";
+@import "blocks/_empty-cart";
+
+/* Checkout */
+@import "blocks/_ml-checkoutonly";
+@import "blocks/_checkout-top";
+@import "blocks/_checkout-step0";
+@import "blocks/_checkout-nav";
+@import "blocks/_checkout-step1";
+@import "blocks/_checkout-step2";
+@import "blocks/_checkout-step4";
+@import "blocks/_checkout-success";
+@import "blocks/_catalog-empty";
 
 //Customized vendor less/css style
 

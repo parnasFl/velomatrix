@@ -36,8 +36,9 @@ block content
 								ul.shipping-info__list
 									li.shipping-info__item
 										.shipping-info__select-wrapper
-											input(type="radio", id="pickpoint",name="shipping")
-											label(for="pickpoint")
+											input(type="radio", id="webmoney",name="payment", class="js-checkoutSelect")
+											label(for="webmoney")
+												img(src="img/img-webmoney.jpg")
 												b Webmoney
 									li.shipping-info__item.delivery-info.
 										Прием платежей через платежную систему WebMoney
@@ -46,16 +47,18 @@ block content
 								ul.shipping-info__list
 									li.shipping-info__item
 										.shipping-info__select-wrapper
-											input(type="radio", id="boxberry",name="shipping")
-											label(for="boxberry")
+											input(type="radio", id="cash",name="payment", class="js-checkoutSelect")
+											label(for="cash")
+												img(src="img/img-cash.jpg")
 												b Наличные
 						.shipping-type
 							.shipping-type__inner
 								ul.shipping-info__list
 									li.shipping-info__item
 										.shipping-info__select-wrapper
-											input(type="radio", id="pochta",name="shipping")
-											label(for="pochta")
+											input(type="radio", id="yandex",name="payment", class="js-checkoutSelect")
+											label(for="yandex")
+												img(src="img/img-yandexm.jpg")
 												b Яндекс.Деньги
 									li.shipping-info__item.delivery-info.
 										Платежная система <a href="">«Яндекс.Деньги»</a>

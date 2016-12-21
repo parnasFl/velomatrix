@@ -108,14 +108,24 @@
 			padding-left: 20px;
 			padding-right: 20px;
 		}
+
+
 	}
 
 	.empty-cart {
 		padding-top: 95px;
 	}
 
+	.wrapper--empty {
+		.config {
+			display: none;
+		}
+	}
+
 	.wrapper--empty .item-carousel {
 		padding-left: 20px;
+
+		
 	}
 }
 
@@ -132,12 +142,12 @@
 *******************************************************/
 @media (min-width: 1024px) {
 	.item-page__wrapper.cart-empty__wrapper {
-		margin-left: 0;
+		//margin-left: 0;
 	}
 
 	.wrapper--empty {
 		.top-bar, .bottom-bar, .main-nav {
-			margin-left: 0;
+			//margin-left: 0;
 		}
 	}
 }

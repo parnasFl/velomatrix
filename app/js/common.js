@@ -1425,6 +1425,74 @@ $(function(){
 
 				});
 			})();
+
+			/*---------Checkout coupon enter
+			============================================*/
+
+			(function(){
+
+				$('.coupon__btn').on('click', function(e){
+					e.preventDefault();
+
+					var that = $(this),
+							couponEnter = $('.checkout-coupon-container');
+
+					couponEnter.slideToggle('fast', function(){
+						if(that.hasClass('bd-bottom')) {
+							that.removeClass('bd-bottom');
+						}
+						else {
+							that.addClass('bd-bottom');
+						}
+					});
+				});
+
+			})();
+
+			/*---------Checkout choose shipping
+			============================================*/
+
+			(function(){
+
+				var $shippingType = $('input:radio[class=checkoutSelect]');
+
+			$shippingType.on('ifChecked', function(event){
+					var that = $(this),
+							parent = that.closest('.shipping-type'),
+							siblings = parent.siblings('.shipping-type');
+
+							if(!parent.hasClass('checked')) {
+								parent.addClass('checked');
+								parent.css('border-color', '#6699cc');
+							}
+							if (siblings.hasClass('checked')) {
+								siblings.removeClass('checked');
+								siblings.css('border-color', '#e5e5e5');
+							}
+				});
+
+				
+
+			})();
+
+			/*---------Checkout register new user
+			============================================*/
+
+			(function(){
+
+				var $checkStep1 = $('input:checkbox[id=regCheckout]');
+
+			 $checkStep1.on('ifToggled', function(event){
+					var that = $(this),
+							parent = that.closest('.reg-info__top'),
+							step1Form = parent.find('.no-reg__form-wrapper.new-user');
+
+							step1Form.slideToggle();
+				});
+
+				
+
+			})();
 }); // Jquery $ Function ...similar-items
 
 
