@@ -51,7 +51,18 @@
 
 @media (min-width: 1024px) {
 	.main-content {
-		width: 96.405463695183%;
-		border-right: 1px solid $bd-grey;
+		//width: 96.405463695183%;
+		width: 100%;
+		//border-right: 1px solid $bd-grey;
+		//margin-left: 51px;
+	}
+
+	main {
+		.main-content {
+		//margin-left: auto;
+		//margin-right: auto;
+		//position: relative;
+		//width: auto;
+	}
 	}
 }

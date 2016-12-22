@@ -35,12 +35,32 @@ gulp.task('pug', function () {
 		.pipe(wiredep({
 				//directory: './app/js/vendor',
 				ignorePath: /^(\.\.\/)*\.\./,
-				exclude: ['app/js/vendor/slick-carousel/slick/slick.css']
+				exclude: './app/js/vendor/picturefill/dist/picturefill.min.js'
 		}))
-		.on('error', log)
+		//.on('error', log)
+		//.pipe(prettify({indent_size: 2}))
+		.pipe(gulp.dest('app/'))
+		//.pipe(reload({stream: true}));
+		.pipe(browserSync.stream());
+});
+
+//Compiling 1 PUG file
+gulp.task('pug-self', function () {
+	gulp.src(	'app/templates/pages/cart-empty.pug')
+	//gulp.src('app/*.pug')
+		.pipe(pug({
+			pretty: true
+		}))
+		.pipe(wiredep({
+				//directory: './app/js/vendor',
+				ignorePath: /^(\.\.\/)*\.\./,
+				exclude: './app/js/vendor/picturefill/dist/picturefill.min.js'
+		}))
+		//.on('error', log)
 		//.pipe(prettify({indent_size: 2}))
 		.pipe(gulp.dest('app/'))
 		.pipe(reload({stream: true}));
+		//.pipe(browserSync.stream());
 });
 
 //SCSS Task
@@ -60,10 +80,9 @@ gulp.task('scss', function () {
 gulp.task('libs', function() {
 	return gulp.src([
 		//'app/js/libs/slick.min.js',
-		//'app/js/libs/jquery.hoverontouch.js'
 		'app/js/libs/jquery.hoverdelay.min.js',
-		'app/js/libs/jquery.selectric.min.js'
-		//'app/js/vendor/jquery.nicescroll/dist/<jquery class="nicescroll"></jquery>.min.js'
+		'app/js/libs/jquery.selectric.min.js',
+		'app/js/libs/perfect-scrollbar.jquery.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
@@ -169,8 +188,8 @@ gulp.task('build', ['clean', 'pug'], function() {
 //========================Watch and Default================
 
 //Watch Tasks
-gulp.task('watch',['server', 'pug', 'scss', 'libs'], function () {
-	gulp.watch('app/**/*.pug', ['pug']);
+gulp.task('watch',['server', 'pug-self','pug', 'scss', 'libs'], function () {
+	gulp.watch('app/**/*.pug', ['pug-self', 'pug']);
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
@@ -186,17 +205,17 @@ gulp.task('default', ['server', 'watch']);
 //*************Functions************
 //============================================
 
-var log = function (error) {
-	console.log([
-		'',
-		//'-------------ERROR MESSAGE START--------------',
-		('[' + error.name + ' in' + error.plugin + ']'),
-		error.message,
-		//'-------------ERROR MESSAGE END----------------',
-		''
-].join('\n'));
-this.end();
-};
+// var log = function (error) {
+// 	console.log([
+// 		'',
+// 		//'-------------ERROR MESSAGE START--------------',
+// 		('[' + error.name + ' in' + error.plugin + ']'),
+// 		error.message,
+// 		//'-------------ERROR MESSAGE END----------------',
+// 		''
+// ].join('\n'));
+// this.end();
+// };
 
 
 gulp.task('clear', function () {

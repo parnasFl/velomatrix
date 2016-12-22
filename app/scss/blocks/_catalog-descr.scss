@@ -2,8 +2,6 @@
 .catalog-descr {
 	border-bottom: 1px solid $bd-grey;
 	border-top: 1px solid $bd-grey;
-	padding-left: 10px;
-	padding-right: 10px;
 }
 
 .catalog-descr__image {
@@ -44,7 +42,10 @@
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
 @media (max-width: 767px) {
-	
+	.catalog-descr {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 }
 

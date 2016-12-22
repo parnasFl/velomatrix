@@ -236,6 +236,26 @@
 		padding-top: 20px;
 		padding-left: 30px;
 		padding-right: 30px;
+		margin-left: 51px;
+		margin-bottom: 30px;
+		@media (min-width: 1681px) {
+			margin-left: 0;
+		}	
+		.main-content {
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1341px;
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+			}	
+
+			.breadcrumb {
+				margin-left: 0;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 
 		.item-feedback-wrapper {
 			width: 727px;

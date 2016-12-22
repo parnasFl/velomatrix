@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <title>CHECKOUT - step 0</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Bicycles online Store">
+    <meta name="keywords" content="bicycles">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta property="og:image" content="path/to/image.jpg">
+<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+<!-- build:css css/vendor.min.css -->
+<!-- bower:css -->
+<!-- endbower -->
+<!-- endbuild -->
+<link rel="stylesheet" href="css/fonts.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<!-- Custom Browsers Color Start -->
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#000">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#000">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+<!-- Custom Browsers Color End -->
+  </head>
+  <body><!--[if lt IE 10 ]>
+<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
+<![endif]-->
+    <div class="wrapper wrapper--cart wrapper--checkout">
+      <div class="config"></div>
+      <div class="main-content__wrapper">
+        <header class="page-header">
+          <div class="top-bar">
+            <div class="main-content"><a class="top-bar__toggle" href="#"><span class="top-bar__toggle-text">Top Menu Toggle</span></a><a class="top-bar__search-toggle" href="#"><span class="top-bar__search-toggle-icon"><img src="img/icon-search.svg" height="16" width="16"></span><span class="top-bar__search-toggle-text">Поиск</span></a>
+              <div class="top-bar__address"><span class="top-bar__address-icon"><img src="img/icon-gps.svg" width="16" height="20" alt="gps icon"></span><a class="top-bar__address-text" href="#"><span>м. Сокольники, Сокольническая площадь, д.9, к.2</span></a></div>
+              <ul class="top-bar__nav">
+                <li class="mobile-menu-header"><a class="mobile-menu__close-btn" href="">Закрыть</a>
+                  <div class="mobile-menu__title">Меню</div>
+                </li>
+                <li class="top-bar__menu">
+                  <ul class="top-bar__menu-list">
+                    <li class="top-bar__menu-item top-bar__menu-item--iconed"><span class="top-bar__menu-icon"><img src="img/icon-ski.svg" width="18" height="15"></span><a class="top-bar__menu-link" href="#">Зимные товары</a></li>
+                    <li class="top-bar__menu-item"><a class="top-bar__menu-link" href="#">Доставка и оплата</a></li>
+                    <li class="top-bar__menu-item"><a class="top-bar__menu-link" href="#">Для партнеров</a></li>
+                    <li class="top-bar__menu-item"><a class="top-bar__menu-link" href="#">Контакты</a></li>
+                    <li class="top-bar__menu-item"><a class="top-bar__menu-link" href="#">Контакты</a></li>
+                  </ul>
+                </li>
+                <li class="top-bar__user"><a class="top-bar__user-link" href="#"><span class="top-bar__user-text">Личный кабинет</span></a>
+                  <ul class="top-bar__user-menu">
+                    <li class="user-menu__item"><a href="">Вход в кабинет</a></li>
+                    <li class="user-menu__item"><a href="">Регистрация</a></li>
+                  </ul>
+                </li>
+              </ul><a class="top-bar__phone-toggle" href="#"><span class="top-bar__search-toggle-icon"><img src="img/icon-phone.svg" height="16" width="16"></span><span class="top-bar__phone-toggle-text">Телефон</span></a>
+              <div class="cart"><a class="cart__btn" href="#"><span class="cart__btn-pre-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 475 442"><style>.st0{fill:#000;}</style><path class="st0" d="M197.8 262.3c4 9.5 7.5 18.6 14.5 25.8 4.7 4.9 10.6 6.6 17.2 6.6 59.2 0 118.3 0 177.5-.1 6.5 0 11.8 2.1 15.4 7.6 6.5 9.9-.3 23.5-12.3 24.6-1.5.1-3 .1-4.5.1-57.3 0-114.7-.3-172 .1-26.1.2-44.5-10.9-56.7-33.5-9.9-18.3-16.1-37.9-23-57.4-15.9-45.4-31.8-90.8-47.6-136.3-4.4-12.6-9-25-17.6-35.6-6.8-8.3-15.5-12.3-26.2-12.2-8.2.1-16.3.1-24.5 0-9.8-.1-16.8-6.8-16.9-15.9-.1-9.3 7.1-16.3 17.1-16.2 12.6.1 25.4-1.1 37.9 1.2 19.4 3.6 33.3 15 43.8 31.2 5.6 8.7 10.2 17.9 13.5 27.7 1.2 3.6 3 4.6 6.8 4.6 79.3-.1 158.6-.1 238-.1 13.5 0 27-.1 40.5.1 9.9.1 19.1 2.6 26.5 9.6 9.8 9.3 12.1 21.2 9.6 33.5-6.1 30.5-14.3 60.5-29.1 88.2-5.1 9.6-11.2 18.5-18.9 26.3-13.2 13.3-29 20.1-47.9 20-51.7-.1-103.3 0-155 0-1.9.1-3.7.1-6.1.1zm178.4-113.5c.1 9.4 7 16.5 16.4 16.6 8.6.1 16.1-7.3 16-15.9 0-9.5-7.4-16.6-17-16.4-8.2.1-15.5 7.6-15.4 15.7zm-161.3 0c.1-8.2-7.4-15.6-16-15.8-8.9-.1-16.3 7.2-16.4 16-.1 8.5 7 16.1 15 16.3 9.9.3 17.2-6.7 17.4-16.5zm96.8 49.1c.1-8.6-7.1-16-15.6-16.2-9.3-.2-16.6 6.8-16.8 16-.2 8.6 7.3 16.2 16.1 16.2 8.9.1 16.3-7.2 16.3-16zm.1-48.7c.1 9.1 7.1 16.2 16.1 16.1 9 0 16.1-7.2 16.1-16.2 0-9.1-7.5-16.3-16.6-16.2-8.6.3-15.7 7.7-15.6 16.3zm-32.5-.2c-.1-8.9-7.5-16.2-16.3-16-9.2.2-16.2 7.7-16 16.9.2 8.5 7.6 15.5 16.3 15.4 9 0 16.1-7.3 16-16.3zm96.9 48.9c.1-9-6.9-16.1-16-16.3-8.6-.1-16 6.9-16.2 15.5-.2 9.2 6.9 16.7 16 16.8 8.9.1 16.1-7 16.2-16zm-161.3-.1c0 8.9 7.4 16.2 16.1 16.1 9.2-.1 16.2-7.5 16.1-16.7-.1-8.5-7.4-15.6-16.1-15.6-9.1.1-16.2 7.2-16.1 16.2zM384.2 424c-22.2 0-40.2-18.1-40.3-40.3 0-22.3 18-40.5 40.2-40.5 22.4-.1 40.8 18.3 40.6 40.7 0 22-18.3 40.1-40.5 40.1zM263.1 383.6c0 22.3-18 40.3-40.1 40.4-22.4 0-40.6-18.2-40.5-40.7.1-22.2 18.3-40.3 40.5-40.2 22.2.1 40.2 18.3 40.1 40.5z"/></svg></span>
+                  <div class="cart__btn-text">В корзине <i>10</i> товаров</div><span class="cart__btn-post-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 493 351"><style>.st0{fill:#020202;}</style><path class="st0" d="M362.5 208.9H55.1c-19 0-33.5-13.5-34-31.4-.4-17.7 13.5-32.5 31.1-33.3 2-.1 4 0 6 0h298.5c1.9 0 3.9.5 6.8-.8-1.7-1.4-3.1-2.5-4.3-3.7-23.4-23.3-46.8-46.5-70.1-69.9-9.7-9.7-11.9-22.7-6.5-35 5.5-12.5 17.5-20.1 31-19.5 7.8.3 14.6 3.3 20.1 8.8 43.8 43.7 87.6 87.3 131.2 131.1 11.9 12 11.9 29.8.6 42.4-1.9 2.1-3.9 4.1-5.9 6.1-41.5 41.4-83.1 82.9-124.5 124.3-9.2 9.2-20 12.5-32.4 8.6-12.3-3.9-19.7-12.7-22.3-25.3-2.2-11.2 1.5-20.6 9.5-28.6 23-22.9 46-45.9 69-68.8 1.3-1.3 2.8-2.3 4.2-3.5-.1-.6-.4-1.1-.6-1.5z"/></svg></span></a></div>
+            </div>
+          </div>
+          <div class="bottom-bar">
+            <div class="main-content">
+              <div class="page-logo"><a class="page-logo__link" href="#"><span class="page-logo__img">
+                    <picture>
+                      <source media="(min-width:768px)" srcset="img/logo-desktop@3x.png"><img src="img/logo_mobile.png" alt="Logo" width="83" height="15">
+                    </picture></span><span class="page-logo__slogan">велосипеды и запчасти</span></a></div>
+              <div class="page-search">
+                <div class="page-search__wrapper">
+                  <form class="search">
+                    <input class="search__input" type="search" placeholder="Введите название товара ...">
+                    <button class="search__btn"><span class="submit-icon"><img src="img/icon-search.svg" width="16" height="16"></span><span class="submit-text">Поиск</span></button>
+                  </form><a class="search__delete" href="#">
+                    <div class="search__delete-icon"></div>
+                    <div class="search__delete-text">Удалить Форму Поиска</div></a>
+                </div>
+                <div class="page-search__hint">
+                  <div class="page-search__hint-wrapper"><span>Например:</span><a href="">Cube DMX Sport</a></div>
+                </div>
+              </div>
+              <div class="page-support">
+                <ul class="page-support__list">
+                  <li class="page-support__phone"><a href="tel:+74959619421">+7 495 961-94-21</a></li>
+                  <li class="page-support__working-hours">Ежедневно с 10:00 до 20:00</li>
+                  <li class="page-support__callback"><a class="page-support__callback-btn" href="#">обратный звонок</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="cart-wrapper">
+            <div class="checkout-top">
+              <div class="main-content">
+                <div class="checkout-top__inner"><a class="checkout-top__cartback" href="">Назад в корзину</a>
+                  <h1 class="checkout-top__title">Оформление заказа</h1>
+                  <div class="checkout-top__order-total">Сумма заказа:<span> 65 770</span> Р.</div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-main">
+              <div class="checkout__first-buy">
+                <div class="checkout__first-buy-inner">
+                  <div class="checkout__if-first-buy">Если покупаете впервые</div>
+                  <div class="checkout__show-button">нажимаем на эту кнопку</div><a class="checkout__continue-btn" href="">Продолжить оформление</a>
+                </div>
+              </div>
+              <div class="checkout__login-form">
+                <form>
+                  <div class="checkout__login-form-inner">
+                    <h6 class="checkout__login-form-title">У меня есть аккаунт</h6>
+                    <div class="checkout__input-wrap">
+                      <label>E-mail
+                        <input name="">
+                      </label>
+                    </div>
+                    <div class="checkout__input-wrap">
+                      <label>Парол
+                        <input name="" type="password">
+                      </label>
+                    </div>
+                    <div class="checkout__login-footer">
+                      <button type="submit">Войти</button><a class="checkout__forgot-pass" href="">Забыли парол</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="checkout__login-social">
+                <div class="checkout__login-social-inner">
+                  <h6 class="checkout__login-social-title">
+                    Используйте аккаунт соцсети для
+                    оформление заказа
+                  </h6>
+                  <div class="checkout__login-social-wrap">
+                    <ul class="social-login__list">
+                      <li class="social-item vk"><a href="#" style="background-color: #50739b">Вконтакте2<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M26.4 17.3c.6-1.2 1.7-1.6 2.9-1.8 3.9-.7 7.8-.6 11.7-.2 2.5.2 3.7 1.6 3.5 4.2-.1 3-.2 6-.2 9 0 1.3-.1 2.9 1.4 3.5 1.5.6 2.5-.7 3.3-1.6 3.1-3.3 5.6-7 7.5-11.1.8-1.9 2-2.6 4-2.5 3.6.1 7.2-.1 10.7 0 2.8 0 3.5 1.1 2.2 3.6-2.1 3.8-5.1 6.9-8 10.2-4.1 4.6-4.1 4.8.7 8.7 2.6 2.1 5.2 4.2 7.1 6.9 1.5 2.1 1 3.7-1.6 3.8-4.1.3-8.3.3-12.5.1-2-.1-3.6-1.5-5.1-2.9-1.5-1.4-3-2.9-4.6-4.2-2-1.5-3.5-1-4.5 1.4-.2.5-.4 1.1-.5 1.7-.6 4.2-.6 4.1-4.8 4.2-9.8.4-17.6-3.6-23.8-10.9-5.1-6-9.2-12.6-12.9-19.6-1-2-.6-2.8 1.6-2.9 3.4-.1 6.8-.1 10.2-.1 1.6 0 2.5 1.1 3.1 2.5 1.7 3.5 3.8 6.8 6.3 9.9.8 1 1.8 2 2.8 2.8 1.2.8 2.5.7 2.9-1 .9-3.6.9-7.2 0-10.8-.2-2.2-2.1-2.2-3.4-2.9z"/></svg></span></a></li>
+                      <li class="social-item fb"><a href="" style="background-color: #3a5a9a">FaceBook<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M24.4 21.9h9.1c-.4 3.1-.7 6-1.1 9.2h-8.2v27.7H12.1V31.2H6.2V22h5.9v-7.2c0-6.8 3.1-10.5 9.8-11.2 3.8-.4 7.6-.1 11.5-.1v9.6h-5.6c-2.7.1-3.6.9-3.6 3.6v4c0 .4 0 .6.2 1.2z"/></svg></span></a></li>
+                      <li class="social-item google"><a href="" style="background-color: #cd2d2d">Google +<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M40.7 11.9L35 17.3c-7.6-4.3-13.6-4.1-18.6.6-4.4 4.1-5.6 10.6-3.1 16 2.6 5.4 8.5 8.7 14.3 7.9 5.8-.8 9.8-4.2 10.7-9.4H26.1v-7.3h20.8c2.2 9.9-3.2 20-12.5 23.4-10.8 4-22.9-.3-28.2-10.2-5.2-9.6-2.5-21.6 6.4-28 8.5-6.3 21-5.6 28.1 1.6zM61.9 37.5v-6.3h-6.1V25h6.1v-6.3h6.2v5.9c2.2.7 4.2.1 6.2.5.4 1.9.2 3.9.1 6h-5.9c-.8 2.1-.1 4.1-.6 6.2-1.9.4-3.9 0-6 .2z"/></svg></span></a></li>
+                      <li class="social-item tw"><a href="" style="background-color: #2fc3f0">Twitter<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M70.5 20.5c-1 2.3-3.4 2.6-5.7 3.7 2.2.6 3.9.8 6.3.7-1.9 1.9-3.9 2.5-6 2.6-1 .1-1.7.3-2 1.4-3.8 10.8-12.2 16.3-22.7 18.9-12.1 2.9-23.1.7-32.4-8-.3-.3-.5-.6-.8-.9l.5-.5c7.2 3.2 14 3.1 20.4-1.9.3-.2.6-.4 1.1-.7-1.6-.7-3.1-.7-4-1.9-1.2-1.6.1-2.6 1-3.8-2.8-.6-5.6-1.3-6.9-4.2.7-1.1 2-1.2 3.1-2-2.9-1.3-5.5-2.6-6-5.9.8-.8 1.9-.6 3.1-1.1-2.5-2-4.9-4-4.9-7.9 7.7 3 15.6 5.4 22.1 11 .8-1.7 1.5-3.3 2.2-4.9 1.3-2.9 3-5.5 5.1-8 1.9-2.2 4.4-2.4 7-2.6h-.1c.7 1.9 2.6-.4 3.5 1.2-.8 1.7-2.7 1.4-4.2 2.1.8 1.1 1.9.6 2.8.9 4.8 1.7 8.2 4.9 9.6 9.7.7 2.4 2 2.7 4 2.5l3.7-.6.2.2z"/><path class="st0" d="M7.1 38.8c-.2-.3-.4-.5-.6-.8l.1-.1c.4 0 .8.1 1 .5-.2.1-.3.3-.5.4zM51 4.5v-.3h.2c0 .1-.1.2-.2.3zM70.3 20.4c.1-.2.3-.3.5-.1l-.3.3c0-.1-.1-.2-.2-.2z"/><path class="st0" d="M6.5 38c-.2 0-.5-.1-.3-.4.2-.2.3 0 .4.2 0 .1-.1.2-.1.2z"/></svg></span></a></li>
+                      <li class="social-item ya"><a href="" style="background-color: #ffffff">Yandex<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#ed0000;}</style><path class="st0" d="M45.4 2v56.7c-1.9.5-3.9.2-6.1.2V38.2c-2.7-.8-4.3-.3-5.6 2.3-2.6 5.3-5.7 10.5-8.4 15.8-1 2-2.2 3.1-4.6 2.7-1.3-.2-2.6.2-4.4-.5 4.2-7.2 8.4-14.3 12.5-21.3 0-.9-.7-.8-1-1C20 32 17 24.3 19.4 14.8 21.5 6.5 27.4 2 36.2 2h9.2zm-6.3 30.8V7c-8.1-.7-12.2 1.9-13.4 9.3-1.6 10.3 2.6 18 13.4 16.5z"/></svg></span></a></li>
+                      <li class="social-item mail"><a href="" style="background-color: #108fe5">Mail.Ru<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#FEAA25;}</style><path class="st0" d="M47.9 42.7c-9.1 5.7-16 5.1-21.6-1.7-5-6.1-4.5-14.9 1.1-20.7 4.5-4.6 12.4-7.1 20.3-.3.9-1.1 1.7-2.6 3.5-1.8 1.7.8 1.6 2.3 1.6 3.9v19c0 .9-.3 2 .9 2.3 1.3.4 1.7-.8 2.2-1.6 4-6.5 3.5-17.2-1-23-5.1-6.6-14.7-9.6-22.9-7-7.8 2.4-13.2 9.3-13.7 17.8-.9 14.6 11.8 24.8 25.8 20.6 1.6-.5 3.2-.7 4 1.2.8 2-.3 3.5-2.1 4.2-5.3 2.1-10.6 1.7-15.9.1-11.6-3.5-18.5-14-17.7-26.7.7-11.4 9.4-21.4 20.8-23.5 10.1-1.8 18.9.8 25.3 8.8 6.5 8.1 7.4 17.4 4 27.1-.8 2.4-2.3 4.4-4.1 6.2-1.9 1.9-4.1 2.5-6.6 1.6-2.5-.9-3.9-2.8-3.9-5.5.1-.3 0-.6 0-1zM28.4 31.6c0 6.1 3.7 10 9.3 10 5.7-.1 9.8-4.5 9.7-10.4-.1-5.8-4.2-10.1-9.8-10.1-5.5.1-9.2 4.3-9.2 10.5z"/></svg></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="page-footer">
+          <div class="page-footer__top">
+            <div class="page-footer__top-wrap">
+              <div class="main-content">
+                <ul class="page-footer__support-list">
+                  <li class="page-footer__support-tel"><span class="page-footer__support-tel-icon"><img src="img/icon-phone-stroked.svg" width="16" height="16" alt="icon"></span><span class="page-footer__support-tel-num">+7 495 961-94-21</span></li>
+                  <li class="page-footer__support-tel last-phone"><span class="page-footer__support-tel-icon"><img src="img/icon-phone-stroked.svg" width="16" height="16" alt="icon"></span><span class="page-footer__support-tel-num">+7 495 246-0-245</span></li>
+                  <li class="page-footer__support-schedule">Ежедневно с 10:00 до 20:00</li>
+                  <li class="page-footer__support-mail"><span class="social-icon"><img src="img/icon-send.svg" width="16" height="16" alt="icon"></span><a class="mail-address" href="mailto:info@velomatrix.ru">info@velomatrix.ru</a></li>
+                  <li class="page-footer__support-skype"><span class="social-icon"><img src="img/icon-skype.svg" width="15" height="15" alt="icon"></span><a class="skypel-address" href="skype:velomatrix?call">velomatrix</a></li>
+                </ul>
+                <dl class="footer-info-block">
+                  <dd>
+                    <h5 class="footer-info-block__title">Информация</h5>
+                  </dd>
+                  <dt>
+                    <ul class="footer-info-block__list">
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Доставка и оплата</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">О нас</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Размер рамы</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Обзоры новинок</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Карта сайта</a></li>
+                    </ul>
+                  </dt>
+                </dl>
+                <dl class="footer-info-block">
+                  <dd>
+                    <h5 class="footer-info-block__title">Служба поддержки</h5>
+                  </dd>
+                  <dt>
+                    <ul class="footer-info-block__list">
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Связаться с нами</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Возврат товара</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Гарантия</a></li>
+                    </ul>
+                  </dt>
+                </dl>
+                <dl class="footer-info-block">
+                  <dd>
+                    <h5 class="footer-info-block__title">Сервис</h5>
+                  </dd>
+                  <dt>
+                    <ul class="footer-info-block__list">
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Выбираем велосипед</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Услуги веломастерской</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Видеообзоры</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Отзывы</a></li>
+                      <li class="footer-info-block__item"><a class="footer-info-block__link" href="#">Информация о гарантии</a></li>
+                    </ul>
+                  </dt>
+                </dl>
+                <dl class="footer-info-block footer-info-block--subscribe">
+                  <dd>
+                    <h5 class="footer-info-block__title">Подписывайтесь</h5>
+                  </dd>
+                  <dt>
+                    <ul class="footer-info-block__list">
+                      <style>
+                        #ins-bg::before {
+                        	background-color: #ff4800;
+                        	background-image: url("img/icon-instagram.svg");
+                        	background-size: 18px 18px;
+                        }
+                        #vk-bg::before {
+                        	background-color: #356b87;
+                        	background-image: url("img/icon-vk.png");
+                        	background-size: 14px 7px;
+                        }
+                      </style>
+                      <li class="footer-info-block__item social"><a class="footer-info-block__link instagram" href="#">
+                          <div class="footer__social-wrapper" id="ins-bg"><span>Instagram</span><i>/velomatrix</i></div></a></li>
+                      <li class="footer-info-block__item social"><a class="footer-info-block__link vk" href="#">
+                          <div class="footer__social-wrapper" id="vk-bg"><span>Вконтакте</span><i>vk.com/velomatrix</i></div></a></li>
+                    </ul>
+                  </dt>
+                </dl>
+                <dl class="footer-info-block">
+                  <dd>
+                    <h5 class="footer-info-block__title">Отзывы</h5>
+                  </dd>
+                  <dt>
+                    <ul class="footer-info-block__list">
+                      <li class="footer-info-block__item yandex-feedback"><a class="footer-info-block__link" href="#"><img src="img/img-yandex.jpg" alt="Yandex market image"></a></li>
+                    </ul>
+                  </dt>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="main-content">
+              <div class="col-left"><a class="logo-footer" href=""><img src="img/logo-desktop@3x.png" alt="Footer logo"></a>
+                <div class="footer-copyright">
+                  <p>© 2013-2016 Velomatrix.ru</p>
+                  <p>м. Сокольники, Сокольническая площадь, д.9, к.2</p>
+                </div>
+              </div>
+              <div class="col-right">
+                <ul class="payment-systems">
+                  <li><a href=""><img src="img/img-visa.jpg"></a></li>
+                  <li><a href=""><img src="img/img-mastercard.jpg"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div><!-- build:js js/vendor.min.js -->
+<!-- bower:js -->
+<script src="/js/vendor/jquery/dist/jquery.js"></script>
+<script src="/js/vendor/iCheck/icheck.min.js"></script>
+<script src="/js/vendor/slick-carousel/slick/slick.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+    <script>
+      var scr = {"scripts":[
+      {"src" : "js/libs.min.js", "async" : false},
+      {"src" : "js/common.js", "async" : false}
+      ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+    </script>
+  </body>
+</html>

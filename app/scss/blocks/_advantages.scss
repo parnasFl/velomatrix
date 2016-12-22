@@ -29,7 +29,7 @@
 	}
 	&.shipping {
 		&::before {
-			left: -13%;
+			left: -5%;
 			top: -17%;
 			background-color: #ffa4e2;
 		}
@@ -256,6 +256,24 @@
 		//padding-right: 2.322340919647%;!
 		padding-top: 20px;
 		padding-bottom: 20px;
+		margin-left: 51px;
+
+		@media (min-width: 1681px) {
+			margin-left: 0;
+		}
+		.main-content {
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1341px;
+
+			@media (min-width: 1680px) {
+				//max-width: 1550px;
+			}
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+			}
+		}
 	}
 
 	.advantages__list {
@@ -265,8 +283,13 @@
 	.advantages__item {
 		flex-basis: 25%;
 		@include clearfix;
-		padding-left: 1.548227279765%;
-		padding-right: 1.548227279765%;
+		//display: flex;
+		//padding-left: 1.548227279765%;
+		//padding-right: 1.548227279765%;
+
+		padding-left: 2.5%;
+		//padding-right: 2.5%;
+		padding-right: 1.5%;
 
 		&:not(:last-child) {
 			border-right: 1px solid $bd-grey;
@@ -278,21 +301,73 @@
 		}
 	}
 
+	.advantages__item.shipping-item {
+		.advantages__item-icon {
+			//width: 27.5%;
+			width: 70px;
+		}
+
+		.advantages__item-content {
+			width: 72.5%;
+		}
+	}
+
+	.advantages__item.econom-item {
+		.advantages__item-icon {
+			//width: 22.5%;
+			width: 60px;
+		}
+
+		.advantages__item-content {
+			width: 77.5%;
+		}
+	}
+
+
+
+	.advantages__item.guarantee-item {
+		.advantages__item-icon {
+			//width: 21.5%;
+			width: 55px;
+		}
+
+		.advantages__item-content {
+			width: 78.5%;
+		}
+	}
+
+
+
+
+	.advantages__item.service-item {
+		.advantages__item-icon {
+			//width:21.5%;
+			width:55px;
+		}
+
+		.advantages__item-content {
+			width: 78.5%;
+		}
+	}
+
 	.advantages__item-icon {
 		//width: 29.855480813189%;
 		//width: 24.771636476235%;
-		width: 21.5%;
+		//width: 25%;
 		float: left;
 		//margin-right: 1.548227279765%;
 		img {
 			max-width: 100%;
 		}
+
+		
 	}
 
 	.advantages__item-content {
 		//width: 70.144519186811%;
-		padding-left: 6.192909119059%;
-		width: 78%;
+		//padding-left: 6.192909119059%;
+		padding-left: 4%;
+		width: 74.9%;
 		float: right;
 
 	}

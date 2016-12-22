@@ -1,0 +1,39 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Ваш заказ оформлен
+
+block content
+	.checkout-success
+		.main-content
+			.success-block
+				.success__notification
+					.succes__ura Ура!
+					.success__done Ваш заказ оформлен!
+				.success-block__inner
+					form
+						.success-section.success-section--thanks
+							.success__thanks.
+								Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.
+							.success__num-text Номер вашего заказа
+							.success__num 100954
+						.success-section.success-section--info
+							p.order-process-schedule
+								span.
+									Обработка заказов Понедельник-Пятница
+									с 9.00 до 18.00 по МСК. Суббота и
+									Восресение выходные
+							p.
+								Для контакта с нами, пожалуйста, используйте:
+							p
+								span Телефон : <a class="tel" href="#">+7 495 961-94-21</a>
+								span.
+									( <a class="callback" href="#">заказать обратный звонок</a> )
+							p
+								span Электронную почту:  
+								a(class="email" href="")  zakaz@velomatrix.ru
+						.success-section.bottom-links
+							.bottom-link
+								a(href="#") Посмотреть еще велосипедов
+							.bottom-link
+								a(href="#") Перейти на главную страницу

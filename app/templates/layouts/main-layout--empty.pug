@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru-RU")
+	include ../common/head.pug
+	body
+		<!--[if lt IE 10 ]>
+		<p class="chromeframe">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/?locale=ru" style="color: red; font-weight: bold;">Скачайте новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome FrameБ</a>чтобы пользоваться всеми возможностями сайта.</p>
+		<![endif]-->
+		.wrapper.wrapper--empty
+			.config
+				include ../common/config
+			.main-content__wrapper
+				include ../common/header
+				include ../common/nav
+				//- all other repeating content
+				//- Variable content
+				main
+					block content
+				block footer
+					include ../common/footer
+
+		block scripts
+			include ../common/scripts-checkout

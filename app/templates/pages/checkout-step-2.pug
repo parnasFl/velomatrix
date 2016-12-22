@@ -1,0 +1,115 @@
+extends ../layouts/main-layout--checkoutonly
+
+block title
+	title CHECKOUT - step 2
+
+block content
+	.cart-wrapper.checkout-shipping
+		include ../common/checkout-top
+		.checkout-nav
+			ul.checkout-nav__list
+				li.checkout-nav__item.passed
+					a.checkout-nav__link(href="#")
+						span.num 1
+						i.text Контактная информация
+				li.checkout-nav__item.active
+					a.checkout-nav__link(href="#")
+						span.num 2
+						i.text Доставка
+				li.checkout-nav__item
+					a.checkout-nav__link(href="#")
+						span.num 3
+						i.text оплата
+				li.checkout-nav__item
+					a.checkout-nav__link(href="#")
+						span.num 4
+						i.text Потверждение заказа
+		.checkout-main__steps
+			form
+				.checkout-main__steps-inner
+					.checkout__step-header
+						h2.checkout__step-title
+							span 2.доставка
+					.checkout__step-content
+						.shipping-type
+							.shipping-type__inner
+								ul.shipping-info__list
+									li.shipping-info__item
+										.shipping-info__select-wrapper
+											input(type="radio", id="pickpoint",name="shipping", class="js-checkoutSelect")
+											label(for="pickpoint")
+												img(src="img/img-picpoint.jpg")
+												b Pickpoint - 
+										.delivery-price <span>500</span> руб.
+									li.shipping-info__item.delivery-info.
+										Доставка осуществляется в постаматы и пункты выдачи PickPoint
+									li.shipping-info__item.delivery-time
+										.delivery-time__icon
+											img(src="img/icon-clock.png")
+										.delivery-time__text.
+											Приблизительное время доставки:
+											<i>28 сентября 2016</i>
+						.shipping-type
+							.shipping-type__inner
+								ul.shipping-info__list
+									li.shipping-info__item
+										.shipping-info__select-wrapper
+											input(type="radio", id="boxberry",name="shipping", class="js-checkoutSelect")
+											label(for="boxberry")
+												img(src="img/img-boxberry.jpg")
+												b Boxberry - 
+										.delivery-alert.
+											Для расчета стоимости доставки укажите регион доставки
+									li.shipping-info__item.delivery-info.
+										Дocтaвĸa ocyщecтвляeтcя в пyнĸт выдaчи зaĸaзoв Вохbеrrу г.Mocĸвa (тoльĸo для пpeдoплaчeнныx зaĸaзoв, вoзмoжнocти выбpaть oплaтy пpи пoлyчeнии нa cлeдyющeм шaгe нe бyдeт!)
+									li.shipping-info__item.delivery-time
+										.delivery-time__icon
+											img(src="img/icon-clock.png")
+										.delivery-time__text.
+											Приблизительное время доставки:
+											<i>28 сентября 2016</i>
+						.shipping-type
+							.shipping-type__inner
+								ul.shipping-info__list
+									li.shipping-info__item
+										.shipping-info__select-wrapper
+											input(type="radio", id="pochta",name="shipping", class="js-checkoutSelect")
+											label(for="pochta")
+												img(src="img/img-pochtaru.jpg")
+												b Почта России - 
+										.delivery-price <span>2735,63</span> руб.
+										.styled
+											select
+												option Посылка, наземный транспорт (2 735.63 руб)
+												option Посылка, наземный транспорт (2 735.63 руб)
+												option Посылка, наземный транспорт (2 735.63 руб)
+									li.shipping-info__item.address
+										.address-title Адрес
+										.shipping-info__form-wrapper
+											.checkout__input-wrap
+												label Улица, дом, квартира
+													input(name="")
+											.checkout__input-wrap.check-inp-error
+												label Город<sup>*</sup>
+													input(name="", type="tel")
+													span Текст ошибки формы
+											.checkout__input-wrap
+												label Регион
+													.styled
+														select
+															option Ханты-Мансийский автономный Республика
+															option Ханты-Мансийский автономный Республика
+															option Ханты-Мансийский автономный Республика
+											.checkout__input-wrap
+												label Индекс
+													input(name="", type="tel")
+									li.shipping-info__item.delivery-info.
+										Расчет стоимости доставки по алгоритму, опубликованному на сайте <a href="">Почты России</a> для отправления посылок.
+									li.shipping-info__item.delivery-time
+										.delivery-time__icon
+											img(src="img/icon-clock.png")
+										.delivery-time__text.
+											Приблизительное время доставки:
+											<i>28 сентября 2016</i>
+					.no-reg-checkout-btn
+						button(type="submit") Продолжить оформление

@@ -146,6 +146,177 @@ textarea {
 	width: 100%;
 }
 
+// input[type=checkbox], input[type=radio] {
+// 	display: inline-block;
+// }
+
+// Custom checkboxes and radio
+
+input[type="checkbox"],
+input[type="radio"] {
+		display:none;
+}
+input[type="checkbox"] + label, 
+input[type="radio"] + label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 30px;
+}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+		content: "";
+		display: inline-block;
+
+		height: 20px;
+		width: 20px;
+
+		position: absolute;
+
+		left: 0;
+		//top: 1px;
+		
+		top: 50%;
+		margin-top: -10px;
+
+		//background-image: url("../img/custom-chr.png");
+		//background-repeat: no-repeat;
+
+		background-color: white;
+		//border: 1px solid #ccc;
+		box-shadow: inset 0 0 0 1px #ccc;
+}
+
+input[type="checkbox"] + label::before{
+		border-radius: 2px;
+}
+
+input[type="radio"] + label::before{
+		border-radius: 10px;
+}
+
+//Checkboxes
+
+input[type="checkbox"] + label::before {
+		
+}
+
+input[type="checkbox"] + label:hover::before {
+	box-shadow: inset 0 0 0 2px #ed0000;
+}
+
+input[type="checkbox"]:checked + label::before {
+	font-family: 'icomoon';
+	content: "\e900";
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+	box-shadow: inset 0 0 0 2px #ed0000;
+}
+
+input[type="checkbox"]:checked + label:hover::before {
+	font-family: 'icomoon';
+	content: "\e900";
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+	box-shadow: inset 0 0 0 2px #ed0000;
+}
+
+input[type="checkbox"]:disabled + label::before {
+	content: "";
+	color: #999;
+	background-color: #e5e5e5;
+	box-shadow: inset 0 0 0 1px #ccc;
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+	font-family: 'icomoon';
+	content: "\e900";
+	color: #999;
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #e5e5e5;
+	box-shadow: inset 0 0 0 1px #ccc;
+}
+
+input[type="checkbox"]:checked:disabled + label:hover::before {
+	font-family: 'icomoon';
+	content: "\e900";
+	color: #999;
+	font-size: 16px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #e5e5e5;
+	box-shadow: inset 0 0 0 1px #ccc;
+}
+
+// Radio
+
+input[type="radio"] + label::before {
+	
+}
+
+input[type="radio"]:checked + label::before {
+	content: "\2022";
+	color: #000;
+	font-size: 30px;
+	text-align: center;
+	line-height: 25px;
+	box-shadow: inset 0 0 0 2px #ed0000;
+}
+
+input[type="radio"]:checked + label:hover::before {
+	content: "\2022";
+	color: #000;
+	font-size: 30px;
+	text-align: center;
+	line-height: 25px;
+	box-shadow: inset 0 0 0 2px #ed0000;
+}
+
+input[type="radio"] + label:hover::before {
+	box-shadow: inset 0 0 0 2px #ed0000;
+}
+
+input[type="radio"]:disabled + label::before {
+	color: #999;
+	background-color: #e5e5e5;
+}
+
+input[type="radio"]:disabled + label:hover::before {
+	color: #999;
+	background-color: #e5e5e5;
+	box-shadow: inset 0 0 0 1px #ccc;
+}
+
+input[type="radio"]:checked:disabled + label::before {
+	content: "\2022";
+	color: #000;
+	font-size: 30px;
+	text-align: center;
+	line-height: 25px;
+	color: #999;
+	background-color: #e5e5e5;
+	box-shadow: inset 0 0 0 1px #ccc;
+}
+
+input[type="radio"]:checked:disabled + label:hover::before {
+	content: "\2022";
+	color: #000;
+	font-size: 30px;
+	text-align: center;
+	line-height: 25px;
+	color: #999;
+	background-color: #e5e5e5;
+	box-shadow: inset 0 0 0 1px #ccc;
+}
+
+
+
 
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/

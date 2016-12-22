@@ -1,0 +1,424 @@
+/* checkout step4 Styles */
+
+.success-block {
+	width: 100%;
+}
+
+.success__notification {
+	//background-color: #fff;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	z-index: 1;
+	background-image: url('../img/icon-checkout-tick.png');
+	background-size: 120px 114px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.succes__ura {
+	font-family: $ff-custom;
+	font-size: 40px;
+
+	margin-bottom: 20px;
+}
+
+.success__done {
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.success-block__inner {
+	background-color: #8bbe4f;
+	position: relative;
+	border-radius: 3px;
+	z-index: 2; //??
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url('../img/bg-checkout-pattern.jpg');
+		background-size: 15px 3px;
+		background-repeat: repeat-x;
+		background-position: 0 0;
+		left: 9px;right: 9px;
+		top: -2px;
+		height: 3px;
+	}
+}
+
+.success-section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+	text-align: center;
+	color: #fff;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid rgba(255,255,255,.2);
+	}
+}
+
+.success__thanks {
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+.success__num-text {
+	font-size: 21px;
+	font-weight: 800;
+}
+
+.success__num {
+	font-size: 55px;
+	font-weight: 800;
+}
+
+.success-form-wrapper {
+	input {
+		display: table;
+		margin: auto;
+		width: 250px;
+		text-align: center;
+		margin-top: 5px;
+	}
+	label {
+		margin-bottom: 35px;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	.error-wrapper {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.success__input-wrapper {
+	position: relative;
+	
+	.example-text {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		bottom: -20px;
+	}
+}
+
+.bill-btn {
+	@include btn--red;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.success__input-error {
+	display: table;
+	//margin-left: 10px;
+	//margin-right: 10px;
+	margin: 0 auto;
+	background-color: #fff;
+	color: $red-base;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 5px 10px;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	span {
+
+	}
+}
+
+.redirect-text {
+	color: #ffea00;
+	font-weight: 700;
+	font-size: 14px;
+	display: table;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.success-section {
+	a {
+		display: inline;
+		color: #fff;
+	}
+	.tel {
+		font-weight: 700;
+	}
+	
+	.callback {
+		border-bottom: 1px dashed rgba(255,255,255,.2);
+		&:hover {
+			border-color: transparent;
+		}
+	}
+
+	.email {
+		font-weight: 700;
+		border-bottom: 1px solid rgba(255,255,255,.2);
+		&:hover {
+			border-color: transparent;
+		}
+	}
+	span {
+		display: block;
+	}
+	&.success-section--thanks {
+		border: none;
+	}
+
+	// &.success-section--info {
+	// 	.order-process-schedule {
+	// 		margin-bottom: 40px;
+	// 	}
+
+	// 	p:last-child {
+	// 		margin-bottom: 40px;
+	// 	}
+	// }
+}
+
+.success-section p {
+	font-size: 14px;
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.success-section .order-process-schedule {
+	margin-bottom: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.tablet-no-config {
+		.page-footer {
+			border-top: 1px solid $bd-grey;
+		}
+	}
+
+	.checkout-success {
+		width: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+
+		//outline: 1px solid red;
+
+		.main-content {
+			width: 100%;
+			margin: 0 auto;
+
+			//outline: 1px solid grey;
+		}
+	}
+
+	.success__thanks {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.success__num-text {
+		font-size: 21px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	.success__num {
+		font-size: 55px;
+		font-weight: 800;
+		line-height: 1;
+	}
+
+	.redirect-text {
+		max-width: 200px;
+	}
+
+	.bill-btn {
+		max-width: 202px;
+		padding-top: 10px;
+		padding-bottom: 8px;
+	}
+
+	.bottom-links {
+		display: none;
+	}
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+	.tablet-no-config {
+		.config {
+			display: none;
+		}
+	}
+
+	.checkout-success {
+		width: 768px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+
+		padding-left: 20px;
+		padding-right: 20px;
+		
+		//outline: 1px solid red;
+
+		.main-content {
+			//outline: 1px solid grey;
+		}
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.success__done {
+		font-size: 40px;
+	}
+
+	.success__thanks {
+		font-size: 20px;
+		margin-bottom: 40px;
+	} 
+
+	.success__num-text {
+		font-size: 35px;
+		font-weight: 800;
+	}
+
+	.success-section {
+		.order-process-schedule {
+			span {
+				font-size: 14px!important;
+				margin-bottom: 20px!important;
+				position: relative;
+				padding-left: 25px;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 16px;
+					height: 16px;
+					background: url("../img/icon-clock-white.png") 0 0 no-repeat;
+					background-size: 16px 16px;
+				}
+			}
+			
+
+			
+		}
+		p, a, span {
+			font-size: 17px;
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: 0px;
+			}
+			
+		}
+
+		p span {
+			display: inline-block;
+		}
+
+		p span + span {
+			margin-left: 10px;
+		}
+
+		&.success-section--info {
+			.order-process-schedule {
+				margin-bottom: 40px;
+			}
+
+			p:last-child {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	
+	.bottom-links {
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: 0;
+	}
+
+	.bottom-link {
+		width: 50%;
+		display: inline-block;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		&:first-child {
+			border-right: 1px solid rgba(255,255,255,.2);
+		}
+
+		a {
+			font-size: 14px;
+			font-weight: 700;
+			border-bottom: 1px solid rgba(255,255,255,.2);
+
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+
+	.wrapper--checkout {
+		.page-footer__bottom {
+			padding-bottom: 0;
+		}
+	} // #pravka
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.checkout-success {
+		margin-left: 51px;
+		margin-bottom: 50px;
+		padding-left: 30px;padding-right: 30px;
+
+		//outline: 1px solid red;
+		.main-content {
+			width: auto;
+			max-width: 1240px;
+			margin: 0 auto;
+
+			background-image: url("../img/bg-checkout-illustration.jpg");
+			background-repeat: no-repeat;
+			background-position: 0 300px;
+			//background-size: cover;
+			//outline: 1px solid grey;
+
+			@media (max-width:1025px) {
+				background-size: 100% auto;
+			}
+		}
+	}
+
+	.success-block {
+		width: 800px;
+		margin: 0 auto;
+
+		//outline: 1px solid yellow;
+	}
+}
+
+
+/* main-layout--checkout  End*/
+

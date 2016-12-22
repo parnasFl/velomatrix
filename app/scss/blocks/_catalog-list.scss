@@ -625,10 +625,15 @@
 	}
 
 	.catalog-filter__inner {
-		display: flex;
-		justify-content: space-between;
+		// display: flex;
+		// justify-content: space-between;
 		padding-left: 20px;
 		padding-right: 20px;
+
+		.main-content {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	.catalog-list__filter-settings {
@@ -788,6 +793,29 @@
 	.catalog-filter__inner {
 		padding-left: 2.322340919647%;
 		padding-right: 2.322340919647%;
+		margin-left: 51px;
+		// @media (min-width: 1680px) {
+		// 	margin-left: 0;
+		// }
+
+		@media (min-width: 1681px) {
+			margin-left: 0;
+		}
+
+		@media (min-width: 1680px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.main-content {
+			width: auto;
+			max-width: 1341px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+			}
+		}
 	}
 	
 	.catalog-list__inner {
@@ -795,7 +823,7 @@
 		padding-right: 2.322340919647%;
 		@include clearfix;
 		font-size: 0;
-
+		margin-left: 51px;
 		&.catalog-list__inner--no-sidebar {
 			.catalog-item__inner {
 				// &:not(:last-child) {
@@ -811,6 +839,28 @@
 
 			.catalog-item__conficons-item {
 				margin-right: 7px;
+			}
+		}
+
+		// @media (min-width: 1680px) {
+		// 	margin-left: 0;
+		// }
+		@media (min-width: 1681px) {
+			margin-left: 0;
+		}
+
+		@media (min-width: 1680px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.main-content {
+			width: auto;
+			max-width: 1341px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
 			}
 		}
 	}
@@ -839,7 +889,7 @@
 		position:relative;
 		-webkit-transition: box-shadow .7s ease;
 		padding-bottom: 60px;
-
+		
 		//-webkit-backface-visibility: hidden;
 		//transform: scale(1);
 		//-webkit-transform-style: preserve-3d;
@@ -856,7 +906,7 @@
 
 		&.shadowed  {
 			// box-shadow: 0 0 21px rgba(0, 0, 0, 0.20);
-			//z-index: 1;
+			z-index: 10000000;
 			//transform: perspective(1px) scale(1.1)
 			//transform: scale(1.03);
 			//transition: transform .3s ease-in;
@@ -874,6 +924,7 @@
 		}
 
 		.catalog-item__conficons {
+			z-index: 100;
 			position: absolute;
 			//bottom: -50px;
 			height: 60px;

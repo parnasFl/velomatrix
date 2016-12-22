@@ -1,0 +1,20 @@
+// Core variables and mixins
+@import "_vars-project";
+@import "_mixins-project";
+@import "bourbon";
+
+
+
+//Customized vendor less/css style
+
+
+@import "vendor/_slick";
+@import "vendor/_slick-theme";
+
+@import "vendor/_all-icheck";
+@import "vendor/_selectric";
+@import "vendor/_perfect-scrollbar";
+//@import "../js/vendor/unslider/dist/css/unslider-dots.css";
+//@import "vendor/_bxslider";
+//@import "vendor/_custom-chr";
+

@@ -14,7 +14,7 @@
 //@import "components/font-awesome";
 @import "components/_buttons";
 @import "components/_items";
-@import "components/_forms";
+//@import "components/_forms";
 @import "components/_popups";
 
 
@@ -62,6 +62,7 @@
 @import "blocks/_item-feedback";
 @import "blocks/_also-buyed";
 @import "blocks/_similar-items";
+@import "blocks/_new-slider";
 
 /* Feedback Page Styles */
 @import "blocks/_feedback-main";
@@ -70,6 +71,23 @@
 /* Footer Page Styles */
 @import "blocks/_footer";
 
+/* Cart */
+@import "blocks/_main-layout--checkout";
+@import "blocks/_cart-wrapper";
+@import "blocks/_cart-top";
+@import "blocks/_cart-main";
+@import "blocks/_empty-cart";
+
+/* Checkout */
+@import "blocks/_ml-checkoutonly";
+@import "blocks/_checkout-top";
+@import "blocks/_checkout-step0";
+@import "blocks/_checkout-nav";
+@import "blocks/_checkout-step1";
+@import "blocks/_checkout-step2";
+@import "blocks/_checkout-step4";
+@import "blocks/_checkout-success";
+@import "blocks/_catalog-empty";
 
 //Customized vendor less/css style
 
@@ -79,6 +97,9 @@
 
 @import "vendor/_all-icheck";
 @import "vendor/_selectric";
+@import "vendor/_perfect-scrollbar";
+//@import "../js/vendor/unslider/dist/css/unslider-dots.css";
 //@import "vendor/_bxslider";
 //@import "vendor/_custom-chr";
+@import "components/_forms";
 

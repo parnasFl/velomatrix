@@ -1,0 +1,50 @@
+/* .cart-wrapper Styles */
+.cart-wrapper {
+	background-color: #f2f2f2;
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	.cart-wrapper {
+		border-bottom: 1px solid $bd-grey;
+	}
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	
+	
+	 
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.cart-wrapper {
+		border-top: 1px solid $bd-grey;
+		border-bottom: 1px solid $bd-grey;
+	}
+}
+
+
+/* .cart-wrapper  End*/
+

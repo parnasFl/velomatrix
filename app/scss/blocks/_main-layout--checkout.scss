@@ -1,0 +1,107 @@
+/* main-layout--checkout Styles */
+.wrapper--cart {
+	.page-footer__top {
+		display: none;
+	}
+}
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	.wrapper--cart {
+
+		.main-nav {
+			margin-bottom: 0;
+		}
+	}
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.wrapper--cart {
+		.config {
+			display: none;
+		}
+
+		.page-footer__bottom {
+			padding-left: 0!important;
+			padding-right: 0!important;
+			//padding-bottom: 20px;
+		}
+	}
+	
+	
+	
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.wrapper--cart {
+
+		.main-content {
+			padding-left: 0!important;
+			padding-right: 0!important;
+		}
+		
+		.main-content__wrapper {
+			
+		}
+
+		.page-header {
+			width: 960px;
+			margin: 0 auto;
+		}
+
+		.top-bar {
+			display: none;
+		}
+
+		.bottom-bar {
+			margin-left: 0;
+			border-bottom: 0;
+		}
+
+		.page-search {
+			display: none;
+		}
+
+		.main-nav {
+			display: none;
+		}
+
+		.page-footer {
+			margin-left: 0;
+		}
+		.page-footer__bottom {
+			//margin-left: 0;
+			.main-content {
+				width: 960px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+
+/* main-layout--checkout  End*/
+

@@ -147,9 +147,38 @@
 @media (min-width: 1024px) {
 
 	.workshop {
+		width: auto;
 		margin-bottom: 40px;
-		padding-left: 2.322340919647%;
-		padding-right: 2.322340919647%;
+		// padding-left: 2.322340919647%;
+		// padding-right: 2.322340919647%;
+		padding-right: 0;
+		padding-left: 0;
+		margin-left: 51px;
+		//margin-right: 51px;
+		//margin-right: 0;
+		@media (min-width: 1681px) {
+			margin-left: 0;
+		}
+		.main-content {
+			width: auto;
+			padding-left: 2.322340919647%;
+			padding-right: 2.322340919647%;
+			max-width: 1341px;
+			margin-left: auto;
+			margin-right: auto;
+
+			@media (min-width: 1680px) {
+				// max-width: 1550px;
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+				//padding-left: 0;
+				//padding-right: 0;
+			}
+		}
 	} 
 
 	.workshop__inner-wrap {

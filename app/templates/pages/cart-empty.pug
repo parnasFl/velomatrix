@@ -1,0 +1,16 @@
+extends ../layouts/main-layout--empty
+
+block title
+	title Корзина пусто
+
+block content
+	.item-page__wrapper.cart-empty__wrapper
+		.empty-cart
+			.main-content
+				h1.empty-cart__title <b>корзина</b> <strong>пусто</strong>
+				.empty-cart__why.
+					Почему ваша корзину пусто? Вы просто еще ничего не добавили в корзину :)
+				.do-not-miss.
+					Не пропуститите хиты продаж
+		.main-content
+			include ../common/sale-hits

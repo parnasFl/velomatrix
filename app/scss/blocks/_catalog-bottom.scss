@@ -173,6 +173,38 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
+	.cat-bottom {
+		margin-left: 51px;
+		
+		@media (min-width: 1681px) {
+			margin-left: 0;
+		}
+
+		.main-content {
+			width: auto;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 1341px;
+			
+
+			@media (min-width: 1680px) {
+				
+
+
+			}
+
+			@media (min-width: 1681px) {
+				max-width: 1550px;
+
+				.cat-bottom__text {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+		
+
 	.cat-bottom__loading {
 		margin-bottom: 50px;
 	}
@@ -184,8 +216,10 @@
 	}
 
 	.cat-bottom__text {
-		padding-left: 10px;
-		padding-right: 10px;
+		//padding-left: 10px;
+		//padding-right: 10px;
+		padding-left: 2.322340919647%;
+		padding-right: 2.322340919647%;
 		margin-bottom: 50px;
 		p {
 			text-align: left;

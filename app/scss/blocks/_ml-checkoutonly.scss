@@ -1,0 +1,72 @@
+/* main-layout--checkout Styles */
+.wrapper--checkout {
+	
+}
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.wrapper--checkout {
+		.payment-systems {
+			display: none;
+		}
+		
+		.page-footer__top {
+			display: block;
+		}
+		.col-left {
+			margin-bottom: 20px;
+		}
+
+		.page-footer dl {
+			display: none;
+
+		}
+		
+	}
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	.wrapper--checkout {
+
+		
+	}
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.wrapper--checkout {
+		.page-footer__bottom {
+			padding-bottom: 20px;
+		}
+		
+	}
+	
+	
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.wrapper--checkout {
+		
+		
+	}
+}
+
+
+/* main-layout--checkout  End*/
+
