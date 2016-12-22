@@ -4,3 +4,28 @@ block title
 	title История заказа
 
 block content
+	.account
+		.account__header
+			.account__header-inner
+				.account__nav
+					ul.account__nav-list
+						li.account__nav-item.order-history: a.account__nav-link(href="#") История заказа
+						li.account__nav-item.user-profile: a.account__nav-link(href="#") Мой профиль
+						li.account__nav-item-partner-program: a.account__nav-link(href="#") Партнерская программа
+						li.account__nav-item.account-exit: a.account__nav-link(href="#") Выйти
+				a.account-nav__toggle(href="#") Открыть меню
+				h1.account__header-title История заказа
+		.account__main
+			.account__main-inner
+				table.order-history__list
+					tr.order-history__list-header
+						th.order-history__list-heading: span Номер заказа
+						th.order-history__list-heading: span Статус заказа
+						th.order-history__list-heading: span Оплата
+						th.order-history__list-heading: span Доставка
+						th.order-history__list-heading: span Дата заказа
+					tr.order-history__list-row
+					tr.order-history__list-row
+					tr.order-history__list-row
+					tr.order-history__list-row
+					tr.order-history__list-row
