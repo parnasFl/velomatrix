@@ -349,7 +349,7 @@ $(function(){
 					});
 				}
 			});
->>>>>>> cssInput
+
 
 				item.addClass('hide-hover-shadow');
 				
