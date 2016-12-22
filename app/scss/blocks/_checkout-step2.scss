@@ -23,6 +23,9 @@
 		img {
 			display: inline-block;
 			vertical-align: middle;
+			@media (max-width: 767px) {
+				display: none;
+			}
 		}
 		b, strong {
 			font-size: 18px;

@@ -842,10 +842,10 @@ $(function(){
 		============================================*/
 
 		(function(){
-			$('input').iCheck({
-				checkboxClass: 'icheckbox_polaris',
-				radioClass: 'iradio_polaris'
-			});
+				// $('input').iCheck({
+				// 	checkboxClass: 'icheckbox_polaris',
+				// 	radioClass: 'iradio_polaris'
+				// });
 		})();
 
 		/*---Desktop user sign in dropdown
@@ -1454,9 +1454,9 @@ $(function(){
 
 			(function(){
 
-				var $shippingType = $('input:radio[class=checkoutSelect]');
+				var $shippingType = $('input:radio[class=js-checkoutSelect]');
 
-			$shippingType.on('ifChecked', function(event){
+			$shippingType.on('change', function(event){
 					var that = $(this),
 							parent = that.closest('.shipping-type'),
 							siblings = parent.siblings('.shipping-type');
@@ -1482,7 +1482,7 @@ $(function(){
 
 				var $checkStep1 = $('input:checkbox[id=regCheckout]');
 
-			 $checkStep1.on('ifToggled', function(event){
+			 $checkStep1.on('change', function(event){
 					var that = $(this),
 							parent = that.closest('.reg-info__top'),
 							step1Form = parent.find('.no-reg__form-wrapper.new-user');
