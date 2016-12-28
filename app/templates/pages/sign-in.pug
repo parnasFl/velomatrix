@@ -1,0 +1,34 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Вход на сайт
+
+block content
+	.auth.auth--in
+		.auth__inner
+			.auth__wrapper
+				.auth__main
+					h2.auth__title Вход на сайт
+					.wa-form
+						form
+							.wa-field.wa-field-email
+								.wa-name Email
+								.wa-value
+									input(type="email")
+							.wa-field.wa-field-password
+								.wa-name Пароль
+								.wa-value
+									input(type="password")
+							.wa-field
+								.wa-value.wa-submit
+									input(type="hidden")
+									<input type="submit", value="Войти"><a href="#">&nbsp;Забыли пароль</a>
+					.auth__text Регистрация, используя аккаунт соцсети
+					.auth__social
+						include ../common/social-login
+				.auth__illust
+					.auth__illust-image
+						img(src="img/ill-signin.png", alt="Illustration")
+
+
+

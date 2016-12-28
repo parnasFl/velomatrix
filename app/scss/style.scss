@@ -90,8 +90,18 @@
 @import "blocks/_catalog-empty";
 
 
-/* Checkout */
-@import "blocks/_account-nav";
+/* Account */
+@import "blocks/_account-nav"; // Account Nav & orders list styles
+@import "blocks/_account-order-detail";
+@import "blocks/_account-profile.scss";
+@import "blocks/_account-partner.scss";
+
+/* Auth */
+@import "blocks/_pin-code.scss";
+@import "blocks/_auth.scss";
+
+/* Compare */
+@import "blocks/_compare.scss";
 
 //Customized vendor less/css style
 

@@ -1,0 +1,61 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Регистрация
+
+block content
+	.auth
+		.auth__inner
+			.auth__wrapper
+				.auth__main
+					h2.auth__title Регистрация
+					.auth__text Регистрация, используя аккаунт соцсети
+					.auth__social
+						include ../common/social-login
+					.wa-form
+						form
+							.wa-field.wa-field-firstname
+								.wa-name Имя
+								.wa-value
+									input(type="text")
+							.wa-field.wa-field-lasttname
+								.wa-name Фамилия
+								.wa-value
+									input(type="text")
+							.wa-field.wa-field-email
+								.wa-name Email
+								.wa-value
+									input(type="email")
+							.wa-field.wa-field-password
+								.wa-name Пароль
+								.wa-value
+									input(type="password")
+							.wa-field.wa-field-password_confirm
+								.wa-name Подтвердите пароль
+								.wa-value
+									input(type="password")
+							.wa-field
+								.wa-value
+									.wa-captcha
+										p
+											img.wa-captcha-img(src="img/img-captcha.jpg", alt="captcha")
+											input.wa-captcha-input
+										p
+											a.wa-captcha-refresh(href="") Обновить капчу (CAPTCHA)
+							.wa-field
+								.wa-value.wa-submit
+									<input type="submit", value="Зарегистрироваться"> или <a href="#">&nbsp;войти</a>
+				.auth__illust
+					.auth__illust-image
+						img(src="img/ill-signup.png", alt="Illustration")
+			.auth__wrapper.auth--success
+				h2.auth--success__title Спасибо!
+				.auth--success__notification Вы успешно зарегистрировались.
+				ul.auth--success__links
+					li: a(href="") Перейти в кабинет
+					li: a(href="") На главную страницу
+				.auth--success__image
+					img(src="img/ill-thanks.png", alt="Illustration")
+
+
+

@@ -1,0 +1,430 @@
+/* Account Order Detail */
+
+.order-date {
+	position: relative;
+	padding-left: 15px;
+	font-size: 14px!important;
+	font-weight: 400!important;
+	text-transform: none!important;
+	top: -4px;
+	margin-left: 10px;
+	&::before {
+		content: '/';
+		position: absolute;
+		font-size: 20px;
+		left: 0;
+		top: -5px;
+	}
+}
+
+.order-detail__top {
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+	margin-bottom: 20px;
+}
+
+.order__details-item.status {
+
+	strong {
+		position: relative;
+		padding-left: 17px;
+		margin-left: 5px;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			//background-color: #79b327;
+			left: 0;
+			top: 50%;
+			margin-top: -6px;
+		}
+
+		&.sent {
+			&::before {
+				background-color: #79b327;
+			}
+		}
+
+		&.new {
+			&::before {
+				background-color: #80c900;
+			}
+		}
+
+		&.processing {
+			&::before {
+				background-color: #00a2ff;
+			}
+		}
+
+		&.delivered {
+			&::before {
+				background-color: #ff8a00;
+			}
+		}
+
+		&.waiting{
+			&::before {
+				background-color: #ff00fc;
+			}
+		}
+
+		&.canceled{
+			&::before {
+				background-color: #ff0000;
+			}
+		}
+	}
+
+	.item-details-wrapper:last-child {
+		margin-top: 10px;
+	}
+}
+
+.order-track {
+	background-color: #ffee9c;
+	border-radius: 3px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	margin-left: 25px;
+}
+
+.order-track__text {
+	display: inline-block;
+}
+
+.order-track__number {
+	display: inline-block;
+	color: $blue-link;
+	font-weight: 700;
+	position: relative;
+	padding-right: 25px;
+	span {
+		border-bottom: 1px dashed $blue-link;
+		line-height: 0.5;
+	}
+
+	&:hover {
+		span {
+			border-color: transparent;
+		}
+	}
+
+	&::after {
+		content: '\e906';
+		font-family: icons;
+		position: absolute;
+		width: 15px;
+		height: 16px;
+		font-size: 16px;
+		color: $blue-link;
+		right: 0;
+		top: 0;
+	}
+}
+
+.payment-tel {
+
+}
+
+.payment-tel__text {
+	font-size: 14px;
+	font-weight: 700;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.payment-tel__input-wrapper {
+	position: relative;
+	input {
+		padding-top: 7px!important;
+		padding-bottom: 7px!important;
+	}
+	span {
+		position: absolute;
+		bottom: -18px;
+		font-size: 12px;
+	}
+}
+
+.payment-tel__button {
+	@include btn--red;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+.order-detail__bottom {
+	margin-bottom: 20px;
+}
+
+.order-content {
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.order-sum__wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	&:not(:last-child) {
+		border-bottom: 1px solid $bd-grey;
+	}
+	&>div {
+		font-weight: 700;
+	}
+
+	&.total {
+
+	}
+}
+
+.order-detail__bottom-title {
+	font-weight: 700;
+	margin-bottom: 10px;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.order-date {
+		display: none;
+	}
+
+	.order-detail__top {
+		padding: 20px;
+	}
+
+	.payment-tel {
+		margin-left: 25px;
+	}
+
+	.payment-tel__text {
+		
+	}
+
+	.payment-tel__input-wrapper {
+		margin-bottom: 30px;
+		input {
+			margin-right: 35px;
+			width: 100%;
+		}
+
+		span {
+			
+		}
+	}
+
+	.payment-tel__button[href] {
+		text-align: left;
+	}
+
+	.order-content__headings {
+		display: none;
+	}
+
+	.order-sum__wrapper {
+		
+		&>div {
+			font-size: 18px;
+		}
+
+		.order-sum__text {
+			width: 140px;
+		}
+	}
+
+	.order-detail__bottom-title {
+		font-size: 16px;
+	}
+
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.order-content__headings {
+		border-bottom: 1px solid $bd-grey;
+	}
+	.order-detail__top {
+		padding: 20px;
+	}
+
+	.order-track {
+		margin-left: 53px;
+	}
+
+	.payment-tel {
+		margin-left: 53px;
+	}
+
+	.payment-tel__input-wrapper,
+	.payment-tel__button {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.payment-tel__input-wrapper {
+
+		input {
+			width: 200px;
+		}
+	}
+
+	.payment-tel__button[type=submit] {
+		margin-left: 10px;
+	}
+	.order-content__headings {
+		padding: 20px;
+		&> div {
+			display: inline-block;
+			color: #999;
+			font-size: 13px;
+			font-weight: 700;
+			text-align: left;
+		}
+		.order-content__name {
+			width: 445px;
+		}
+
+		.order-content__count {
+			width: 131px;
+		}
+
+		.order-content__total {
+			//width: ;
+			//padding-left: 28px;
+		}
+
+	}
+
+	.order__goods-list  * {
+		font-size: 15px;
+	}
+
+	.order-sum__wrapper {
+		align-items: center;
+		&>div {
+			font-size: 20px;
+		}
+
+		.order-sum__text {
+			
+		}
+
+		&.total {
+			//padding-top: 10px;
+			.order-sum__amount {
+				font-size: 30px;
+			}
+		}
+	}
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.order-detail  {
+
+		.account__header-title {
+			//right: auto;
+		}
+	}
+
+	.order-content__headings {
+		.order-content__name {
+			width: 680px;
+		}
+
+		.order-content__count {
+			width: 125px;
+		}
+
+		.order-content__total {
+			width: 100px;
+			//padding-left: 28px;
+		}
+
+	}
+	
+	.order-detail__bottom {
+		.order__goods-list {
+			width: 960px;
+		}
+
+		.order__goods-item {
+			width: 960px;
+
+			.item-image {
+				width: 140px;
+				a {
+					height: 140px;
+					width: 140px;
+				}
+			}
+
+			.item-name {
+				width: 535px;
+				padding-left: 20px;
+
+				.item-name__text {
+					width: 450px;
+				}
+			}
+
+			.item-quantity {
+				width: 125px;
+			}
+
+			.item-total {
+				width: 106px;
+			}
+		}
+
+		.inner-table {
+			width: 920px;
+		}
+
+		.three-dot {
+			left: 60px;
+		}
+	}
+	
+}
+
+
+/* Account Order Detail  End*/
+

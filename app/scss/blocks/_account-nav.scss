@@ -1,10 +1,430 @@
 /* order history list Styles */
+.account__header {
+	position: relative;
+}
+
+.account__header-title {
+	span {
+		text-transform: uppercase;
+		font-size: 25px;
+		font-weight: 700;
+	}
+}
+
+.account__nav-link  {
+	
+	display: inline-block;
+	font-weight: 600;
+	font-size: 13px;
+	color: $blue-link;
+	span {
+		position: relative;
+		padding-left: 27px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			font-family: icons;
+			font-size: 14px;
+			display: inline-block;
+			line-height: 1;
+			top: 50%;
+			left: 0;
+		}
+	}
+	
+
+	&:hover {
+		color: #000;
+	}
+}
+
+.account__nav-item.active {
+	.account__nav-link {
+		color: #000;
+		span {
+			position: relative;
+		}
+		i {
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 9px;
+				height: 9px;
+				background-color: $red-base;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.order-history {
+	.account__nav-link {
+		span {
+			&::before {
+				content: '\e907';
+				margin-top: -6px;
+				width: 15px;
+				height: 11px;
+				font-size: 12px;
+			}
+		}
+		
+	}
+}
+
+.user-profile {
+	.account__nav-link {
+		span {
+			&::before {
+				content: '\e90d';
+				margin-top: -7px;
+				width: 16px;
+				height: 15px;
+				font-size: 15px;
+			}
+		}
+		
+	}
+}
+
+.partner-program {
+	.account__nav-link {
+		span {
+			&::before {
+				content: '\e90b';
+				margin-top: -8px;
+				width: 16px;
+				height: 14px;
+				font-size: 15px;
+			}
+		}
+		
+	}
+}
+
+.account-exit {
+	.account__nav-link {
+		span {
+			&::before {
+				content: '\e903';
+				margin-top: -8px;
+				width: 16px;
+				height: 16px;
+				font-size: 16px;
+			}
+		}
+		
+	}
+}
+
+.cell-type, 
+.info-type {
+	display: inline-block;
+}
+
+.info-type span {
+	font-weight: 700;
+}
+
+.account-order__status-icon,
+.account-order__status-text{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.account-order__status-icon {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+
+	&.new {
+		background-color: #80c900;
+	}
+
+	&.processing {
+		background-color: #00a2ff;
+	}
+
+	&.delivered {
+		background-color: #ff8a00;
+	}
+
+	&.cancelled {
+		background-color: #ff0000;
+	}
+
+	&.waiting {
+		background-color: #ff00fc;
+	}
+}
+
+.account-order__status-text {
+	margin-left: 5px;
+}
+
+.account__no-orders {
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+	//position: relative;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.account__no-orders-text {
+	//left: 50%;
+	//top: 50%;
+	 //transform: translate(-50%, -50%);
+	padding-top: 80px;
+	span {
+		font-size: 20px;
+		color: #ccc;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
 
 
 /* ==============Only Mobile Styles * 767 * ==============
 *******************************************************/
 @media (max-width: 767px) {
+	.account {
+		margin-top: -14px;
+	}
+
+	.account__header {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	// .account-header__inner {
+	// 	width: 100%;
+	// 	padding-left: 10px;
+	// 	padding-right: 10px;
+	// }
+
+	.account__header-title {
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		span {
+			font-size: 16px;
+		}
+	}
+
+	.account__nav {
+		display: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		background-color: #fff;
+		top: 4px;
+		//outline: 1px solid red;
+		z-index: 100;
+		box-shadow: 0 5px 16px rgba(0, 0, 0, 0.34), inset 0 2px 0 #ed0000;
+	}
+
+	.account__nav-list {
+		width: 100%;
+		//outline: 1px solid grey;
+	}
+
+	.account-nav__toggle {
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		margin-top: -18px;
+		z-index: 101;
+		@include link-text-indent;
+		border: 1px solid $bd-grey;
+		background-color: #fff;
+
+		&::before {
+			content: '\e909';
+			position: absolute;
+			font-family: icons;
+			width: 14px;
+			height: 12px;
+			font-size: 14px;
+			line-height: 1;
+			top: 50%;left: 50%;
+			margin-top: -6px;
+			margin-left: -7px;
+			display: inline-block;
+			text-align: center;
+			color: #000;
+		}
+
+		&:hover {
+			background-color: $red-base;
+			border-color: #fff;
+			&::before {
+				color: #fff;
+			}
+		}
+
+		&.toggle-close {
+			&::before {
+				content: '\e904';
+				position: absolute;
+				font-family: icons;
+				width: 14px;
+				height: 12px;
+				font-size: 14px;
+				line-height: 1;
+				top: 50%;left: 50%;
+				margin-top: -6px;
+				margin-left: -7px;
+				display: inline-block;
+				text-align: center;
+				color: #000;
+			}
+		}
+	}
+
+	.account__nav-item {
+		&:not(:last-child) {
+			.account__nav-link {
+				border-bottom: 1px solid $bd-grey;
+			}
+		}
+	}
+
+	.account__nav-link {
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 20px;
+			top: 50%;left: 50%;
+
+	}
+
+	.account__nav-item.active {
+		.account__nav-link {
+			i {
+				position: relative;
+				&::after {
+					top: 50%;
+					right: -20px;
+					margin-top: -5px;
+				}
+			}
+		}
+	}
+
+	.account__main {
+		width: 100%;
+	}
+
+	.account__main-inner {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.order-history__list {
+		display: block;
+		width: 100%;
+		tbody {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.order-history__list-header {
+		display: none;
+	}
 	
+	.order-history__list-row,
+	.order-account__order-cell {
+		display: block;
+	}
+
+	.order-history__list-row {
+		//display: table;
+		width: 100%;
+		padding: 20px;
+		padding-bottom: 75px;
+		margin-bottom: 20px;
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+		position: relative;
+	}
+
+	.order-account__order-cell {
+		font-size: 14px;
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		&:last-child {
+			margin-bottom: 15px;
+		}
+	}
+
+	.account-order-num {
+
+		.order-num__text,
+		.order-num__number {
+			display: inline-block;
+		}
+	}
+
+	.account-order__detail-btn {
+		position: absolute;
+		bottom: 20px;
+
+		@include btn--transparent-round;
+	}
+
+	.cell-type, 
+	.info-type {
+		display: inline-block;
+	}
+
+	.info-type span {
+		font-weight: 700;
+	}
+
+	.account-order__status-icon,
+	.account-order__status-text{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.account-order__status-text br {
+		display: none;
+	}
+
+	.account-order__status-icon {
+
+	}
+
+	.td-head {
+		margin-bottom: 20px!important;
+	}
+
+	.account-order-num span {
+		font-weight: 700;
+		font-size: 20px;
+	}
+
+	.order-num__number a {
+		display: inline-block;
+		margin-left: 5px;
+		color: $blue-link;	
+		text-decoration: underline;
+	}
 } // media query
 
 
@@ -26,6 +446,185 @@
 /* ==============Tablet Media queries============
 *******************************************************/
 @media (min-width: 768px) {
+	.account {
+		margin-top: -20px;
+	}
+
+	.account__inner {
+		width: 768px;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.account__main {
+		width: 100%;
+	}
+
+	.account__main-inner {
+		width: 100%;
+	}
+
+	.account__header {
+		background-color: #f2f2f2;
+		border-bottom: 1px solid $bd-grey;
+		margin-bottom: 65px;
+	}
+
+	.account__header-inner {
+		//display: flex;
+		//justify-content: center;
+	}
+
+	.account__nav {
+		display: flex!important;
+		justify-content: center;
+	}
+
+	.account__nav-list {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.account__nav-item {
+		display: inline-block;
+		&:not(:first-child) {
+			margin-left: 55px;
+		}
+	}
+
+	.account__nav-link {
+		display: inline-block;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.account-nav__toggle {
+		display: none;
+	}
+
+	.account__header-title {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		bottom: -53px;
+		span {
+			text-transform: uppercase;
+			font-size: 25px;
+			font-weight: 700;
+		}
+	}
+
+	.account__nav-item.active {
+		.account__nav-link {
+			i {
+				position: relative;
+				&::after {
+					bottom: -10px;
+					left: 50%;
+					margin-left: -5px;
+				}
+			}
+		}
+	}
+
+	.order-history__list-row {
+		&:nth-child(odd) {
+			background-color: #f7f7f7;
+		}
+		&.hover-shadow {
+			box-shadow: inset 5px 0 0 0 $red-base,
+									inset -5px 0 0 0 $red-base;
+		}
+	}
+
+	.order-history__list {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.order-account__order-cell,
+	.order-history__list-heading {
+		width: 20%;
+		padding: 12px 15px;
+		border: 1px solid $bd-grey;
+		vertical-align: middle;
+		text-align: left;
+		span, a, i {
+			font-size: 13px;
+		}
+	}
+
+	.order-history__list-heading {
+		span {
+			color: #999;
+		}
+		padding-top: 17px;
+		padding-bottom: 17px;
+	}
+
+	.td-head {
+		position: relative;
+	}
+
+	.account-order-num,
+	.account-order__detail-btn {
+		display: inline-block;
+	}
+
+	.account-order__detail-btn {
+		//position: absolute;
+		@include btn--transparent-round;
+		font-size: 10px;
+		color: #666;
+		padding: 5px 7px;
+		text-transform: none;
+		margin-left: 5px;
+		font-weight: 600;
+		//bottom: 5px;
+
+		&:hover {
+			background-color: $red-base;
+			border-color: $red-base;
+			color:#fff;
+		}
+		i {
+			display: none;
+		}
+	}
+
+	.order-num__number a {
+		text-decoration: underline;
+		font-size: 14px;
+		color: $blue-link;
+		font-weight: 700;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+
+	
+
+
+
+	.order-account__order-cell {
+		
+	}
+
+	
+
+	.order-num__text,
+	.cell-type {
+		display: none;
+	}
+
+	// .td-status .info-type {
+	// 	//white-space: nowrap;
+	// }
+
 	
 } //(min-width: 768px)
 
@@ -33,7 +632,38 @@
 /* ==============Desktop Media queries============
 *******************************************************/
 @media (min-width: 1024px) {
-	
+	.account {
+	}
+	.account__inner {
+		width: 960px;
+		//margin: 0 auto;
+		//margin: 0 !important;
+		padding-left: 0;
+		padding-right: 0;
+		@media (max-width: 1279px) {
+			margin: 0 !important;
+		}
+		@media (min-width: 1280px) {
+			margin: 0 auto;
+		}
+	}
+	.account__main {
+		
+		//margin: 0 auto;
+		margin-left: 58px;
+		@media (min-width: 1280px) {
+			margin-left: 0;
+		}
+	}
+
+	// .account__main-inner {
+	// 	width: 960px;
+	// 	margin: 0 auto;
+	// }
+
+	.account-order__status-text br {
+		display: none;
+	}
 }
 
 

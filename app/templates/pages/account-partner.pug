@@ -1,0 +1,108 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Партнерская программа
+
+block content
+	.account
+		.account__header
+			.account__nav
+				ul.account__nav-list
+					li.account__nav-item.order-history: a.account__nav-link(href="#") <span><i>История заказа</i></span>
+					li.account__nav-item.user-profile: a.account__nav-link(href="#") <span><i>Мой профиль</i></span>
+					li.account__nav-item.partner-program.active: a.account__nav-link(href="#") <span><i>Партнерская программа</i></span>
+					li.account__nav-item.account-exit: a.account__nav-link(href="#") <span><i>Выйти</i></span>
+			a.account-nav__toggle(href="#") Открыть меню
+			h1.account__header-title: span партнерская программа
+		.account__inner.account--partner
+			.account__main
+				.account__main-inner
+					.partner
+						.partner__graphic
+							strong 150
+							span бонусов
+							i на вашем счету
+							em 1 бонус = 0,5 руб.
+						table.partner__stats
+							tr.partner__stats-th-row
+								th.date Дата операции
+								th.comments Комментрий
+								th.income Приход
+								th.expense Расход
+								th.balance Баланс
+							tr.partner__stats-td-row
+								td.date
+									i Дата операции:
+									strong Вчера 09:22
+								td.partner-comments
+									i Комментарий:
+									a(href="#"): span Заказ #1008 
+									span Bonus for the order #1008 totalling 60,750 руб.
+								td
+									i Приход:
+									strong -
+								td
+									i Расход:
+									strong 200
+								td
+									i Баланс:
+									strong 150
+							tr.partner__stats-td-row
+								td.date
+									i Дата операции:
+									strong 28 мая 2016 17:32
+								td.partner-comments
+									i Комментарий:
+									span Скидка на сумму 15 880 руб.
+								td
+									i Приход:
+									strong 150
+								td
+									i Расход:
+									strong
+								td
+									i Баланс:
+									strong 250
+							tr.partner__stats-td-row
+								td.date
+									i Дата операции:
+									strong 27 мая 2016 19:54
+								td.partner-comments
+									i Комментарий:
+									a(href="#"): span Заказ #1006
+									span Bonus for the order #1006 totalling 28,990 руб.
+								td
+									i Приход:
+									strong 50
+								td
+									i Расход:
+									strong
+								td
+									i Баланс:
+									strong 100
+							tr.partner__stats-td-row
+								td.date
+									i Дата операции:
+									strong 21 мая 2016 20:41
+								td.partner-comments
+									i Комментарий:
+									a(href="#"): span Заказ #1002 
+									span Bonus for the order #1002 totalling 208,500 руб.
+								td
+									i Приход:
+									strong 50
+								td
+									i Расход:
+									strong
+								td
+									i Баланс:
+									strong 50
+					.partner.partner--empty
+						.partner__graphic
+							strong 0
+							span бонусов
+							i на вашем счету
+							em 1 бонус = 0,5 руб.
+						.partner__no-bonus
+							strong.
+								К сожаление, у вас еще нету бонусов

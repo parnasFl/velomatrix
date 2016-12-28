@@ -1,0 +1,226 @@
+/* Account artner Program */
+.partner {
+	.partner__graphic {
+		bottom: -60px;
+		display: table;
+		margin: 0 auto;
+		margin-top: -50px;
+	}
+
+	margin-bottom: 20px;
+}
+
+.partner__stats {
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+}
+
+.partner__stats-td-row {
+	a {
+		
+		span {
+			color: $blue-link;
+			border-bottom: 1px solid rgba($blue-link, .5);
+			font-weight: 700;
+		}
+
+		&:hover {
+			span {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+}
+
+.partner__graphic {
+	position: relative;
+	width: 251px;
+	height: 251px;
+	border-radius: 100%;
+	background-color: $red-base;
+	border: 27px solid #ffea00;
+	text-align: center;
+	padding-top: 20px;
+	z-index: 9;
+	strong, span, i, em {
+		display: block;
+		line-height: 1;
+	}
+
+	strong {
+		font-size: 60px;
+		font-weight: 900;
+		color: #fff;
+	}
+
+	span {
+		text-transform: uppercase;
+		font-size: 30px;
+		color: rgba(#fff, .7);
+	}
+
+	i {
+		text-transform: uppercase;
+		font-size: 15px;
+		color: rgba(#fff, .7);
+		margin-bottom: 10px;
+	}
+
+	em {
+		color: #fff;
+		font-style: normal;
+		font-weight: 700;
+	}
+}
+
+.partner__no-bonus {
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+	background-color: white;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+	strong {
+		@include img-center;
+		font-size: 15px;
+		font-weight: 700;
+	}
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.partner__stats-th-row {
+		display: none;
+	}
+
+	.partner__stats-td-row {
+		display: block;
+		background-color: white;
+		border: 1px solid #e5e5e5;
+		border-radius: 3px;
+		box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+		margin-bottom: 10px;
+		padding: 20px;
+
+		td {
+			display: block;
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			&:nth-child(n+3) {
+				strong {
+					margin-left: 5px;
+				}
+			}
+			strong,a {
+				font-size: 13px;
+			}
+		}
+
+		.date, .partner-comments {
+			i {
+				display: block;
+			}
+		}
+
+		.partner-comments {
+
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+
+	.partner__stats {
+		width: 100%;
+	}
+
+	.partner__stats-th-row {
+		th {
+			border: 1px solid $bd-grey;
+			text-align: left;
+			font-size: 13px;
+			color: #999;
+			padding: 20px;
+		}
+	}
+
+	.partner__stats-td-row {
+		i {
+			display: none;
+		}
+
+		td {
+			border: 1px solid $bd-grey;
+			vertical-align: middle;
+			padding-top: 13px;
+			padding-bottom: 15px;
+			padding-left: 20px;
+			padding-right: 20px;
+			font-size: 13px;
+			a {
+				font-size: 13px;
+			}
+
+			* {
+				font-weight: 600;
+			}
+		}
+
+		.date {
+			white-space: nowrap;
+		}
+
+		&:nth-child(odd) {
+			background-color: #f7f7f7;
+		}
+	}
+	
+	.partner__no-bonus {
+		strong {
+			font-size: 20px;
+		}
+	}
+
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+
+	
+}
+
+
+/* Account PArtner Programm  End*/
+

@@ -1,0 +1,197 @@
+/* Pin code */
+
+.pin {
+	background-color: #f2f2f2;
+	padding-bottom: 20px;
+}
+
+.pin__inner {
+	margin: 0 auto;
+}
+
+.pin__content-wrapper {
+	padding: 20px;
+	text-align: center;
+
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	box-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.08);
+	
+	margin-top: 20px;
+	input {
+		display: table;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		width: 250px;
+		padding-top: 11px;
+		padding-bottom: 12px;
+		text-align: center;
+	}
+}
+
+.pin__content-text {
+	margin-bottom: 20px;
+}
+
+.pin__title {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.pin__content-input-wrapper {
+	margin-bottom: 20px;
+}
+
+.pin__content-btn button {
+	@include btn--red;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.password-recovery {
+
+	.pin__content-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.password-recovery__link {
+		span {
+			color:$blue-link;
+			font-size: 14px;
+			font-weight: 700;
+			border-bottom: 1px solid $blue-link;
+		}
+	
+		&:hover {
+			span {
+				border-color: transparent;
+			}
+		}
+	}
+
+	input {
+		width: 260px;
+		text-align: left;
+	}
+
+	.password-recovery__notif {
+		margin-bottom: 20px;
+		font-weight: 700;
+		color: #8bbe4f;
+	}
+}
+
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.pin {
+		margin-top: -10px;
+	}
+	.pin__inner {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.pin__title {
+		font-size: 16px;
+	}
+
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+	.pin {
+		padding-top: 17px;
+	}
+
+	.pin__inner {
+		width: 100%;
+	}
+
+	.pin__title {
+		//margin-top: 17px;
+		//margin-bottom: 17px;
+	}
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+	.pin__inner {
+		
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.pin__title {
+		font-size: 25px;
+	}
+
+	.pin {
+		padding-bottom: 40px;
+	}
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+	.pin {
+		margin-top: -20px;
+	}
+
+	.pin__content-wrapper {
+		
+	}
+	
+	.pin__content-image {
+		width: 400px;
+		margin: 0 auto;
+	}
+
+	.password-recovery {
+		.pin__content-wrapper {
+			padding-top: 30px;
+		}
+
+		.password-recovery__link {
+			margin-bottom: 20px;
+		}
+	}
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+	.pin {
+		padding-top: 25px;
+		padding-bottom: 50px;
+	}
+	.pin__inner {
+		width: 800px;
+	}
+	.pin__content-wrapper {
+		margin-left: 51px;
+	}
+
+	.pin__title {
+		font-size: 30px;
+		//margin-bottom: 20px;
+		//margin-bottom: 25px;
+	}
+}
+
+
+/* Pin code  End*/
+

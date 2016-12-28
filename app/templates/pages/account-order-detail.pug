@@ -1,63 +1,74 @@
-extends ../layouts/main-layout--checkoutonly
+extends ../layouts/main-layout--tablet-no-config
 
 block title
-	title Потверждение заказа
+	title Детали заказа
 
 block content
-	.cart-wrapper.checkout-shipping.checkout-confirmation
-		include ../common/checkout-top
-		.checkout-nav
-			ul.checkout-nav__list
-				li.checkout-nav__item.passed
-					a.checkout-nav__link(href="#")
-						span.num 1
-						i.text Контактная информация
-				li.checkout-nav__item.passed
-					a.checkout-nav__link(href="#")
-						span.num 2
-						i.text Доставка
-				li.checkout-nav__item.passed
-					a.checkout-nav__link(href="#")
-						span.num 3
-						i.text оплата
-				li.checkout-nav__item.active
-					a.checkout-nav__link(href="#")
-						span.num 4
-						i.text Потверждение заказа
-		.checkout-main__steps
-			form
-				.checkout-main__steps-inner
-					.checkout__step-header
-						h2.checkout__step-title
-							span 4. Потверждение заказа
-					.checkout__step-content
-						.shipping-type.confirmation-top
-							.shipping-type__inner
-								ul.order__details-list
-									li.order__details-item
-										.item-details-wrapper
-											b.receiver Получатель:
-											strong  Сайдуллаев Фархад
-									li.order__details-item
-										.item-details-wrapper
-											b.shipping Доставка:
-											strong  Курьер
-										.item-details-wrapper.receiver-address
-											b Адрес доставки:
-											strong.
-												Россиская Федерация, Московский область, Москва, улица Пушкина, дом 32, подъезд 1,
-												домофон 332
-									li.order__details-item
-										.item-details-wrapper
-											b.payment Оплата:
-											strong  QIWI
-						.shipping-type.confirmation-bottom
-							.shipping-type__inner
-								h2.order-conf__title Состав заказа
-								.order__items-list-header
-									.name Наименование
-									.quantity Количество
-									.sum Сумма
+	.account.order-detail__outer
+		.account__header
+			.account__nav
+				ul.account__nav-list
+					li.account__nav-item.order-history: a.account__nav-link(href="#") <span><i>История заказа</i></span>
+					li.account__nav-item.user-profile: a.account__nav-link(href="#") <span><i>Мой профиль</i></span>
+					li.account__nav-item.partner-program: a.account__nav-link(href="#") <span><i>Партнерская программа</i></span>
+					li.account__nav-item.account-exit: a.account__nav-link(href="#") <span><i>Выйти</i></span>
+			a.account-nav__toggle(href="#") Открыть меню
+			h1.account__header-title
+				span Детали заказа <i>#102808</i>
+				span.order-date Вчера 14:48
+		.account__inner
+			.account__main
+				.account__main-inner
+					.order-detail
+						.order-detail__top
+							ul.order__details-list
+								li.order__details-item.status
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.sent Отправлен
+									.item-details-wrapper
+										.order-track
+											.order-track__text <span>Номер трека: </span>
+											a.order-track__number(href="")
+												span <i>&nbsp;</i>AA1234567RU
+								li.order__details-item.receiver
+									.item-details-wrapper
+										b.receiver Получатель:
+										strong Сайдуллаев Фархад
+								li.order__details-item
+									.item-details-wrapper
+										b.shipping Доставка:
+										strong  Курьер
+									.item-details-wrapper.receiver-address
+										b Адрес доставки:
+										strong.
+											Россиская Федерация, Московский область, Москва, улица Пушкина, дом 32, подъезд 1,
+											домофон 332
+								li.order__details-item
+									.item-details-wrapper
+										b.payment Оплата:
+										strong  QIWI
+									.item-details-wrapper.payment-tel
+										form
+											.payment-tel__form-wrapper
+												label.payment-tel__text(for="payment-tel") Мобильный телефон номер
+												.payment-tel__input-wrapper
+													input(type="tel", id="payment-tel", value="998912300001")
+													span Пример, 79261234567
+												button.payment-tel__button(type="submit") Выставить счет QIWI
+								li.order__details-item
+									.item-details-wrapper
+										b.payment Оплата:
+										strong  Яндекс.Деньги
+									.item-details-wrapper.payment-tel
+										a.payment-tel__button(href="") Оплатить заказ на сайте Яндекс.Деньги
+						.order-detail__bottom
+							h2.order-detail__bottom-title Состав заказа
+							.order-content
+								.order-content__headings
+									.order-content__name(colspan="2") Наименование
+									.order-content__count Количество
+									.order-content__total Итого
 								table.order__goods-list
 									tr.checkout__main-tr
 										td.order__goods-item
@@ -154,22 +165,9 @@ block content
 														span.item-total__text Сумма: 
 														span.item-total__price 15 7700
 														span.item-total__currency  Р.
-								.confirmation-bottom__discount
-									.discount-text Скидка
-									.discount-amount
-										.num -100
-										.currency Р.
-								.confirmation-bottom__total
-									.discount-text Итоговая стоимость без учета доставки:
-									.discount-amount
-										.num 29 770
-										.currency Р.
-								.confirmation-bottom__agreement
-									input(type="checkbox", id="agree")
-									label(for="agree").
-										Я ознакомился (ознакомилась) с <a href="#">Условиями предоставления</a> услуг и принимаю их
-								.confirmation-bottom__comments
-									label(for="conf-comments")
-									textarea(id="conf-comments")
-					.no-reg-checkout-btn
-						button(type="submit") закончить оформление заказа
+								.order-sum__wrapper
+									.order-sum__text Скидка
+									.order-sum__amount: span -100<i>&nbsp;Р</i>
+								.order-sum__wrapper.total
+									.order-sum__text Итоговая стоимость без учета доставки:
+									.order-sum__amount: span 29 770<i>&nbsp;Р</i>

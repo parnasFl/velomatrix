@@ -1,0 +1,188 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Детали заказа
+
+block content
+	.account.order-detail__outer
+		.account__header
+			.account__nav
+				ul.account__nav-list
+					li.account__nav-item.order-history: a.account__nav-link(href="#") <span><i>История заказа</i></span>
+					li.account__nav-item.user-profile: a.account__nav-link(href="#") <span><i>Мой профиль</i></span>
+					li.account__nav-item.partner-program: a.account__nav-link(href="#") <span><i>Партнерская программа</i></span>
+					li.account__nav-item.account-exit: a.account__nav-link(href="#") <span><i>Выйти</i></span>
+			a.account-nav__toggle(href="#") Открыть меню
+			h1.account__header-title
+				span Детали заказа <i>#102808</i>
+				span.order-date Вчера 14:48
+		.account__inner
+			.account__main
+				.account__main-inner
+					.order-detail
+						.order-detail__top
+							ul.order__details-list
+								li.order__details-item.status
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.sent Отправлен
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.new Новый
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.processing В обработке
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.delivered Доставлен
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.waiting Ожидается оплаты
+									.item-details-wrapper
+										b.status  Статус заказа:
+										strong.canceled Отменен
+									.item-details-wrapper
+										.order-track
+											.order-track__text <span>Номер трека: </span>
+											a.order-track__number(href="")
+												span <i>&nbsp;</i>AA1234567RU
+								li.order__details-item.receiver
+									.item-details-wrapper
+										b.receiver Получатель:
+										strong Сайдуллаев Фархад
+								li.order__details-item
+									.item-details-wrapper
+										b.shipping Доставка:
+										strong  Курьер
+									.item-details-wrapper.receiver-address
+										b Адрес доставки:
+										strong.
+											Россиская Федерация, Московский область, Москва, улица Пушкина, дом 32, подъезд 1,
+											домофон 332
+								li.order__details-item
+									.item-details-wrapper
+										b.payment Оплата:
+										strong  QIWI
+									.item-details-wrapper.payment-tel
+										form
+											.payment-tel__form-wrapper
+												label.payment-tel__text(for="payment-tel") Мобильный телефон номер
+												.payment-tel__input-wrapper
+													input(type="tel", id="payment-tel", value="998912300001")
+													span Пример, 79261234567
+												button.payment-tel__button(type="submit") Выставить счет QIWI
+								li.order__details-item
+									.item-details-wrapper
+										b.payment Оплата:
+										strong  Яндекс.Деньги
+									.item-details-wrapper.payment-tel
+										a.payment-tel__button(href="") Оплатить заказ на сайте Яндекс.Деньги
+						.order-detail__bottom
+							h2.order-detail__bottom-title Состав заказа
+							.order-content
+								.order-content__headings
+									.order-content__name(colspan="2") Наименование
+									.order-content__count Количество
+									.order-content__total Итого
+								table.order__goods-list
+									tr.checkout__main-tr
+										td.order__goods-item
+											table.inner-table
+												tr.main-item-row
+													td.item-image
+														a(href="#")
+															img(src="./img/img-item-1.jpg")
+													td.item-name
+														a.item-name__text(href="") Велосипед "Bulls" Bushtail 29 (2016)
+														span.item-marking Артикул: <i class="artikul-id">0BB101</i>
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 15 770
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 15 770
+														span.item-total__currency  Р.
+												tr.item-addon
+													td.item-image
+														i.three-dot
+													td.item-name
+														h5.item-name__text + Подарочная упаковка
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 100
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 100
+														span.item-total__currency  Р.
+												tr.item-addon
+													td.item-image
+														i.three-dot
+													td.item-name
+														h5.item-name__text + Собрать велосипед в магазине
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 970
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 970
+														span.item-total__currency  Р.
+									tr.checkout__main-tr
+										td.order__goods-item
+											table.inner-table
+												tr.main-item-row
+													td.item-image
+														a(href="#")
+															img(src="./img/img-item-1.jpg")
+													td.item-name
+														a.item-name__text(href="") Jagwire Наконечник оболочки тормозного троса 5мм с защитой троса. Золотой.
+														span.item-marking Артикул: <i class="artikul-id">0BB101</i>
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 3300
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 15 770
+														span.item-total__currency  Р.
+									tr.checkout__main-tr
+										td.order__goods-item
+											table.inner-table
+												tr.main-item-row
+													td.item-image
+														a(href="#")
+															img(src="./img/img-item-1.jpg")
+													td.item-name
+														a.item-name__text(href="") Самокат "Globber" MY TOO 18.0 с ручн. тормозом
+														span.item-marking Артикул: <i class="artikul-id">0192-11-SB</i>
+													td.item-quantity
+														span.quantity-text Количество:
+														.quantity-num
+															span.amount 1
+															span.multiply  x 
+															span.item-price 1990
+															span.currency  Р.
+													td.item-total
+														span.item-total__text Сумма: 
+														span.item-total__price 15 7700
+														span.item-total__currency  Р.
+								.order-sum__wrapper
+									.order-sum__text Скидка
+									.order-sum__amount: span -100<i>&nbsp;Р</i>
+								.order-sum__wrapper.total
+									.order-sum__text Итоговая стоимость без учета доставки:
+									.order-sum__amount: span 29 770<i>&nbsp;Р</i>

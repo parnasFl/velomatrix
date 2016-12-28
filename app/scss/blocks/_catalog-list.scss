@@ -190,6 +190,7 @@
 	position: relative;
 	padding-left: 12px;
 	padding-bottom: 5px;
+	margin-bottom: 15px;
 	&:before {
 		content: '';
 		position: absolute;
@@ -1073,7 +1074,7 @@
 	}
 
 	.catalog-item__stock.stock {
-		margin-bottom: 15px;
+		//margin-bottom: 15px;
 	}
 
 	.catalog-item__arrow {

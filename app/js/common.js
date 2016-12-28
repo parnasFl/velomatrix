@@ -1496,6 +1496,79 @@ $(function(){
 				
 
 			})();
+
+			/*---------Account nav
+			============================================*/
+			(function(){
+
+				$('.account-nav__toggle').on('click', function(e){
+
+					var parent = $('.account__header'),
+							menu = $('.account__nav');
+
+						if($(window).width() < 1024) {
+							e.preventDefault();
+							
+							menu.slideToggle(300);
+							$(this).toggleClass('toggle-close');
+						}
+
+				});
+
+			})();
+
+			/*---------Account table row hover
+			============================================*/
+			(function(){
+				if($(window).width() > 1023) {
+					$('.account-order__detail-btn').hover(function(){
+						$(this).closest('.order-history__list-row')
+										.toggleClass('hover-shadow');
+					});
+				}
+
+			})();
+			/*---------Compare page
+			============================================*/
+
+			(function(){
+				$('.compare-slider__js-container').slick({
+					accessibility: false,
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					dots: false,
+					responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							vertical: false,
+							//slidesToShow: 3,
+							slidesToScroll: 1,
+							variableWidth: true,
+							centerMode: false
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							//slidesToShow: 1,
+							vertical: false,
+							slidesToScroll: 1,
+							dots: false,
+							variableWidth: true,
+							centerMode: false
+						}
+					}
+					]
+				});
+
+			})();
+			/*---------Compare page
+			============================================*/
+			(function(){
+				$('.compare-slide-header').equalHeights();
+			})();
+			
 }); // Jquery $ Function ...similar-items
 
 

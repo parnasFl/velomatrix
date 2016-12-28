@@ -46,7 +46,7 @@ gulp.task('pug', function () {
 
 //Compiling 1 PUG file
 gulp.task('pug-self', function () {
-	gulp.src(	'app/templates/pages/cart-empty.pug')
+	gulp.src(	'app/templates/pages/compare.pug')
 	//gulp.src('app/*.pug')
 		.pipe(pug({
 			pretty: true
@@ -188,8 +188,8 @@ gulp.task('build', ['clean', 'pug'], function() {
 //========================Watch and Default================
 
 //Watch Tasks
-gulp.task('watch',['server','pug', 'scss', 'libs'], function () {
-	gulp.watch('app/**/*.pug', ['pug']);
+gulp.task('watch',['server','pug-self', 'scss', 'libs'], function () {
+	gulp.watch('app/**/*.pug', ['pug-self']);
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch('app/js/**/*.js', browserSync.reload);

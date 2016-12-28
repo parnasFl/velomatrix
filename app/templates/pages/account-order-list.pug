@@ -6,26 +6,139 @@ block title
 block content
 	.account
 		.account__header
-			.account__header-inner
-				.account__nav
-					ul.account__nav-list
-						li.account__nav-item.order-history: a.account__nav-link(href="#") История заказа
-						li.account__nav-item.user-profile: a.account__nav-link(href="#") Мой профиль
-						li.account__nav-item-partner-program: a.account__nav-link(href="#") Партнерская программа
-						li.account__nav-item.account-exit: a.account__nav-link(href="#") Выйти
-				a.account-nav__toggle(href="#") Открыть меню
-				h1.account__header-title История заказа
-		.account__main
-			.account__main-inner
-				table.order-history__list
-					tr.order-history__list-header
-						th.order-history__list-heading: span Номер заказа
-						th.order-history__list-heading: span Статус заказа
-						th.order-history__list-heading: span Оплата
-						th.order-history__list-heading: span Доставка
-						th.order-history__list-heading: span Дата заказа
-					tr.order-history__list-row
-					tr.order-history__list-row
-					tr.order-history__list-row
-					tr.order-history__list-row
-					tr.order-history__list-row
+			.account__nav
+				ul.account__nav-list
+					li.account__nav-item.order-history.active: a.account__nav-link(href="#") <span><i>История заказа</i></span>
+					li.account__nav-item.user-profile: a.account__nav-link(href="#") <span><i>Мой профиль</i></span>
+					li.account__nav-item.partner-program: a.account__nav-link(href="#") <span><i>Партнерская программа</i></span>
+					li.account__nav-item.account-exit: a.account__nav-link(href="#") <span><i>Выйти</i></span>
+			a.account-nav__toggle(href="#") Открыть меню
+			h1.account__header-title: span История заказа
+		.account__inner
+			.account__main
+				.account__main-inner
+					table.order-history__list
+						tr.order-history__list-header
+							th.order-history__list-heading: span Номер заказа
+							th.order-history__list-heading: span Статус заказа
+							th.order-history__list-heading: span Оплата
+							th.order-history__list-heading: span Доставка
+							th.order-history__list-heading: span Дата заказа
+						tr.order-history__list-row
+							td.order-account__order-cell.td-head
+								.account-order-num
+									span.order-num__text Номер заказа:  
+									span.order-num__number: a(href="#") <i>102836</i>
+								a.account-order__detail-btn(href="") <span>детали<span> <i>заказа</i>
+							td.order-account__order-cell
+								div.cell-type Статус заказа:
+								div.info-type
+									span.account-order__status-icon.new
+									span.account-order__status-text Новый
+							td.order-account__order-cell
+								div.cell-type Оплата:
+								div.info-type
+									span.account-order__payment-type Наличные
+							td.order-account__order-cell
+								div.cell-type Доставка:
+								div.info-type
+									span.account-order_shipping-type Курьер
+							td.order-account__order-cell
+								div.cell-type Дата заказа:
+								div.info-type
+									span.account-order_date 28 сентября 2016
+						tr.order-history__list-row
+							td.order-account__order-cell.td-head
+								.account-order-num
+									span.order-num__text Номер заказа:  
+									span.order-num__number: a(href="#") <i>100677</i>
+								a.account-order__detail-btn(href="") <span>детали<span> <i>заказа</i>
+							td.order-account__order-cell
+								div.cell-type Статус заказа:
+								div.info-type
+									span.account-order__status-icon.processing
+									span.account-order__status-text В обработке
+							td.order-account__order-cell
+								div.cell-type Оплата:
+								div.info-type
+									span.account-order__payment-type Webmoney
+							td.order-account__order-cell
+								div.cell-type Доставка:
+								div.info-type
+									span.account-order_shipping-type Курьер
+							td.order-account__order-cell
+								div.cell-type Дата заказа:
+								div.info-type
+									span.account-order_date 1 сентября 2016
+						tr.order-history__list-row
+							td.order-account__order-cell.td-head
+								.account-order-num
+									span.order-num__text Номер заказа:  
+									span.order-num__number: a(href="#") <i>100677</i>
+								a.account-order__detail-btn(href="") <span>детали<span> <i>заказа</i>
+							td.order-account__order-cell
+								div.cell-type Статус заказа:
+								div.info-type
+									span.account-order__status-icon.delivered
+									span.account-order__status-text Доставлен
+							td.order-account__order-cell
+								div.cell-type Оплата:
+								div.info-type
+									span.account-order__payment-type Яндекс.Деньги
+							td.order-account__order-cell
+								div.cell-type Доставка:
+								div.info-type
+									span.account-order_shipping-type ТК Альянс
+							td.order-account__order-cell
+								div.cell-type Дата заказа:
+								div.info-type
+									span.account-order_date 22 марта 2016
+						tr.order-history__list-row
+							td.order-account__order-cell.td-head
+								.account-order-num
+									span.order-num__text Номер заказа:  
+									span.order-num__number: a(href="#") <i>100677</i>
+								a.account-order__detail-btn(href="") <span>детали<span> <i>заказа</i>
+							td.order-account__order-cell
+								div.cell-type Статус заказа:
+								div.info-type
+									span.account-order__status-icon.cancelled
+									span.account-order__status-text Отменен
+							td.order-account__order-cell
+								div.cell-type Оплата:
+								div.info-type
+									span.account-order__payment-type Наличные
+							td.order-account__order-cell
+								div.cell-type Доставка:
+								div.info-type
+									span.account-order_shipping-type Почта России
+							td.order-account__order-cell
+								div.cell-type Дата заказа:
+								div.info-type
+									span.account-order_date 22 марта 2016
+						tr.order-history__list-row
+							td.order-account__order-cell.td-head
+								.account-order-num
+									span.order-num__text Номер заказа:  
+									span.order-num__number: a(href="#") <i>100677</i>
+								a.account-order__detail-btn(href="") <span>детали<span> <i>заказа</i>
+							td.order-account__order-cell.td-status
+								div.cell-type Статус заказа:
+								div.info-type
+									span.account-order__status-icon.waiting
+									span.account-order__status-text Ожидается <br>оплаты
+							td.order-account__order-cell
+								div.cell-type Оплата:
+								div.info-type
+									span.account-order__payment-type Наличные
+							td.order-account__order-cell
+								div.cell-type Доставка:
+								div.info-type
+									span.account-order_shipping-type Pickpoint
+							td.order-account__order-cell
+								div.cell-type Дата заказа:
+								div.info-type
+									span.account-order_date 1 февраля 2016
+					.account__no-orders
+						.account__no-orders-text
+							span Список заказов пуст

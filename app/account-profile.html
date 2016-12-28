@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <title>История заказа</title>
+    <title>Мой профиль</title>
     <meta charset="utf-8">
     <meta name="description" content="Bicycles online Store">
     <meta name="keywords" content="bicycles">
@@ -1335,133 +1335,98 @@
             <div class="account__header">
               <div class="account__nav">
                 <ul class="account__nav-list">
-                  <li class="account__nav-item order-history active"><a class="account__nav-link" href="#"><span><i>История заказа</i></span></a></li>
-                  <li class="account__nav-item user-profile"><a class="account__nav-link" href="#"><span><i>Мой профиль</i></span></a></li>
+                  <li class="account__nav-item order-history"><a class="account__nav-link" href="#"><span><i>История заказа</i></span></a></li>
+                  <li class="account__nav-item user-profile active"><a class="account__nav-link" href="#"><span><i>Мой профиль</i></span></a></li>
                   <li class="account__nav-item partner-program"><a class="account__nav-link" href="#"><span><i>Партнерская программа</i></span></a></li>
                   <li class="account__nav-item account-exit"><a class="account__nav-link" href="#"><span><i>Выйти</i></span></a></li>
                 </ul>
               </div><a class="account-nav__toggle" href="#">Открыть меню</a>
-              <h1 class="account__header-title"><span>История заказа</span></h1>
+              <h1 class="account__header-title"><span>Мой профиль</span></h1>
             </div>
-            <div class="account__inner">
+            <div class="account__inner account--profile">
               <div class="account__main">
                 <div class="account__main-inner">
-                  <table class="order-history__list">
-                    <tr class="order-history__list-header">
-                      <th class="order-history__list-heading"><span>Номер заказа</span></th>
-                      <th class="order-history__list-heading"><span>Статус заказа</span></th>
-                      <th class="order-history__list-heading"><span>Оплата</span></th>
-                      <th class="order-history__list-heading"><span>Доставка</span></th>
-                      <th class="order-history__list-heading"><span>Дата заказа</span></th>
-                    </tr>
-                    <tr class="order-history__list-row">
-                      <td class="order-account__order-cell td-head">
-                        <div class="account-order-num"><span class="order-num__text">Номер заказа:  </span><span class="order-num__number"><a href="#"><i>102836</i></a></span></div><a class="account-order__detail-btn" href=""><span>детали<span> <i>заказа</i></a>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Статус заказа:</div>
-                        <div class="info-type"><span class="account-order__status-icon new"></span><span class="account-order__status-text">Новый</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Оплата:</div>
-                        <div class="info-type"><span class="account-order__payment-type">Наличные</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Доставка:</div>
-                        <div class="info-type"><span class="account-order_shipping-type">Курьер</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Дата заказа:</div>
-                        <div class="info-type"><span class="account-order_date">28 сентября 2016</span></div>
-                      </td>
-                    </tr>
-                    <tr class="order-history__list-row">
-                      <td class="order-account__order-cell td-head">
-                        <div class="account-order-num"><span class="order-num__text">Номер заказа:  </span><span class="order-num__number"><a href="#"><i>100677</i></a></span></div><a class="account-order__detail-btn" href=""><span>детали<span> <i>заказа</i></a>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Статус заказа:</div>
-                        <div class="info-type"><span class="account-order__status-icon processing"></span><span class="account-order__status-text">В обработке</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Оплата:</div>
-                        <div class="info-type"><span class="account-order__payment-type">Webmoney</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Доставка:</div>
-                        <div class="info-type"><span class="account-order_shipping-type">Курьер</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Дата заказа:</div>
-                        <div class="info-type"><span class="account-order_date">1 сентября 2016</span></div>
-                      </td>
-                    </tr>
-                    <tr class="order-history__list-row">
-                      <td class="order-account__order-cell td-head">
-                        <div class="account-order-num"><span class="order-num__text">Номер заказа:  </span><span class="order-num__number"><a href="#"><i>100677</i></a></span></div><a class="account-order__detail-btn" href=""><span>детали<span> <i>заказа</i></a>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Статус заказа:</div>
-                        <div class="info-type"><span class="account-order__status-icon delivered"></span><span class="account-order__status-text">Доставлен</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Оплата:</div>
-                        <div class="info-type"><span class="account-order__payment-type">Яндекс.Деньги</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Доставка:</div>
-                        <div class="info-type"><span class="account-order_shipping-type">ТК Альянс</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Дата заказа:</div>
-                        <div class="info-type"><span class="account-order_date">22 марта 2016</span></div>
-                      </td>
-                    </tr>
-                    <tr class="order-history__list-row">
-                      <td class="order-account__order-cell td-head">
-                        <div class="account-order-num"><span class="order-num__text">Номер заказа:  </span><span class="order-num__number"><a href="#"><i>100677</i></a></span></div><a class="account-order__detail-btn" href=""><span>детали<span> <i>заказа</i></a>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Статус заказа:</div>
-                        <div class="info-type"><span class="account-order__status-icon cancelled"></span><span class="account-order__status-text">Отменен</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Оплата:</div>
-                        <div class="info-type"><span class="account-order__payment-type">Наличные</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Доставка:</div>
-                        <div class="info-type"><span class="account-order_shipping-type">Почта России</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Дата заказа:</div>
-                        <div class="info-type"><span class="account-order_date">22 марта 2016</span></div>
-                      </td>
-                    </tr>
-                    <tr class="order-history__list-row">
-                      <td class="order-account__order-cell td-head">
-                        <div class="account-order-num"><span class="order-num__text">Номер заказа:  </span><span class="order-num__number"><a href="#"><i>100677</i></a></span></div><a class="account-order__detail-btn" href=""><span>детали<span> <i>заказа</i></a>
-                      </td>
-                      <td class="order-account__order-cell td-status">
-                        <div class="cell-type">Статус заказа:</div>
-                        <div class="info-type"><span class="account-order__status-icon waiting"></span><span class="account-order__status-text">Ожидается <br>оплаты</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Оплата:</div>
-                        <div class="info-type"><span class="account-order__payment-type">Наличные</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Доставка:</div>
-                        <div class="info-type"><span class="account-order_shipping-type">Pickpoint</span></div>
-                      </td>
-                      <td class="order-account__order-cell">
-                        <div class="cell-type">Дата заказа:</div>
-                        <div class="info-type"><span class="account-order_date">1 февраля 2016</span></div>
-                      </td>
-                    </tr>
-                  </table>
-                  <div class="account__no-orders">
-                    <div class="account__no-orders-text"><span>Список заказов пуст</span></div>
+                  <div class="profile">
+                    <div class="update-info">
+                      Контактная информация успешно
+                      обновлена!
+                    </div>
+                    <div class="profile__inner">
+                      <div class="profile__info">
+                        <div class="profile__info-row">
+                          <div class="info-row__property"><span>Имя:</span></div>
+                          <div class="info-row__value"><span>Фархад</span></div>
+                        </div>
+                        <div class="profile__info-row">
+                          <div class="info-row__property"><span>Фамилия:</span></div>
+                          <div class="info-row__value"><span>Сайдуллаев</span></div>
+                        </div>
+                        <div class="profile__info-row">
+                          <div class="info-row__property"><span>E-mail</span></div>
+                          <div class="info-row__value"><span>hi@designmyshop.ru</span></div>
+                        </div>
+                        <div class="profile__info-row">
+                          <div class="info-row__property"><span>Адрес:</span></div>
+                          <div class="info-row__value"><span>
+                              Россиская
+                              Федерация,
+                              Московская
+                              область,
+                              Москва, дом 32</span></div>
+                        </div>
+                        <div class="profile__info-row">
+                          <form>
+                            <button class="edit-profile-btn">Редактировать профиль</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile profile--edit">
+                    <div class="profile__edit">
+                      <div class="profile__edit-row">
+                        <label>Имя
+                          <input value="Фарход">
+                        </label>
+                      </div>
+                      <div class="profile__edit-row">
+                        <label>Фамилия
+                          <input>
+                        </label>
+                      </div>
+                      <div class="profile__edit-row">
+                        <label>Телефон
+                          <input type="tel">
+                        </label>
+                      </div>
+                      <div class="profile__edit-row">
+                        <label>E-mail
+                          <input type="email">
+                        </label>
+                      </div>
+                      <div class="profile__edit-row">
+                        <form>
+                          <button class="edit-profile-btn">Редактировать профиль</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile profile--social">
+                    <div class="profile__social">
+                      <h3 class="profile__social-title">Связанные аккаунты</h3>
+                      <div class="profile__social-descr">
+                        Подключите этот аккаунт к вашим аккаунтам в соцсетях, чтобы в следующий раз входить на сайт
+                        без ввода пароля:
+                      </div>
+                      <ul class="social-login__list">
+                        <li class="social-item vk"><a href="#" style="background-color: #50739b">Вконтакте2<span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M26.4 17.3c.6-1.2 1.7-1.6 2.9-1.8 3.9-.7 7.8-.6 11.7-.2 2.5.2 3.7 1.6 3.5 4.2-.1 3-.2 6-.2 9 0 1.3-.1 2.9 1.4 3.5 1.5.6 2.5-.7 3.3-1.6 3.1-3.3 5.6-7 7.5-11.1.8-1.9 2-2.6 4-2.5 3.6.1 7.2-.1 10.7 0 2.8 0 3.5 1.1 2.2 3.6-2.1 3.8-5.1 6.9-8 10.2-4.1 4.6-4.1 4.8.7 8.7 2.6 2.1 5.2 4.2 7.1 6.9 1.5 2.1 1 3.7-1.6 3.8-4.1.3-8.3.3-12.5.1-2-.1-3.6-1.5-5.1-2.9-1.5-1.4-3-2.9-4.6-4.2-2-1.5-3.5-1-4.5 1.4-.2.5-.4 1.1-.5 1.7-.6 4.2-.6 4.1-4.8 4.2-9.8.4-17.6-3.6-23.8-10.9-5.1-6-9.2-12.6-12.9-19.6-1-2-.6-2.8 1.6-2.9 3.4-.1 6.8-.1 10.2-.1 1.6 0 2.5 1.1 3.1 2.5 1.7 3.5 3.8 6.8 6.3 9.9.8 1 1.8 2 2.8 2.8 1.2.8 2.5.7 2.9-1 .9-3.6.9-7.2 0-10.8-.2-2.2-2.1-2.2-3.4-2.9z"/></svg></span></a></li>
+                        <li class="social-item fb"><a href="" style="background-color: #3a5a9a">FaceBook<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M24.4 21.9h9.1c-.4 3.1-.7 6-1.1 9.2h-8.2v27.7H12.1V31.2H6.2V22h5.9v-7.2c0-6.8 3.1-10.5 9.8-11.2 3.8-.4 7.6-.1 11.5-.1v9.6h-5.6c-2.7.1-3.6.9-3.6 3.6v4c0 .4 0 .6.2 1.2z"/></svg></span></a></li>
+                        <li class="social-item google"><a href="" style="background-color: #cd2d2d">Google +<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M40.7 11.9L35 17.3c-7.6-4.3-13.6-4.1-18.6.6-4.4 4.1-5.6 10.6-3.1 16 2.6 5.4 8.5 8.7 14.3 7.9 5.8-.8 9.8-4.2 10.7-9.4H26.1v-7.3h20.8c2.2 9.9-3.2 20-12.5 23.4-10.8 4-22.9-.3-28.2-10.2-5.2-9.6-2.5-21.6 6.4-28 8.5-6.3 21-5.6 28.1 1.6zM61.9 37.5v-6.3h-6.1V25h6.1v-6.3h6.2v5.9c2.2.7 4.2.1 6.2.5.4 1.9.2 3.9.1 6h-5.9c-.8 2.1-.1 4.1-.6 6.2-1.9.4-3.9 0-6 .2z"/></svg></span></a></li>
+                        <li class="social-item tw"><a href="" style="background-color: #2fc3f0">Twitter<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#fff;}</style><path class="st0" d="M70.5 20.5c-1 2.3-3.4 2.6-5.7 3.7 2.2.6 3.9.8 6.3.7-1.9 1.9-3.9 2.5-6 2.6-1 .1-1.7.3-2 1.4-3.8 10.8-12.2 16.3-22.7 18.9-12.1 2.9-23.1.7-32.4-8-.3-.3-.5-.6-.8-.9l.5-.5c7.2 3.2 14 3.1 20.4-1.9.3-.2.6-.4 1.1-.7-1.6-.7-3.1-.7-4-1.9-1.2-1.6.1-2.6 1-3.8-2.8-.6-5.6-1.3-6.9-4.2.7-1.1 2-1.2 3.1-2-2.9-1.3-5.5-2.6-6-5.9.8-.8 1.9-.6 3.1-1.1-2.5-2-4.9-4-4.9-7.9 7.7 3 15.6 5.4 22.1 11 .8-1.7 1.5-3.3 2.2-4.9 1.3-2.9 3-5.5 5.1-8 1.9-2.2 4.4-2.4 7-2.6h-.1c.7 1.9 2.6-.4 3.5 1.2-.8 1.7-2.7 1.4-4.2 2.1.8 1.1 1.9.6 2.8.9 4.8 1.7 8.2 4.9 9.6 9.7.7 2.4 2 2.7 4 2.5l3.7-.6.2.2z"/><path class="st0" d="M7.1 38.8c-.2-.3-.4-.5-.6-.8l.1-.1c.4 0 .8.1 1 .5-.2.1-.3.3-.5.4zM51 4.5v-.3h.2c0 .1-.1.2-.2.3zM70.3 20.4c.1-.2.3-.3.5-.1l-.3.3c0-.1-.1-.2-.2-.2z"/><path class="st0" d="M6.5 38c-.2 0-.5-.1-.3-.4.2-.2.3 0 .4.2 0 .1-.1.2-.1.2z"/></svg></span></a></li>
+                        <li class="social-item ya"><a href="" style="background-color: #ffffff">Yandex<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#ed0000;}</style><path class="st0" d="M45.4 2v56.7c-1.9.5-3.9.2-6.1.2V38.2c-2.7-.8-4.3-.3-5.6 2.3-2.6 5.3-5.7 10.5-8.4 15.8-1 2-2.2 3.1-4.6 2.7-1.3-.2-2.6.2-4.4-.5 4.2-7.2 8.4-14.3 12.5-21.3 0-.9-.7-.8-1-1C20 32 17 24.3 19.4 14.8 21.5 6.5 27.4 2 36.2 2h9.2zm-6.3 30.8V7c-8.1-.7-12.2 1.9-13.4 9.3-1.6 10.3 2.6 18 13.4 16.5z"/></svg></span></a></li>
+                        <li class="social-item mail"><a href="" style="background-color: #108fe5">Mail.Ru<span><svg xmlns="http://www.w3.org/2000/svg" width="76" height="61" viewBox="0 0 76 61"><style>.st0{fill:#FEAA25;}</style><path class="st0" d="M47.9 42.7c-9.1 5.7-16 5.1-21.6-1.7-5-6.1-4.5-14.9 1.1-20.7 4.5-4.6 12.4-7.1 20.3-.3.9-1.1 1.7-2.6 3.5-1.8 1.7.8 1.6 2.3 1.6 3.9v19c0 .9-.3 2 .9 2.3 1.3.4 1.7-.8 2.2-1.6 4-6.5 3.5-17.2-1-23-5.1-6.6-14.7-9.6-22.9-7-7.8 2.4-13.2 9.3-13.7 17.8-.9 14.6 11.8 24.8 25.8 20.6 1.6-.5 3.2-.7 4 1.2.8 2-.3 3.5-2.1 4.2-5.3 2.1-10.6 1.7-15.9.1-11.6-3.5-18.5-14-17.7-26.7.7-11.4 9.4-21.4 20.8-23.5 10.1-1.8 18.9.8 25.3 8.8 6.5 8.1 7.4 17.4 4 27.1-.8 2.4-2.3 4.4-4.1 6.2-1.9 1.9-4.1 2.5-6.6 1.6-2.5-.9-3.9-2.8-3.9-5.5.1-.3 0-.6 0-1zM28.4 31.6c0 6.1 3.7 10 9.3 10 5.7-.1 9.8-4.5 9.7-10.4-.1-5.8-4.2-10.1-9.8-10.1-5.5.1-9.2 4.3-9.2 10.5z"/></svg></span></a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

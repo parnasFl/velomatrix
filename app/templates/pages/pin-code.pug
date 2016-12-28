@@ -1,0 +1,23 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Пин код
+
+block content
+	.pin
+		.pin__inner
+			h1.pin__title заказ <span>#100077</span>
+			.pin__content-wrapper
+				form
+					.pin__content-text.
+						Введите четырехзначный PIN-код, который был отправлен вам в уведомлении о заказе по электронной
+						почте.
+					.pin__content-input-wrapper
+						input(type="tel", value="7532")
+						.pin__content-btn
+							button(type="submit") Посмотреть заказ
+					.pin__content-image
+						img(src="img/ill-pin.png", alt="Illustration")
+
+
+
