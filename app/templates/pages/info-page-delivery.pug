@@ -1,0 +1,23 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Новости
+
+block content
+	section.blog
+		.blog__inner
+			.blog__content
+				.blog__nav
+					ul.blog__nav-list
+						li.blog__nav-item.active: a.blog__nav-link(href="") Доставка и оплата
+						li.blog__nav-item: a.blog__nav-link(href="") Обзор и новинки
+						li.blog__nav-item: a.blog__nav-link(href="") Новости
+						li.blog__nav-item: a.blog__nav-link(href="") Контакты
+						li.blog__nav-item: a.blog__nav-link(href="") Услуги
+						li.blog__nav-item: a.blog__nav-link(href="") Гарантия
+						li.blog__nav-item: a.blog__nav-link(href="") О нас
+						li.blog__nav-item: a.blog__nav-link(href="") Обслуживание
+					a.blog__nav-toggle(href="#") Открыть меню
+				section.blog__main
+					h1.blog__title Новости                                                                  
+

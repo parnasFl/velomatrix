@@ -162,6 +162,11 @@
 }
 
 
+.payment-tel__button[disabled=disabled],
+.payment-tel__button:disabled {
+	@include btn--red--disabled;
+}
+
 
 .order-detail__bottom {
 	margin-bottom: 20px;

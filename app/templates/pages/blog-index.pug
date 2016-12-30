@@ -1,0 +1,52 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Новости
+
+block content
+	section.blog
+		.blog__inner
+			.blog__content
+				.blog__nav
+					ul.blog__nav-list
+						li.blog__nav-item: a.blog__nav-link(href="") Доставка и оплата
+						li.blog__nav-item: a.blog__nav-link(href="") Обзор и новинки
+						li.blog__nav-item.active: a.blog__nav-link(href="") Новости
+						li.blog__nav-item: a.blog__nav-link(href="") Контакты
+						li.blog__nav-item: a.blog__nav-link(href="") Услуги
+						li.blog__nav-item: a.blog__nav-link(href="") Гарантия
+						li.blog__nav-item: a.blog__nav-link(href="") О нас
+						li.blog__nav-item: a.blog__nav-link(href="") Обслуживание
+					a.blog__nav-toggle(href="#") Открыть меню
+				section.blog__main
+					h1.blog__title Новости
+					article.blog__article
+						h1.blog__article-title
+							a(href="") Тренировки для тех, кто хочет стать выносливее
+						.blog__article-meta: span 6 октябрь 2016
+						p
+							img(src="img/img-blog-4.jpg")
+						p.
+							Больше силовых тренировок для тех, кто хочет ехать быстрее и дальше.   Норвежские ученые доказали, что силовые тренировки увеличивают выносливость велосипедистов и бегунов. Делай 3 подхода по 10 приседаний с весом
+						a.blog__article-read-more(href=""): span Читать далее&#8594;
+					article.blog__article
+						h1.blog__article-title
+							a(href="") Мексиканское воскресенье без автомобилей
+						.blog__article-meta: span 6 октябрь 2016
+						p
+							img(src="img/img-blog-1.jpg")
+						p.
+							7 лет назад в Мехико стартовала государственная программа в поддержку велосипедизации, суть которой – отказ от автомобиля по воскресеньям.
+						p.
+							Программа оказалась успешной! На сегодняшний момент около 4,2 миллионов людей оставляют свои машины в гаражах и каждое воскресенье катаются на велосипедах. Общая протяженность дорог, которые перекрывают для машин по воскресеньям, составляет около 50 км.
+						a.blog__article-read-more(href=""): span Читать далее
+					article.blog__article
+						h1.blog__article-title
+							a(href="") 4 мэра, которые пересели на велосипеды
+						.blog__article-meta: span 6 октябрь 2016
+						p
+							img(src="img/img-blog-3.jpg")
+						p.
+							Эти люди решили всерьез подойти к вопросу велосипедизации своих городов, поэтому решили стать примером для окружающих, пересев с авто на велосипед.
+						a.blog__article-read-more(href=""): span Читать далее
+

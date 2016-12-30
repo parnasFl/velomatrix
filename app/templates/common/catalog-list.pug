@@ -4,12 +4,13 @@
 			.main-content
 				.catalog-list__filter-result Найдено <strong>425</strong> товаров в наличии
 				.catalog-list__filter-settings
-						form
-							label(for="catalog-filter") Сначала:
-							select
-								option Новые и популярные
-								option Старые и популярные
-								option Новые но не популярные
+						.filter-settings-wrap
+							span Сначала:
+							.filter-settings__label: span Новые и популярные
+								ul.filter-settings__list
+									li: a(href="") Новые и популярные
+									li: a(href="") Старые и популярные
+									li: a(href="") Новые но не популярные
 	.catalog-list__inner
 		.main-content
 			.catalog-list__sidebar

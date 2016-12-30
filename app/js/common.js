@@ -24,35 +24,35 @@ $(function(){
 				$('.slideshow__thumbs-link').on('click', function(e){
 					e.preventDefault();
 				});
-			$('.slideshow__image-wrap').slick({
-							slidesToShow: 1,
-							slidesToScroll: 1,
-							arrows: false,
-							fade: true,
-							asNavFor: '.slideshow__thumbs',
-							accessibility: false,
-							responsive: [{
-									breakpoint: 1023,
-									settings: {
-											slidesToShow: 1,
-											slidesToScroll: 1
-									}
-							}, {
-									breakpoint: 767,
-									settings: {
-											slidesToShow: 1,
-											slidesToScroll: 1,
-											arrows: false,
-											dots: true,
-											asNavFor: null
-									}
-							}]
-					});
+			// $('.slideshow__image-wrap').slick({
+			// 				slidesToShow: 1,
+			// 				slidesToScroll: 1,
+			// 				arrows: false,
+			// 				fade: true,
+			// 				asNavFor: '.slideshow__thumbs',
+			// 				accessibility: false,
+			// 				responsive: [{
+			// 						breakpoint: 1023,
+			// 						settings: {
+			// 								slidesToShow: 1,
+			// 								slidesToScroll: 1
+			// 						}
+			// 				}, {
+			// 						breakpoint: 767,
+			// 						settings: {
+			// 								slidesToShow: 1,
+			// 								slidesToScroll: 1,
+			// 								arrows: false,
+			// 								dots: true,
+			// 								asNavFor: null
+			// 						}
+			// 				}]
+			// 		});
 					$('.slideshow__thumbs').slick({
 							// rows: 2,
 							slidesToShow: 5,
 							slidesToScroll: 1,
-							asNavFor: '.slideshow__image-wrap',
+							//asNavFor: '.slideshow__image-wrap',
 							dots: false,
 							arrows: true,
 							centerMode: true,
@@ -1563,12 +1563,105 @@ $(function(){
 				});
 
 			})();
-			/*---------Compare page
+			/*---------Compare page row equilHeight adjust 
+			: https://github.com/mattbanks/jQuery.equalHeights
 			============================================*/
 			(function(){
-				$('.compare-slide-header').equalHeights();
+				if($('.compare').length) {
+					$('.compare-slide-header').equalHeights();
+					$('.tech-item--row-1').equalHeights();
+					$('.tech-item--row-2').equalHeights();
+					$('.tech-item--row-3').equalHeights();
+					$('.tech-item--row-4').equalHeights();
+					$('.tech-item--row-5').equalHeights();
+					$('.tech-item--row-6').equalHeights();
+					$('.tech-item--row-7').equalHeights();
+					$('.tech-item--row-8').equalHeights();
+					$('.tech-item--row-9').equalHeights();
+					$('.tech-item--row-10').equalHeights();
+					$('.tech-item--row-11').equalHeights();
+					$('.tech-item--row-12').equalHeights();
+					$('.tech-item--row-13').equalHeights();
+					$('.tech-item--row-14').equalHeights();
+					$('.tech-item--row-15').equalHeights();
+					$('.tech-item--row-16').equalHeights();
+					$('.tech-item--row-17').equalHeights();
+					$('.tech-item--row-18').equalHeights();
+				}
+				
+				
+
+			})();
+
+			/*---------Compare page row hover
+			============================================*/
+			
+			(function(){
+
+				$('.compare-slider__item-chars-li').mouseenter(function(){
+					var that = $(this),
+							container = that.closest('.compare-slider__item-chars-ul'),
+							sliderContainer = $('.compare-slider__js-container'),
+							sliderItem = sliderContainer.find('.compare-slider__item'),
+							sliderItemUl = sliderItem.find('.compare-slider__item-chars-ul'),
+							itemLi = container.find('.compare-slider__item-chars-li'),
+							inx = itemLi.index(that),
+							titleInRow = $('.compare-title__tech-list li:nth-of-type(' + (inx+1) + ')'),
+							inRow = sliderItem
+											.find('ul li:nth-of-type(' + (inx+1) + ')');
+
+					titleInRow.addClass('hover');
+					inRow.addClass('hover');
+
+				}).mouseleave(function(){
+					var that = $(this),
+							container = that.closest('.compare-slider__item-chars-ul'),
+							sliderContainer = $('.compare-slider__js-container'),
+							sliderItem = sliderContainer.find('.compare-slider__item'),
+							sliderItemUl = sliderItem.find('.compare-slider__item-chars-ul'),
+							itemLi = container.find('.compare-slider__item-chars-li'),
+							inx = itemLi.index(that),
+							titleInRow = $('.compare-title__tech-list li:nth-of-type(' + (inx+1) + ')'),
+							inRow = sliderItem
+											.find('ul li:nth-of-type(' + (inx+1) + ')');
+
+					titleInRow.removeClass('hover');
+					inRow.removeClass('hover');
+				});
+
 			})();
 			
+			/*---------Catalog sorting
+			============================================*/
+			(function(){
+				$('.filter-settings__label').on('click', 'span', function(){
+					var that = $(this),
+					container = that.closest('.filter-settings__label'),
+					sortList = container.find('.filter-settings__list');
+
+					sortList.toggle();
+				});
+			})();
+
+			/*---------Account nav
+			============================================*/
+			(function(){
+
+				$('.blog__nav-toggle').on('click', function(e){
+
+					var parent = $('.blog__nav'),
+							menu = $('.blog__nav-list');
+
+						if($(window).width() < 1024) {
+							e.preventDefault();
+							
+							menu.slideToggle('fast');
+							$(this).toggleClass('toggle-close');
+						}
+
+				});
+
+			})();
 }); // Jquery $ Function ...similar-items
 
 

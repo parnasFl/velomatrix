@@ -120,6 +120,11 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
+	button[disabled=disabled],
+	button:disabled {
+		@include btn--red--disabled;
+	}
 }
 
 /* ==============Only Mobile Styles * 767 * ==============
@@ -163,7 +168,7 @@
 	}
 
 	.reg-info__input-wrapper {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	.no-reg-checkout-btn {

@@ -1,0 +1,85 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Новости
+
+block content
+	section.blog
+		.blog__inner
+			.blog__content
+				.blog__nav
+					ul.blog__nav-list
+						li.blog__nav-item: a.blog__nav-link(href="") Доставка и оплата
+						li.blog__nav-item: a.blog__nav-link(href="") Обзор и новинки
+						li.blog__nav-item.active: a.blog__nav-link(href="") Новости
+						li.blog__nav-item: a.blog__nav-link(href="") Контакты
+						li.blog__nav-item: a.blog__nav-link(href="") Услуги
+						li.blog__nav-item: a.blog__nav-link(href="") Гарантия
+						li.blog__nav-item: a.blog__nav-link(href="") О нас
+						li.blog__nav-item: a.blog__nav-link(href="") Обслуживание
+					a.blog__nav-toggle(href="#") Открыть меню
+				section.blog__main
+					h1.blog__title Новости
+					article.blog__article
+						h1.blog__article-title
+							a(href="") Тренировки для тех, кто хочет стать выносливее
+						.blog__article-meta: span 6 октябрь 2016
+						p
+							img(src="img/img-blog-4.jpg")
+						p.
+							Больше силовых тренировок для тех, кто хочет ехать быстрее и дальше.  Норвежские ученые доказали, что силовые тренировки увеличивают выносливость велосипедистов и бегунов. Делай 3 подхода по 10 приседаний с весом
+						p
+							img(src="img/img-blog-5.jpg")
+						p: strong: span(style="font-size:18px;") Это немного другого размера текст + жирный
+						p(style="text-align: center;").
+							Если у вас дома или в офисе много журналов и бумаг, которые негде хранить, воспользуйтесь специальными органайзерами или лотками. Такие органайзеры можно купить в канцелярском магазине или изготовить самостоятельно. <span style="background-color: #ed0000; color:#fff;">В этой статье мы расскажем,</span > как сделать органайзер для хранения журналов своими руками. <a href="#">Такие органайзеры получатся недорогими</a>, так как из листа фанеры размером 120×120 см их можно изготовить 9 штук.
+						p <strong><em>Текст + жирный + курсив</em></strong>
+						p: strong Это список
+						ul
+							li Первый
+							li Второй
+							li Третий
+						p: strong Это нумеровой список
+						ol
+							li: strong: span(style="color:red;") Первый
+							li: strong: span(style="color:green;") Второй
+							li: strong: span(style="color:blue;") Третий
+						<table>
+						<tbody>
+						<tr>
+							<td>Ячейка
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td>Ячейка<strong></strong>
+							</td>
+							<td style="text-align:center;"><strong>Ячейка</strong>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td>Ячейка
+							</td>
+							<td>
+							</td>
+							<td>Примечание: такие органайзеры можно<br> украсить с применением многих техник,<br> например, росписи, аппликации или декупажа.
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;
+							</td>
+							<td>&nbsp;
+							</td>
+							<td>&nbsp;
+							</td>
+						</tr>
+						</tbody>
+						</table>
+						<h1 style="text-align: center;color: red;">Новинка года!</h1>
+						<iframe style="width: 500px; height: 281px;" src="//www.youtube.com/embed/ArZUrJd2QXo" frameborder="0" allowfullscreen="">
+						</iframe>

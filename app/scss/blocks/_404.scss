@@ -1,0 +1,55 @@
+/* 404 */
+.mistake {
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.mistake__text span {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+/* ==============Only Mobile Styles * 767 * ==============
+*******************************************************/
+@media (max-width: 767px) {
+	.mistake__inner {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+} // media query
+
+
+
+/* ============== Only Mobile&Tablet styles * 1023 * ======
+*******************************************************/
+@media (max-width: 1023px) {
+
+}//@media (max-width: 1023px) 
+
+
+/* ==============Only Tablet Styles !!! 768 < || 1023======
+*******************************************************/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+/* ==============Tablet Media queries============
+*******************************************************/
+@media (min-width: 768px) {
+.mistake__inner {
+	width: 500px;
+	margin: 0 auto;
+}
+} //(min-width: 768px)
+
+
+/* ==============Desktop Media queries============
+*******************************************************/
+@media (min-width: 1024px) {
+
+}
+
+/* 404  End*/
+
