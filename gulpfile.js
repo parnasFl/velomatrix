@@ -46,7 +46,7 @@ gulp.task('pug', function () {
 
 //Compiling 1 PUG file
 gulp.task('pug-self', function () {
-	gulp.src(	'app/templates/pages/info-page-delivery.pug')
+	gulp.src(	'app/templates/pages/compare.pug')
 	//gulp.src('app/*.pug')
 		.pipe(pug({
 			pretty: true
