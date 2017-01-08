@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
-    <title>Новости</title>
+    <title>Доставка и оплата</title>
     <meta charset="utf-8">
     <meta name="description" content="Bicycles online Store">
     <meta name="keywords" content="bicycles">
@@ -13,11 +13,11 @@
 <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 <!-- build:css css/vendor.min.css -->
 <!-- bower:css -->
+<link rel="stylesheet" href="/js/vendor/lightgallery/dist/css/lightgallery.css" />
 <!-- endbower -->
 <!-- endbuild -->
 <link rel="stylesheet" href="css/fonts.min.css">
 <link rel="stylesheet" href="css/style.min.css">
-<link rel="stylesheet" href="css/style-cart.min.css">
 <!-- Custom Browsers Color Start -->
 <!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#000">
@@ -1331,12 +1331,12 @@
           </div>
         </nav>
         <main>
-          <section class="blog delivery">
+          <section class="blog delivery--outer">
             <div class="blog__inner">
               <div class="blog__content">
                 <div class="blog__nav">
                   <ul class="blog__nav-list">
-                    <li class="blog__nav-item active"><a class="blog__nav-link" href="">Доставка и оплата</a></li>
+                    <li class="blog__nav-item active"><a class="blog__nav-link">Доставка и оплата</a></li>
                     <li class="blog__nav-item"><a class="blog__nav-link" href="">Обзор и новинки</a></li>
                     <li class="blog__nav-item"><a class="blog__nav-link" href="">Новости</a></li>
                     <li class="blog__nav-item"><a class="blog__nav-link" href="">Контакты</a></li>
@@ -1346,8 +1346,163 @@
                     <li class="blog__nav-item"><a class="blog__nav-link" href="">Обслуживание</a></li>
                   </ul><a class="blog__nav-toggle" href="#">Открыть меню</a>
                 </div>
-                <section class="blog__main">
+                <section class="blog__main delivery">
                   <h1 class="blog__title">Доставка и оплата</h1>
+                  <div class="delivery__banners-wrap">
+                    <div class="delivery__banner">
+                      <h2 class="delivery__banner-title"><strong>БЕСПЛАТНАЯ</strong> доставка</h2>
+                      <div class="delivery__banner-text">При заказе велосипеда через интернет-магазин<br> При заказе свыше 10000 рублей</div>
+                    </div>
+                    <div class="delivery__banner">
+                      <h2 class="delivery__banner-title"><strong>ДОСТАВКА ОТ</strong> 500 РУБЛЕЙ</h2>
+                      <div class="delivery__banner-text">При покупке в розничном магазине<br> +50 рублей за 1 км. от МКАД</div>
+                    </div>
+                  </div>
+                  <section class="delivery__date-info-wrap">
+                    <article class="delivery__date">
+                      <header class="delivery__date-header">
+                        <h1 class="delivery__date-header-title"><span>Доставка по Москве</span></h1>
+                        <div class="delivery__date-header-days"><span>1-2 дня</span></div><a class="delivery__date-header-toggle" href="#"></a>
+                      </header>
+                      <div class="delivery__date-content">
+                        <p>Доставка осуществляется силами нашей собственной курьерской службы.</p>
+                        <p>После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.</p>
+                        <p>Как правило, доставка заказа производится в течение <strong>1-2</strong> дней с момента получения заказа и согласования всех необходимых моментов.</p>
+                        <p>Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.</p>
+                        <p>
+                          <strong>В розничных магазинах стоимость доставки договорная
+                          Наша курьерская служба работает с 10.00 до 23.00</strong>
+                        </p>
+                      </div>
+                    </article>
+                    <article class="delivery__date">
+                      <header class="delivery__date-header">
+                        <h1 class="delivery__date-header-title"><span>Доставка по Московской области</span></h1>
+                        <div class="delivery__date-header-days"><span>1-2 дня</span></div><a class="delivery__date-header-toggle" href="#"></a>
+                      </header>
+                      <div class="delivery__date-content">
+                        <p>Доставка осуществляется силами нашей собственной курьерской службы.</p>
+                        <p>После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.</p>
+                        <p>Как правило, доставка заказа производится в течение 1-2 дней с момента получения заказа и согласования всех необходимых моментов.</p>
+                        <p>Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.</p>
+                        <p><strong>В розничных магазинах стоимость доставки договорная Наша курьерская служба работает с 10.00 до 23.00</strong></p>
+                      </div>
+                    </article>
+                    <article class="delivery__date">
+                      <header class="delivery__date-header">
+                        <h1 class="delivery__date-header-title"><span>Доставка в регионы РФ</span></h1>
+                        <div class="delivery__date-header-days"><span>3-5 дня</span></div><a class="delivery__date-header-toggle" href="#"></a>
+                      </header>
+                      <div class="delivery__date-content">
+                        <p>Доставка осуществляется силами нашей собственной курьерской службы.</p>
+                        <p>После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.</p>
+                        <p>Как правило, доставка заказа производится в течение 1-2 дней с момента получения заказа и согласования всех необходимых моментов.</p>
+                        <p>Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.</p>
+                        <p>
+                          <strong>В розничных магазинах стоимость доставки договорная
+                          Наша курьерская служба работает с 10.00 до 23.00</strong>
+                        </p>
+                      </div>
+                    </article>
+                    <article class="delivery__date">
+                      <header class="delivery__date-header">
+                        <h1 class="delivery__date-header-title no-border"><span>Самовывоз</span></h1><a class="delivery__date-header-toggle" href="#"></a>
+                      </header>
+                      <div class="delivery__date-content">
+                        <p>Доставка осуществляется силами нашей собственной курьерской службы.</p>
+                        <p>После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.</p>
+                        <p>Как правило, доставка заказа производится в течение 1-2 дней с момента получения заказа и согласования всех необходимых моментов.</p>
+                        <p>Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.</p>
+                        <p>
+                          <strong>В розничных магазинах стоимость доставки договорная
+                          Наша курьерская служба работает с 10.00 до 23.00</strong>
+                        </p>
+                      </div>
+                    </article>
+                  </section>
+                  <div class="delivery__date-notif"><span>Уважаемы клиенты, отгрузка заказов через транспортные компании, осуществляется только после полной оплаты заказа.</span></div>
+                  <div class="delivery__transport">
+                    <div class="delivery__transport-image"><img src="img/ill-truck.png"></div>
+                    <div class="delivery__transport-text">Мы работем с любыми транспортными компаниями!</div>
+                    <div class="delivery__transport-logos"><a class="delivery__transport-logos-item" href=""><img src="img/logo-jeldor.png" alt="Logo"></a><a class="delivery__transport-logos-item" href=""><img src="img/logo-fedex.png" alt="Logo"></a><a class="delivery__transport-logos-item" href=""><img src="img/logo-aerogruz.png" alt="Logo"></a><a class="delivery__transport-logos-item" href=""><img src="img/logo-ems.png" alt="Logo"></a><a class="delivery__transport-logos-item" href=""><img src="img/logo-baykal.png" alt="Logo"></a><a class="delivery__transport-logos-item" href=""><img src="img/logo-del.png" alt="Logo"></a></div>
+                  </div>
+                  <div class="delivery__payment">
+                    <h2 class="delivery-payment__title">Оплата заказа</h2>
+                    <div class="delivery-payment__table">
+                      <ul class="delivery-payment__place-list">
+                        <li class="delivery-payment__place-item js-delivery-payment__top"></li>
+                        <li class="delivery-payment__place-item js-delivery-payment__cell">Курьеру</li>
+                        <li class="delivery-payment__place-item js-delivery-payment__cell">В магазине</li>
+                        <li class="delivery-payment__place-item js-delivery-payment__cell">На сайте</li>
+                        <li class="delivery-payment__place-item js-delivery-payment__cell">Мастерская</li>
+                      </ul>
+                      <div class="delivery-payment__type-wrapper">
+                        <div class="delivery-payment__slider-wrap">
+                          <div class="delivery-payment__type">
+                            <div class="delivery-payment__type-title js-delivery-payment__top">Наличными</div>
+                            <ul class="delivery-payment__type-list">
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                            </ul>
+                          </div>
+                          <div class="delivery-payment__type">
+                            <div class="delivery-payment__type-title js-delivery-payment__top">Картой</div>
+                            <ul class="delivery-payment__type-list">
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                            </ul>
+                          </div>
+                          <div class="delivery-payment__type">
+                            <div class="delivery-payment__type-title js-delivery-payment__top">Подарочной картой</div>
+                            <ul class="delivery-payment__type-list">
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                            </ul>
+                          </div>
+                          <div class="delivery-payment__type">
+                            <div class="delivery-payment__type-title js-delivery-payment__top">Бонусной картой</div>
+                            <ul class="delivery-payment__type-list">
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                            </ul>
+                          </div>
+                          <div class="delivery-payment__type">
+                            <div class="delivery-payment__type-title js-delivery-payment__top">Кредит</div>
+                            <ul class="delivery-payment__type-list">
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"><i class="checked"></i></li>
+                              <li class="delivery-payment__type-item js-delivery-payment__cell"></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-payment__text">
+                      <p>Для жителей Москвы и Подмосковья возможна оплата наличными денежными средствами курьеру в момент доставки заказа.</p>
+                      <p>Для жителей регионов мы предлагаем взаиморасчеты через банковские карты <strong>Visa и Mastercard</strong></p>
+                    </div>
+                  </div>
+                  <div class="delivery__alert">
+                    <p><strong>Уважаемые клиенты, модели, которых нет в наличии, доступны к заказу, но срок поставки данных изделий зависит от срока поставки данной продукции на склад в Москву.</strong></p>
+                    <p><strong>Подробности вы можете уточнить у менеджера по телефонам +7 495 961-94-21</strong></p>
+                  </div>
+                  <div class="delivery__build">
+                    <div class="delivery-build__inner">
+                      <div class="delivery-build__circle">
+                        <h3 class="delivery-build__title"><span>Бесплатная<br> сборка<br> настройка</span></h3>
+                      </div>
+                      <div class="delivery-build__square"><span>Перед доставкой каждый велосипед собирается и настраивается бесплатно, а также первое ТО после обкатки велосипеда мы делаем бесплатно.</span></div>
+                    </div>
+                  </div>
                 </section>
               </div>
             </div>
@@ -1460,12 +1615,15 @@
           </div>
         </footer>
       </div>
+      <div class="compare__label"><a href="#">сравнить выбранные товары (<i>12</i>)</a></div>
     </div><!-- build:js js/vendor.min.js -->
 <!-- bower:js -->
 <script src="/js/vendor/jquery/dist/jquery.js"></script>
 <script src="/js/vendor/iCheck/icheck.min.js"></script>
 <script src="/js/vendor/slick-carousel/slick/slick.js"></script>
 <script src="/js/vendor/jQuery.equalHeights/jquery.equalHeights.js"></script>
+<script src="/js/vendor/lightgallery/dist/js/lightgallery.min.js"></script>
+<script src="/js/vendor/lg-video/dist/lg-video.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
     <script>

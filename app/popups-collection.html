@@ -13,11 +13,11 @@
 <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 <!-- build:css css/vendor.min.css -->
 <!-- bower:css -->
+<link rel="stylesheet" href="/js/vendor/lightgallery/dist/css/lightgallery.css" />
 <!-- endbower -->
 <!-- endbuild -->
 <link rel="stylesheet" href="css/fonts.min.css">
 <link rel="stylesheet" href="css/style.min.css">
-<link rel="stylesheet" href="css/style-cart.min.css">
 <!-- Custom Browsers Color Start -->
 <!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#000">
@@ -1331,155 +1331,177 @@
           </div>
         </nav>
         <main>
-          <div class="popups__wrapper">
-            <div class="feedback-write-popup__outer">
-              <div class="feedback-write-popup"><a class="popup-close" href="#">Закрыть окошку</a>
-                <div class="feedback-form__wrapper">
-                  <form>
-                    <h3 class="feedback-form__title">Написать отзыв</h3>
-                    <ul class="feedback-form__rating">
-                      <li class="feedback-form__rating-item">Оцените товар</li>
-                      <li class="feedback-form__rating-item rating-info">
-                        <ul class="item__rating">
-                          <li class="item__rating-item item__rating-item--full"></li>
-                          <li class="item__rating-item item__rating-item--full"></li>
-                          <li class="item__rating-item item__rating-item--full"></li>
-                          <li class="item__rating-item"></li>
-                          <li class="item__rating-item"></li>
-                        </ul>
-                      </li>
-                      <li class="feedback-form__rating-item"><a class="rating-clear" href="#">очистить</a></li>
-                    </ul>
-                    <div class="feedback-form__inner">
-                      <div class="input-wrapper">
-                        <label>Заголовок
-                          <input type="text" name="" id="">
+          <div class="popups__wrapper"></div>
+          <!--Написать отзыв-->
+          <div class="feedback-write-popup__outer popup__outer--wide">
+            <div class="feedback-write-popup popup-wrapper"><a class="popup-close" href="#">Закрыть модального окна</a>
+              <div class="feedback-form__wrapper">
+                <form>
+                  <h3 class="feedback-form__title">Написать отзыв</h3>
+                  <ul class="feedback-form__rating">
+                    <li class="feedback-form__rating-item">Оцените товар</li>
+                    <li class="feedback-form__rating-item rating-info">
+                      <ul class="item__rating">
+                        <li class="item__rating-item item__rating-item--full"></li>
+                        <li class="item__rating-item item__rating-item--full"></li>
+                        <li class="item__rating-item item__rating-item--full"></li>
+                        <li class="item__rating-item"></li>
+                        <li class="item__rating-item"></li>
+                      </ul>
+                    </li>
+                    <li class="feedback-form__rating-item"><a class="rating-clear" href="#">очистить</a></li>
+                  </ul>
+                  <div class="feedback-form__inner">
+                    <div class="input-wrapper">
+                      <label>Заголовок
+                        <input type="text" name="" id="" value="Товар мне нравиться">
+                      </label>
+                    </div>
+                    <div class="input-wrapper">
+                      <label>Текст отзывы
+                        <textarea placeholder="Опишите подробнее свои впечатления о товаре. Чем бы Вы хотели поделиться с другими покупателями?" name="" id=""></textarea>
+                      </label>
+                    </div>
+                    <div class="feedback-form__meta">
+                      <div class="input-wrapper name">
+                        <label>Ваше имя
+                          <input type="text" name="" id="" value="Фарход">
                         </label>
                       </div>
-                      <div class="input-wrapper">
-                        <label>Текст отзывы
-                          <textarea placeholder="Опишите подробнее свои впечатления о товаре. Чем бы Вы хотели поделиться с другими покупателями?" name="" id=""></textarea>
-                        </label>
-                      </div>
-                      <div class="feedback-form__meta">
-                        <div class="input-wrapper name">
-                          <label>Ваше имя
-                            <input type="text" name="" id="" value="Фарход">
+                      <div class="feedback-captcha">
+                        <div class="input-wrapper">
+                          <label>Код каптчи
+                            <input type="text" name="" id="">
                           </label>
                         </div>
-                        <div class="feedback-captcha">
-                          <div class="input-wrapper">
-                            <label>Код каптчи
-                              <input type="text" name="" id="">
-                            </label>
-                          </div>
-                          <div class="captcha-input"><a class="update-btn" href="#"><img src="img/icon-refresh.svg" alt="" width="16" height="16"></a>
-                            <div class="captcha-input__image"><img src="img/img-captcha.jpg" alt="captcha"></div>
-                          </div>
+                        <div class="captcha-input"><a class="update-btn" href="#"><img src="img/icon-refresh.svg" alt="" width="16" height="16"></a>
+                          <div class="captcha-input__image"><img src="img/img-captcha.jpg" alt="captcha"></div>
                         </div>
                       </div>
-                      <button class="feedback-form__btn" type="submit">добавить отзыв</button>
                     </div>
-                  </form>
-                </div>
+                    <div class="feedback-form__meta">
+                      <div class="input-wrapper name">
+                        <label>Ваше имя
+                          <div class="feedback-form__meta-logined"><span class="avatar"><img src="img/img-user-pic.jpg"></span><span class="nick"><i>Designmyshop.ru</i><a href="#">(выйти)</a></span></div>
+                        </label>
+                      </div>
+                      <div class="feedback-captcha">
+                        <div class="input-wrapper">
+                          <label>Код каптчи
+                            <input type="text" name="" id="">
+                          </label>
+                        </div>
+                        <div class="captcha-input"><a class="update-btn" href="#"><img src="img/icon-refresh.svg" alt="" width="16" height="16"></a>
+                          <div class="captcha-input__image"><img src="img/img-captcha.jpg" alt="captcha"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="feedback-form__btn" type="submit">добавить отзыв</button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="added-to-cart__outer"> 
-              <div class="added-to-cart"><a class="popup-close" href="#">Закрыть окошку</a>
-                <div class="added-to-cart__inner">
-                  <form>
-                    <div class="added-to-cart__title">ТОВАР ДОБАВЛЕН В КОРЗИНУ</div>
-                    <div class="added-to-cart__content-wrapper">
-                      <div class="added-to-cart__content">
-                        <div class="added-to-cart__content-image"><img src="img/img-item-7.jpg" alt="Item image"></div>
-                        <div class="added-to-cart__content-descr"><a class="item-name" href="#">Велосипед МТВ Author Solution 29 Grande Azzuro (Black / Canary Yellow)-Black (2016)</a>
-                          <div class="added-to-cart__price">
-                            <div class="item__descr-price">
-                              <div class="price__inner">
-                                <div class="price new-price"><span>22000</span> руб</div>
-                                <div class="price old-price"><span>22000</span> руб</div>
-                              </div>
+          </div>
+          <!--Товар добавлен в корзину-->
+          <div class="added-to-cart__outer popup__outer--wide">
+            <div class="added-to-cart popup-wrapper"><a class="popup-close" href="#">Закрыть модального окна</a>
+              <div class="added-to-cart__inner">
+                <form>
+                  <div class="added-to-cart__title">ТОВАР ДОБАВЛЕН В КОРЗИНУ</div>
+                  <div class="added-to-cart__content-wrapper">
+                    <div class="added-to-cart__content">
+                      <div class="added-to-cart__content-image"><img src="img/img-item-7.jpg" alt="Item image"></div>
+                      <div class="added-to-cart__content-descr"><a class="item-name" href="#">Велосипед МТВ Author Solution 29 Grande Azzuro (Black / Canary Yellow)-Black (2016)</a>
+                        <div class="added-to-cart__price">
+                          <div class="item__descr-price">
+                            <div class="price__inner">
+                              <div class="price new-price"><span>22000</span> руб</div>
+                              <div class="price old-price"><span>22000</span> руб</div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="added-to-cart__quantity">
-                        <div>Кол-во:</div>
+                    </div>
+                    <div class="added-to-cart__quantity">
+                      <div>Кол-во:</div>
+                      <div class="styled">
                         <select>
                           <option value="1">1</option>
                           <option value="1">2</option>
                           <option value="1">3</option>
-                        </select><a href="#">удалить</a>
-                      </div>
+                        </select>
+                      </div><a href="#">удалить</a>
                     </div>
-                    <div class="added-to-cart__footer"><a class="added-to-cart__continue-btn" href="#">продолжить покупки</a>
-                      <button class="added-to-cart__checkout-btn" type="submit">оформить заказ</button>
-                    </div>
-                  </form>
-                </div>
+                  </div>
+                  <div class="added-to-cart__footer"><a class="added-to-cart__continue-btn" href="#">продолжить покупки</a>
+                    <button class="added-to-cart__checkout-btn" type="submit">оформить заказ</button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="quick-buy__outer">
-              <div class="quick-buy"><a class="popup-close" href="#">Закрыть окошку</a>
-                <div class="quick-buy__inner">
-                  <div class="added-to-cart__content">
-                    <div class="added-to-cart__content-image"><img src="img/img-item-7.jpg" alt="Item image"></div>
-                    <div class="added-to-cart__content-descr"><a class="item-name" href="#">Велосипед МТВ Author Solution 29 Grande Azzuro (Black / Canary Yellow)-Black (2016)</a>
-                      <div class="added-to-cart__price">
-                        <div class="item__descr-price">
-                          <div class="price__inner">
-                            <div class="price new-price"><span>22000</span> руб</div>
-                            <div class="price old-price"><span>22000</span> руб</div>
-                          </div>
+          </div>
+          <!--быстрая покупка-->
+          <div class="quick-buy__outer">
+            <div class="quick-buy popup-wrapper"><a class="popup-close" href="#">Закрыть модального окна</a>
+              <div class="quick-buy__inner">
+                <div class="added-to-cart__title">быстрая покупка</div>
+                <div class="added-to-cart__content">
+                  <div class="added-to-cart__content-image"><img src="img/img-item-7.jpg" alt="Item image"></div>
+                  <div class="added-to-cart__content-descr"><a class="item-name" href="#">Велосипед МТВ Author Solution 29 Grande Azzuro (Black / Canary Yellow)-Black (2016)</a>
+                    <div class="added-to-cart__price">
+                      <div class="item__descr-price">
+                        <div class="price__inner">
+                          <div class="price new-price"><span>22000</span> руб</div>
+                          <div class="price old-price"><span>22000</span> руб</div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="quick-buy__form">
-                  <form>
-                    <div class="popup-input-wrapper">
-                      <input type="text" placeholder="Ваще имя">
-                      <input type="tel" placeholder="Контактный телефон">
-                    </div>
-                    <button class="quick-buy__btn" type="submit">заказать</button>
-                  </form>
-                </div>
+              </div>
+              <div class="quick-buy__form">
+                <form>
+                  <div class="popup-input-wrapper">
+                    <input type="text" placeholder="Ваще имя">
+                    <input type="tel" placeholder="Контактный телефон">
+                  </div>
+                  <button class="quick-buy__btn" type="submit">заказать</button>
+                </form>
               </div>
             </div>
-            <div class="order-complete__outer">
-              <div class="order-complete"><a class="popup-close" href="#">Закрыть окошку</a>
-                <div class="order-complete__inner">
-                  <div class="order-complete__top">
-                    <div class="ura">Ура!</div>
-                    <div class="order-complete__title">Ваш заказ оформлен!</div>
-                  </div>
-                  <div class="order-complete__info">
-                    <div class="order-complete__num">Номер вашего заказа <span>#100790</span></div>
-                    <div>Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.</div>
-                  </div>
-                  <div class="order-complete__info">
-                    <i></i>Обработка заказов Понедельник-Пятница с 9.00 до 18.00 по МСК. Суббота и Восресение выходные
-                    
-                  </div>
+          </div>
+          <!--ваш заказ оформлен-->
+          <div class="order-complete__outer">
+            <div class="order-complete popup-wrapper"><a class="popup-close" href="#">Закрыть модального окна</a>
+              <div class="order-complete__inner">
+                <div class="order-complete__top">
+                  <div class="ura">Ура!</div>
+                  <div class="order-complete__title">Ваш заказ оформлен!</div>
                 </div>
+                <div class="order-complete__info">
+                  <div class="order-complete__num">Номер вашего заказа <span>#100790</span></div>
+                  <div>Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.</div>
+                </div>
+                <div class="order-complete__info schedule"><i></i>Обработка заказов Понедельник-Пятница с 9.00 до 18.00 по МСК. Суббота и Восресение выходные</div><a class="order-complete__link" href="">продолжить покупки</a>
               </div>
             </div>
-            <div class="simple-popup__outer">
-              <div class="simple-popup"><a class="popup-close" href="#">Закрыть окошку</a>
-                <div class="simple-popup__inner">
-                  <div class="simple-popup__descr">
-                    <div>Описание поп-ап окошки</div>
-                  </div>
-                  <div class="simple-popup__status">Запрос отправлено</div>
-                  <form>
-                    <div class="popup-input-wrapper">
-                      <input type="text" placeholder="Поля 1">
-                      <input type="tel" placeholder="Поля 1">
-                    </div>
-                    <button class="quick-buy__btn" type="submit">кнопка</button>
-                  </form>
+          </div>
+          <!-- типовой поп-ап-->
+          <div class="simple-popup__outer">
+            <div class="simple-popup popup-wrapper"><a class="popup-close" href="#">Закрыть модального окна</a>
+              <div class="simple-popup__inner">
+                <h5 class="simple-popup__title">Типовой поп-ап</h5>
+                <div class="simple-popup__descr">
+                  <div>Описание поп-ап окошки</div>
                 </div>
+                <div class="simple-popup__status">Запрос отправлено</div>
+                <form>
+                  <div class="popup-input-wrapper">
+                    <input type="text" placeholder="Поля 1">
+                    <input type="tel" placeholder="Поля 1">
+                  </div>
+                  <button class="simple-popup__btn" type="submit">кнопка</button>
+                </form>
               </div>
             </div>
           </div>
@@ -1591,12 +1613,15 @@
           </div>
         </footer>
       </div>
+      <div class="compare__label"><a href="#">сравнить выбранные товары (<i>12</i>)</a></div>
     </div><!-- build:js js/vendor.min.js -->
 <!-- bower:js -->
 <script src="/js/vendor/jquery/dist/jquery.js"></script>
 <script src="/js/vendor/iCheck/icheck.min.js"></script>
 <script src="/js/vendor/slick-carousel/slick/slick.js"></script>
 <script src="/js/vendor/jQuery.equalHeights/jquery.equalHeights.js"></script>
+<script src="/js/vendor/lightgallery/dist/js/lightgallery.min.js"></script>
+<script src="/js/vendor/lg-video/dist/lg-video.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
     <script>

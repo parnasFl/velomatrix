@@ -1082,11 +1082,11 @@ $(function(){
 
 			/* Styling Select - http://selectric.js.org/
 			==============================================*/
-			(function(){
-				$('.styled select').selectric();
+			// (function(){
+			// 	$('.styled select').selectric();
 
-				$('.catalog-list__filter-settings select').selectric();
-			})();
+			// 	$('.catalog-list__filter-settings select').selectric();
+			// })();
 
 
 			/*---------Search button hover
@@ -1652,7 +1652,7 @@ $(function(){
 					var parent = $('.blog__nav'),
 							menu = $('.blog__nav-list');
 
-						if($(window).width() < 1024) {
+						if($(window).width() < 768) {
 							e.preventDefault();
 							
 							menu.slideToggle('fast');
@@ -1662,7 +1662,138 @@ $(function(){
 				});
 
 			})();
-}); // Jquery $ Function ...similar-items
+
+			/*---------Delivery page payment table equelheight
+			============================================*/
+			(function(){
+				$('.js-delivery-payment__cell').equalHeights();
+				$('.js-delivery-payment__top').equalHeights();
+			})();
+
+
+			/*---------Mobile payment table
+			============================================*/
+
+			(function(){
+
+				if($(window).width() < 768) {
+					$('.delivery-payment__slider-wrap').slick({
+						slidesToScroll: 1,
+						dots: false,
+						variableWidth: true,
+						centerMode: false,
+						infinite: true
+					});
+				}
+				else {
+					if($('.delivery-payment__slider-wrap.slick-slider').length) {
+						$('.slick-slider').slick("unslick");
+					}
+				}
+
+			})();
+
+			/*Mobile Footer Info block toggle
+			==============================================*/
+				(function(){
+					$('.delivery__date-header-toggle').on('click', function(e){
+						e.preventDefault();
+					});
+				
+					$('.delivery__date-header').on('click', function(){
+						//console.log('test');
+							var $this = $(this),
+									selfTitle = $this.find('.delivery__date-header-title'),
+									toggle = $this.find('.delivery__date-header-toggle'),
+									delContainer = $this.closest('.delivery__date'),
+									delContainerSib = delContainer.siblings('.delivery__date'),
+									delContent = delContainer.find('.delivery__date-content'),
+									delContentAll = $('.delivery__date-content');
+
+							if (delContainerSib.hasClass('active')) {
+									
+									delContainerSib.find(delContentAll).slideUp();
+									delContainerSib.removeClass('active');
+									delContainerSib.find('.delivery__date-header-toggle').removeClass('opened');
+									delContainerSib.find('.delivery__date-header-title').removeClass('opened');
+									delContent.slideDown();
+									delContainer.addClass('active');
+									toggle.addClass('opened');
+									selfTitle.addClass('opened');
+							}
+							
+							else {
+								if(!delContainer.hasClass('active')) {
+									delContent.slideDown();
+									delContainer.addClass('active');
+									toggle.addClass('opened');
+									selfTitle.addClass('opened');
+								}
+								else {
+									delContent.slideUp();
+									delContainer.removeClass('active');
+									toggle.removeClass('opened');
+									selfTitle.removeClass('opened');
+								}
+							}
+
+					});
+
+				})();
+
+			/*Mobile Footer Info block toggle
+			==============================================*/
+			(function(){
+				$('.gallery__inner').lightGallery({
+					width: '70%',
+					//height: '70%',
+					download: false,
+					fullScreen: false
+				});
+			})();
+
+			/* Services Page video gallery
+			==============================================*/
+			(function(){
+				$('.workshop-gallery').lightGallery({
+					
+				});
+			})();
+
+			/* Services Page video gallery slider
+			==============================================*/
+			(function(){
+				$('.workshop-gallery').slick({
+					accessibility: false,
+					//slidesToShow: 4,
+					slidesToScroll: 1,
+					variableWidth: true,
+					dots: false,
+					responsive: [
+					{
+						breakpoint: 1023,
+						settings: {
+							vertical: false,
+							slidesToScroll: 1,
+							variableWidth: true,
+							centerMode: false
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							vertical: false,
+							slidesToScroll: 1,
+							dots: false,
+							variableWidth: true,
+							centerMode: false
+						}
+					}
+					]
+				});
+			})();
+
+}); // Jquery $ Function 
 
 
 

@@ -18,7 +18,9 @@
     "jquery": "2.2.4",
     "iCheck": "^1.0.2",
     "slick-carousel": "slick.js#^1.6.0",
-    "jQuery.equalHeights": "jquery.equalheights#^1.5.2"
+    "jQuery.equalHeights": "jquery.equalheights#^1.5.2",
+    "lightgallery": "^1.3.7",
+    "lg-video": "^1.0.1"
   },
   "overrides": {
     "qtip2": {

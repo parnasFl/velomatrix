@@ -46,7 +46,7 @@ gulp.task('pug', function () {
 
 //Compiling 1 PUG file
 gulp.task('pug-self', function () {
-	gulp.src(	'app/templates/pages/compare.pug')
+	gulp.src(	'app/templates/pages/popups-collection.pug')
 	//gulp.src('app/*.pug')
 		.pipe(pug({
 			pretty: true
@@ -81,7 +81,8 @@ gulp.task('libs', function() {
 	return gulp.src([
 		//'app/js/libs/slick.min.js',
 		'app/js/libs/jquery.hoverdelay.min.js',
-		'app/js/libs/jquery.selectric.min.js',
+		//'app/js/libs/jquery.selectric.min.js',
+		//'app/js/libs/jquery.selectric.min.js',
 		'app/js/libs/perfect-scrollbar.jquery.min.js'
 		])
 		.pipe(concat('libs.min.js'))
@@ -146,6 +147,16 @@ gulp.task('images', function(){
 	.pipe(gulp.dest('dist/img'));
 });
 
+//Copying video
+gulp.task('video', function(){
+	return gulp.src('app/video/**/*')
+	// .pipe(imagemin({
+	// 	progressive: true,
+	// 	interlaced: true
+	// }))
+	.pipe(gulp.dest('dist/video'));
+});
+
 //Other files
 gulp.task('extras', function(){
 	return gulp.src([
@@ -174,7 +185,7 @@ gulp.task('js', function(){
 });
 
 //Build and display the size of build folder
-gulp.task('dist', ['useref', 'css','js','images', 'fonts', 'extras'], function(){
+gulp.task('dist', ['useref', 'css','js','images', 'video', 'fonts', 'extras'], function(){
 	return gulp.src('dist/**/*').pipe(size({title: 'build'}));
 });
 

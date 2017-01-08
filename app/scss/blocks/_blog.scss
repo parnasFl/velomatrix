@@ -323,19 +323,22 @@
 	}
 
 	.blog__nav {
+		margin-top: 20px;
 		width: 200px;
 		order:2;
 
 	}
 
 	.blog__nav-list {
-		border-left: 1px solid $bd-grey;
+		border-left: 2px solid $bd-grey;
 		display: block!important;
 		padding-left: 20px;
+		padding-bottom: 5px;
+		padding-top: 5px;
 	}
 
 	.blog__nav-link {
-		//display: inline-block;
+		display: inline-block;
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 10px;
@@ -355,6 +358,14 @@
 
 	.blog__article-title a {
 		font-size: 20px;
+
+		
+	}
+
+	.blog__article-title a[href] {
+		&:hover {
+			color: $blue-link;
+		}
 	}
 } //(min-width: 768px)
 

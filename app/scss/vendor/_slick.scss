@@ -119,7 +119,8 @@
 
 .main-slider--js,
 .slideshow__image-wrap,
- .slideshow__thumbs {
+ .slideshow__thumbs,
+ .workshop-gallery {
     background-image: url(../img/ajax-loader.gif);
     background-repeat: no-repeat;
     background-position: center center;
@@ -128,7 +129,8 @@
     //overflow: hidden;
         .main-slider__item,
         .slideshow__image-item,
-        .slideshow__thumbs-item {
+        .slideshow__thumbs-item,
+        .workshop-gallery__item {
             display: none;
             
 
@@ -141,7 +143,8 @@
         &.slick-initialized {
             .main-slider__item,
                     .slideshow__image-item,
-                    .slideshow__thumbs-item {
+                    .slideshow__thumbs-item,
+                    .workshop-gallery__item {
                     background: none;
                     display: block;
                 

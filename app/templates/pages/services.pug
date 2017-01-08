@@ -1,0 +1,369 @@
+extends ../layouts/main-layout--tablet-no-config--services
+
+block title
+	title Услуги
+
+block content
+	section.blog.services--outer
+		.blog__inner
+			.blog__content
+				.blog__nav
+					ul.blog__nav-list
+						li.blog__nav-item: a.blog__nav-link(href="") Доставка и оплата
+						li.blog__nav-item: a.blog__nav-link(href="") Обзор и новинки
+						li.blog__nav-item: a.blog__nav-link(href="") Новости
+						li.blog__nav-item: a.blog__nav-link(href="") Контакты
+						li.blog__nav-item.active: a.blog__nav-link Услуги
+						li.blog__nav-item: a.blog__nav-link(href="") Гарантия
+						li.blog__nav-item: a.blog__nav-link(href="") О нас
+						li.blog__nav-item: a.blog__nav-link(href="") Обслуживание
+					a.blog__nav-toggle(href="#") Открыть меню
+				section.blog__main.services
+					h1.blog__title Услуги
+					.services__top-text
+						.to-buyers.
+							<span>Уважаемые покупатели!</span>
+							В нашем магазине вас ждут бонусы, а
+							именно:
+					ul.services__bonus-list
+						li.services__bonus-item.total: span Одно бесплатное ТО после обкатки велосипеда
+						li.services__bonus-item.spare: span Устанавливаем запчасти на велосипеды на месте
+						li.services__bonus-item.setting: span Бесплатная настройка и сборка велосипеда <i>при покупке</i><i>дно бесплатное ТО после обкатки велосипеда</i>
+					.services__content
+						table.services__table.services__table--general
+							tr.services__tr
+								th.services__th: span Подготовка велосипеда к сезону
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Мойка
+								td.services__td 250 руб.
+							tr.services__tr
+								td.services__td Индивидуальная сборка велосипеда на заказ
+								td.services__td от 5000 руб.
+							tr.services__tr
+								td.services__td Замена рамы
+								td.services__td от 4000 руб.
+							tr.services__tr
+								td.services__td Консервация велосипеда на зимнее хранение
+								td.services__td от 900 руб
+							tr.services__tr
+								td.services__td Слесарные работы, нормо-час
+								td.services__td 500 руб.
+						table.services__table.services__table--prepare
+							tr.services__tr
+								th.services__th: span Общие услуги
+								th.services__th Цена
+							tr.services__tr
+								td.services__td
+									h5.services__td-title Эконом
+									.services__td-descr.
+										Настройка переднего и заднего переключателей, настройка тормозов и девайсов (прокачка), "удаление восьмёрок" (камерные, бескамерные колёса: на станке), протяжка байка, выявление неисправностей, чистка, смазка.
+								td.services__td от 1800 руб.
+							tr.services__tr
+								td.services__td
+									h5.services__td-title Стандарт
+									.services__td-descr.
+										Настройка переднего и заднего переключателей, настройка тормозов и девайсов (прокачка), "удаление восьмёрок" (камерные, бескамерные колёса: на станке), протяжка байка, выявление неисправностей). Переборка рулевых подшипников: любые (пром :шариковые, игольчатые, насыпные), зонт колеса, правка роторов (тормозных дисков), мойка чистка, смазка.
+								td.services__td от 3500 руб.
+							tr.services__tr
+								td.services__td
+									h5.services__td-title Премиум
+									.services__td-descr.
+										Полная переборка 
+								td.services__td от 5500 руб.
+							tr.services__tr
+								td.services__td
+									h5.services__td-title Премиум
+									.services__td-descr.
+										Полная переборка 
+								td.services__td от 9000 руб.
+						table.services__table.services__table--wheel
+							tr.services__tr
+								th.services__th: span Колеса и втулки
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Правка колеса простая - "восьмерка" менее 5 мм
+								td.services__td от 400 руб.
+							tr.services__tr
+								td.services__td Правка колеса "восьмёрка" более 5 мм
+								td.services__td от 500 руб.
+							tr.services__tr
+								td.services__td Правка колеса сложная - Зонт + восьмёрка
+								td.services__td от 650 руб.
+							tr.services__tr
+								td.services__td Переспицовка колеса - замена втулки или всех спиц
+								td.services__td 1000 руб.
+							tr.services__tr
+								td.services__td Замена обода со спицами
+								td.services__td 1000 руб.
+							tr.services__tr
+								td.services__td Сборка колеса
+								td.services__td от 1000 руб.
+							tr.services__tr
+								td.services__td Замена спицы, 1 шт.
+								td.services__td 80 руб.
+							tr.services__tr
+								td.services__td Регулировка люфта передней втулки (насыпной подшипник)
+								td.services__td от 250 руб.
+							tr.services__tr
+								td.services__td Регулировка люфта задней втулки (насыпной подшипник)
+								td.services__td от 350 руб.
+							tr.services__tr
+								td.services__td Снятие, обратная установка (или замена) трещотки
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Снятие, обратная установка (или замена) кассеты
+								td.services__td 450 руб.
+							tr.services__tr
+								td.services__td Ремонт втулки переднего колеса, замена смазки
+								td.services__td 450 руб.
+							tr.services__tr
+								td.services__td Ремонт втулки заднего колеса, замена смазки (без учета барабана кассеты)
+								td.services__td от 550 руб.
+							tr.services__tr
+								td.services__td Шиномонтаж переднего колеса
+								td.services__td 250 руб.
+							tr.services__tr
+								td.services__td Шиномонтаж заднего колеса
+								td.services__td 300 руб.
+							tr.services__tr
+								td.services__td Шиномонтаж заднего колеса синглспид
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Подкачка колес
+								td.services__td 50 руб.(В комплексе с услугой бесплатно)
+						table.services__table.services__table--kareta
+							tr.services__tr
+								th.services__th: span Кареточный узел
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Замена педалей
+								td.services__td от 250 руб.
+							tr.services__tr
+								td.services__td Ремонт педали 1 шт
+								td.services__td от 350 руб.
+							tr.services__tr
+								td.services__td Замена насыпной каретки
+								td.services__td 600 руб.
+							tr.services__tr
+								td.services__td Замена каретки картридж
+								td.services__td от 500 руб.
+							tr.services__tr
+								td.services__td Ремонт насыпной каретки
+								td.services__td 350 руб.
+							tr.services__tr
+								td.services__td Ремонт системы шатунов; замена, подбор ведущих звездочек, установка рокринга
+								td.services__td 850 руб.
+							tr.services__tr
+								td.services__td Снятие, установка фривила
+								td.services__td от 450 руб.
+						table.services__table.services__table--steering
+							tr.services__tr
+								th.services__th: span Руль/вилка/амортизатор
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Регулировка люфта рулевой колонки
+								td.services__td 250 руб.
+							tr.services__tr
+								td.services__td Ремонт рулевой колонки, ТО
+								td.services__td 450 руб.
+							tr.services__tr
+								td.services__td Установка, замена рулевой колонки с запрессовкой чашек
+								td.services__td 1000 руб.
+							tr.services__tr
+								td.services__td Замена выноса руля
+								td.services__td 450 руб.
+							tr.services__tr
+								td.services__td Замена якоря рулевой колонки
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Снятие/установка дополнительных колец для выносов с регулировкой
+								td.services__td от 200 руб.
+							tr.services__tr
+								td.services__td Снятие/установка вилки (резьбовая)
+								td.services__td 800 руб.
+							tr.services__tr
+								td.services__td Снятие/установка вилки (безрезьбовая)
+								td.services__td 1100 руб.
+							tr.services__tr
+								td.services__td Снятие/установка руля МТВ
+								td.services__td 550 руб.
+							tr.services__tr
+								td.services__td Снятие/установка руля Шоссе
+								td.services__td 1300 руб.
+							tr.services__tr
+								td.services__td Снятие/установка ручек руля (грипсы), за пару
+								td.services__td 350 руб.
+							tr.services__tr
+								td.services__td ТО пружинно-эластомерной вилки
+								td.services__td от 700 руб.
+							tr.services__tr
+								td.services__td ТО пружинно-масляной вилки
+								td.services__td от 1800 руб.
+							tr.services__tr
+								td.services__td ТО воздушной вилки
+								td.services__td от 2500 руб.
+							tr.services__tr
+								td.services__td ТО пружинно-маслянного амортизатора
+								td.services__td от 2000 руб.
+							tr.services__tr
+								td.services__td ТО воздушного амортизатора
+								td.services__td от 2500 руб.
+						table.services__table.services__table--system
+							tr.services__tr
+								th.services__th: span Система переключения передач
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Правка петуха включая регулировку скоростей без гарантии сохранности петуха
+								td.services__td 350 руб.
+							tr.services__tr
+								td.services__td Замена петуха включая регулировку скоростей
+								td.services__td 600 руб.
+							tr.services__tr
+								td.services__td Регулировка переднего переключателя без промывки/с промывкой
+								td.services__td 350/550 руб.
+							tr.services__tr
+								td.services__td Регулировка заднего переключателя без промывки/с промывкой
+								td.services__td 450/650 руб.
+							tr.services__tr
+								td.services__td Замена переднего переключателя
+								td.services__td 650 руб.
+							tr.services__tr
+								td.services__td Замена заднего переключателя
+								td.services__td 700 руб.
+							tr.services__tr
+								td.services__td Замена тросика, рубашки переключателя
+								td.services__td 450 руб.
+						table.services__table.services__table--chain
+							tr.services__tr
+								th.services__th: span Цепь, кассета, трещотка
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Смазка цепи специальной смазкой без промывки
+								td.services__td 100 руб.
+							tr.services__tr
+								td.services__td Ремонт или замена цепи с уменьшением или увеличением ее длины
+								td.services__td 550 руб.
+							tr.services__tr
+								td.services__td Промывка и смазка цепи
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Замена трещотки
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Замена кассеты
+								td.services__td 500 руб.
+							tr.services__tr
+								td.services__td Чистка трещотки, кассеты
+								td.services__td 300 руб.
+							tr.services__tr
+								td.services__td Чистка кассеты со съёмом
+								td.services__td 550 руб.
+						table.services__table.services__table--brake
+							tr.services__tr
+								th.services__th: span Тормозная система
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Замена ручки тормоза v-brake или диск (механика)
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Замена тормоза v-brake
+								td.services__td 350 руб.
+							tr.services__tr
+								td.services__td Регулировка тормоза v-brake
+								td.services__td 250 руб.
+							tr.services__tr
+								td.services__td Регулировка дискового механического тормоза
+								td.services__td 400 руб.
+							tr.services__tr
+								td.services__td Регулировка дискового гидравлического тормоза
+								td.services__td от 500 руб.
+							tr.services__tr
+								td.services__td Замена троса и/или рубашки тормоза с регулировкой
+								td.services__td 500 руб.
+							tr.services__tr
+								td.services__td Установка механического дискового тормоза
+								td.services__td от 650 руб.
+							tr.services__tr
+								td.services__td Замена тормозных колодок дискового механического тормоза с регулировкой
+								td.services__td 550 руб.
+							tr.services__tr
+								td.services__td Замена тормозных колодок дискового гидравлического тормоза с регулировкой
+								td.services__td от 550 руб.
+							tr.services__tr
+								td.services__td Снятие/установка гидравлического дискового тормоза	
+								td.services__td 950 руб.
+							tr.services__tr
+								td.services__td Замена ручки гидравлического тормоза с прокачкой
+								td.services__td 1500 руб.
+							tr.services__tr
+								td.services__td Замена шифтер/ручка (моноблок, dual control) гидравлического тормоза
+								td.services__td 1850 руб.
+							tr.services__tr
+								td.services__td Замена гидролинии тормоза с прокачкой
+								td.services__td 1400 руб.
+							tr.services__tr
+								td.services__td Замена каллипера дискового гидравлического тормоза с прокачкой
+								td.services__td 1500 руб.
+							tr.services__tr
+								td.services__td Замена каллипера ободного гидравлического тормоза с прокачкой
+								td.services__td 1600 руб.
+							tr.services__tr
+								td.services__td Прокачка гидравлического дискового тормоза
+								td.services__td 1000 руб.
+							tr.services__tr
+								td.services__td Прокачка гидравлического ободного тормоза
+								td.services__td 1000 руб.
+							tr.services__tr
+								td.services__td Снятие/установка тормозного ротора
+								td.services__td от 350 руб.
+							tr.services__tr
+								td.services__td Правка тормозного ротора (по возможности)
+								td.services__td 300 руб.
+							tr.services__tr
+								td.services__td Чистка ротора и колодок (сторона)
+								td.services__td 450 руб.
+						table.services__table.services__table--accessories
+							tr.services__tr
+								th.services__th: span Велосипедные аксессуары
+								th.services__th Цена
+							tr.services__tr
+								td.services__td Установка крыльев
+								td.services__td от 300 руб.
+							tr.services__tr
+								td.services__td Установка багажника
+								td.services__td от 600 руб.
+							tr.services__tr
+								td.services__td Установка велокомпьютера	от
+								td.services__td от 400 руб.
+							tr.services__tr
+								td.services__td Установка электрооборудования с питанием от батарей
+								td.services__td от 400 руб.
+							tr.services__tr
+								td.services__td Установка электрооборудования с питанием от динамомашин
+								td.services__td от 550 руб.
+							tr.services__tr
+								td.services__td Установка других аксессуаров, прочие услуги
+								td.services__td оцениваются по факту
+					.services__workshop
+						h3.services__workshop-title Наша <span>мастерская!</span>
+						.services__workshop-gallery
+							div(style="display:none;",id="video1")
+								video(class="lg-video-object lg-html5", controls, preload="none")
+									source(src="video/video3.mp4",type="video/mp4")
+							div(style="display:none;",id="video2")
+								video(class="lg-video-object lg-html5", controls, preload="none")
+									source(src="video/video3.mp4",type="video/mp4")
+							.workshop-gallery
+								a.workshop-gallery__item(class="vmx-video",data-poster="video/video-poster1.png",data-sub-html="Наша мастерская",data-html="#video1", href="")
+									img(src="img/img-contacts-thumb-1.jpg")
+								a.workshop-gallery__item(class="vmx-gallery-img",href="img/img-item-slide-6.jpg")
+									img(src="img/img-contacts-thumb-2.jpg")
+								a.workshop-gallery__item(class="vmx-video",data-poster="video/video-poster1.png",data-sub-html="Наша мастерская",data-html="#video2", href="")
+									img(src="img/img-contacts-thumb-3.jpg")
+								a.workshop-gallery__item(class="vmx-gallery-img",href="img/img-item-slide-9.jpg")
+									img(src="img/img-contacts-thumb-1.jpg")
+								a.workshop-gallery__item(class="vmx-video",data-poster="video/video-poster1.png",data-sub-html="Наша мастерская",data-html="#video1", href="")
+									img(src="img/img-contacts-thumb-3.jpg")
+					.services__vk
+						img(src="img/img-vk-vidjet.jpg")

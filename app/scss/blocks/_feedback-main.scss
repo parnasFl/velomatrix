@@ -133,6 +133,15 @@
 	.feedback-form__meta {
 		margin-bottom: 20px;
 	}
+
+	.captcha-input {
+		display: flex;
+		align-items: center;
+	}
+
+	.update-btn {
+		margin-left: 10px;
+	}
 }
 
 
@@ -198,7 +207,7 @@
 
 	.feedback-form__meta {
 		display: flex;
-		align-items: flex-end;
+		align-items: flex-start;
 		justify-content: space-between;
 		margin-bottom: 30px;
 

@@ -11,11 +11,9 @@
 @import "base/_scaffolding-project";
 
 //Components
-//@import "components/font-awesome";
 @import "components/_buttons";
 @import "components/_items";
-//@import "components/_forms";
-@import "components/_popups";
+
 
 
 
@@ -109,6 +107,8 @@
 /* Blog */
 @import "blocks/_blog";
 @import "blocks/_delivery";
+@import "blocks/_contacts";
+@import "blocks/_services";
 
 //Customized vendor less/css style
 
@@ -116,11 +116,12 @@
 @import "vendor/_slick";
 @import "vendor/_slick-theme";
 
-@import "vendor/_all-icheck";
-@import "vendor/_selectric";
+//@import "vendor/_all-icheck";
+//@import "vendor/_selectric";
 @import "vendor/_perfect-scrollbar";
 //@import "../js/vendor/unslider/dist/css/unslider-dots.css";
 //@import "vendor/_bxslider";
 //@import "vendor/_custom-chr";
 @import "components/_forms";
+@import "components/_popups";
 

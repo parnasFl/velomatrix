@@ -1,15 +1,15 @@
 extends ../layouts/main-layout--tablet-no-config
 
 block title
-	title Новости
+	title Доставка и оплата
 
 block content
-	section.blog.delivery
+	section.blog.delivery--outer
 		.blog__inner
 			.blog__content
 				.blog__nav
 					ul.blog__nav-list
-						li.blog__nav-item.active: a.blog__nav-link(href="") Доставка и оплата
+						li.blog__nav-item.active: a.blog__nav-link Доставка и оплата
 						li.blog__nav-item: a.blog__nav-link(href="") Обзор и новинки
 						li.blog__nav-item: a.blog__nav-link(href="") Новости
 						li.blog__nav-item: a.blog__nav-link(href="") Контакты
@@ -18,6 +18,164 @@ block content
 						li.blog__nav-item: a.blog__nav-link(href="") О нас
 						li.blog__nav-item: a.blog__nav-link(href="") Обслуживание
 					a.blog__nav-toggle(href="#") Открыть меню
-				section.blog__main
+				section.blog__main.delivery
 					h1.blog__title Доставка и оплата
+					.delivery__banners-wrap
+						.delivery__banner
+							h2.delivery__banner-title <strong>БЕСПЛАТНАЯ</strong> доставка
+							.delivery__banner-text При заказе велосипеда через интернет-магазин<br> При заказе свыше 10000 рублей
+						.delivery__banner
+							h2.delivery__banner-title <strong>ДОСТАВКА ОТ</strong> 500 РУБЛЕЙ
+							.delivery__banner-text При покупке в розничном магазине<br> +50 рублей за 1 км. от МКАД
+					section.delivery__date-info-wrap
+						article.delivery__date
+							header.delivery__date-header
+								h1.delivery__date-header-title: span Доставка по Москве
+								.delivery__date-header-days: span 1-2 дня
+								a(href="#").delivery__date-header-toggle
+							.delivery__date-content
+								p.
+									Доставка осуществляется силами нашей собственной курьерской службы.
+								p.
+									После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.
+								p.
+									Как правило, доставка заказа производится в течение <strong>1-2</strong> дней с момента получения заказа и согласования всех необходимых моментов.
+								p.
+									Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.
+								p.
+									<strong>В розничных магазинах стоимость доставки договорная
+									Наша курьерская служба работает с 10.00 до 23.00</strong>
+						article.delivery__date
+							header.delivery__date-header
+								h1.delivery__date-header-title: span Доставка по Московской области
+								.delivery__date-header-days: span 1-2 дня
+								a(href="#").delivery__date-header-toggle
+							.delivery__date-content
+								p.
+									Доставка осуществляется силами нашей собственной курьерской службы.
+								p.
+									После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.
+								p.
+									Как правило, доставка заказа производится в течение 1-2 дней с момента получения заказа и согласования всех необходимых моментов.
+								p.
+									Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.
+								p.
+									<strong>В розничных магазинах стоимость доставки договорная Наша курьерская служба работает с 10.00 до 23.00</strong>
+						article.delivery__date
+							header.delivery__date-header
+								h1.delivery__date-header-title: span Доставка в регионы РФ
+								.delivery__date-header-days: span 3-5 дня
+								a(href="#").delivery__date-header-toggle
+							.delivery__date-content
+								p.
+									Доставка осуществляется силами нашей собственной курьерской службы.
+								p.
+									После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.
+								p.
+									Как правило, доставка заказа производится в течение 1-2 дней с момента получения заказа и согласования всех необходимых моментов.
+								p.
+									Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.
+								p.
+									<strong>В розничных магазинах стоимость доставки договорная
+									Наша курьерская служба работает с 10.00 до 23.00</strong>
+						article.delivery__date
+							header.delivery__date-header
+								h1.delivery__date-header-title.no-border: span Самовывоз
+								a(href="#").delivery__date-header-toggle
+							.delivery__date-content
+								p.
+									Доставка осуществляется силами нашей собственной курьерской службы.
+								p.
+									После получения заказа мы согласовываем дату доставки и предпочтительное время доставки.
+								p.
+									Как правило, доставка заказа производится в течение 1-2 дней с момента получения заказа и согласования всех необходимых моментов.
+								p.
+									Мы готовы обеспечить доставку заказа в день его получения, но это требует дополнительного согласования с менеджером.
+								p.
+									<strong>В розничных магазинах стоимость доставки договорная
+									Наша курьерская служба работает с 10.00 до 23.00</strong>
+					.delivery__date-notif: span.
+						Уважаемы клиенты, отгрузка заказов через транспортные компании, осуществляется только после полной оплаты заказа.
+					.delivery__transport
+						.delivery__transport-image
+							img(src="img/ill-truck.png")
+						.delivery__transport-text.
+							Мы работем с любыми транспортными компаниями!
+						.delivery__transport-logos
+							a.delivery__transport-logos-item(href="")
+								img(src="img/logo-jeldor.png", alt="Logo")
+							a.delivery__transport-logos-item(href="")
+								img(src="img/logo-fedex.png", alt="Logo")
+							a.delivery__transport-logos-item(href="")
+								img(src="img/logo-aerogruz.png", alt="Logo")
+							a.delivery__transport-logos-item(href="")
+								img(src="img/logo-ems.png", alt="Logo")
+							a.delivery__transport-logos-item(href="")
+								img(src="img/logo-baykal.png", alt="Logo")
+							a.delivery__transport-logos-item(href="")
+								img(src="img/logo-del.png", alt="Logo")
+					.delivery__payment
+						h2.delivery-payment__title Оплата заказа
+						.delivery-payment__table
+							ul.delivery-payment__place-list
+								li.delivery-payment__place-item.js-delivery-payment__top
+								li.delivery-payment__place-item.js-delivery-payment__cell Курьеру
+								li.delivery-payment__place-item.js-delivery-payment__cell В магазине
+								li.delivery-payment__place-item.js-delivery-payment__cell На сайте
+								li.delivery-payment__place-item.js-delivery-payment__cell Мастерская
+							.delivery-payment__type-wrapper
+								.delivery-payment__slider-wrap
+									.delivery-payment__type
+										.delivery-payment__type-title.js-delivery-payment__top Наличными
+										ul.delivery-payment__type-list
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+									.delivery-payment__type
+										.delivery-payment__type-title.js-delivery-payment__top Картой
+										ul.delivery-payment__type-list
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+									.delivery-payment__type
+										.delivery-payment__type-title.js-delivery-payment__top Подарочной картой
+										ul.delivery-payment__type-list
+											li.delivery-payment__type-item.js-delivery-payment__cell
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+									.delivery-payment__type
+										.delivery-payment__type-title.js-delivery-payment__top Бонусной картой
+										ul.delivery-payment__type-list
+											li.delivery-payment__type-item.js-delivery-payment__cell
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+									.delivery-payment__type
+										.delivery-payment__type-title.js-delivery-payment__top Кредит
+										ul.delivery-payment__type-list
+											li.delivery-payment__type-item.js-delivery-payment__cell
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell: i.checked
+											li.delivery-payment__type-item.js-delivery-payment__cell
+						.delivery-payment__text
+							p.
+								Для жителей Москвы и Подмосковья возможна оплата наличными денежными средствами курьеру в момент доставки заказа.
+							p.
+								Для жителей регионов мы предлагаем взаиморасчеты через банковские карты <strong>Visa и Mastercard</strong>
+					.delivery__alert
+						p: strong.
+							Уважаемые клиенты, модели, которых нет в наличии, доступны к заказу, но срок поставки данных изделий зависит от срока поставки данной продукции на склад в Москву.
+						p: strong.
+							Подробности вы можете уточнить у менеджера по телефонам +7 495 961-94-21
+					.delivery__build
+						.delivery-build__inner
+							.delivery-build__circle
+								h3.delivery-build__title: span Бесплатная<br> сборка<br> настройка
+							.delivery-build__square
+								span.
+									Перед доставкой каждый велосипед собирается и настраивается бесплатно, а также первое ТО после обкатки велосипеда мы делаем бесплатно.
+
 

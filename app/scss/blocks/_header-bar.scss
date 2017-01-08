@@ -378,6 +378,12 @@
 		height: 51px;
 	}
 	
+	.bottom-bar {
+		.main-content {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
 }
 
 
@@ -418,8 +424,6 @@
 			width: 718px;
 			justify-content: space-between;
 			align-items: center;
-			padding-left: 20px;
-			padding-right: 20px;
 			padding-top: 10px;
 			padding-bottom: 10px;
 			//border-bottom: 1px solid $bd-grey;

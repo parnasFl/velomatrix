@@ -1,0 +1,223 @@
+extends ../layouts/main-layout--tablet-no-config
+
+block title
+	title Контакты
+
+block content
+	section.blog.contacts--outer
+		.blog__inner
+			.blog__content
+				.blog__nav
+					ul.blog__nav-list
+						li.blog__nav-item: a.blog__nav-link(href="") Доставка и оплата
+						li.blog__nav-item: a.blog__nav-link(href="") Обзор и новинки
+						li.blog__nav-item: a.blog__nav-link(href="") Новости
+						li.blog__nav-item.active: a.blog__nav-link Контакты
+						li.blog__nav-item: a.blog__nav-link(href="") Услуги
+						li.blog__nav-item: a.blog__nav-link(href="") Гарантия
+						li.blog__nav-item: a.blog__nav-link(href="") О нас
+						li.blog__nav-item: a.blog__nav-link(href="") Обслуживание
+					a.blog__nav-toggle(href="#") Открыть меню
+				section.blog__main.contacts
+					h1.blog__title Контакты
+					.contacts__top-illust
+						img(src="img/ill-contacts-top.png", alt="Illustration")
+					.contacts__top-text
+						.bonus.
+							Бонусы, полученные при покупке в наших магазинах Вы можете обменять на скидку на все виды услуг.
+						.define.
+							Уточняйте у продавцов ВелоМатрикс.ру, либо по телефону 8-495-961-94-21
+					h2.contacts__secondary-title Наши розничные магазины
+					.contacts-store
+						h3.contacts-store__title Точка # 1
+						.contacts-store__content
+							.contacts-store__img-address
+								.contacts-store__illustration
+									img(src="img/ill-building-1.png", alt="Illustration")
+									span.illustration__text(style="top:17px; left: 5px;") <i>Здесь есть самовывоз</i> интернет-магазина
+								.contacts-store__map
+									img(src="img/img-map2.png", alt="Map")
+								a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+								.contacts-store__address
+									strong.
+										м. Сокольники 1 минута от м. Сокольники, Сокольническая площадь, д.9, корп. 2
+									a(href="#").driving-schemes Схема проезда
+									a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+							.contacts-store__contacts
+								.contacts-store__address
+									strong.
+										м. Сокольники 1 минута от м. Сокольники, Сокольническая площадь, д.9, корп. 2
+									a(href="#").driving-schemes: span Схема проезда
+								ul.contacts-list
+									li.worktime: span Ежедневно 10:00 - 20:00
+									li.phone: a(href="tel:+74959619421"): strong +7 (495) 961-94-21
+									li.email: a(href="mailto:info@velomatrix.ru"): span info@velomatrix.ru
+									li.skype: a(href="skype:velomatrix?call"): span velomatrix
+								.store-features
+									h6.store-features__title Особенности точки продаж:
+									ul.features__list
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Велосипеды
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Запчасти
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Ремонт, обслуживание, эксклюзивная сборка<strong>(ремонт возможен только в будние дни)</strong>
+										li.highlighted
+											i -&nbsp;
+											span #&nbsp;
+											em Пункт самовывоза интернет-магазина
+						.contacts-store__gallery
+							.gallery__inner
+								a(href="img/img-item-slide-6.jpg")
+									img(src="img/img-contacts-thumb-1.jpg")
+								a(href="img/img-item-slide-9.jpg")
+									img(src="img/img-contacts-thumb-2.jpg")
+								a(href="img/img-item-slide-5.jpg")
+									img(src="img/img-contacts-thumb-3.jpg")
+					.contacts-store
+						h3.contacts-store__title Точка # 2
+						.contacts-store__content
+							.contacts-store__img-address
+								.contacts-store__illustration
+									img(src="img/ill-building-2.png", alt="Illustration")
+									span.illustration__text(style="top:17px; left: 16px;") Здесь большой выбор<i>самокатов</i>
+								.contacts-store__map
+									img(src="img/img-map2.png", alt="Map")
+								a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+								.contacts-store__address
+									strong.
+										м. Сокольники, Сокольническая площадь д. 4, расположен в «Галерее спорта»
+									a(href="#").driving-schemes Схема проезда
+									a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+							.contacts-store__contacts
+								.contacts-store__address
+									strong.
+										м. Сокольники, Сокольническая площадь д. 4, расположен в «Галерее спорта»
+									a(href="#").driving-schemes: span Схема проезда
+								ul.contacts-list
+									li.worktime: span Ежедневно 10:00 - 20:00
+									li.phone: a(href="tel:+74959619421"): strong +7 (495) 246-0-245
+									li.email: a(href="mailto:info@velomatrix.ru"): span info@velomatrix.ru
+									li.skype: a(href="skype:velomatrix?call"): span velomatrix
+								.store-features
+									h6.store-features__title Особенности точки продаж:
+									ul.features__list
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Велосипеды
+										li.highlighted
+											i -&nbsp;
+											span #&nbsp;
+											em Самокаты
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Запчасти
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Ремонт, обслуживание, эксклюзивная сборка<strong>(ремонт возможен только в будние дни)</strong>
+						.contacts-store__gallery
+							.gallery__inner
+								a(href="img/img-item-slide-6.jpg")
+									img(src="img/img-contacts-thumb-1.jpg")
+								a(href="img/img-item-slide-9.jpg")
+									img(src="img/img-contacts-thumb-2.jpg")
+								a(href="img/img-item-slide-5.jpg")
+									img(src="img/img-contacts-thumb-3.jpg")
+					.contacts-store
+						h3.contacts-store__title Точка # 3
+						.contacts-store__content
+							.contacts-store__img-address
+								.contacts-store__illustration
+									img(src="img/ill-building-3.png", alt="Illustration")
+									span.illustration__text(style="top:19px; left: 16px;") Здесь большой выбор <i>запчастей</i>
+								.contacts-store__map
+									img(src="img/img-map2.png", alt="Map")
+								a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+								.contacts-store__address
+									strong.
+										м. Сокольники, Сокольническая площадь д. 9 корп. 2, в подвальном помещении, соседняя дверь
+									a(href="#").driving-schemes Схема проезда
+									a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+							.contacts-store__contacts
+								.contacts-store__address
+									strong.
+										м. Сокольники, Сокольническая площадь д. 9 корп. 2, в подвальном помещении, соседняя дверь
+									a(href="#").driving-schemes: span Схема проезда
+								ul.contacts-list
+									li.worktime: span Ежедневно 10:00 - 20:00
+									li.phone: a(href="tel:+74959619421"): strong +7 (495) 246-0-245
+									li.email: a(href="mailto:info@velomatrix.ru"): span info@velomatrix.ru
+									li.skype: a(href="skype:velomatrix?call"): span velomatrix
+								.store-features
+									h6.store-features__title Особенности точки продаж:
+									ul.features__list
+										li.highlighted
+											i -&nbsp;
+											span #&nbsp;
+											em Магазин занимается только запчастями
+						.contacts-store__gallery
+							.gallery__inner
+								a(href="img/img-item-slide-6.jpg")
+									img(src="img/img-contacts-thumb-1.jpg")
+								a(href="img/img-item-slide-9.jpg")
+									img(src="img/img-contacts-thumb-2.jpg")
+								a(href="img/img-item-slide-5.jpg")
+									img(src="img/img-contacts-thumb-3.jpg")
+					.contacts-store
+						h3.contacts-store__title веломастерская -сервисный центр
+						.contacts-store__content
+							.contacts-store__img-address
+								.contacts-store__illustration
+									img(src="img/ill-building-4.png", alt="Illustration")
+									span.illustration__text(style="top:18px; left: 5px; font-size: 10px;") Большой ассортимент <i>запчастей и аксессуаров</i>
+								.contacts-store__map
+									img(src="img/img-map2.png", alt="Map")
+								a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+								.contacts-store__address
+									strong.
+										м. Сокольники, Сокольническая площадь д. 4, расположен в «Галерее спорта»
+									a(href="#").driving-schemes Схема проезда
+									a.contacts-store__map-link(href=""): span Открыть Яндекс.Карту »
+							.contacts-store__contacts
+								.contacts-store__address
+									strong.
+										м. Сокольники, Сокольническая площадь д. 4, расположен в «Галерее спорта»
+									a(href="#").driving-schemes: span Схема проезда
+								ul.contacts-list
+									li.worktime: span Ежедневно 10:00 - 20:00
+									li.phone: a(href="tel:+74959619421"): strong +7 (495) 246-0-245
+									li.email: a(href="mailto:info@velomatrix.ru"): span info@velomatrix.ru
+									li.skype: a(href="skype:velomatrix?call"): span velomatrix
+								.store-features
+									h6.store-features__title Особенности точки продаж:
+									ul.features__list
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Велосипеды
+										li
+											i -&nbsp;
+											span #&nbsp;
+											em Запчасти
+										li.highlighted
+											i -&nbsp;
+											span #&nbsp;
+											em Самокаты
+						.contacts-store__gallery
+							.gallery__inner
+								a(href="img/img-item-slide-6.jpg")
+									img(src="img/img-contacts-thumb-1.jpg")
+								a(href="img/img-item-slide-9.jpg")
+									img(src="img/img-contacts-thumb-2.jpg")
+								a(href="img/img-item-slide-5.jpg")
+									img(src="img/img-contacts-thumb-3.jpg")
+

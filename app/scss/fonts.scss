@@ -117,6 +117,37 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-zoom:before {
+  content: "\e913";
+}
+
+.icon-gps .path1:before {
+  content: "\e911";
+  color: rgb(3, 3, 3);
+}
+.icon-gps .path2:before {
+  content: "\e912";
+  margin-left: -0.78515625em;
+  color: rgb(236, 3, 3);
+}
+.icon-icon-skype:before {
+  content: "\e9010";
+}
+.icon-icon-tel-2:before {
+  content: "\e90e";
+}
+.icon-icon-clock-2 .path1:before {
+  content: "\e90f";
+  color: rgb(36, 32, 33);
+}
+.icon-icon-clock-2 .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(236, 2, 2);
+}
+
+
+
 .icon-icon-bike:before {
   content: "\e900";
 }
