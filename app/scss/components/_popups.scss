@@ -170,6 +170,10 @@
 			text-decoration: none;
 		}
 	}
+
+	.styled {
+		min-width: 60px;
+	}
 }
 
 .added-to-cart__continue-btn {
@@ -437,6 +441,10 @@
 		margin-bottom: 10px;
 		.styled {
 			margin-left: 10px;
+			//min-width: 70px;
+			// select {
+			// 	//padding-right: 10px;
+			// }
 		}
 
 		a {

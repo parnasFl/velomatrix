@@ -67,11 +67,12 @@ gulp.task('pug-self', function () {
 gulp.task('scss', function () {
 	gulp.src('app/scss/**/*.scss')
 	.pipe(sass({
-		includePaths: bourbon.includePaths
+		includePaths: bourbon.includePaths,
+		outputStyle: 'expanded'
 	}).on('error', sass.logError))
 	.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
-	//.pipe(cleanCSS())
+	.pipe(cleanCSS())
 	.pipe(gulp.dest('app/css'))
 	.pipe(reload({stream: true}));
 });
@@ -199,8 +200,8 @@ gulp.task('build', ['clean', 'pug'], function() {
 //========================Watch and Default================
 
 //Watch Tasks
-gulp.task('watch',['server','pug-self', 'scss', 'libs'], function () {
-	gulp.watch('app/**/*.pug', ['pug-self']);
+gulp.task('watch',['server','pug', 'scss', 'libs'], function () {
+	gulp.watch('app/**/*.pug', ['pug']);
 	gulp.watch('app/scss/**/*.scss', ['scss']);
 	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
